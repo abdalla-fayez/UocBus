@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticketing System</title>
+</head>
+<body>
+    <h1>Bus Ticketing System</h1>
+
+    <!-- Find Available Trips Section -->
+    <h2>Find Available Trips</h2>
+    <form id="findTripsForm">
+        <!-- Dropdown to select departure location -->
+        <label for="departure">Departure:</label>
+        <select id="departure" name="departure"></select><br>
+
+        <!-- Dropdown to select arrival location -->
+        <label for="arrival">Arrival:</label>
+        <select id="arrival" name="arrival"></select><br>
+
+        <!-- Date picker to select trip date -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <!-- Button to trigger search for available trips -->
+        <button type="button" id="searchTrips">Search Trips</button>
+    </form>
+
+    <!-- Section to display available trips -->
+    <h2>Available Trips</h2>
+    <div id="tripsResults"></div>
+
+    <!-- Book a Trip Section -->
+    <h2>Book a Trip</h2>
+    <form id="bookTripForm">
+        <!-- Input field to specify the trip ID to book -->
+        <label for="tripId">Trip ID:</label>
+        <input type="text" id="tripId" name="tripId" placeholder="Enter Trip ID" required><br>
+
+        <!-- Input field to specify the number of seats to book -->
+        <label for="numSeats">Number of Seats:</label>
+        <input type="number" id="numSeats" name="numSeats" min="1" required><br>
+
+        <!-- Button to trigger the booking process -->
+        <button type="button" id="bookTrip">Book Trip</button>
+    </form>
+
+    <!-- Section to display the booking status -->
+    <h2>Booking Status</h2>
+    <div id="bookingStatus"></div>
+
+    <!-- JavaScript -->
+    <script>
+        /**
+         * Function to populate departure and arrival dropdowns dynamically
+         * - Fetches available locations from the backend.
+         * - Populates the "Departure" and "Arrival" dropdowns with unique locations.
+         */
+        async function populateDropdowns() {
+            try {
+                // Fetch the list of unique locations from the server
+                const response = await fetch('/api/locations');
+                if (!response.ok) throw new Error('Failed to fetch locations');
+                const locations = await response.json();
+
+                // Get the dropdown elements
+                const departureSelect = document.getElementById('departure');
+                const arrivalSelect = document.getElementById('arrival');
+
+                // Populate dropdowns with fetched locations
+                locations.forEach(location => {
+                    const option = document.createElement('option');
+                    option.value = location;
+                    option.textContent = location;
+                    departureSelect.appendChild(option);
+
+                    const option2 = option.cloneNode(true); // Clone option for arrival dropdown
+                    arrivalSelect.appendChild(option2);
+                });
+            } catch (error) {
+                console.error('Error populating dropdowns:', error);
+            }
+        }
+
+        // Call the dropdown population function when the page loads
+        document.addEventListener('DOMContentLoaded', populateDropdowns);
+
+        /**
+         * Function to search for available trips based on user input
+         * - Sends a request to the backend to fetch trips matching the user's criteria.
+         * - Displays the results below the search form.
+         */
+        document.getElementById('searchTrips').addEventListener('click', async () => {
+            try {
+                // Get the input values from the form
+                const departure = document.getElementById('departure').value;
+                const arrival = document.getElementById('arrival').value;
+                const date = document.getElementById('date').value;
+
+                // Ensure all fields are filled
+                if (!departure || !arrival || !date) {
+                    alert('Please fill in all fields!');
+                    return;
+                }
+
+                // Fetch available trips from the server
+                const response = await fetch(`/api/trips/available?departure=${departure}&arrival=${arrival}&date=${date}`);
+                if (!response.ok) throw new Error('Failed to fetch trips');
+                const trips = await response.json();
+
+                // Display the fetched trips in the results section
+                const tripsResults = document.getElementById('tripsResults');
+                tripsResults.innerHTML = ''; // Clear previous results
+                if (trips.length === 0) {
+                    tripsResults.textContent = 'No trips available for the selected criteria.';
+                } else {
+                    trips.forEach(trip => {
+                        const tripElement = document.createElement('div');
+                        tripElement.textContent = `Trip ID: ${trip.id}, Date: ${trip.trip_date}, Available Seats: ${trip.available_seats}, Route: ${trip.name}`;
+                        tripsResults.appendChild(tripElement);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching trips:', error);
+            }
+        });
+
+        /**
+         * Function to book a trip based on user input
+         * - Sends a booking request to the backend with trip ID and number of seats.
+         * - Displays success or error messages after booking.
+         */
+        document.getElementById('bookTrip').addEventListener('click', async () => {
+            try {
+                // Get the input values from the booking form
+                const tripId = document.getElementById('tripId').value;
+                const seatsBooked = document.getElementById('numSeats').value;
+
+                // Ensure the inputs are valid
+                if (!tripId || !seatsBooked || seatsBooked <= 0) {
+                    alert('Please provide valid Trip ID and Number of Seats!');
+                    return;
+                }
+
+                // Send a booking request to the server
+                const response = await fetch('/api/trips/book', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ trip_id: tripId, seats_booked: seatsBooked }),
+                });
+
+                const result = await response.json();
+                const bookingStatus = document.getElementById('bookingStatus');
+
+                // Display the booking status
+                if (response.ok) {
+                    bookingStatus.textContent = `Booking Successful! Trip ID: ${result.trip_id}, Seats Booked: ${result.seats_booked}`;
+                } else {
+                    bookingStatus.textContent = `Booking Failed: ${result.error || 'Unknown error'}`;
+                }
+            } catch (error) {
+                console.error('Error booking trip:', error);
+            }
+        });
+    </script>
+</body>
+</html>
