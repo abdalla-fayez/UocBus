@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticketing System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Bus Ticketing System</h1>
+
+    <!-- Find Available Trips Section -->
+    <h2>Find Available Trips</h2>
+    <form id="findTripsForm">
+        <label for="departure">Departure:</label>
+        <select id="departure" name="departure"></select><br>
+
+        <label for="arrival">Arrival:</label>
+        <select id="arrival" name="arrival"></select><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <button type="button" id="searchTrips">Search Trips</button>
+    </form>
+
+    <h2>Available Trips</h2>
+    <div id="tripsResults"></div>
+
+    <!-- Book a Trip Section -->
+    <h2>Book a Trip</h2>
+    <form id="bookTripForm">
+        <label for="tripId">Trip ID:</label>
+        <input type="text" id="tripId" name="tripId" placeholder="Enter Trip ID" required><br>
+
+        <label for="numSeats">Number of Seats:</label>
+        <input type="number" id="numSeats" name="numSeats" min="1" required><br>
+
+        <button type="button" id="bookTrip">Book Trip</button>
+    </form>
+
+    <h2>Booking Status</h2>
+    <div id="bookingStatus"></div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
