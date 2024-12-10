@@ -1,20 +1,15 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql2');
+const db = require('../models/db'); //Database connection
 
-// Database connection
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'bus_ticketing',
-});
 
 // Get available trips
 router.get('/trips/available', (req, res) => {
     const { departure, arrival, date } = req.query;
     const query = `
-        SELECT trips.id, trips.trip_date, trips.available_seats, routes.name
+        SELECT trips.id, trips.trip_date, trips.available_seats, trips.route_name
         FROM trips
         JOIN routes ON trips.route_id = routes.id
         WHERE routes.departure = ? AND routes.arrival = ? AND trips.trip_date = ?;

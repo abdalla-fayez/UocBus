@@ -4,11 +4,14 @@ const arrivalSelect = document.getElementById('arrival');
 const dateInput = document.getElementById('date');
 const searchButton = document.getElementById('searchTrips');
 const tripsResults = document.getElementById('tripsResults');
-
 const tripIdInput = document.getElementById('tripId');
 const numSeatsInput = document.getElementById('numSeats');
 const bookButton = document.getElementById('bookTrip');
 const bookingStatus = document.getElementById('bookingStatus');
+// Event listeners
+document.addEventListener('DOMContentLoaded', populateDropdowns);
+searchButton.addEventListener('click', searchTrips);
+bookButton.addEventListener('click', bookTrip);
 
 // Function to populate dropdowns dynamically
 async function populateDropdowns() {
@@ -22,10 +25,9 @@ async function populateDropdowns() {
             const option = document.createElement('option');
             option.value = location;
             option.textContent = location;
-            departureSelect.appendChild(option);
 
-            const option2 = option.cloneNode(true);
-            arrivalSelect.appendChild(option2);
+            departureSelect.appendChild(option);
+            arrivalSelect.appendChild(option.cloneNode(true));
         });
     } catch (error) {
         console.error('Error populating dropdowns:', error);
@@ -54,7 +56,7 @@ async function searchTrips() {
         } else {
             trips.forEach(trip => {
                 const tripElement = document.createElement('div');
-                tripElement.textContent = `Trip ID: ${trip.id}, Date: ${trip.trip_date}, Available Seats: ${trip.available_seats}, Route: ${trip.name}`;
+                tripElement.textContent = `Trip ID: ${trip.id}, Date: ${trip.trip_date}, Available Seats: ${trip.available_seats}, Route: ${trip.route_name}`;
                 tripsResults.appendChild(tripElement);
             });
         }
@@ -92,7 +94,4 @@ async function bookTrip() {
     }
 }
 
-// Event listeners
-document.addEventListener('DOMContentLoaded', populateDropdowns);
-searchButton.addEventListener('click', searchTrips);
-bookButton.addEventListener('click', bookTrip);
+
