@@ -13,30 +13,18 @@ function handleDisconnect() {
         user: process.env.DB_USER,
         password: process.env.DB_PASS,
         database: process.env.DB_NAME,
-    });
+    }).promise(); // Wrap in promise interface
 
-    // Handle connection errors
-    connection.connect(err => {
-        if (err) {
-            console.error('Error connecting to MySQL:', err);
-            setTimeout(handleDisconnect, 2000); // Retry after 2 seconds
-        } else {
-            console.log('Connected to MySQL!');
-        }
-    });
-
-    // Re-establish connection on disconnect
-    connection.on('error', err => {
-        console.error('MySQL error:', err);
+    connection.on('error', (err) => {
+        console.error('Database error', err);
         if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-            handleDisconnect(); // Reconnect on connection loss
-        } else {
-            throw err;
+            handleDisconnect(); // Reconnect on disconnection
         }
     });
+
+    console.log('Database connected');
 }
 
-// Initialize the connection
 handleDisconnect();
 
 module.exports = connection;

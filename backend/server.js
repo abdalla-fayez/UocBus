@@ -1,21 +1,45 @@
 const express = require('express');
+const session = require('express-session');
 const dotenv = require('dotenv');
 const db = require('./models/db'); // Import the MySQL connection
 const bookingRoutes = require('./js/booking');
 const path = require('path');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
-dotenv.config(); // Load environment variables
+const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
 
 const app = express();
-app.use(express.json()); // Middleware to parse JSON
+
+dotenv.config(); // Load environment variables
+
+app.use(session({
+    secret: 'uocbussessionsecretkeybecausewhynot', // Replace with a strong secret key
+    resave: false, // Prevent unnecessary session save operations
+    saveUninitialized: true, // Save sessions even if they're empty
+    cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes, HTTPS-only // Set true if using HTTPS
+}));
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
+
+app.use((req, res, next) => {
+    console.log('Middleware triggered: Parsing request body...');
+    next();
+});
+
+app.use(sessionStorageRoutes);
 
 // Serve static files for testing (like index.html)
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Use the booking API routes
 app.use('/api', bookingRoutes);
+
 // Use the payments API routes
-app.use('/api/payments', paymentRoutes);
+app.use(paymentRoutes);
+app.use('/api/payment', paymentRoutes);
+
 // Start the server
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on https://172.16.50.207:${PORT}`));
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
+    console.log(`Server running on port ${process.env.PORT || 5000}`);
+});

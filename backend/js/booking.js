@@ -1,84 +1,81 @@
 const dotenv = require('dotenv');
 const express = require('express');
 const router = express.Router();
-const mysql = require('mysql2');
 const db = require('../models/db'); //Database connection
 
 
 // Get available trips
-router.get('/trips/available', (req, res) => {
+router.get('/trips/available', async (req, res) => {
     const { departure, arrival, date } = req.query;
-    const query = `
-        SELECT trips.id, trips.trip_date, trips.available_seats, trips.route_name
-        FROM trips
-        JOIN routes ON trips.route_id = routes.id
-        WHERE routes.departure = ? AND routes.arrival = ? AND trips.trip_date = ?;
-    `;
-    db.query(query, [departure, arrival, date], (err, results) => {
-        if (err) {
-            console.error('Error fetching trips:', err);
-            res.status(500).send('Error fetching trips');
-        } else {
-            res.json(results);
-        }
-    });
+
+    try {
+        const query = `
+            SELECT trips.id, trips.trip_date, trips.available_seats, trips.route_name
+            FROM trips
+            JOIN routes ON trips.route_id = routes.id
+            WHERE routes.departure = ? AND routes.arrival = ? AND trips.trip_date = ?;
+        `;
+        const [results] = await db.query(query, [departure, arrival, date]);
+        res.json(results);
+    } catch (error) {
+        console.error('Error fetching trips:', error);
+        res.status(500).json({ message: 'Server error' });
+}
 });
 
-// Book a trip
-router.post('/trips/book', (req, res) => {
+
+// Book a trip (reserve seats temporarily)
+router.post('/trips/book', async (req, res) => {
     const { trip_id, seats_booked } = req.body;
-    const getSeatsQuery = `SELECT available_seats FROM trips WHERE id = ?`;
 
-    db.query(getSeatsQuery, [trip_id], (err, results) => {
-        if (err || results.length === 0) {
-            console.error('Error checking available seats:', err);
-            return res.status(500).json({ error: 'Trip not found or database error' });
+    if (!trip_id || !seats_booked || seats_booked <= 0) {
+        return res.status(400).json({ message: 'Invalid trip or seat data' });
+    }
+
+    try {
+        const [trip] = await db.query(
+            `SELECT available_seats FROM trips WHERE id = ?`,
+            [trip_id]
+        );
+
+        if (!trip || trip.available_seats < seats_booked) {
+            return res.status(400).json({ message: 'Not enough seats available' });
         }
 
-        const availableSeats = results[0].available_seats;
-        if (availableSeats < seats_booked) {
-            return res.status(400).json({ error: 'Not enough seats available' });
-        }
+        const updatedSeats = trip.available_seats - seats_booked;
+        await db.query(
+            `UPDATE trips SET available_seats = ? WHERE id = ?`,
+            [updatedSeats, trip_id]
+        );
 
-        const updateSeatsQuery = `UPDATE trips SET available_seats = available_seats - ? WHERE id = ?`;
-        db.query(updateSeatsQuery, [seats_booked, trip_id], (updateErr) => {
-            if (updateErr) {
-                console.error('Error updating seats:', updateErr);
-                return res.status(500).json({ error: 'Error updating seats' });
-            }
+        res.json({ success: true, trip_id, seats_booked });
+    } catch (error) {
+        console.error('Error in booking:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
 
-            // Record the booking in the bookings table
-            const insertBookingQuery = `
-                INSERT INTO bookings (trip_id, seats_booked, payment_status, created_at)
-                VALUES (?, ?, 'pending', NOW())
-            `;
-            db.query(insertBookingQuery, [trip_id, seats_booked], (insertErr) => {
-                if (insertErr) {
-                    console.error('Error recording booking:', insertErr);
-                    return res.status(500).json({ error: 'Error recording booking' });
-                }
+// Get grouped departure and arrival locations
+router.get('/locations', async (req, res) => {
+    try {
+        // Fetch departure and arrival locations separately
+        const [departures] = await db.query(`SELECT DISTINCT departure FROM routes`);
+        const [arrivals] = await db.query(`SELECT DISTINCT arrival FROM routes`);
 
-                res.json({ trip_id, seats_booked });
-            });
+        // Map results to arrays
+        const departureLocations = departures.map(row => row.departure);
+        const arrivalLocations = arrivals.map(row => row.arrival);
+
+        // Return grouped data
+        res.json({
+            departure: departureLocations,
+            arrival: arrivalLocations,
         });
-    });
+    } catch (error) {
+        console.error('Error fetching locations:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
 });
 
-router.get('/locations', (req, res) => {
-    const query = `
-        SELECT DISTINCT departure FROM routes 
-        UNION 
-        SELECT DISTINCT arrival FROM routes
-    `;
-    db.query(query, (err, results) => {
-        if (err) {
-            console.error('Error fetching locations:', err);
-            res.status(500).send('Error fetching locations');
-        } else {
-            // Flatten the results to an array of unique locations
-            res.json(results.map(row => row.departure || row.arrival));
-        }
-    });
-});
 
 module.exports = router;

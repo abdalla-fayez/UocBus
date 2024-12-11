@@ -11,28 +11,35 @@ const bookingStatus = document.getElementById('bookingStatus');
 // Event listeners
 document.addEventListener('DOMContentLoaded', populateDropdowns);
 searchButton.addEventListener('click', searchTrips);
-bookButton.addEventListener('click', bookTrip);
+bookButton.addEventListener('click', redirectToPayment);
 
 // Function to populate dropdowns dynamically
 async function populateDropdowns() {
     try {
         const response = await fetch('/api/locations');
         if (!response.ok) throw new Error('Failed to fetch locations');
-        const locations = await response.json();
+        const { departure, arrival } = await response.json();
 
-        // Populate dropdowns
-        locations.forEach(location => {
+        // Populate departure dropdown
+        departure.forEach(location => {
             const option = document.createElement('option');
             option.value = location;
             option.textContent = location;
-
             departureSelect.appendChild(option);
-            arrivalSelect.appendChild(option.cloneNode(true));
+        });
+
+        // Populate arrival dropdown
+        arrival.forEach(location => {
+            const option = document.createElement('option');
+            option.value = location;
+            option.textContent = location;
+            arrivalSelect.appendChild(option);
         });
     } catch (error) {
         console.error('Error populating dropdowns:', error);
     }
 }
+
 
 // Function to search for available trips
 async function searchTrips() {
@@ -65,33 +72,30 @@ async function searchTrips() {
     }
 }
 
-// Function to book a trip
-async function bookTrip() {
-    try {
-        const tripId = tripIdInput.value;
-        const seatsBooked = numSeatsInput.value;
+// Function to redirect to payment
+async function redirectToPayment() {
+    const tripId = tripIdInput.value;
+    const seatsBooked = numSeatsInput.value;
 
-        if (!tripId || !seatsBooked || seatsBooked <= 0) {
-            alert('Please provide valid Trip ID and Number of Seats!');
-            return;
-        }
-
-        const response = await fetch('/api/trips/book', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ trip_id: tripId, seats_booked: seatsBooked }),
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
-            bookingStatus.textContent = `Booking Successful! Trip ID: ${result.trip_id}, Seats Booked: ${result.seats_booked}`;
-        } else {
-            bookingStatus.textContent = `Booking Failed: ${result.error || 'Unknown error'}`;
-        }
-    } catch (error) {
-        console.error('Error booking trip:', error);
+    if (!tripId || !seatsBooked || seatsBooked <= 0) {
+        alert('Please provide valid Trip ID and Number of Seats!');
+        return;
     }
-}
 
+    // Store trip details in the backend session
+    const response = await fetch('/api/session/trip/store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tripId, seatsBooked }),
+    });
+
+    if (response.ok) {
+        // Redirect to payment.html without exposing details
+        window.location.href = '../payment.html';
+    } else {
+        console.error('Failed to store session data');
+        alert('An error occurred while processing your request.');
+    }
+    console.log('Sending Data:', { tripId, seatsBooked }); //Debug
+}
 
