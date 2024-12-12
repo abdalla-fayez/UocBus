@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Complete Your Payment</h1>
+    <h1>Payment Page</h1>
 
-    <!-- Hidden fields for trip and seat details -->
-    <form id="paymentForm">
-        <input type="hidden" id="tripId" />
-        <input type="hidden" id="seatsBooked" />
-        <button type="button" id="payNow">Pay Now</button>
-    </form>
+    <div id="paymentDetails">
+        <input type="hidden" id="tripId" value="">
+        <input type="hidden" id="seatsBooked" value="">
+    </div>
+
+    <button id="payNowButton">Pay Now</button>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="paymentResultMessage"></p>
+        </div>
+    </div>
 
     <!-- Include JavaScript -->
     <script src="./js/payment.js"></script>
+    <script src="https://nbe.gateway.mastercard.com/checkout/version/61/checkout.js"
+            data-error="errorCallback"
+            data-cancel="cancelCallback"></script>
+
 </body>
 </html>

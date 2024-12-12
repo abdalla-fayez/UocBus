@@ -1,116 +1,148 @@
 const express = require('express');
+const axios = require('axios');
 const router = express.Router();
-const axios = require('axios'); // For API requests
-const db = require('../models/db'); // Import the database connection
-
-// NBE Payment Gateway Configuration (Production URLs and Credentials)
-const MERCHANT_ID = '';  // Replace with your production Merchant ID
-const PASSWORD = '';       // Replace with your production API Password
-const API_VERSION = '61';
-const API_BASE_URL = `https://nbe.gateway.mastercard.com/api/rest/version/${API_VERSION}/merchant/${MERCHANT_ID}`;
-
-// Route: Initiate Payment Session
-// router.post('/initiate', async (req, res) => {
-//     const { bookingId, amount } = req.body; // Extract booking ID and amount
-
-//     try {
-//         // Validate booking in the database
-//         const [booking] = await db.promise().query('SELECT * FROM bookings WHERE id = ?', [bookingId]);
-//         if (!booking || booking.length === 0) {
-//             return res.status(404).json({ message: 'Booking not found' });
-//         }
-
-//         // Prepare the payload for `createCheckoutSession`
-//         const payload = {
-//             order: {
-//                 id: bookingId.toString(), // Use booking ID as the order ID
-//                 amount: amount * 100,    // Amount in cents/piasters (e.g., 1 EGP = 100)
-//                 currency: 'EGP',
-//                 description: `Payment for Booking ID: ${bookingId}`,
-//             },
-//             interaction: {
-//                 operation: 'PURCHASE',  // Specify the type of operation
-//                 returnUrl: `https://172.16.50.207/api/payments/callback?orderId=${bookingId}`, // Success/failure callback URL
-//             },
-//         };
-
-//         // Make the API request to create a checkout session
-//         const response = await axios.post(`${API_BASE_URL}/session`, payload, {
-//             auth: {
-//                 username: MERCHANT_ID,
-//                 password: PASSWORD,
-//             },
-//             headers: { 'Content-Type': 'application/json' },
-//         });
-
-//         // Extract the session URL for Hosted Checkout
-//         const { session, _links } = response.data;
-//         if (session && _links && _links.redirect) {
-//             return res.json({ redirectUrl: _links.redirect.href });
-//         }
-
-//         res.status(500).json({ message: 'Failed to create checkout session' });
-//     } catch (error) {
-//         console.error('Error creating checkout session:', error.response?.data || error.message);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// });
-
-// Route: Handle Payment Callback
-router.get('/callback', async (req, res) => {
-    const { orderId, result, transactionId } = req.query;
-
-    try {
-        // Update payment status in the database
-        const status = result === 'SUCCESS' ? 'success' : 'failed';
-        await db.promise().query(
-            'UPDATE payments SET status = ?, transaction_id = ? WHERE booking_id = ?',
-            [status, transactionId, orderId]
-        );
-
-        // Redirect the user to the payment status page
-        res.redirect(`/payment-status.html?status=${status}`);
-    } catch (error) {
-        console.error('Error handling payment callback:', error.message);
-        res.status(500).send('Error processing payment status');
-    }
-});
+const db = require('../models/db'); // Replace with your DB model
+const dotenv = require('dotenv');
+dotenv.config();
 
 // Payment initiation endpoint
 router.post('/api/payments/initiate', async (req, res) => {
-    const { tripId, seatsBooked } = req.body;
+    const bookingDetails = req.session.bookingDetails;
 
-    // Validate input
-    if (!tripId || !seatsBooked || seatsBooked <= 0) {
-        return res.status(400).json({ message: 'Invalid trip or seat data' });
+    if (!bookingDetails) {
+        return res.status(404).json({ message: 'No booking details found in session' });
     }
 
+    const { tripId, seatsBooked, amountPayable } = bookingDetails;
 
-    // MOCK REDIRECT URL FOR TESTING AND DEBUGGING!!!!
-    const redirectUrl = `https://www.youtube.com`;
-    res.json({ redirectUrl });
-    // try {
-    //     // Verify trip exists and seats are reserved
-    //     const [trip] = await db.query('SELECT * FROM trips WHERE id = ?', [tripId]);
-    //     if (!trip) {
-    //         return res.status(404).json({ message: 'Trip not found' });
-    //     }
+    try {
+        // Temporarily reserve seats
+        await db.query(
+            `UPDATE trips SET available_seats = available_seats - ? WHERE id = ?`,
+            [seatsBooked, tripId]
+        );
 
-    //     // Calculate payment amount
-    //     const [route] = await db.query('SELECT price FROM routes WHERE id = ?', [trip.route_id]);
-    //     if (!route) {
-    //         return res.status(404).json({ message: 'Route not found' });
-    //     }
-    //     const totalAmount = route.price * seatsBooked;
+        const orderId = `${tripId}-${Date.now()}`;
 
-    //     // Mock payment gateway URL (replace with real API integration)
-    //     const redirectUrl = `https://mockpaymentgateway.com/checkout?amount=${totalAmount}&tripId=${tripId}&seats=${seatsBooked}`;
+        // Insert payment record
+        await db.query(
+            `INSERT INTO payments (order_id, trip_id, seats_booked, amount, status) VALUES (?, ?, ?, ?, 'PENDING')`,
+            [orderId, tripId, seatsBooked, amountPayable]
+        );
 
-    //     res.json({ redirectUrl });
-    // } catch (error) {
-    //     console.error('Error initiating payment:', error);
-    //     res.status(500).json({ message: 'Server error' });
-    // }
+        // Prepare and initiate payment session with NBE
+        const merchantId = process.env.MERCHANT_ID;
+        const apiPassword = process.env.API_PASSWORD;
+        const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
+
+        const nbeResponse = await axios.post(
+            `https://nbe.gateway.mastercard.com/api/rest/version/61/merchant/${merchantId}/session`,
+            {
+                apiOperation: 'CREATE_CHECKOUT_SESSION',
+                order: {
+                    amount: amountPayable.toFixed(2),
+                    currency: 'EGP',
+                    id: orderId
+                },
+                interaction: {
+                    operation: 'PURCHASE',
+                    returnUrl: 'https://172.16.50.207/api/payments/callback'
+                }
+            },
+            {
+                headers: {
+                    Authorization: `Basic ${auth}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+
+        const { id: sessionId } = nbeResponse.data.session;
+        const redirectUrl = `https://nbe.gateway.mastercard.com/checkout/version/61/checkout.js`;
+
+        console.log('Payment initiation response:', { sessionId, redirectUrl });
+
+
+        res.json({ sessionId, redirectUrl });
+    } catch (error) {
+        console.error('Error initiating payment:', error);
+
+        // Rollback seat reservation
+        await db.query(
+            `UPDATE trips SET available_seats = available_seats + ? WHERE id = ?`,
+            [seatsBooked, tripId]
+        );
+
+        res.status(500).json({ message: 'Error initiating payment' });
+    }
 });
+
+
+
+router.post('/api/payments/callback', async (req, res) => {
+    const { orderId, result } = req.body;
+
+    try {
+        const status = result === 'SUCCESS' ? 'SUCCESS' : 'FAILED';
+
+        const [payment] = await db.query(`SELECT * FROM payments WHERE order_id = ?`, [orderId]);
+
+        if (!payment) {
+            return res.status(404).json({ message: 'Payment not found' });
+        }
+
+        const { trip_id, seats_booked } = payment;
+
+        // Update payment status
+        await db.query(`UPDATE payments SET status = ? WHERE order_id = ?`, [status, orderId]);
+
+        if (status === 'SUCCESS') {
+            // Confirm booking
+            await db.query(
+                `INSERT INTO bookings (trip_id, user_id, seats_booked, status) VALUES (?, ?, ?, 'CONFIRMED')`,
+                [trip_id, req.session.userId, seats_booked]
+            );
+            res.json({ message: 'Payment confirmed, booking finalized' });
+        } else {
+            // Release reserved seats
+            await db.query(
+                `UPDATE trips SET available_seats = available_seats + ? WHERE id = ?`,
+                [seats_booked, trip_id]
+            );
+            res.json({ message: 'Payment failed, seats released' });
+        }
+    } catch (error) {
+        console.error('Error handling payment callback:', error);
+        res.status(500).json({ message: 'Error processing payment callback' });
+    }
+});
+
+
+
+router.get('/api/payments/result', async (req, res) => {
+    const { orderId } = req.query;
+
+    try {
+        const [payment] = await db.query(
+            `SELECT status FROM payments WHERE order_id = ?`,
+            [orderId]
+        );
+
+        if (!payment) {
+            return res.status(404).json({ message: 'Payment not found' });
+        }
+
+        res.json({ message: `Payment status: ${payment.status}` });
+    } catch (error) {
+        console.error('Error fetching payment result:', error);
+        res.status(500).json({ message: 'Error retrieving payment result' });
+    }
+});
+
+
+
+
+
+
 
 module.exports = router;

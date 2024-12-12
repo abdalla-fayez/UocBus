@@ -1,26 +1,41 @@
 // Cache DOM elements
 const tripIdField = document.getElementById('tripId');
 const seatsBookedField = document.getElementById('seatsBooked');
-const payNowButton = document.getElementById('payNow');
+const payNowButton = document.getElementById('payNowButton');
+const modal = document.getElementById('paymentModal');
+const modalMessage = document.getElementById('paymentResultMessage');
+const closeModal = document.getElementById('closeModal');
 
-// Fetch trip details from the backend session
-async function getTripDetails() {
+// Function to close the modal
+closeModal.onclick = () => {
+    modal.style.display = 'none';
+};
+
+// Close modal when clicking outside of it
+window.onclick = (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
+
+// Fetch booking details from the backend session
+async function getBookingDetails() {
     try {
-        const response = await fetch('/api/session/trip/retrieve');
+        const response = await fetch('/api/session/booking/retrieve');
         if (!response.ok) {
-            throw new Error('Failed to retrieve trip details');
+            throw new Error('Failed to retrieve booking details');
         }
 
-        const { tripId, seatsBooked } = await response.json();
+        const { tripId, seatsBooked, amountPayable } = await response.json();
 
         // Populate hidden fields with retrieved data
         tripIdField.value = tripId;
         seatsBookedField.value = seatsBooked;
 
-        return { tripId, seatsBooked };
+        return { tripId, seatsBooked, amountPayable };
     } catch (error) {
-        console.error('Error fetching trip details:', error);
-        alert('Failed to retrieve trip details. Please try again.');
+        console.error('Error fetching booking details:', error);
+        alert('Failed to retrieve booking details. Please try again.');
         throw error; // Stop further execution if fetching details fails
     }
 }
@@ -28,31 +43,34 @@ async function getTripDetails() {
 // Event listener for "Pay Now" button
 payNowButton.addEventListener('click', async () => {
     try {
-        // Retrieve trip details
-        const response = await fetch('/api/session/trip/retrieve');
-        const { tripId, seatsBooked } = await response.json();
-
         // Initiate payment
-        const paymentResponse = await fetch('/api/payments/initiate', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ tripId, seatsBooked }),
-        });
+        const response = await fetch('/api/payments/initiate', { method: 'POST' });
+        const { sessionId, redirectUrl, orderId } = await response.json();
 
-        const result = await paymentResponse.json();
+        // Redirect to the NBE payment gateway
+        window.location.href = `${redirectUrl}?sessionId=${sessionId}`;
 
-        if (result.redirectUrl) {
-            // Redirect to mock payment gateway
-            window.location.href = result.redirectUrl;
-        } else {
-            alert(`Payment initiation failed: ${result.message}`);
-        }
+        // Periodically check the payment result after redirection
+        setTimeout(async () => {
+            try {
+                const resultResponse = await fetch(`/api/payments/result?orderId=${orderId}`);
+                const result = await resultResponse.json();
+
+                // Display the payment result in the modal
+                modalMessage.textContent = result.message;
+                modal.style.display = 'block';
+            } catch (resultError) {
+                console.error('Error fetching payment result:', resultError);
+                modalMessage.textContent = 'Error retrieving payment result. Please contact support.';
+                modal.style.display = 'block';
+            }
+        }, 10000); // Check the result after 10 seconds
     } catch (error) {
         console.error('Error initiating payment:', error);
-        alert('An error occurred while initiating payment. Please try again.');
+        modalMessage.textContent = 'Error initiating payment. Please try again.';
+        modal.style.display = 'block';
     }
 });
 
-
-// Fetch trip details on page load to initialize the form
-getTripDetails();
+// Fetch booking details on page load to initialize the form
+getBookingDetails();
