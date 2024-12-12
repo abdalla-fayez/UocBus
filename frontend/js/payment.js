@@ -43,32 +43,26 @@ async function getBookingDetails() {
 // Event listener for "Pay Now" button
 payNowButton.addEventListener('click', async () => {
     try {
-        // Initiate payment
+        // Initiate payment and get session ID
         const response = await fetch('/api/payments/initiate', { method: 'POST' });
-        const { sessionId, redirectUrl, orderId } = await response.json();
+        const { sessionId } = await response.json();
 
-        // Redirect to the NBE payment gateway
-        window.location.href = `${redirectUrl}?sessionId=${sessionId}`;
+        if (!sessionId) {
+            throw new Error('Invalid payment initiation response');
+        }
+        console.log
+        // Configure hosted checkout
+        Checkout.configure({
+            session: { id: sessionId },
+           
+        
+        });
+        // Display embedded hosted checkout form
+        Checkout.showLightbox('#checkoutContainer');
 
-        // Periodically check the payment result after redirection
-        setTimeout(async () => {
-            try {
-                const resultResponse = await fetch(`/api/payments/result?orderId=${orderId}`);
-                const result = await resultResponse.json();
-
-                // Display the payment result in the modal
-                modalMessage.textContent = result.message;
-                modal.style.display = 'block';
-            } catch (resultError) {
-                console.error('Error fetching payment result:', resultError);
-                modalMessage.textContent = 'Error retrieving payment result. Please contact support.';
-                modal.style.display = 'block';
-            }
-        }, 10000); // Check the result after 10 seconds
     } catch (error) {
         console.error('Error initiating payment:', error);
-        modalMessage.textContent = 'Error initiating payment. Please try again.';
-        modal.style.display = 'block';
+        alert('An error occurred while initiating payment. Please try again.');
     }
 });
 
