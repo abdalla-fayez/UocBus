@@ -36,8 +36,8 @@ router.post('/api/payments/initiate', async (req, res) => {
         const apiPassword = process.env.API_PASSWORD;
         const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
         const absoluteCallbackUrl = `https://172.16.50.207/api/payments/callback?orderId=${orderId}`;
-        const cancelCallbackUrl = `https://172.16.50.207/api/payments/callback/cancel?orderId=${orderId}`;
-        const errorCallbackUrl = `https://172.16.50.207/api/payments/callback/error?orderId=${orderId}`;
+        // const cancelCallbackUrl = `https://172.16.50.207/api/payments/callback/cancel?orderId=${orderId}`;
+        // const errorCallbackUrl = `https://172.16.50.207/api/payments/callback/error?orderId=${orderId}`;
 
 
         // Create checkout session
@@ -64,7 +64,7 @@ router.post('/api/payments/initiate', async (req, res) => {
                         billingAddress: 'HIDE',
                     },
                     returnUrl: absoluteCallbackUrl,
-                    cancelUrl: cancelCallbackUrl,
+                    // cancelUrl: cancelCallbackUrl,
                     // errorUrl: errorCallbackUrl,
                 },
             },
@@ -116,7 +116,7 @@ router.get('/api/payments/callback', async (req, res) => {
             return res.status(404).json({ message: 'Payment record not found' });
         }
 
-        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
+        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord[0];
 
         // Finalize booking if successful
         await db.query(
@@ -144,35 +144,44 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
 
         console.log(`Processing cancellation for orderId: ${orderId}`);
 
-        // Fetch the payment record
         const [paymentRecord] = await db.query(
-            `SELECT trip_id, seats_booked FROM payments WHERE order_id = ?`,
+            'SELECT trip_id, seats_booked, status FROM payments WHERE order_id = ?',
             [orderId]
         );
-        console.log ('Payment record', paymentRecord )
+
         if (!paymentRecord) {
-            console.error('Payment record not found for orderId:', orderId);
             return res.status(404).json({ message: 'Payment record not found' });
         }
 
-        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
+        const { trip_id: tripId, seats_booked: seatsBooked, status } = paymentRecord[0];
 
-        // Update the payment status to CANCELLED
-        await db.query('UPDATE payments SET status = "CANCELLED" WHERE order_id = ?', [orderId]);
+        // Check if the cancellation has already been handled
+        if (status === 'CANCELLED') {
+            console.warn(`Cancellation already processed for orderId: ${orderId}`);
+            return res.status(200).json({ message: 'Cancellation already processed.' });
+        }
 
-        // Release reserved seats
+        // Release reserved seats and update payment status
+        console.log(`Releasing seats: ${seatsBooked} for Trip ID: ${tripId}`);
+
+        await db.query(
+            'UPDATE payments SET status = "CANCELLED" WHERE order_id = ?',
+            [orderId]
+        );
+
         await db.query(
             'UPDATE trips SET available_seats = available_seats + ? WHERE id = ?',
             [seatsBooked, tripId]
         );
 
         console.log(`Payment cancelled for orderId: ${orderId}. Seats released.`);
-        res.status(200).json({ message: 'Payment cancellation processed successfully.' });
+        res.status(200).json({ message: 'Payment cancelled successfully.' });
     } catch (error) {
         console.error('Error processing payment cancellation callback:', error);
         res.status(500).json({ message: 'Error processing cancellation callback.' });
     }
 });
+
 
 // Handle error callback
 router.get('/api/payments/callback/error', async (req, res) => {
@@ -188,17 +197,21 @@ router.get('/api/payments/callback/error', async (req, res) => {
 
         // Fetch the payment record
         const [paymentRecord] = await db.query(
-            `SELECT trip_id, seats_booked FROM payments WHERE order_id = ?`,
+            'SELECT trip_id, seats_booked, status FROM payments WHERE order_id = ?',
             [orderId]
         );
 
         if (!paymentRecord) {
-            console.error('Payment record not found for orderId:', orderId);
             return res.status(404).json({ message: 'Payment record not found' });
         }
 
-        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
+        const { trip_id: tripId, seats_booked: seatsBooked, status } = paymentRecord[0];
 
+        // Check if the failure has already been handled
+        if (status === 'FAILED') {
+            console.warn(`Failure already processed for orderId: ${orderId}`);
+            return res.status(200).json({ message: 'Failure already processed.' });
+        }
         // Update the payment status to FAILED
         await db.query('UPDATE payments SET status = "FAILED" WHERE order_id = ?', [orderId]);
 

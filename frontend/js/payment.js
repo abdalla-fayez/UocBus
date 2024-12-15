@@ -6,17 +6,6 @@ const modal = document.getElementById('paymentModal');
 const modalMessage = document.getElementById('paymentResultMessage');
 const closeModal = document.getElementById('closeModal');
 
-// Function to close the modal
-closeModal.onclick = () => {
-    modal.style.display = 'none';
-};
-
-// Close modal when clicking outside of it
-window.onclick = (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-};
 
 // Fetch booking details from the backend session
 async function getBookingDetails() {
