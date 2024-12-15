@@ -11,6 +11,8 @@ const app = express();
 
 dotenv.config(); // Load environment variables
 
+app.use(express.json());
+
 app.use(session({
     secret: 'uocbussessionsecretkeybecausewhynot', // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
@@ -18,9 +20,10 @@ app.use(session({
     cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes, HTTPS-only // Set true if using HTTPS
 }));
 
-app.use(express.json());
 
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
+app.use(express.text({ type: 'text/plain' })); // Handle text/plain payloads
+
 
 app.use((req, res, next) => {
     console.log('Middleware triggered: Parsing request body...');

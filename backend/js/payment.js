@@ -26,7 +26,8 @@ router.post('/api/payments/initiate', async (req, res) => {
 
         // Insert payment record into the database
         await db.query(
-            `INSERT INTO payments (order_id, trip_id, seats_booked, amount, status) VALUES (?, ?, ?, ?, 'PENDING')`,
+            `INSERT INTO payments (order_id, trip_id, seats_booked, amount, status) 
+             VALUES (?, ?, ?, ?, 'PENDING')`,
             [orderId, tripId, seatsBooked, amountPayable]
         );
 
@@ -34,7 +35,10 @@ router.post('/api/payments/initiate', async (req, res) => {
         const merchantId = process.env.MERCHANT_ID;
         const apiPassword = process.env.API_PASSWORD;
         const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
-        const absoluteCallbackUrl = 'https://172.16.50.207/api/payments/callback';
+        const absoluteCallbackUrl = `https://172.16.50.207/api/payments/callback?orderId=${orderId}`;
+        const cancelCallbackUrl = `https://172.16.50.207/api/payments/callback/cancel?orderId=${orderId}`;
+        const errorCallbackUrl = `https://172.16.50.207/api/payments/callback/error?orderId=${orderId}`;
+
 
         // Create checkout session
         const nbeResponse = await axios.post(
@@ -53,23 +57,28 @@ router.post('/api/payments/initiate', async (req, res) => {
                         name: 'University of Canada',
                         address: {
                             line1: 'New Capital',
-                            line2: 'New Capital'    
-                        }
+                            line2: 'New Capital',
+                        },
+                    },
+                    displayControl: {
+                        billingAddress: 'HIDE',
                     },
                     returnUrl: absoluteCallbackUrl,
+                    cancelUrl: cancelCallbackUrl,
+                    // errorUrl: errorCallbackUrl,
                 },
             },
             {
                 headers: {
                     Authorization: `Basic ${auth}`,
                     'Content-Type': 'application/json',
-                }
+                },
             }
         );
 
         const { id: sessionId } = nbeResponse.data.session;
 
-        console.log('Payment initiation response:', { sessionId });
+        console.log('Payment initiation response:', { sessionId, orderId });
 
         res.json({ sessionId, orderId });
     } catch (error) {
@@ -85,20 +94,21 @@ router.post('/api/payments/initiate', async (req, res) => {
     }
 });
 
-// Callback endpoint
 // Handle successful payment callbacks
-router.post('/api/payments/callback', async (req, res) => {
-    const { orderId, result } = req.body;
+router.get('/api/payments/callback', async (req, res) => {
+    const { orderId, resultIndicator } = req.query;
 
     try {
-        console.log('Payment callback received:', req.body);
+        console.log('Payment callback received:', req.query);
 
-        if (!orderId || !result) {
+        // Validate required parameters
+        if (!orderId || !resultIndicator) {
             return res.status(400).json({ message: 'Invalid callback data' });
         }
 
+        // Retrieve payment details from the database
         const [paymentRecord] = await db.query(
-            'SELECT trip_id, seats_booked FROM payments WHERE order_id = ?',
+            'SELECT trip_id, seats_booked, status FROM payments WHERE order_id = ?',
             [orderId]
         );
 
@@ -108,46 +118,102 @@ router.post('/api/payments/callback', async (req, res) => {
 
         const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
 
-        if (result === 'SUCCESS') {
-            // Finalize booking
-            await db.query(
-                'UPDATE payments SET status = "SUCCESS" WHERE order_id = ?',
-                [orderId]
-            );
+        // Finalize booking if successful
+        await db.query(
+            'UPDATE payments SET status = "SUCCESS", updated_at = NOW() WHERE order_id = ?',
+            [orderId]
+        );
 
-            console.log(`Payment successful for orderId: ${orderId}`);
-            return res.json({ message: 'Payment confirmed and booking finalized' });
-        } else {
-            // Release reserved seats for failure
-            await db.query(
-                'UPDATE trips SET available_seats = available_seats + ? WHERE id = ?',
-                [seatsBooked, tripId]
-            );
-
-            await db.query(
-                'UPDATE payments SET status = "FAILED" WHERE order_id = ?',
-                [orderId]
-            );
-
-            console.log(`Payment failed for orderId: ${orderId}. Seats released.`);
-            return res.json({ message: 'Payment failed, seats released' });
-        }
+        console.log(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
+        res.json({ message: 'Payment confirmed and booking finalized.' });
     } catch (error) {
-        console.error('Error handling payment callback:', error);
-        res.status(500).json({ message: 'Error processing payment callback' });
+        console.error('Error processing payment callback:', error);
+        res.status(500).json({ message: 'Error processing payment callback.' });
     }
 });
 
-// Handle error callback from the hosted checkout
-router.get('/api/payments/callback/error', (req, res) => {
-    console.error('Payment error callback triggered:', req.query);
-    res.status(400).json({ message: 'An error occurred during payment processing.' });
+// Handle cancellation callback
+router.get('/api/payments/callback/cancel', async (req, res) => {
+    const { orderId } = req.query;
+
+    try {
+        if (!orderId) {
+            console.error('Missing orderId in cancellation callback');
+            return res.status(400).json({ message: 'Invalid cancellation callback data' });
+        }
+
+        console.log(`Processing cancellation for orderId: ${orderId}`);
+
+        // Fetch the payment record
+        const [paymentRecord] = await db.query(
+            `SELECT trip_id, seats_booked FROM payments WHERE order_id = ?`,
+            [orderId]
+        );
+        console.log ('Payment record', paymentRecord )
+        if (!paymentRecord) {
+            console.error('Payment record not found for orderId:', orderId);
+            return res.status(404).json({ message: 'Payment record not found' });
+        }
+
+        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
+
+        // Update the payment status to CANCELLED
+        await db.query('UPDATE payments SET status = "CANCELLED" WHERE order_id = ?', [orderId]);
+
+        // Release reserved seats
+        await db.query(
+            'UPDATE trips SET available_seats = available_seats + ? WHERE id = ?',
+            [seatsBooked, tripId]
+        );
+
+        console.log(`Payment cancelled for orderId: ${orderId}. Seats released.`);
+        res.status(200).json({ message: 'Payment cancellation processed successfully.' });
+    } catch (error) {
+        console.error('Error processing payment cancellation callback:', error);
+        res.status(500).json({ message: 'Error processing cancellation callback.' });
+    }
 });
 
-// Handle cancellation callback from the hosted checkout
-router.get('/api/payments/callback/cancel', (req, res) => {
-    console.log('Payment cancellation callback triggered:', req.query);
-    res.json({ message: 'Payment was cancelled by the user.' });
+// Handle error callback
+router.get('/api/payments/callback/error', async (req, res) => {
+    const { orderId } = req.query;
+
+    try {
+        if (!orderId) {
+            console.error('Missing orderId in error callback');
+            return res.status(400).json({ message: 'Invalid error callback data' });
+        }
+
+        console.log(`Processing error for orderId: ${orderId}`);
+
+        // Fetch the payment record
+        const [paymentRecord] = await db.query(
+            `SELECT trip_id, seats_booked FROM payments WHERE order_id = ?`,
+            [orderId]
+        );
+
+        if (!paymentRecord) {
+            console.error('Payment record not found for orderId:', orderId);
+            return res.status(404).json({ message: 'Payment record not found' });
+        }
+
+        const { trip_id: tripId, seats_booked: seatsBooked } = paymentRecord;
+
+        // Update the payment status to FAILED
+        await db.query('UPDATE payments SET status = "FAILED" WHERE order_id = ?', [orderId]);
+
+        // Release reserved seats
+        await db.query(
+            'UPDATE trips SET available_seats = available_seats + ? WHERE id = ?',
+            [seatsBooked, tripId]
+        );
+
+        console.log(`Payment failed for orderId: ${orderId}. Seats released.`);
+        res.status(200).json({ message: 'Payment error processed successfully.' });
+    } catch (error) {
+        console.error('Error processing payment error callback:', error);
+        res.status(500).json({ message: 'Error processing error callback.' });
+    }
 });
 
 module.exports = router;

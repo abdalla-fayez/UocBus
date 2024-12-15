@@ -40,22 +40,25 @@ async function getBookingDetails() {
     }
 }
 
+
 // Event listener for "Pay Now" button
 payNowButton.addEventListener('click', async () => {
     try {
         // Initiate payment and get session ID
         const response = await fetch('/api/payments/initiate', { method: 'POST' });
-        const { sessionId } = await response.json();
+        const { sessionId, orderId: generatedOrderId } = await response.json();
 
-        if (!sessionId) {
-            throw new Error('Invalid payment initiation response');
+        if (!sessionId || !generatedOrderId) {
+            throw new Error('Failed to initiate payment. Missing sessionId or orderId.');
         }
-        console.log
+        
+        orderId = generatedOrderId;
+
         // Configure hosted checkout
         Checkout.configure({
             session: { id: sessionId },
-           
-        
+
+            
         });
         // Display embedded hosted checkout form
         Checkout.showLightbox('#checkoutContainer');
