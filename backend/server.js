@@ -16,7 +16,7 @@ app.use(session({
     secret: 'uocbussessionsecretkeybecausewhynot', // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
     saveUninitialized: true, // Save sessions even if they're empty
-    cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes, HTTPS-only // Set true if using HTTPS
+    cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes cookie // Set true if using HTTPS
 }));
 
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data

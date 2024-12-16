@@ -23,38 +23,6 @@ router.get('/trips/available', async (req, res) => {
 }
 });
 
-//Old booking implementation:
-// // Book a trip (reserve seats temporarily)
-// router.post('/trips/book', async (req, res) => {
-//     const { trip_id, seats_booked } = req.body;
-
-//     if (!trip_id || !seats_booked || seats_booked <= 0) {
-//         return res.status(400).json({ message: 'Invalid trip or seat data' });
-//     }
-
-//     try {
-//         const [trip] = await db.query(
-//             `SELECT available_seats FROM trips WHERE id = ?`,
-//             [trip_id]
-//         );
-
-//         if (!trip || trip.available_seats < seats_booked) {
-//             return res.status(400).json({ message: 'Not enough seats available' });
-//         }
-
-//         const updatedSeats = trip.available_seats - seats_booked;
-//         await db.query(
-//             `UPDATE trips SET available_seats = ? WHERE id = ?`,
-//             [updatedSeats, trip_id]
-//         );
-
-//         res.json({ success: true, trip_id, seats_booked });
-//     } catch (error) {
-//         console.error('Error in booking:', error);
-//         res.status(500).json({ message: 'Server error' });
-//     }
-// });
-
 // Get grouped departure and arrival locations
 router.get('/locations', async (req, res) => {
     try {
@@ -76,6 +44,29 @@ router.get('/locations', async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+
+// // Route to save booking details
+// router.post('/create', async (req, res) => {
+//     const { studentName, studentEmail, studentId, studentMobileNo, orderId } = req.body;
+
+//     try {
+//         // Validate input
+//         if (!studentName || !studentEmail || !studentId || !studentMobileNo || !orderId) {
+//             return res.status(400).json({ message: 'All fields are required.' });
+//         }
+
+//         // Insert booking details into the database
+//         await db.query(
+//             'INSERT INTO bookings (student_name, student_email, student_id, student_mobile_no, order_id) VALUES (?, ?, ?, ?, ?)',
+//             [studentName, studentEmail, studentId, studentMobileNo, orderId]
+//         );
+
+//         res.status(201).json({ message: 'Booking created successfully.' });
+//     } catch (error) {
+//         console.error('Error creating booking:', error);
+//         res.status(500).json({ message: 'Failed to create booking.' });
+//     }
+// });
 
 
 module.exports = router;
