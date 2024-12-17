@@ -3,26 +3,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db'); //Database connection
 
-
-// Get available trips
-router.get('/trips/available', async (req, res) => {
-    const { departure, arrival, date } = req.query;
-
-    try {
-        const query = `
-            SELECT trips.id, trips.trip_date, trips.available_seats, trips.route_name
-            FROM trips
-            JOIN routes ON trips.route_id = routes.id
-            WHERE routes.departure = ? AND routes.arrival = ? AND trips.trip_date = ?;
-        `;
-        const [results] = await db.query(query, [departure, arrival, date]);
-        res.json(results);
-    } catch (error) {
-        console.error('Error fetching trips:', error);
-        res.status(500).json({ message: 'Server error' });
-}
-});
-
 // Get grouped departure and arrival locations
 router.get('/locations', async (req, res) => {
     try {
@@ -45,28 +25,72 @@ router.get('/locations', async (req, res) => {
     }
 });
 
-// // Route to save booking details
-// router.post('/create', async (req, res) => {
-//     const { studentName, studentEmail, studentId, studentMobileNo, orderId } = req.body;
+// Endpoint to fetch available trips based on departure, arrival, and date
+router.get('/trips/available', async (req, res) => {
+    const { departure, arrival, date } = req.query;
 
-//     try {
-//         // Validate input
-//         if (!studentName || !studentEmail || !studentId || !studentMobileNo || !orderId) {
-//             return res.status(400).json({ message: 'All fields are required.' });
-//         }
+    // Validate query parameters to ensure required inputs are provided
+    if (!departure || !arrival || !date) {
+        return res.status(400).json({ message: 'All fields are required.' });
+    }
 
-//         // Insert booking details into the database
-//         await db.query(
-//             'INSERT INTO bookings (student_name, student_email, student_id, student_mobile_no, order_id) VALUES (?, ?, ?, ?, ?)',
-//             [studentName, studentEmail, studentId, studentMobileNo, orderId]
-//         );
+    try {
+        // SQL query to fetch trips with available seats greater than 0
+        const query = `
+            SELECT 
+                trips.id, 
+                trips.trip_date, 
+                trips.available_seats, 
+                routes.route_name, 
+                routes.price
+            FROM trips
+            JOIN routes ON trips.route_id = routes.id
+            WHERE routes.departure = ? 
+              AND routes.arrival = ? 
+              AND trips.trip_date = ? 
+              AND trips.available_seats > 0;
+        `;
 
-//         res.status(201).json({ message: 'Booking created successfully.' });
-//     } catch (error) {
-//         console.error('Error creating booking:', error);
-//         res.status(500).json({ message: 'Failed to create booking.' });
-//     }
-// });
+        // Execute the query with the provided parameters
+        const [results] = await db.query(query, [departure, arrival, date]);
+
+        // Send the filtered trip results back to the frontend
+        res.json(results);
+    } catch (error) {
+        console.error('Error fetching trips:', error);
+        res.status(500).json({ message: 'Server error' }); // Handle server errors gracefully
+    }
+});
+
+
+router.post('/api/bookings/create', async (req, res) => {
+    const { studentName, studentEmail, studentId, studentMobileNo } = req.body;
+
+    // Input validation
+    if (!studentName || !studentEmail || !studentId || !studentMobileNo) {
+        return res.status(400).json({ message: 'All fields are required.' });
+    }
+
+    try {
+        // Insert only student info and timestamp into the bookings table
+        const [result] = await db.query(
+            `INSERT INTO bookings (student_name, student_email, student_id, student_mobile_no, created_at)
+             VALUES (?, ?, ?, ?, NOW())`,
+            [studentName, studentEmail, studentId, studentMobileNo]
+        );
+
+        // Save the booking ID in the session for further processing (e.g., linking order_id later)
+        req.session.bookingId = result.insertId;
+
+        console.log('Booking entry created with ID:', result.insertId);
+
+        res.json({ message: 'Booking details stored successfully.', bookingId: result.insertId });
+    } catch (error) {
+        console.error('Error storing booking details:', error);
+        res.status(500).json({ message: 'An error occurred while storing booking details.' });
+    }
+});
+
 
 
 module.exports = router;

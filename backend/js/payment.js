@@ -8,21 +8,48 @@ dotenv.config();
 // Payment initiation endpoint
 router.post('/api/payments/initiate', async (req, res) => {
     const bookingDetails = req.session.bookingDetails;
+    const bookingId = req.session.bookingId; // Retrieve booking ID from session
 
     if (!bookingDetails) {
         return res.status(404).json({ message: 'No booking details found in session' });
     }
-
+    if (!bookingId) {
+        return res.status(404).json({ message: 'No booking details found in session' });
+    }
     const { tripId, seatsBooked, amountPayable } = bookingDetails;
 
     try {
+        // Validate seat availability
+        const [tripDetails] = await db.query(
+            `SELECT available_seats FROM trips WHERE id = ?`,
+            [tripId]
+        );
+        
+        if (!tripDetails || tripDetails.length === 0) {
+            return res.status(404).json({ message: 'Trip not found.' });
+        }
+
+        const availableSeats = tripDetails[0].available_seats;
+
+        if (availableSeats < seatsBooked) {
+            return res.status(400).json({ message: 'Not enough seats available.' });
+        }
+
+        const orderId = `${tripId}-${Date.now()}`;
+
+         // Update the bookings table with the generated order_id
+         await db.query(
+            `UPDATE bookings SET order_id = ? WHERE id = ?`,
+            [orderId, bookingId]
+        );
+        console.log(`Order ID ${orderId} linked to booking ID ${bookingId}`);
+        
+
         // Temporarily reserve seats in the database
         await db.query(
             `UPDATE trips SET available_seats = available_seats - ? WHERE id = ?`,
             [seatsBooked, tripId]
         );
-
-        const orderId = `${tripId}-${Date.now()}`;
 
         // Insert payment record into the database
         await db.query(
@@ -124,6 +151,10 @@ router.get('/api/payments/callback', async (req, res) => {
             [orderId]
         );
 
+        // Clean up session data
+        req.session.bookingId = null;
+        req.session.bookingDetails = null;
+
         console.log(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
         res.json({ message: 'Payment confirmed and booking finalized.' });
     } catch (error) {
@@ -174,6 +205,10 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
             [seatsBooked, tripId]
         );
 
+        // Clean up session data
+        req.session.bookingId = null;
+        req.session.bookingDetails = null;
+
         console.log(`Payment cancelled for orderId: ${orderId}. Seats released.`);
         res.status(200).json({ message: 'Payment cancelled successfully.' });
     } catch (error) {
@@ -221,6 +256,10 @@ router.get('/api/payments/callback/error', async (req, res) => {
             [seatsBooked, tripId]
         );
 
+        // Clean up session data
+        req.session.bookingId = null;
+        req.session.bookingDetails = null; 
+        
         console.log(`Payment failed for orderId: ${orderId}. Seats released.`);
         res.status(200).json({ message: 'Payment error processed successfully.' });
     } catch (error) {
