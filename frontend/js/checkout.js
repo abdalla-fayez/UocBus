@@ -1,47 +1,85 @@
-// Cache DOM elements
-const tripIdField = document.getElementById('tripId');
-const seatsBookedField = document.getElementById('seatsBooked');
-const payNowButton = document.getElementById('payNowButton');
-const modal = document.getElementById('paymentModal');
-const modalMessage = document.getElementById('paymentResultMessage');
-const closeModal = document.getElementById('closeModal');
+// Select DOM elements
+const fromLocation = document.getElementById('fromLocation');
+const toLocation = document.getElementById('toLocation');
+const tripDate = document.getElementById('tripDate'); // Added for Date
+const seatCount = document.getElementById('seatCount');
+const pricePerSeat = document.getElementById('pricePerSeat');
+const totalAmount = document.getElementById('totalAmount');
 
+const userName = document.getElementById('userName');
+const userEmail = document.getElementById('userEmail');
+const userId = document.getElementById('userId');
+const userMobile = document.getElementById('userMobile');
+const proceedButton = document.getElementById('proceedToPayment');
 
-// Fetch booking details from the backend session
-async function getBookingDetails() {
+// Event listener for page load
+document.addEventListener('DOMContentLoaded', populateBookingDetails);
+proceedButton.addEventListener('click', handleProceedToPayment);
+
+// Function to populate booking details
+async function populateBookingDetails() {
     try {
+        // Fetch stored booking data from the backend session
         const response = await fetch('/api/session/booking/retrieve');
-        if (!response.ok) {
-            throw new Error('Failed to retrieve booking details');
-        }
+        if (!response.ok) throw new Error('Failed to fetch booking details.');
 
-        const { tripId, seatsBooked, amountPayable } = await response.json();
-
-        // Populate hidden fields with retrieved data
-        tripIdField.value = tripId;
-        seatsBookedField.value = seatsBooked;
-
-        return { tripId, seatsBooked, amountPayable };
+        const bookingData = await response.json();
+        
+        // Populate the placeholders in the booking details card
+        fromLocation.textContent = bookingData.departure;
+        toLocation.textContent = bookingData.arrival;
+        tripDate.textContent = bookingData.tripDate;
+        seatCount.textContent = bookingData.seatsBooked;
+        pricePerSeat.textContent = bookingData.ticketPrice;
+        totalAmount.textContent = bookingData.amountPayable;
     } catch (error) {
-        console.error('Error fetching booking details:', error);
-        alert('Failed to retrieve booking details. Please try again.');
-        throw error; // Stop further execution if fetching details fails
+        console.error('Error populating booking details:', error);
+        alert('Failed to load booking details. Please try again.');
     }
 }
 
-
-// Event listener for "Pay Now" button
-payNowButton.addEventListener('click', async () => {
+// Function to handle "Proceed to Checkout"
+async function handleProceedToPayment() {
     try {
-        // Initiate payment and get session ID
-        const response = await fetch('/api/payments/initiate', { method: 'POST' });
-        const { sessionId, orderId: generatedOrderId } = await response.json();
+        // Validate user input
+        if (!userName.value || !userEmail.value || !userId.value || !userMobile.value) {
+            alert('Please fill in all fields before proceeding.');
+            return;
+        }
+
+        // Send user details to the backend to store in the bookings table
+        const userDetails = {
+            studentName: userName.value,
+            studentEmail: userEmail.value,
+            studentId: userId.value,
+            studentMobileNo: userMobile.value,
+        };
+
+        const storeResponse = await fetch('/api/bookings/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(userDetails),
+        });
+
+        if (!storeResponse.ok) throw new Error('Failed to store user details.');
+
+        console.log('User details stored successfully.');
+
+        // Call the payments initiate API
+        const paymentResponse = await fetch('/api/payments/initiate', {
+            method: 'POST',
+        });
+        
+        const { sessionId, orderId: generatedOrderId } = await paymentResponse.json();
 
         if (!sessionId || !generatedOrderId) {
             throw new Error('Failed to initiate payment. Missing sessionId or orderId.');
         }
-        
+        if (!paymentResponse.ok) throw new Error('Failed to initiate payment.');
+
         orderId = generatedOrderId;
+  
+        console.log('Payment initiation successful:', { sessionId, orderId });
 
         // Configure hosted checkout
         Checkout.configure({
@@ -51,12 +89,8 @@ payNowButton.addEventListener('click', async () => {
         });
         // Display embedded hosted checkout form
         Checkout.showLightbox('#checkoutContainer');
-
     } catch (error) {
-        console.error('Error initiating payment:', error);
-        alert('An error occurred while initiating payment. Please try again.');
+        console.error('Error during checkout process:', error);
+        alert('An error occurred. Please try again.');
     }
-});
-
-// Fetch booking details on page load to initialize the form
-getBookingDetails();
+};

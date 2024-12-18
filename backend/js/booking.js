@@ -63,7 +63,7 @@ router.get('/trips/available', async (req, res) => {
 });
 
 
-router.post('/api/bookings/create', async (req, res) => {
+router.post('/bookings/create', async (req, res) => {
     const { studentName, studentEmail, studentId, studentMobileNo } = req.body;
 
     // Input validation

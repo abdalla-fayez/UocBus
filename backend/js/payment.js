@@ -37,26 +37,27 @@ router.post('/api/payments/initiate', async (req, res) => {
 
         const orderId = `${tripId}-${Date.now()}`;
 
-         // Update the bookings table with the generated order_id
-         await db.query(
+        // Insert payment record into the database
+        await db.query(
+            `INSERT INTO payments (order_id, trip_id, seats_booked, amount, status) 
+            VALUES (?, ?, ?, ?, 'PENDING')`,
+            [orderId, tripId, seatsBooked, amountPayable]
+        );
+
+        // Update the bookings table with the generated order_id
+        await db.query(
             `UPDATE bookings SET order_id = ? WHERE id = ?`,
             [orderId, bookingId]
         );
         console.log(`Order ID ${orderId} linked to booking ID ${bookingId}`);
         
-
         // Temporarily reserve seats in the database
         await db.query(
             `UPDATE trips SET available_seats = available_seats - ? WHERE id = ?`,
             [seatsBooked, tripId]
         );
 
-        // Insert payment record into the database
-        await db.query(
-            `INSERT INTO payments (order_id, trip_id, seats_booked, amount, status) 
-             VALUES (?, ?, ?, ?, 'PENDING')`,
-            [orderId, tripId, seatsBooked, amountPayable]
-        );
+      
 
         // NBE API credentials
         const merchantId = process.env.MERCHANT_ID;

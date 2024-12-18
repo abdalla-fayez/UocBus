@@ -168,43 +168,38 @@
             <span id="errorMessage"></span>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+    
+        <!-- Trip Results Container --> 
+        <div id="tripsResults" class="row justify-content-center mt-4"></div>
 
-<!-- Trip Results Container -->
-<div id="tripsResults" class="row justify-content-center mt-4"></div>
+        <template id="tripTemplate">
+            <div class="col-lg-6 col-md-8 col-sm-10"> <!-- Match search form width -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <!-- Trip Details -->
+                        <div class="mb-3">
+                            <h5 class="card-title">Route: <span class="route-name"></span></h5>
+                            <p class="card-text p-6">
+                                Date: <span class="trip-date"></span> <br>
+                                Available Seats: <span class="available-seats"></span> <br>
+                                Price: <span class="trip-price"></span> EGP
+                            </p>
+                        </div>
 
-<template id="tripTemplate">
-    <div class="col-lg-6 col-md-8 col-sm-10"> <!-- Match search form width -->
-        <div class="card mb-3 shadow-sm">
-            <div class="card-body">
-                <!-- Trip Details -->
-                <div class="mb-3">
-                    <h5 class="card-title">Route: <span class="route-name"></span></h5>
-                    <p class="card-text p-6">
-                        Date: <span class="trip-date"></span> <br>
-                        Available Seats: <span class="available-seats"></span> <br>
-                        Price: <span class="trip-price"></span> EGP
-                    </p>
-                </div>
+                        <!-- Seats Selection -->
+                        <div class="mb-3">
+                            <label class="form-label">Seats to book:</label>
+                            <select class="form-select seat-dropdown" style="width: auto;"></select>
+                        </div>
 
-                <!-- Seats Selection -->
-                <div class="mb-3">
-                    <label class="form-label">Seats to book:</label>
-                    <select class="form-select seat-dropdown" style="width: auto;"></select>
-                </div>
-
-                <!-- Book Button -->
-                <div class="text-center">
-                    <button class="btn btn-success book-btn">Book</button>
+                        <!-- Book Button -->
+                        <div class="text-center">
+                            <button class="btn btn-success book-btn">Book</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</template>
-
-
-
-
-
+        </template>
     </div>
     <!-- Footer -->
     <footer class="footer">
@@ -218,7 +213,7 @@
                 <a href="https://www.twitter.com/uofcanada" target="_blank"><i class="bi bi-twitter"></i></a>
             </div>
         </div>
-
+    </footer>
 
 </body>
 
