@@ -94,3 +94,18 @@ async function handleProceedToPayment() {
         alert('An error occurred. Please try again.');
     }
 };
+
+// Call handlePaymentSuccess after successful payment confirmation
+async function handlePaymentSuccess(orderId) {
+    try {
+        // Show the ticket download section
+        const ticketSection = document.getElementById('ticketSection');
+        const downloadLink = document.getElementById('downloadTicketLink');
+
+        // Update the download link
+        downloadLink.href = `/api/tickets/${orderId}`;
+        ticketSection.classList.remove('d-none');
+    } catch (error) {
+        console.error('Error handling payment success:', error);
+    }
+}

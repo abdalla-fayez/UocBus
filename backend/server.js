@@ -6,6 +6,7 @@ const bookingRoutes = require('./js/booking');
 const path = require('path');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
 const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
+const ticketGenRoutes = require('./js/ticketgenerator');
 const app = express();
 
 dotenv.config(); // Load environment variables
@@ -33,6 +34,8 @@ app.use('/static', express.static(path.join(__dirname, '../frontend')));
 
 // Use the booking API routes
 app.use('/api', bookingRoutes);
+
+app.use('/api', ticketGenRoutes);
 
 // Use the payments API routes
 app.use(paymentRoutes);

@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db'); //Database connection
+dotenv.config();
 
 // Get grouped departure and arrival locations
 router.get('/locations', async (req, res) => {

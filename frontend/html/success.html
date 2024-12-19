@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Checkout - Universities of Canada in Egypt</title>
+    <title>Booking Success - Universities of Canada in Egypt</title>
     <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -85,6 +85,12 @@
             color: #ddd;
         }
 
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .custom-banner {
@@ -110,69 +116,23 @@
             <img src="../assets/UOC-Website-Header-Logo2.png" alt="UPEI Logo">
         </div>
         <div class="custom-text">
-            Bus Booking Checkout
+            Booking Successful!
         </div>
     </header>
 
     <!-- Main Content -->
     <div class="content container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8 col-sm-10">
-                <!-- Booking Details Card -->
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h5 class="mb-0">Booking Details</h5>
-                    </div>
-                    <div class="card-body">
-                        <p><strong>From:</strong> <span id="fromLocation"></span> | <strong>To:</strong> <span id="toLocation"></span></p>
-                        <p><strong>Date:</strong> <span id="tripDate"></span></p>
-                        <p><strong>Seats:</strong> <span id="seatCount"></span></p>
-                        <p><strong>Price per Seat:</strong> <span id="pricePerSeat"></span> EGP</p>
-                        <p><strong>Total Amount:</strong> <span id="totalAmount"></span> EGP</p>
-                    </div>
-                </div>
-
-                <!-- User Details Form -->
-                <div class="card shadow-sm">
-                    <div class="card-header">
-                        <h5 class="mb-0">Please Enter Your Details</h5>
-                    </div>
-                    <div class="card-body">
-                        <form id="userDetailsForm">
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="userName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="userName" placeholder="Your full name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="userEmail" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="userEmail" placeholder="Your email" required>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="userId" class="form-label">Student ID</label>
-                                    <input type="text" class="form-control" id="userId" placeholder="Your student ID" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="userMobile" class="form-label">Mobile No</label>
-                                    <input type="tel" class="form-control" id="userMobile" placeholder="Your mobile number" required>
-                                </div>
-                            </div>
-                            <!-- Submit Button -->
-                            <div class="text-center">
-                                <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">Proceed to Checkout</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div>
+                <p>Your ticket has been successfully generated. You can view it below or download it:</p>
+                <a id="downloadLink" class="btn btn-success btn-lg" href="#">Download Ticket</a>
+                <br><br>
+                <iframe id="ticketViewer"></iframe>
+                <br><br>
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
             </div>
-        </div>
-        <div id="checkoutContainer"></div>
-        <div id="ticketSection" class="mt-4 d-none">
-            <h3>Payment Successful!</h3>
-            <p>Your ticket is ready for download.</p>
-            <a id="downloadTicketLink" class="btn btn-primary" href="#" target="_blank">Download Your Ticket</a>
+
+       
         </div>
     </div>
 
@@ -192,25 +152,26 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Main Checkout JS -->
-    <script src="../js/checkout.js" defer></script>
-    <!-- Payment Gateway (NBE) JS -->
-    <script src="https://nbe.gateway.mastercard.com/checkout/version/61/checkout.js"
-    data-error="errorCallback"
-    data-cancel="cancelCallback"
-    defer>
-    </script>
-
-    <script type="text/javascript">
-    function errorCallback() {
-        console.error('Payment error occurred.');
-        window.location.href = `https://172.16.50.207/api/payments/callback/error?orderId=${orderId}`;
-    }
-
-    function cancelCallback() {
-        console.warn('Payment was cancelled.');
-        window.location.href = `https://172.16.50.207/api/payments/callback/cancel?orderId=${orderId}`;
-    }
+   
+    <script>
+        // Get orderId from query parameters
+        const params = new URLSearchParams(window.location.search);
+        const orderId = params.get('orderId');
+    
+        // Update the download link and iframe source
+        if (orderId) {
+            const ticketPath = `../assets/tickets/${orderId}.pdf`;
+    
+            // Update the download link
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = ticketPath;
+    
+            // Display the ticket in the iframe
+            const ticketViewer = document.getElementById('ticketViewer');
+            ticketViewer.src = ticketPath;
+        } else {
+            alert('No ticket information found.');
+        }
     </script>
     
 </body>

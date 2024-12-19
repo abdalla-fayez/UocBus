@@ -3,6 +3,8 @@ const axios = require('axios');
 const router = express.Router();
 const db = require('../models/db'); // Replace with your DB model
 const dotenv = require('dotenv');
+const path = require('path');
+const { generateTicket } = require('./ticketgenerator');
 dotenv.config();
 
 // Payment initiation endpoint
@@ -64,9 +66,6 @@ router.post('/api/payments/initiate', async (req, res) => {
         const apiPassword = process.env.API_PASSWORD;
         const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
         const absoluteCallbackUrl = `https://172.16.50.207/api/payments/callback?orderId=${orderId}`;
-        // const cancelCallbackUrl = `https://172.16.50.207/api/payments/callback/cancel?orderId=${orderId}`;
-        // const errorCallbackUrl = `https://172.16.50.207/api/payments/callback/error?orderId=${orderId}`;
-
 
         // Create checkout session
         const nbeResponse = await axios.post(
@@ -77,7 +76,7 @@ router.post('/api/payments/initiate', async (req, res) => {
                     amount: amountPayable.toFixed(2),
                     currency: 'EGP',
                     id: orderId,
-                    description: 'Bus Ticket Booking',
+                    description: 'Bus Ticket Booking Testing',
                 },
                 interaction: {
                     operation: 'PURCHASE',
@@ -92,8 +91,6 @@ router.post('/api/payments/initiate', async (req, res) => {
                         billingAddress: 'HIDE',
                     },
                     returnUrl: absoluteCallbackUrl,
-                    // cancelUrl: cancelCallbackUrl,
-                    // errorUrl: errorCallbackUrl,
                 },
             },
             {
@@ -152,12 +149,37 @@ router.get('/api/payments/callback', async (req, res) => {
             [orderId]
         );
 
+         // Fetch booking and payment details
+        const [bookingDetails] = await db.query(
+            `SELECT b.student_name, b.student_email, b.student_id, b.student_mobile_no,
+                    t.trip_date, r.departure AS \`from\`, r.arrival AS \`to\`, r.price AS price_per_seat,
+                    p.amount AS total_amount, p.seats_booked, p.order_id
+            FROM bookings b
+            JOIN payments p ON b.order_id = p.order_id
+            JOIN trips t ON p.trip_id = t.id
+            JOIN routes r ON t.route_id = r.id
+            WHERE b.order_id = ?`,
+            [orderId]
+        );
+            
+        if (!bookingDetails.length) {
+            return res.status(404).json({ message: 'Booking not found' });
+        }
+
+        const ticketDetails = bookingDetails[0];
+
+        // Generate ticket
+        const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
+        await generateTicket(ticketDetails, ticketPath);
+
+        console.log(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
+        console.log(`Ticket generated: ${ticketPath}`);
+
         // Clean up session data
         req.session.bookingId = null;
         req.session.bookingDetails = null;
 
-        console.log(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
-        res.json({ message: 'Payment confirmed and booking finalized.' });
+        res.json({ message: 'Payment confirmed and ticket generated.', ticketPath });
     } catch (error) {
         console.error('Error processing payment callback:', error);
         res.status(500).json({ message: 'Error processing payment callback.' });
