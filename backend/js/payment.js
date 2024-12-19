@@ -179,7 +179,7 @@ router.get('/api/payments/callback', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null;
 
-        res.json({ message: 'Payment confirmed and ticket generated.', ticketPath });
+        res.redirect(`/success.html?orderId=${orderId}`);
     } catch (error) {
         console.error('Error processing payment callback:', error);
         res.status(500).json({ message: 'Error processing payment callback.' });
