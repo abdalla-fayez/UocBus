@@ -112,29 +112,43 @@ async function handlePaymentSuccess(orderId) {
 function validateUserDetails() {
     let isValid = true;
 
+    // Clear previous error messages
+    document.querySelectorAll('.text-danger').forEach(errorElement => {
+        errorElement.textContent = '';
+        errorElement.classList.add('d-none');
+    });
+
     // Name Validation: At least 3 characters
     if (userName.value.trim().length < 3) {
-        alert('Name must be at least 3 characters long.');
+        const userNameError = document.getElementById('userNameError');
+        userNameError.textContent = 'Name must be at least 3 characters long.';
+        userNameError.classList.remove('d-none');
         isValid = false;
     }
 
     // Email Validation: Basic regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(userEmail.value.trim())) {
-        alert('Please enter a valid email address.');
+        const userEmailError = document.getElementById('userEmailError');
+        userEmailError.textContent = 'Please enter a valid email address.';
+        userEmailError.classList.remove('d-none');
         isValid = false;
     }
 
     // Student ID Validation: Must be exactly 9 digits
     const studentIdRegex = /^\d{9}$/;
     if (!studentIdRegex.test(userId.value.trim())) {
-        alert('Student ID must be exactly 9 digits.');
+        const userIdError = document.getElementById('userIdError');
+        userIdError.textContent = 'Student ID must be exactly 9 digits.';
+        userIdError.classList.remove('d-none');
         isValid = false;
     }
 
     // Mobile Number Validation: Ensure it’s not empty
     if (!userMobile.value.trim()) {
-        alert('Please enter your mobile number.');
+        const userMobileError = document.getElementById('userMobileError');
+        userMobileError.textContent = 'Please enter your mobile number.';
+        userMobileError.classList.remove('d-none');
         isValid = false;
     }
 

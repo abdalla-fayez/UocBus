@@ -143,22 +143,26 @@
                                 <div class="col-md-6">
                                     <label for="userName" class="form-label">Name</label>
                                     <input type="text" class="form-control" id="userName" placeholder="Your full name" required>
+                                    <small id="userNameError" class="text-danger d-none"></small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="userEmail" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="userEmail" placeholder="Your email" required>
+                                    <small id="userEmailError" class="text-danger d-none"></small>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="userId" class="form-label">Student ID</label>
-                                    <input type="text" class="form-control" id="userId" placeholder="Your Student ID" maxlength="9" pattern="^\d{9}$" required>
+                                    <input type="text" class="form-control" id="userId" placeholder="Your Student ID" required>
+                                    <small id="userIdError" class="text-danger d-none"></small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="userMobile" class="form-label">Mobile No</label>
                                     <input type="tel" class="form-control" id="userMobile" placeholder="Your mobile number" required>
+                                    <small id="userMobileError" class="text-danger d-none"></small>
                                 </div>
-                            </div>
+                            </div>                            
                             <!-- Submit Button -->
                             <div class="text-center">
                                 <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">Proceed to Checkout</button>
