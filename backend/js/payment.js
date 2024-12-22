@@ -232,11 +232,11 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null;
 
-        console.log(`Payment cancelled for orderId: ${orderId}. Seats released.`);
-        res.status(200).json({ message: 'Payment cancelled successfully.' });
+        console.log(`Payment cancelled for Order ID: ${orderId}`);
+        res.redirect('https://172.16.50.207/?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
-        console.error('Error processing payment cancellation callback:', error);
-        res.status(500).json({ message: 'Error processing cancellation callback.' });
+        console.error('Error handling cancellation:', error);
+        res.redirect('https://172.16.50.207/?payment=cancelled'); // Still redirect on error, but optionally log the issue
     }
 });
 
@@ -283,11 +283,11 @@ router.get('/api/payments/callback/error', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null; 
         
-        console.log(`Payment failed for orderId: ${orderId}. Seats released.`);
-        res.status(200).json({ message: 'Payment error processed successfully.' });
+        console.log(`Payment error for Order ID: ${orderId}`);
+        res.redirect('https://172.16.50.207/?payment=error'); // Redirect to the homepage
     } catch (error) {
-        console.error('Error processing payment error callback:', error);
-        res.status(500).json({ message: 'Error processing error callback.' });
+        console.error('Error handling payment error:', error);
+        res.redirect('https://172.16.50.207/?payment=error'); // Still redirect on error, but optionally log the issue
     }
 });
 

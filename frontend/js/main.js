@@ -128,3 +128,35 @@ async function searchTrips() {
         errorAlert.classList.remove('d-none'); // Show the alert
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded event triggered'); // Log to confirm event execution
+
+    const params = new URLSearchParams(window.location.search);
+    console.log('Query parameters:', params.toString()); // Log the query parameters
+
+    const alertMessage = document.getElementById('alertMessage');
+    console.log('Alert message element:', alertMessage); // Verify the element is selected
+
+    if (params.has('payment')) {
+        console.log('Payment status detected'); // Log to confirm query parameter detection
+
+        const paymentStatus = params.get('payment');
+        let message = '';
+
+        if (paymentStatus === 'cancelled') {
+            message = 'Payment was cancelled.';
+        } else if (paymentStatus === 'error') {
+            message = 'An error occurred during payment.';
+        }
+
+        console.log('Generated message:', message); // Log the message to confirm logic
+
+        if (message) {
+            alertMessage.textContent = message;
+            alertMessage.classList.remove('d-none');
+            alertMessage.classList.add('alert-warning'); // Add the Bootstrap warning style
+        }
+    }
+});
+
