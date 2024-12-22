@@ -9,7 +9,7 @@ const totalAmount = document.getElementById('totalAmount');
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userId = document.getElementById('userId');
-const userMobile = document.getElementById('userMobile');
+const userMobile = document.getElementById('userMobile'); // Keeping the field but removing validation
 const proceedButton = document.getElementById('proceedToPayment');
 
 // Event listener for page load
@@ -42,9 +42,8 @@ async function populateBookingDetails() {
 async function handleProceedToPayment() {
     try {
         // Validate user input
-        if (!userName.value || !userEmail.value || !userId.value || !userMobile.value) {
-            alert('Please fill in all fields before proceeding.');
-            return;
+        if (!validateUserDetails()) {
+            return; // Stop if the validation fails
         }
 
         // Send user details to the backend to store in the bookings table
@@ -52,7 +51,7 @@ async function handleProceedToPayment() {
             studentName: userName.value,
             studentEmail: userEmail.value,
             studentId: userId.value,
-            studentMobileNo: userMobile.value,
+            studentMobileNo: userMobile.value, // Will still send this even without length or correctness validation
         };
 
         const storeResponse = await fetch('/api/bookings/create', {
@@ -84,9 +83,8 @@ async function handleProceedToPayment() {
         // Configure hosted checkout
         Checkout.configure({
             session: { id: sessionId },
-
-            
         });
+
         // Display embedded hosted checkout form
         Checkout.showLightbox('#checkoutContainer');
     } catch (error) {
@@ -108,4 +106,37 @@ async function handlePaymentSuccess(orderId) {
     } catch (error) {
         console.error('Error handling payment success:', error);
     }
+}
+
+// Updated: Function to validate user input
+function validateUserDetails() {
+    let isValid = true;
+
+    // Name Validation: At least 3 characters
+    if (userName.value.trim().length < 3) {
+        alert('Name must be at least 3 characters long.');
+        isValid = false;
+    }
+
+    // Email Validation: Basic regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(userEmail.value.trim())) {
+        alert('Please enter a valid email address.');
+        isValid = false;
+    }
+
+    // Student ID Validation: Must be exactly 9 digits
+    const studentIdRegex = /^\d{9}$/;
+    if (!studentIdRegex.test(userId.value.trim())) {
+        alert('Student ID must be exactly 9 digits.');
+        isValid = false;
+    }
+
+    // Mobile Number Validation: Ensure it’s not empty
+    if (!userMobile.value.trim()) {
+        alert('Please enter your mobile number.');
+        isValid = false;
+    }
+
+    return isValid;
 }
