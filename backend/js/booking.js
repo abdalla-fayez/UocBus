@@ -92,6 +92,44 @@ router.post('/bookings/create', async (req, res) => {
     }
 });
 
+router.get('/bookings/details', async (req, res) => {
+    const { orderId } = req.query;
+
+    if (!orderId) {
+        return res.status(400).json({ message: 'Missing orderId' });
+    }
+
+    try {
+        const [details] = await db.query(`
+            SELECT 
+                b.student_name, 
+                b.student_id, 
+                b.student_email, 
+                b.student_mobile_no,
+                r.departure AS \`from\`,
+                r.arrival AS \`to\`,
+                t.trip_date, 
+                p.seats_booked, 
+                p.amount AS total_amount, 
+                p.order_id
+            FROM bookings b
+            JOIN payments p ON b.order_id = p.order_id
+            JOIN trips t ON p.trip_id = t.id
+            JOIN routes r ON t.route_id = r.id
+            WHERE p.order_id = ?
+        `, [orderId]);
+
+        if (!details.length) {
+            return res.status(404).json({ message: 'Booking details not found' });
+        }
+
+        res.json(details[0]);
+    } catch (error) {
+        console.error('Error fetching booking details:', error);
+        res.status(500).json({ message: 'Server error while fetching booking details' });
+    }
+});
+
 
 
 module.exports = router;
