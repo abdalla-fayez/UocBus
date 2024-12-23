@@ -36,7 +36,7 @@ router.get('/trips/available', async (req, res) => {
     }
 
     try {
-        // SQL query to fetch trips with available seats greater than 0
+        // SQL query to fetch trips with available seats greater than 0 and in a future time
         const query = `
             SELECT 
                 trips.id, 
@@ -46,7 +46,8 @@ router.get('/trips/available', async (req, res) => {
                 routes.price
             FROM trips
             JOIN routes ON trips.route_id = routes.id
-            WHERE routes.departure = ? 
+            WHERE trip_date >= CURDATE()
+              AND routes.departure = ? 
               AND routes.arrival = ? 
               AND trips.trip_date = ? 
               AND trips.available_seats > 0;
