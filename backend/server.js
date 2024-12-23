@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
-const db = require('./models/db'); // Import the MySQL connection
+const db = require('./models/dbconnection'); // Import the MySQL connection
 const bookingRoutes = require('./js/booking');
 const path = require('path');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
@@ -14,7 +14,7 @@ dotenv.config(); // Load environment variables
 app.use(express.json());
 
 app.use(session({
-    secret: 'uocbussessionsecretkeybecausewhynot', // Replace with a strong secret key
+    secret: process.env.SESSION_SECRET, // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
     saveUninitialized: true, // Save sessions even if they're empty
     // cookie: { maxAge: 15 * 60 * 1000, secure: true }, // 15 minutes cookie // Set true if using HTTPS

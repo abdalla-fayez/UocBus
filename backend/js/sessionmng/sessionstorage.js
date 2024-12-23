@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../../models/db'); // Database connection
+const db = require('../../models/dbconnection'); // Database connection
 
 router.post('/api/session/booking/store', async (req, res) => {
     console.log('Request received at /api/session/booking/store:', req.body);

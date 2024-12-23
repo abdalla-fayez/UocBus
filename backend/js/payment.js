@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
-const db = require('../models/db'); // Replace with your DB model
+const db = require('../models/dbconnection'); // Replace with your DB model
 const dotenv = require('dotenv');
 const path = require('path');
 const { generateTicket } = require('./ticketgenerator');
