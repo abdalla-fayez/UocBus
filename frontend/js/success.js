@@ -65,7 +65,7 @@ if (orderId) {
                 safeSetContent(studentMobile, data.student_mobile_no);
                 safeSetContent(fromLocation, data.from);
                 safeSetContent(toLocation, data.to);
-                safeSetContent(tripDate, new Date(data.trip_date).toLocaleString());
+                safeSetContent(tripDate, new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(data.trip_date)));
                 safeSetContent(seatsBooked, data.seats_booked);
                 safeSetContent(totalAmount, data.total_amount);
                 safeSetContent(ticketNumber, data.order_id);

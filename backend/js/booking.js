@@ -41,16 +41,21 @@ router.get('/trips/available', async (req, res) => {
             SELECT 
                 trips.id, 
                 trips.trip_date, 
+                trips.trip_time, 
                 trips.available_seats, 
                 routes.route_name, 
                 routes.price
             FROM trips
             JOIN routes ON trips.route_id = routes.id
-            WHERE trip_date >= CURDATE()
+            WHERE (
+              (trip_date = CURDATE() AND trip_time >= CURTIME())
+            OR (trip_date > CURDATE())                           
+            )  
               AND routes.departure = ? 
               AND routes.arrival = ? 
               AND trips.trip_date = ? 
-              AND trips.available_seats > 0;
+              AND trips.available_seats > 0
+              ORDER BY trip_date, trip_time;
         `;
 
         // Execute the query with the provided parameters

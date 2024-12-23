@@ -75,7 +75,7 @@ async function searchTrips() {
 
             // Populate trip details
             clone.querySelector('.route-name').textContent = trip.route_name;
-            clone.querySelector('.trip-date').textContent = trip.trip_date;
+            clone.querySelector('.trip-date').textContent = new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(trip.trip_date));
             clone.querySelector('.available-seats').textContent = trip.available_seats;
             clone.querySelector('.trip-price').textContent = trip.price;
 

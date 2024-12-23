@@ -45,7 +45,7 @@ router.post('/api/session/booking/store', async (req, res) => {
             amountPayable,
             departure: tripDetails.departure,
             arrival: tripDetails.arrival,
-            tripDate: tripDetails.trip_date,
+            tripDate: new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(tripDetails.trip_date)),
             routeName: tripDetails.route_name,
         };
 

@@ -26,7 +26,7 @@ async function generateTicket(details, filePath) {
 
             doc.text(`From: ${details.from}`);
             doc.text(`To: ${details.to}`);
-            doc.text(`Date: ${details.trip_date}`);
+            doc.text(`Date: ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(details.trip_date))}`);
             doc.text(`Seats Booked: ${details.seats_booked}`);
             doc.text(`Price per Seat: ${details.price_per_seat} EGP`);
             doc.text(`Total Amount: ${details.total_amount} EGP`);
