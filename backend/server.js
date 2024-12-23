@@ -9,6 +9,8 @@ const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
 const ticketGenRoutes = require('./js/ticketgenerator');
 const app = express();
 
+process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
+
 dotenv.config(); // Load environment variables
 
 app.use(express.json());
