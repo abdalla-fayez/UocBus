@@ -128,7 +128,7 @@
     <div class="content container">
 
         <h2 class="text-center mb-4">Search for a Trip</h2>
-        <div id="alertMessage" class="alert d-none text-center " role="alert"></div>
+        <div id="alertMessage" class="alert d-none text-center" role="alert"></div>
         <!-- Search Form  -->
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10">
@@ -162,15 +162,14 @@
                         </div>
                     </form>
                 </div>
+                        <!-- Alert Placeholder for Errors -->
+                <div id="errorAlert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                    <span id="errorMessage"></span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
             </div>
         </div>
 
-                <!-- Alert Placeholder for Errors -->
-        <div id="errorAlert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
-            <span id="errorMessage"></span>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    
         <!-- Trip Results Container --> 
         <div id="tripsResults" class="row justify-content-center mt-4"></div>
 
