@@ -76,7 +76,7 @@ router.post('/api/payments/initiate', async (req, res) => {
                     amount: amountPayable.toFixed(2),
                     currency: 'EGP',
                     id: orderId,
-                    description: 'Bus Ticket Booking Testing',
+                    description: 'Bus ticket booking.',
                 },
                 interaction: {
                     operation: 'PURCHASE',
