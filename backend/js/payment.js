@@ -65,7 +65,7 @@ router.post('/api/payments/initiate', async (req, res) => {
         const merchantId = process.env.MERCHANT_ID;
         const apiPassword = process.env.API_PASSWORD;
         const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
-        const absoluteCallbackUrl = `https://172.16.50.207/api/payments/callback?orderId=${orderId}`;
+        const absoluteCallbackUrl = `https://busticketing.uofcanada.edu.eg/api/payments/callback?orderId=${orderId}`;
 
         // Create checkout session
         const nbeResponse = await axios.post(
@@ -178,7 +178,7 @@ router.get('/api/payments/callback', async (req, res) => {
         // Clean up session data
         req.session.bookingId = null;
         req.session.bookingDetails = null;
-
+        // Potential error below:
         res.redirect(`/success.html?orderId=${orderId}`);
     } catch (error) {
         console.error('Error processing payment callback:', error);
@@ -233,10 +233,10 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         req.session.bookingDetails = null;
 
         console.log(`Payment cancelled for Order ID: ${orderId}`);
-        res.redirect('https://172.16.50.207/?payment=cancelled'); // Redirect to the homepage
+        res.redirect('https://busticketing.uofcanada.edu.eg//?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling cancellation:', error);
-        res.redirect('https://172.16.50.207/?payment=cancelled'); // Still redirect on error, but optionally log the issue
+        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Still redirect on error, but optionally log the issue
     }
 });
 
@@ -284,10 +284,10 @@ router.get('/api/payments/callback/error', async (req, res) => {
         req.session.bookingDetails = null; 
         
         console.log(`Payment error for Order ID: ${orderId}`);
-        res.redirect('https://172.16.50.207/?payment=error'); // Redirect to the homepage
+        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling payment error:', error);
-        res.redirect('https://172.16.50.207/?payment=error'); // Still redirect on error, but optionally log the issue
+        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Still redirect on error, but optionally log the issue
     }
 });
 
