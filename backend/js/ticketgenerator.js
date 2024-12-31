@@ -3,37 +3,81 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
-
+// ../../frontend/assets/UOC-Website-Header-Logo1.png
 
 async function generateTicket(details, filePath) {
     return new Promise((resolve, reject) => {
         try {
-            const doc = new PDFDocument();
+            const doc = new PDFDocument({ size: 'A4', margin: 50 });
+            const maroon = '#8b2004';
 
             // Pipe the PDF into a file
             const stream = fs.createWriteStream(filePath);
             doc.pipe(stream);
 
-            // Add ticket content
-            doc.fontSize(20).text('Bus Ticket', { align: 'center' });
-            doc.moveDown();
+            // Add University Logo
+            doc.image('../../frontend/assets/UOC-Website-Header-Logo1.png', 50, 20, { width: 100 });
 
-            doc.fontSize(14).text(`Name: ${details.student_name}`);
-            doc.text(`Student ID: ${details.student_id}`);
-            doc.text(`Email: ${details.student_email}`);
-            doc.text(`Mobile: ${details.student_mobile_no}`);
-            doc.moveDown();
+            // Title
+            doc.fillColor(maroon).fontSize(22).text('Bus Ticket', { align: 'center' });
+            doc.moveDown(2);
 
-            doc.text(`From: ${details.from}`);
-            doc.text(`To: ${details.to}`);
-            doc.text(`Date: ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(details.trip_date))}`);
-            doc.text(`Seats Booked: ${details.seats_booked}`);
-            doc.text(`Price per Seat: ${details.price_per_seat} EGP`);
-            doc.text(`Total Amount: ${details.total_amount} EGP`);
-            doc.text(`Ticket Number: ${details.order_id}`);
-            doc.moveDown();
+            // Passenger Details Section
+            doc.rect(50, 100, 500, 150).stroke(maroon);
+            doc.fillColor(maroon).fontSize(14).text('Passenger Details', 50, 110, { align: 'center' });
+            doc.moveTo(60, 125).lineTo(540, 125).stroke(); // Underline
 
-            doc.text('Thank you for booking with us!', { align: 'center' });
+            // Content within Passenger Details Section
+            const passengerDetails = [
+                ['Name:', details.student_name],
+                ['Student ID:', details.student_id],
+                ['Email:', details.student_email],
+                ['Mobile:', details.student_mobile_no],
+            ];
+
+            doc.moveDown(0.5).fillColor('black').fontSize(12);
+            passengerDetails.forEach(([label, value], index) => {
+                doc.text(label, 60, 140 + index * 25, { continued: true }).text(` ${value}`);
+            });
+
+            // Trip Details Section
+            const tripDetailsHeight = 220; // Height of the section
+            const paddingBelowLine = 20; // Padding below the red line
+            const tripSectionYStart = 270;
+
+            doc.rect(50, tripSectionYStart, 500, tripDetailsHeight + paddingBelowLine).stroke(maroon); // Extend height dynamically
+            doc.fillColor(maroon).fontSize(14).text('Trip Details', 50, tripSectionYStart + 10, { align: 'center' });
+            doc.moveTo(60, tripSectionYStart + 25).lineTo(540, tripSectionYStart + 25).stroke(); // Underline
+
+            // Content within Trip Details Section
+            const tripDetails = [
+                ['From:', details.from],
+                ['To:', details.to],
+                ['Date:', new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(details.trip_date))],
+                ['Seats Booked:', details.seats_booked],
+                ['Price per Seat:', `${details.price_per_seat} EGP`],
+                ['Total Amount:', `${details.total_amount} EGP`],
+                ['Ticket Number:', details.order_id],
+                ['Driver Mobile:', details.driver_mobile || 'N/A'],
+            ];
+
+            doc.moveDown(0.5).fillColor('black').fontSize(12);
+            let yPosition = tripSectionYStart + 40;
+            tripDetails.forEach(([label, value]) => {
+                doc.text(label, 60, yPosition, { continued: true }).text(` ${value}`);
+                yPosition += 25; // Increment position to prevent overlap
+            });
+
+            // Footer
+            doc.moveDown(4);
+            doc.fillColor(maroon).fontSize(10).text(
+                'Thank you for booking with us!',
+                { align: 'center', baseline: 'bottom' }
+            );
+            doc.fontSize(10).fillColor('black').text(
+                'For support, contact us at XXXXXX@XXXX.XXX or 01XXXXXXXX',
+                { align: 'center' }
+            );
 
             // Finalize the PDF
             doc.end();
@@ -48,6 +92,8 @@ async function generateTicket(details, filePath) {
         }
     });
 }
+
+
 
 router.get('/tickets/:orderId', (req, res) => {
     const { orderId } = req.params;
