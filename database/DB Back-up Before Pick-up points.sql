@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2025 at 02:57 PM
+-- Generation Time: Dec 31, 2024 at 12:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,7 +59,6 @@ CREATE TABLE IF NOT EXISTS `buses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `capacity` int(11) NOT NULL,
-  `driver_mobile` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -92,28 +91,6 @@ CREATE TABLE IF NOT EXISTS `payments` (
 -- RELATIONSHIPS FOR TABLE `payments`:
 --   `trip_id`
 --       `trips` -> `id`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pickup_points`
---
-
-DROP TABLE IF EXISTS `pickup_points`;
-CREATE TABLE IF NOT EXISTS `pickup_points` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `route_id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `time` time NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `route_id` (`route_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- RELATIONSHIPS FOR TABLE `pickup_points`:
---   `route_id`
---       `routes` -> `id`
 --
 
 -- --------------------------------------------------------
@@ -182,12 +159,6 @@ ALTER TABLE `bookings`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`trip_id`) REFERENCES `trips` (`id`);
-
---
--- Constraints for table `pickup_points`
---
-ALTER TABLE `pickup_points`
-  ADD CONSTRAINT `pickup_points_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `routes` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `trips`

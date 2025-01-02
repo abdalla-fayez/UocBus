@@ -29,10 +29,23 @@ app.use((req, res, next) => {
     next();
 });
 
+// Cache-Control for APIs
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+    res.setHeader('Pragma', 'no-cache');
+    next();
+});
+
 app.use(sessionStorageRoutes);
 
-// Serve static files for testing (like index.html)
-app.use('/static', express.static(path.join(__dirname, '../frontend')));
+// Code below not needed since apache is the webserver responsible for serving the frontend files.
+// // Serve static files for testing (like index.html) with cache-control
+// app.use('/static', express.static(path.join(__dirname, '../frontend'), {
+//     setHeaders: (res, path) => {
+//         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+//         res.setHeader('Pragma', 'no-cache');
+//     }
+// }));
 
 // Use the booking API routes
 app.use('/api', bookingRoutes);

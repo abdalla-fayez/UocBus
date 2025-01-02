@@ -179,7 +179,7 @@ router.get('/api/payments/callback', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null;
         // Potential error below:
-        res.redirect(`/success.html?orderId=${orderId}`);
+        res.redirect(`https://busticketing.uofcanada.edu.eg/success.html?orderId=${orderId}`);
     } catch (error) {
         console.error('Error processing payment callback:', error);
         res.status(500).json({ message: 'Error processing payment callback.' });
@@ -233,7 +233,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         req.session.bookingDetails = null;
 
         console.log(`Payment cancelled for Order ID: ${orderId}`);
-        res.redirect('https://busticketing.uofcanada.edu.eg//?payment=cancelled'); // Redirect to the homepage
+        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling cancellation:', error);
         res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Still redirect on error, but optionally log the issue

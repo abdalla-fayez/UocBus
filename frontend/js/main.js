@@ -1,3 +1,4 @@
+// JavaScript to dynamically populate trips and pickup points
 const departureSelect = document.getElementById('fromLocation');
 const arrivalSelect = document.getElementById('toLocation');
 const dateInput = document.getElementById('tripDate');
@@ -88,6 +89,42 @@ async function searchTrips() {
                 seatDropdown.appendChild(option);
             }
 
+            // Debug log for pickup points
+            console.log('Processing pickup points for trip:', trip);
+
+            // Populate pickup points
+            const pickupPointsList = clone.querySelector('.pickup-points-list');
+            if (!pickupPointsList) {
+                console.warn('Pickup points list element not found in the template.');
+            } else {
+                trip.pickup_points.forEach((point, index) => {
+                    console.log(`Rendering pickup point ${index + 1}:`, point);
+
+                    // Create a list item
+                    const listItem = document.createElement('li');
+
+                    // Create the icon element
+                    const icon = document.createElement('i');
+                    icon.classList.add('bi', 'bi-geo-alt-fill');
+                    icon.style.color = 'red';
+                    icon.style.marginRight = '5px';
+
+                    // Create the text node for the pickup point
+                    const pointText = document.createTextNode(`${point.name} (${point.time})`);
+
+                    // Append icon and text to the list item
+                    listItem.appendChild(icon);
+                    listItem.appendChild(pointText);
+
+                    // Append the list item to the pickup points list
+                    pickupPointsList.appendChild(listItem);
+
+                    console.log('List item added to DOM:', listItem);
+                });
+
+                console.log('Final pickup points list for trip:', pickupPointsList.innerHTML);
+            }
+
             // Handle "Book" button click
             clone.querySelector('.book-btn').addEventListener('click', async () => {
                 const seatsBooked = seatDropdown.value;
@@ -159,4 +196,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
