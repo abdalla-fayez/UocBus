@@ -65,7 +65,7 @@ router.post('/api/payments/initiate', async (req, res) => {
         const merchantId = process.env.MERCHANT_ID;
         const apiPassword = process.env.API_PASSWORD;
         const auth = Buffer.from(`merchant.${merchantId}:${apiPassword}`).toString('base64');
-        const absoluteCallbackUrl = `https://busticketing.uofcanada.edu.eg/api/payments/callback?orderId=${orderId}`;
+        const absoluteCallbackUrl = `https://172.16.50.207/api/payments/callback?orderId=${orderId}`;
 
         // Create checkout session
         const nbeResponse = await axios.post(
@@ -149,15 +149,16 @@ router.get('/api/payments/callback', async (req, res) => {
             [orderId]
         );
 
-         // Fetch booking and payment details
+        // Fetch booking and payment details
         const [bookingDetails] = await db.query(
             `SELECT b.student_name, b.student_email, b.student_id, b.student_mobile_no,
-                    t.trip_date, r.departure AS \`from\`, r.arrival AS \`to\`, r.price AS price_per_seat,
-                    p.amount AS total_amount, p.seats_booked, p.order_id
+                    t.trip_date, r.route_name, r.trip_type, r.price AS price_per_seat,
+                    p.amount AS total_amount, p.seats_booked, p.order_id, bu.driver_mobile
             FROM bookings b
             JOIN payments p ON b.order_id = p.order_id
             JOIN trips t ON p.trip_id = t.id
             JOIN routes r ON t.route_id = r.id
+            JOIN buses bu ON r.bus_id = bu.id
             WHERE b.order_id = ?`,
             [orderId]
         );
@@ -179,7 +180,7 @@ router.get('/api/payments/callback', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null;
         // Potential error below:
-        res.redirect(`https://busticketing.uofcanada.edu.eg/success.html?orderId=${orderId}`);
+        res.redirect(`https://172.16.50.207/success.html?orderId=${orderId}`);
     } catch (error) {
         console.error('Error processing payment callback:', error);
         res.status(500).json({ message: 'Error processing payment callback.' });
@@ -233,10 +234,10 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         req.session.bookingDetails = null;
 
         console.log(`Payment cancelled for Order ID: ${orderId}`);
-        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Redirect to the homepage
+        res.redirect('https://172.16.50.207/?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling cancellation:', error);
-        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Still redirect on error, but optionally log the issue
+        res.redirect('https://172.16.50.207/?payment=cancelled'); // Still redirect on error, but optionally log the issue
     }
 });
 
@@ -284,10 +285,10 @@ router.get('/api/payments/callback/error', async (req, res) => {
         req.session.bookingDetails = null; 
         
         console.log(`Payment error for Order ID: ${orderId}`);
-        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Redirect to the homepage
+        res.redirect('https://172.16.50.207/?payment=error'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling payment error:', error);
-        res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Still redirect on error, but optionally log the issue
+        res.redirect('https://172.16.50.207/?payment=error'); // Still redirect on error, but optionally log the issue
     }
 });
 

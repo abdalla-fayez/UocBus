@@ -14,7 +14,7 @@ router.post('/api/session/booking/store', async (req, res) => {
     try {
          // Fetch trip details, including price, departure, arrival, and date
         const [rows] = await db.query(
-        `SELECT routes.price AS ticketPrice, routes.departure, routes.arrival, trips.trip_date, routes.route_name
+        `SELECT routes.price AS ticketPrice, routes.departure, routes.arrival, trips.trip_date, routes.route_name, routes.trip_type
          FROM trips 
          JOIN routes ON trips.route_id = routes.id 
          WHERE trips.id = ?`,
@@ -43,10 +43,11 @@ router.post('/api/session/booking/store', async (req, res) => {
             seatsBooked,
             ticketPrice,
             amountPayable,
+            tripDate: new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(tripDetails.trip_date)),
             departure: tripDetails.departure,
             arrival: tripDetails.arrival,
-            tripDate: new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(tripDetails.trip_date)),
             routeName: tripDetails.route_name,
+            tripType: tripDetails.trip_type
         };
 
         console.log('Booking details stored in session:', req.session.bookingDetails);

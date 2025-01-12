@@ -1,6 +1,6 @@
 // JavaScript to dynamically populate trips and pickup points
-const departureSelect = document.getElementById('fromLocation');
-const arrivalSelect = document.getElementById('toLocation');
+const routeSelect = document.getElementById('routeName');
+const tripTypeSelect = document.getElementById('tripType');
 const dateInput = document.getElementById('tripDate');
 const searchButton = document.getElementById('searchTrips');
 const errorAlert = document.getElementById('errorAlert'); // Alert container
@@ -15,24 +15,25 @@ searchButton.addEventListener('click', searchTrips);
 // Function to populate dropdowns dynamically
 async function populateDropdowns() {
     try {
-        const response = await fetch('/api/locations');
-        if (!response.ok) throw new Error('Unable to fetch data. Please try again later.');
-        const { departure, arrival } = await response.json();
+        const response = await fetch('/api/routes/available');
+        if (!response.ok) throw new Error('Unable to fetch data.');
 
-        // Populate departure dropdown
-        departure.forEach(location => {
+        const { routes, tripTypes } = await response.json();
+
+        // Populate route name dropdown
+        routes.forEach(route => {
             const option = document.createElement('option');
-            option.value = location;
-            option.textContent = location;
-            departureSelect.appendChild(option);
+            option.value = route;
+            option.textContent = route;
+            routeSelect.appendChild(option);
         });
 
-        // Populate arrival dropdown
-        arrival.forEach(location => {
+        // Populate trip type dropdown
+        tripTypes.forEach(type => {
             const option = document.createElement('option');
-            option.value = location;
-            option.textContent = location;
-            arrivalSelect.appendChild(option);
+            option.value = type;
+            option.textContent = type;
+            tripTypeSelect.appendChild(option);
         });
     } catch (error) {
         console.error('Error populating dropdowns:', error);
@@ -46,18 +47,18 @@ async function searchTrips() {
         errorAlert.classList.add('d-none');
 
         // Retrieve values from input fields
-        const departure = departureSelect.value;
-        const arrival = arrivalSelect.value;
+        const route = routeSelect.value;
+        const tripType = tripTypeSelect.value;
         const date = dateInput.value;
 
         // Validate inputs to ensure all fields are filled
-        if (!departure || !arrival || !date) {
+        if (!route || !tripType || !date) {
             showError('Please fill in all fields before searching.');
             return;
         }
 
         // Send a request to the backend API to fetch available trips
-        const response = await fetch(`/api/trips/available?departure=${departure}&arrival=${arrival}&date=${date}`);
+        const response = await fetch(`/api/trips/available?route=${route}&tripType=${tripType}&date=${date}`);
         if (!response.ok) throw new Error('Unable to fetch data. Please try again later.');
 
         const trips = await response.json(); // Parse the JSON response
@@ -76,10 +77,11 @@ async function searchTrips() {
 
             // Populate trip details
             clone.querySelector('.route-name').textContent = trip.route_name;
+            clone.querySelector('.trip-time').textContent = trip.trip_type;
             clone.querySelector('.trip-date').textContent = new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(trip.trip_date));
             clone.querySelector('.available-seats').textContent = trip.available_seats;
             clone.querySelector('.trip-price').textContent = trip.price;
-
+            
             // Populate seat dropdown
             const seatDropdown = clone.querySelector('.seat-dropdown');
             for (let i = 1; i <= trip.available_seats; i++) {
@@ -165,6 +167,7 @@ async function searchTrips() {
         errorAlert.classList.remove('d-none'); // Show the alert
     }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded event triggered'); // Log to confirm event execution

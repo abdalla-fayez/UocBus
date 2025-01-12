@@ -46,7 +46,7 @@ setInterval(async () => {
   } catch (err) {
       console.error('Error during keep-alive query:', err);
   }
-}, 60000); // Run every 60 seconds
+}, 600000); // Run every 10 minutes
 
 
 module.exports = {

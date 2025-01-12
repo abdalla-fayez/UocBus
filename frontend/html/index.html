@@ -1,291 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bus Booking - Universities of Canada in Egypt</title>
-    <!-- Include Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
 
-    <style>
-      /* Force light mode */
-      :root {
-        color-scheme: light;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Booking - Universities of Canada in Egypt</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
+  <style>
+    /* Force light mode */
+    :root {
+      color-scheme: light;
+    }
 
-      /* Main content should grow to fill space */
-      .content {
-        flex: 1;
-        padding: 10px; /* Prevent footer from crashing into content */
-      }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
 
-      /* Banner Styling */
-      .custom-banner {
-        background: linear-gradient(
-          to bottom,
+    /* Main content should grow to fill space */
+    .content {
+      flex: 1;
+      padding: 10px;
+      /* Prevent footer from crashing into content */
+    }
+
+    /* Banner Styling */
+    .custom-banner {
+      background: linear-gradient(to bottom,
           #ffffff,
-          #f9f9f9
-        ); /* Subtle gradient */
-        border-top: 20px solid #a30000; /* Red stripe */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
-        padding: 15px 20px;
-        text-align: center;
-        position: relative;
-      }
+          #f9f9f9);
+      /* Subtle gradient */
+      border-top: 20px solid #a30000;
+      /* Red stripe */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Adds depth */
+      padding: 15px 20px;
+      text-align: center;
+      position: relative;
+    }
 
-      .custom-banner .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px; /* Space below logos */
-      }
+    .custom-banner .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      /* Space below logos */
+    }
 
-      .custom-banner img {
-        max-height: 60px;
-        width: auto;
-        margin: 0 10px; /* Space between logos */
+    .custom-banner img {
+      max-height: 60px;
+      width: auto;
+      margin: 0 10px;
+      /* Space between logos */
+    }
+
+    .custom-banner .custom-text {
+      font-size: 1.6rem;
+      color: #000;
+    }
+
+    .custom-banner::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #a30000;
+      /* Same red as stripe */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Results Section Styling */
+    .results-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #a30000;
+      color: #ffffff;
+      padding: 10px 0;
+      text-align: center;
+      flex-shrink: 0;
+      /* Ensures footer stays at the bottom */
+    }
+
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #ddd;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .custom-banner {
+        padding: 15px 10px;
       }
 
       .custom-banner .custom-text {
-        font-size: 1.6rem;
-        color: #000;
+        font-size: 1.2rem;
       }
 
-      .custom-banner::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: #a30000; /* Same red as stripe */
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      .card {
+        padding: 20px;
       }
+    }
 
-      /* Results Section Styling */
-      .results-container {
-        margin-top: 20px;
-        display: none;
-      }
+    .btn-danger {
+      background-color: #a30000;
+      border: none;
+    }
 
-      /* Footer Styling */
-      .footer {
-        background-color: #a30000;
-        color: #ffffff;
-        padding: 10px 0;
-        text-align: center;
-        flex-shrink: 0; /* Ensures footer stays at the bottom */
-      }
+    .pickup-points {
+      margin-top: 10px;
+    }
 
-      .footer a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 10px;
-      }
+    .pickup-points h6 {
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
 
-      .footer a:hover {
-        color: #ddd;
-      }
+    .pickup-points-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-        .custom-banner {
-          padding: 15px 10px;
-        }
+    .pickup-points-list li {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
 
-        .custom-banner .custom-text {
-          font-size: 1.2rem;
-        }
+<body>
+  <!-- Banner -->
+  <header class="custom-banner mb-4">
+    <div class="logo-container">
+      <img src="../assets/UOC-Website-Header-Logo1.png" alt="UCE Logo" />
+      <img src="../assets/UOC-Website-Header-Logo2.png" alt="UPEI Logo" />
+    </div>
+    <div class="custom-text">Bus Booking</div>
+  </header>
 
-        .card {
-          padding: 20px;
-        }
-      }
+  <!-- Main Content -->
+  <div class="content container">
+    <h2 class="text-center mb-4">Search for a Trip</h2>
+    <div id="alertMessage" class="alert d-none text-center" role="alert"></div>
+    <!-- Search Form  -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="card shadow p-4">
+          <form>
+            <!-- From -->
+            <div class="mb-3">
+              <label for="routeName" class="form-label">Route</label>
+              <select class="form-select" id="routeName">
+                <option selected disabled>Select Route</option>
+              </select>
+            </div>
 
-      .btn-danger {
-        background-color: #a30000;
-        border: none;
-      }
+            <!-- To -->
+            <div class="mb-3">
+              <label for="tripType" class="form-label">Trip Time</label>
+              <select class="form-select" id="tripType">
+                <option selected disabled>Select Trip Time</option>
+              </select>
+            </div>
 
-      .pickup-points {
-        margin-top: 10px;
-      }
+            <!-- Date -->
+            <div class="mb-3">
+              <label for="tripDate" class="form-label">Date</label>
+              <input type="date" class="form-control" id="tripDate" />
+            </div>
 
-      .pickup-points h6 {
-        font-size: 1em;
-        margin-bottom: 5px;
-      }
-
-      .pickup-points-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .pickup-points-list li {
-        font-size: 0.9em;
-        margin-bottom: 5px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Banner -->
-    <header class="custom-banner mb-4">
-      <div class="logo-container">
-        <img src="../assets/UOC-Website-Header-Logo1.png" alt="UCE Logo" />
-        <img src="../assets/UOC-Website-Header-Logo2.png" alt="UPEI Logo" />
-      </div>
-      <div class="custom-text">Bus Booking</div>
-    </header>
-
-    <!-- Main Content -->
-    <div class="content container">
-      <h2 class="text-center mb-4">Search for a Trip</h2>
-      <div
-        id="alertMessage"
-        class="alert d-none text-center"
-        role="alert"
-      ></div>
-      <!-- Search Form  -->
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8 col-sm-10">
-          <div class="card shadow p-4">
-            <form>
-              <!-- From -->
-              <div class="mb-3">
-                <label for="fromLocation" class="form-label">From</label>
-                <select class="form-select" id="fromLocation">
-                  <option selected disabled>Select Location</option>
-                </select>
-              </div>
-
-              <!-- To -->
-              <div class="mb-3">
-                <label for="toLocation" class="form-label">To</label>
-                <select class="form-select" id="toLocation">
-                  <option selected disabled>Select Location</option>
-                </select>
-              </div>
-
-              <!-- Date -->
-              <div class="mb-3">
-                <label for="tripDate" class="form-label">Date</label>
-                <input type="date" class="form-control" id="tripDate" />
-              </div>
-
-              <!-- Search Button -->
-              <div class="text-center">
-                <button type="button" id="searchTrips" class="btn btn-danger">
-                  Search
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- Alert Placeholder for Errors -->
-          <div
-            id="errorAlert"
-            class="alert alert-danger alert-dismissible fade show d-none"
-            role="alert"
-          >
-            <span id="errorMessage"></span>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-            ></button>
-          </div>
+            <!-- Search Button -->
+            <div class="text-center">
+              <button type="button" id="searchTrips" class="btn btn-danger">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Alert Placeholder for Errors -->
+        <div id="errorAlert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+          <span id="errorMessage"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       </div>
+    </div>
 
-      <!-- Trip Results Container -->
-      <div id="tripsResults" class="row justify-content-center mt-4"></div>
+    <!-- Trip Results Container -->
+    <div id="tripsResults" class="row justify-content-center mt-4"></div>
 
-      <template id="tripTemplate">
-        <div class="col-lg-6 col-md-8 col-sm-10">
-          <!-- Match search form width -->
-          <div class="card mb-3 shadow-sm">
-            <div class="card-body">
-              <!-- Trip Details -->
-              <div class="mb-3">
-                <h5 class="card-title">
-                  Route: <span class="route-name"></span>
-                </h5>
-                <p class="card-text p-6">
-                  Date: <span class="trip-date"></span> <br />
-                  Available Seats: <span class="available-seats"></span> <br />
-                  Price: <span class="trip-price"></span> EGP
-                </p>
-              </div>
-              <!-- Pickup Points Section -->
-              <div class="mb-3 pickup-points">
-                <h5>Pickup Points:</h5>
-                <ul class="pickup-points-list">
-                  <!-- Pickup points will be dynamically inserted here -->
-                </ul>
-              </div>
-              <!-- Seats Selection -->
-              <div class="mb-3">
-                <label class="form-label">Seats to book:</label>
-                <select
-                  class="form-select seat-dropdown"
-                  style="width: auto"
-                ></select>
-              </div>
-              <!-- Book Button -->
-              <div class="text-center">
-                <button class="btn btn-success book-btn">Book</button>
-              </div>
+    <template id="tripTemplate">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <!-- Match search form width -->
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <!-- Trip Details -->
+            <div class="mb-3">
+              <h5 class="card-title">
+                Route: <span class="route-name"></span>
+              </h5>
+              <p class="card-text p-6">
+                Trip Time: <span class="trip-time"></span> <br />
+                Date: <span class="trip-date"></span> <br />
+                Available Seats: <span class="available-seats"></span> <br />
+                Ticket Price: <span class="trip-price"></span> EGP
+              </p>
+            </div>
+
+            <hr />
+
+            <!-- Pickup Points Section -->
+            <div class="mb-3 pickup-points">
+              <h5>Pickup Points:</h5>
+              <ul class="pickup-points-list">
+                <!-- Pickup points will be dynamically inserted here -->
+              </ul>
+            </div>
+
+            <hr />
+
+            <!-- Seats Selection -->
+            <div class="mb-3">
+              <h5>Seats to book:</h5>
+              <select class="form-select seat-dropdown" style="width: auto;"></select>
+            </div>
+            <!-- Book Button -->
+            <div class="text-center">
+              <button class="btn btn-success book-btn">Book</button>
             </div>
           </div>
         </div>
-      </template>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <span>&copy; 2024 Universities of Canada in Egypt</span>
-        <div>
-          <a href="https://www.facebook.com/UofCanada/" target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/uofcanada/" target="_blank"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="https://www.youtube.com/uofcanada" target="_blank"
-            ><i class="bi bi-youtube"></i
-          ></a>
-          <a href="https://eg.linkedin.com/school/uofcanada/" target="_blank"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a href="https://www.twitter.com/uofcanada" target="_blank"
-            ><i class="bi bi-twitter"></i
-          ></a>
-        </div>
       </div>
-    </footer>
-  </body>
+    </template>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <span>&copy; 2025 Universities of Canada in Egypt</span>
+      <div>
+        <a href="https://www.facebook.com/UofCanada/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/uofcanada/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/uofcanada" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="https://eg.linkedin.com/school/uofcanada/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.twitter.com/uofcanada" target="_blank"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
 
-  <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    defer
-  ></script>
-  <!-- Main JS -->
-  <script src="../js/main.js" defer></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<!-- Main JS -->
+<script src="../js/main.js" defer></script>
+
 </html>

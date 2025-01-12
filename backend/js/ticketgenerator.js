@@ -53,8 +53,8 @@ async function generateTicket(details, filePath) {
 
             // Content within Trip Details Section
             const tripDetails = [
-                ['From:', details.from],
-                ['To:', details.to],
+                ['Route:', details.route_name],
+                ['Trip Time:', details.trip_type],
                 ['Date:', new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(details.trip_date))],
                 ['Seats Booked:', details.seats_booked],
                 ['Price per Seat:', `${details.price_per_seat} EGP`],

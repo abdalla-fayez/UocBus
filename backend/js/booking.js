@@ -4,35 +4,37 @@ const router = express.Router();
 const db = require('../models/dbconnection'); //Database connection
 dotenv.config();
 
-// Get grouped departure and arrival locations
-router.get('/locations', async (req, res) => {
+// Get available routes and triptypes
+router.get('/routes/available', async (req, res) => {
     try {
-        // Fetch departure and arrival locations separately
-        const [departures] = await db.query(`SELECT DISTINCT departure FROM routes`);
-        const [arrivals] = await db.query(`SELECT DISTINCT arrival FROM routes`);
+        // Fetch unique route names and trip types
+        const [routes] = await db.query(`
+            SELECT DISTINCT route_name FROM routes
+        `);
+        const [tripTypes] = await db.query(`
+            SELECT DISTINCT trip_type FROM routes
+        `);
 
-        // Map results to arrays
-        const departureLocations = departures.map(row => row.departure);
-        const arrivalLocations = arrivals.map(row => row.arrival);
+        const routeNames = routes.map(row => row.route_name);
+        const tripTypesList = tripTypes.map(row => row.trip_type);
 
-        // Return grouped data
         res.json({
-            departure: departureLocations,
-            arrival: arrivalLocations,
+            routes: routeNames,
+            tripTypes: tripTypesList
         });
     } catch (error) {
-        console.error('Error fetching locations:', error);
+        console.error('Error fetching route names and trip types:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });
 
 // Fetch available trips with pickup points
 router.get('/trips/available', async (req, res) => {
-    const { departure, arrival, date } = req.query;
+    const { route, tripType, date } = req.query;
 
-    console.log('Received query parameters:', { departure, arrival, date });
+    console.log('Received query parameters:', { route, tripType, date });
 
-    if (!departure || !arrival || !date) {
+    if (!route || !tripType || !date) {
         console.warn('Missing required query parameters.');
         return res.status(400).json({ message: 'All fields are required.' });
     }
@@ -57,16 +59,20 @@ router.get('/trips/available', async (req, res) => {
                 (trip_date = CURDATE() AND trip_time >= CURTIME())
                 OR (trip_date > CURDATE())
             )
-            AND routes.departure = ?
-            AND routes.arrival = ?
+            AND routes.route_name = ?
+            AND routes.trip_type = ?
             AND trips.trip_date = ?
             AND trips.available_seats > 0
             ORDER BY trip_date, trip_time, pickup_time;
         `;
 
-        console.log('Executing SQL query for fetching trip details');
+        console.log('Executing SQL query for fetching trip details with filters:', {
+            route,
+            tripType,
+            date
+        });
 
-        const [results] = await db.query(query, [departure, arrival, date]);
+        const [results] = await db.query(query, [route, tripType, date]);
 
         console.log('Query results:', results);
 
@@ -76,7 +82,7 @@ router.get('/trips/available', async (req, res) => {
             if (!trips[row.id]) {
                 console.log(`Creating new trip entry for id: ${row.id}`);
                 trips[row.id] = {
-                    id: row.id, // Use 'id' to match frontend expectations
+                    id: row.id,
                     trip_date: row.trip_date,
                     trip_time: row.trip_time,
                     available_seats: row.available_seats,
@@ -94,7 +100,7 @@ router.get('/trips/available', async (req, res) => {
                 });
 
                 // Include pickup points only for morning routes or single point for afternoon
-                if (row.trip_type === 'morning' || (row.trip_type === 'afternoon' && row.pickup_name === 'University')) {
+                if (row.trip_type === 'Morning' || row.trip_type === 'Afternoon') {
                     trips[row.id].pickup_points.push({
                         name: row.pickup_name,
                         time: row.pickup_time
@@ -110,6 +116,7 @@ router.get('/trips/available', async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+
 
 
 router.post('/bookings/create', async (req, res) => {
@@ -154,8 +161,8 @@ router.get('/bookings/details', async (req, res) => {
                 b.student_id, 
                 b.student_email, 
                 b.student_mobile_no,
-                r.departure AS \`from\`,
-                r.arrival AS \`to\`,
+                r.route_name,
+                r.trip_type,
                 t.trip_date, 
                 p.seats_booked, 
                 p.amount AS total_amount, 

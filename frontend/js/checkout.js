@@ -1,6 +1,6 @@
 // Select DOM elements
-const fromLocation = document.getElementById('fromLocation');
-const toLocation = document.getElementById('toLocation');
+const routeName = document.getElementById('routeName');
+const tripType = document.getElementById('tripType');
 const tripDate = document.getElementById('tripDate'); // Added for Date
 const seatCount = document.getElementById('seatCount');
 const pricePerSeat = document.getElementById('pricePerSeat');
@@ -26,8 +26,8 @@ async function populateBookingDetails() {
         const bookingData = await response.json();
         
         // Populate the placeholders in the booking details card
-        fromLocation.textContent = bookingData.departure;
-        toLocation.textContent = bookingData.arrival;
+        routeName.textContent = bookingData.routeName;
+        tripType.textContent = bookingData.tripType;
         tripDate.textContent = bookingData.tripDate;
         seatCount.textContent = bookingData.seatsBooked;
         pricePerSeat.textContent = bookingData.ticketPrice;
