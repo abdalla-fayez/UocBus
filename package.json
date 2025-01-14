@@ -22,6 +22,7 @@
     "nodemailer": "^6.9.16",
     "passport-azure-ad": "^4.3.5",
     "pdfkit": "^0.15.2",
-    "rest": "^2.0.0"
+    "rest": "^2.0.0",
+    "winston": "^3.17.0"
   }
 }

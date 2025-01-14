@@ -1,13 +1,17 @@
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
+const path = require('path');
+global.__basedir = path.resolve(__dirname, '../'); // This sets the base directory as the root of your project
 const db = require('./models/dbconnection'); // Import the MySQL connection
 const bookingRoutes = require('./js/booking');
-const path = require('path');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
 const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
 const ticketGenRoutes = require('./js/ticketgenerator');
 const app = express();
+const winston = require('winston');
+const logger = require(`${__basedir}/backend/logger`);
+
 
 process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
@@ -25,7 +29,7 @@ app.use(session({
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
 
 app.use((req, res, next) => {
-    console.log(`Middleware triggered for ${req.method} ${req.url}`);
+    logger.info(`Middleware triggered for ${req.method} ${req.url}`);
     next();
 });
 
@@ -36,26 +40,29 @@ app.use((req, res, next) => {
     next();
 });
 
+// Use the session manager routes
 app.use(sessionStorageRoutes);
-
-// Code below not needed since apache is the webserver responsible for serving the frontend files.
-// // Serve static files for testing (like index.html) with cache-control
-// app.use('/static', express.static(path.join(__dirname, '../frontend'), {
-//     setHeaders: (res, path) => {
-//         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-//         res.setHeader('Pragma', 'no-cache');
-//     }
-// }));
 
 // Use the booking API routes
 app.use('/api', bookingRoutes);
 
+// Use the ticcket generation routes
 app.use('/api', ticketGenRoutes);
 
 // Use the payments API routes
 app.use(paymentRoutes);
 
+// Capture uncaught exceptions and unhandled promise rejections
+process.on('uncaughtException', (err) => {
+    logger.error(`Uncaught Exception: ${err.stack || err.message}`);
+    process.exit(1); // Exit the process (optional)
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    logger.error(`Unhandled Rejection at: ${promise}, reason: ${reason.stack || reason}`);
+});
+
 // Start the server
 app.listen(process.env.PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${process.env.PORT}`);
+    logger.info(`Server running on port ${process.env.PORT}`);
 });

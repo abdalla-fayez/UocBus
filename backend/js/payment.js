@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const { generateTicket } = require('./ticketgenerator');
 dotenv.config();
+const logger = require(`${__basedir}/backend/logger`);
+
 
 // Payment initiation endpoint
 router.post('/api/payments/initiate', async (req, res) => {
@@ -51,7 +53,7 @@ router.post('/api/payments/initiate', async (req, res) => {
             `UPDATE bookings SET order_id = ? WHERE id = ?`,
             [orderId, bookingId]
         );
-        console.log(`Order ID ${orderId} linked to booking ID ${bookingId}`);
+        logger.info(`Order ID ${orderId} linked to booking ID ${bookingId}`);
         
         // Temporarily reserve seats in the database
         await db.query(
@@ -103,7 +105,7 @@ router.post('/api/payments/initiate', async (req, res) => {
 
         const { id: sessionId } = nbeResponse.data.session;
 
-        console.log('Payment initiation response:', { sessionId, orderId });
+        logger.info('Payment initiation response:', { sessionId, orderId });
 
         res.json({ sessionId, orderId });
     } catch (error) {
@@ -124,7 +126,7 @@ router.get('/api/payments/callback', async (req, res) => {
     const { orderId, resultIndicator } = req.query;
 
     try {
-        console.log('Payment callback received:', req.query);
+        logger.info('Payment callback received:', req.query);
 
         // Validate required parameters
         if (!orderId || !resultIndicator) {
@@ -173,8 +175,8 @@ router.get('/api/payments/callback', async (req, res) => {
         const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
         await generateTicket(ticketDetails, ticketPath);
 
-        console.log(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
-        console.log(`Ticket generated: ${ticketPath}`);
+        logger.info(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
+        logger.info(`Ticket generated: ${ticketPath}`);
 
         // Clean up session data
         req.session.bookingId = null;
@@ -197,7 +199,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
             return res.status(400).json({ message: 'Invalid cancellation callback data' });
         }
 
-        console.log(`Processing cancellation for orderId: ${orderId}`);
+        logger.info(`Processing cancellation for orderId: ${orderId}`);
 
         const [paymentRecord] = await db.query(
             'SELECT trip_id, seats_booked, status FROM payments WHERE order_id = ?',
@@ -217,7 +219,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         }
 
         // Release reserved seats and update payment status
-        console.log(`Releasing seats: ${seatsBooked} for Trip ID: ${tripId}`);
+        logger.info(`Releasing seats: ${seatsBooked} for Trip ID: ${tripId}`);
 
         await db.query(
             'UPDATE payments SET status = "CANCELLED" WHERE order_id = ?',
@@ -233,7 +235,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null;
 
-        console.log(`Payment cancelled for Order ID: ${orderId}`);
+        logger.info(`Payment cancelled for Order ID: ${orderId}`);
         res.redirect('https://172.16.50.207/?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling cancellation:', error);
@@ -252,7 +254,7 @@ router.get('/api/payments/callback/error', async (req, res) => {
             return res.status(400).json({ message: 'Invalid error callback data' });
         }
 
-        console.log(`Processing error for orderId: ${orderId}`);
+        logger.info(`Processing error for orderId: ${orderId}`);
 
         // Fetch the payment record
         const [paymentRecord] = await db.query(
@@ -284,7 +286,7 @@ router.get('/api/payments/callback/error', async (req, res) => {
         req.session.bookingId = null;
         req.session.bookingDetails = null; 
         
-        console.log(`Payment error for Order ID: ${orderId}`);
+        logger.info(`Payment error for Order ID: ${orderId}`);
         res.redirect('https://172.16.50.207/?payment=error'); // Redirect to the homepage
     } catch (error) {
         console.error('Error handling payment error:', error);

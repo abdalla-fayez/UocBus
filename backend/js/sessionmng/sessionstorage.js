@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../../models/dbconnection'); // Database connection
+const logger = require(`${__basedir}/backend/logger`);
 
 router.post('/api/session/booking/store', async (req, res) => {
-    console.log('Request received at /api/session/booking/store:', req.body);
+    logger.info('Request received at /api/session/booking/store:', req.body);
 
     const { tripId, seatsBooked } = req.body;
 
@@ -50,7 +51,7 @@ router.post('/api/session/booking/store', async (req, res) => {
             tripType: tripDetails.trip_type
         };
 
-        console.log('Booking details stored in session:', req.session.bookingDetails);
+        logger.info('Booking details stored in session:', req.session.bookingDetails);
 
         res.json({ message: 'Booking details stored successfully' });
     } catch (error) {
@@ -64,7 +65,7 @@ router.get('/api/session/booking/retrieve', (req, res) => {
         return res.status(404).json({ message: 'No booking details found in session' });
     }
 
-    console.log('Retrieved booking details:', req.session.bookingDetails);
+    logger.info('Retrieved booking details:', req.session.bookingDetails);
 
     res.json(req.session.bookingDetails);
 });

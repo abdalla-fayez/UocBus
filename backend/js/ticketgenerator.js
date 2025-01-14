@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
+const logger = require(`${__basedir}/backend/logger`);
+
 // ../../frontend/assets/TicketLogo.png
 
 async function generateTicket(details, filePath) {
@@ -18,7 +20,7 @@ async function generateTicket(details, filePath) {
             // Add University Logo
             const logoPath = 'C:/xampp/htdocs/UocBus/frontend/assets/TicketLogo.png';
             doc.image(logoPath, 50, 20, { width: 100 });
-            console.log('Resolved logo path:', logoPath);
+            logger.info('Resolved logo path:', logoPath);
             
             // Title
             doc.fillColor(maroon).fontSize(22).text('Bus Ticket', { align: 'center' });
@@ -94,8 +96,6 @@ async function generateTicket(details, filePath) {
         }
     });
 }
-
-
 
 router.get('/tickets/:orderId', (req, res) => {
     const { orderId } = req.params;

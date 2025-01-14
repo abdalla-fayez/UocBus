@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/dbconnection'); //Database connection
 dotenv.config();
+const logger = require(`${__basedir}/backend/logger`);
 
 // Get available routes and triptypes
 router.get('/routes/available', async (req, res) => {
@@ -32,7 +33,7 @@ router.get('/routes/available', async (req, res) => {
 router.get('/trips/available', async (req, res) => {
     const { route, tripType, date } = req.query;
 
-    console.log('Received query parameters:', { route, tripType, date });
+    logger.info('Received query parameters:', { route, tripType, date });
 
     if (!route || !tripType || !date) {
         console.warn('Missing required query parameters.');
@@ -74,13 +75,13 @@ router.get('/trips/available', async (req, res) => {
 
         const [results] = await db.query(query, [route, tripType, date]);
 
-        console.log('Query results:', results);
+        logger.info('Query results:', results);
 
         // Group trips by id, adding pickup points to each trip
         const trips = {};
         results.forEach(row => {
             if (!trips[row.id]) {
-                console.log(`Creating new trip entry for id: ${row.id}`);
+                logger.info(`Creating new trip entry for id: ${row.id}`);
                 trips[row.id] = {
                     id: row.id,
                     trip_date: row.trip_date,
@@ -109,7 +110,7 @@ router.get('/trips/available', async (req, res) => {
             }
         });
 
-        console.log('Final trips object:', trips);
+        logger.info('Final trips object:', trips);
         res.json(Object.values(trips));
     } catch (error) {
         console.error('Error fetching trips:', error);
@@ -138,7 +139,7 @@ router.post('/bookings/create', async (req, res) => {
         // Save the booking ID in the session for further processing (e.g., linking order_id later)
         req.session.bookingId = result.insertId;
 
-        console.log('Booking entry created with ID:', result.insertId);
+        logger.info('Booking entry created with ID:', result.insertId);
 
         res.json({ message: 'Booking details stored successfully.', bookingId: result.insertId });
     } catch (error) {

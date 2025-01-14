@@ -1,5 +1,6 @@
 const path = require('path');
 const { generateTicket } = require('./ticketgenerator.js'); // Adjust path as needed
+const logger = require(`${__basedir}/backend/logger`);
 
 // Sample data for testing
 const sampleDetails = {
@@ -23,7 +24,7 @@ const outputFilePath = path.join(__dirname, 'ticket.pdf');
 // Run the function
 generateTicket(sampleDetails, outputFilePath)
     .then((filePath) => {
-        console.log(`Ticket generated successfully! File saved at: ${filePath}`);
+        logger.info(`Ticket generated successfully! File saved at: ${filePath}`);
     })
     .catch((error) => {
         console.error("Error generating ticket:", error);

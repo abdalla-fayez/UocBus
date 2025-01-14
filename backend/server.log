@@ -1,0 +1,146 @@
+[2025-01-14T11:25:17.464Z] INFO: Server running on port 5000
+[2025-01-14T11:38:01.416Z] INFO: Server running on port 5000
+[2025-01-14T11:38:10.095Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:38:11.948Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:38:18.783Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-15
+[2025-01-14T11:38:18.785Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:35:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:38:23.190Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-14
+[2025-01-14T11:38:23.191Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:35:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:38:29.430Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-14
+[2025-01-14T11:38:29.431Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:35:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:38:29.443Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:38:29.939Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:38:36.215Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-12
+[2025-01-14T11:38:36.216Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:35:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:38:39.054Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-13
+[2025-01-14T11:38:39.055Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:35:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:46:12.708Z] INFO: Server running on port 5000
+[2025-01-14T11:46:25.469Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:46:32.085Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-15
+[2025-01-14T11:46:32.087Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:36:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T11:57:08.046Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T11:57:13.490Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-14
+[2025-01-14T11:57:13.491Z] ERROR: Unhandled Rejection at: [object Promise], reason: ReferenceError: logger is not defined
+    at C:\xampp\htdocs\UocBus\backend\js\booking.js:36:5
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\xampp\htdocs\UocBus\node_modules\express\lib\router\index.js:47:12)
+[2025-01-14T12:12:01.028Z] INFO: Server running on port 5000
+[2025-01-14T12:12:37.449Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T12:13:00.658Z] INFO: Database connection is healthy
+[2025-01-14T12:13:05.699Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-15
+[2025-01-14T12:13:05.700Z] INFO: Received query parameters:
+[2025-01-14T12:13:05.705Z] INFO: Query results:
+[2025-01-14T12:13:05.706Z] INFO: Creating new trip entry for id: 2729
+[2025-01-14T12:13:05.706Z] INFO: Final trips object:
+[2025-01-14T12:14:00.682Z] INFO: Database connection is healthy
+[2025-01-14T12:15:00.708Z] INFO: Database connection is healthy
+[2025-01-14T12:16:00.722Z] INFO: Database connection is healthy
+[2025-01-14T12:17:00.724Z] INFO: Database connection is healthy
+[2025-01-14T12:18:00.736Z] INFO: Database connection is healthy
+[2025-01-14T12:19:00.733Z] INFO: Database connection is healthy
+[2025-01-14T12:20:00.729Z] INFO: Database connection is healthy
+[2025-01-14T12:21:00.727Z] INFO: Database connection is healthy
+[2025-01-14T12:22:00.734Z] INFO: Database connection is healthy
+[2025-01-14T12:23:00.727Z] INFO: Database connection is healthy
+[2025-01-14T12:24:00.729Z] INFO: Database connection is healthy
+[2025-01-14T12:25:00.735Z] INFO: Database connection is healthy
+[2025-01-14T12:25:51.208Z] INFO: Server running on port 5000
+[2025-01-14T12:26:00.331Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T12:26:12.088Z] INFO: Middleware triggered for GET /api/trips/available?route=Ring%20Road&tripType=Morning&date=2025-01-16
+[2025-01-14T12:26:12.090Z] INFO: Received query parameters: {"route":"Ring Road","tripType":"Morning","date":"2025-01-16"}
+[2025-01-14T12:26:12.095Z] INFO: Query results: {"0":{"id":2738,"trip_date":"2025-01-16T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Gate","pickup_time":"07:00:00"},"1":{"id":2738,"trip_date":"2025-01-16T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Dorms","pickup_time":"07:10:00"},"2":{"id":2738,"trip_date":"2025-01-16T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Library","pickup_time":"07:20:00"}}
+[2025-01-14T12:26:12.097Z] INFO: Creating new trip entry for id: 2738
+[2025-01-14T12:26:12.099Z] INFO: Final trips object: {"2738":{"id":2738,"trip_date":"2025-01-16T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City C Gate","time":"07:00:00"},{"name":"City C Dorms","time":"07:10:00"},{"name":"City C Library","time":"07:20:00"}]}}
+[2025-01-14T12:26:50.839Z] INFO: Database connection is healthy
+[2025-01-14T12:26:58.888Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-14T12:26:58.889Z] INFO: Request received at /api/session/booking/store: {"tripId":2738,"seatsBooked":"2"}
+[2025-01-14T12:26:59.111Z] INFO: Booking details stored in session: {"tripId":2738,"seatsBooked":"2","ticketPrice":0.1,"amountPayable":0.2,"tripDate":"16/01/2025","departure":"","arrival":"","routeName":"Ring Road","tripType":"Morning"}
+[2025-01-14T12:27:50.840Z] INFO: Database connection is healthy
+[2025-01-14T12:28:09.699Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-14T12:28:19.137Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-15
+[2025-01-14T12:28:19.137Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-15"}
+[2025-01-14T12:28:19.140Z] INFO: Query results: {"0":{"id":2730,"trip_date":"2025-01-15T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Gate","pickup_time":"07:00:00"},"1":{"id":2730,"trip_date":"2025-01-15T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Dorms","pickup_time":"07:10:00"},"2":{"id":2730,"trip_date":"2025-01-15T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Library","pickup_time":"07:20:00"}}
+[2025-01-14T12:28:19.141Z] INFO: Creating new trip entry for id: 2730
+[2025-01-14T12:28:19.143Z] INFO: Final trips object: {"2730":{"id":2730,"trip_date":"2025-01-15T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City B Gate","time":"07:00:00"},{"name":"City B Dorms","time":"07:10:00"},{"name":"City B Library","time":"07:20:00"}]}}
+[2025-01-14T12:28:26.728Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-14T12:28:26.729Z] INFO: Request received at /api/session/booking/store: {"tripId":2730,"seatsBooked":"1"}
+[2025-01-14T12:28:26.731Z] INFO: Booking details stored in session: {"tripId":2730,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"15/01/2025","departure":"","arrival":"","routeName":"El Rehab","tripType":"Morning"}
+[2025-01-14T12:28:50.868Z] INFO: Database connection is healthy
+[2025-01-14T12:29:50.909Z] INFO: Database connection is healthy
+[2025-01-14T12:30:50.930Z] INFO: Database connection is healthy
+[2025-01-14T12:31:50.950Z] INFO: Database connection is healthy
+[2025-01-14T12:32:50.949Z] INFO: Database connection is healthy
+[2025-01-14T12:33:50.958Z] INFO: Database connection is healthy
+[2025-01-14T12:34:50.957Z] INFO: Database connection is healthy
+[2025-01-14T12:35:50.968Z] INFO: Database connection is healthy
+[2025-01-14T12:36:15.311Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-14T12:36:15.311Z] INFO: Retrieved booking details: {"tripId":2730,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"15/01/2025","departure":"","arrival":"","routeName":"El Rehab","tripType":"Morning"}
+[2025-01-14T12:36:50.973Z] INFO: Database connection is healthy
+[2025-01-14T12:37:50.977Z] INFO: Database connection is healthy

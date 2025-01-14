@@ -1,7 +1,6 @@
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
-
-// Load environment variables
+const logger = require(`${__basedir}/backend/logger`);
 dotenv.config();
 
 
@@ -31,7 +30,7 @@ pool.on('error', (err) => {
 async function checkDatabaseConnection() {
   try {
       const [rows] = await promisePool.query('SELECT 1');
-      console.log('Database connection is healthy');
+      logger.info('Database connection is healthy');
   } catch (err) {
       console.error('Database connection failed:', err);
   }
