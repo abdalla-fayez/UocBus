@@ -19,14 +19,14 @@ dotenv.config(); // Load environment variables
 
 app.use(express.json());
 
+app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
+
 app.use(session({
     secret: process.env.SESSION_SECRET, // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
     saveUninitialized: true, // Save sessions even if they're empty
     cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes cookie // Set true if using HTTPS
 }));
-
-app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
 
 app.use((req, res, next) => {
     logger.info(`Middleware triggered for ${req.method} ${req.url}`);
@@ -60,6 +60,20 @@ process.on('uncaughtException', (err) => {
 
 process.on('unhandledRejection', (reason, promise) => {
     logger.error(`Unhandled Rejection at: ${promise}, reason: ${reason.stack || reason}`);
+});
+
+// Log Process Exit
+process.on('exit', (code) => {
+    logger.info(`Process exiting with code: ${code}`);
+});
+
+// Handle SIGINT (Ctrl+C) or Server Stops
+process.on('SIGINT', () => {
+    logger.warn('SIGINT received. Shutting down gracefully...');
+    server.close(() => {
+        logger.info('Server closed.');
+        process.exit(0);
+    });
 });
 
 // Start the server
