@@ -11034,3 +11034,106 @@
 [2025-01-21T07:23:07.201Z] INFO: Database connection is healthy
 [2025-01-21T07:25:26.831Z] INFO: Middleware triggered for GET /api/routes/available
 [2025-01-21T07:30:21.534Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-21T07:31:03.786Z] INFO: Server running on port 5000
+[2025-01-21T07:36:09.951Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T07:40:58.963Z] INFO: Database connection is healthy
+[2025-01-21T07:50:58.952Z] INFO: Database connection is healthy
+[2025-01-21T08:00:58.993Z] INFO: Database connection is healthy
+[2025-01-21T08:10:58.980Z] INFO: Database connection is healthy
+[2025-01-21T08:20:59.027Z] INFO: Database connection is healthy
+[2025-01-21T08:30:59.002Z] INFO: Database connection is healthy
+[2025-01-21T08:40:59.055Z] INFO: Database connection is healthy
+[2025-01-21T08:50:59.061Z] INFO: Database connection is healthy
+[2025-01-21T09:00:59.065Z] INFO: Database connection is healthy
+[2025-01-21T09:10:59.083Z] INFO: Database connection is healthy
+[2025-01-21T09:20:59.063Z] INFO: Database connection is healthy
+[2025-01-21T09:30:59.133Z] INFO: Database connection is healthy
+[2025-01-21T09:40:59.121Z] INFO: Database connection is healthy
+[2025-01-21T09:50:59.156Z] INFO: Database connection is healthy
+[2025-01-21T10:00:59.171Z] INFO: Database connection is healthy
+[2025-01-21T10:10:59.191Z] INFO: Database connection is healthy
+[2025-01-21T10:20:59.218Z] INFO: Database connection is healthy
+[2025-01-21T10:30:59.206Z] INFO: Database connection is healthy
+[2025-01-21T10:40:59.240Z] INFO: Database connection is healthy
+[2025-01-21T10:50:59.235Z] INFO: Database connection is healthy
+[2025-01-21T11:00:59.264Z] INFO: Database connection is healthy
+[2025-01-21T11:10:59.289Z] INFO: Database connection is healthy
+[2025-01-21T11:20:59.287Z] INFO: Database connection is healthy
+[2025-01-21T11:30:59.328Z] INFO: Database connection is healthy
+[2025-01-21T11:34:41.997Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:35:27.997Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:35:32.812Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:36:06.403Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:37:03.668Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-29
+[2025-01-21T11:37:03.669Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-29"}
+[2025-01-21T11:37:03.680Z] INFO: Query results:
+[2025-01-21T11:37:03.681Z] INFO: Final trips object:
+[2025-01-21T11:37:12.920Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-29
+[2025-01-21T11:37:12.920Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-29"}
+[2025-01-21T11:37:12.922Z] INFO: Query results:
+[2025-01-21T11:37:12.923Z] INFO: Final trips object:
+[2025-01-21T11:37:24.103Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-22
+[2025-01-21T11:37:24.104Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-22"}
+[2025-01-21T11:37:24.107Z] INFO: Query results: {"0":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-21T11:37:24.107Z] INFO: Creating new trip entry for id: 19
+[2025-01-21T11:37:24.108Z] INFO: Final trips object: {"19":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-21T11:37:27.285Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-22
+[2025-01-21T11:37:27.286Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-22"}
+[2025-01-21T11:37:27.288Z] INFO: Query results: {"0":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-21T11:37:27.288Z] INFO: Creating new trip entry for id: 19
+[2025-01-21T11:37:27.289Z] INFO: Final trips object: {"19":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-21T11:37:27.813Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-22
+[2025-01-21T11:37:27.814Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-22"}
+[2025-01-21T11:37:27.817Z] INFO: Query results: {"0":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-21T11:37:27.817Z] INFO: Creating new trip entry for id: 19
+[2025-01-21T11:37:27.818Z] INFO: Final trips object: {"19":{"id":19,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-21T11:37:30.438Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:37:40.724Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-20
+[2025-01-21T11:37:40.725Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-20"}
+[2025-01-21T11:37:40.727Z] INFO: Query results:
+[2025-01-21T11:37:40.727Z] INFO: Final trips object:
+[2025-01-21T11:37:45.807Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-23
+[2025-01-21T11:37:45.807Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-23"}
+[2025-01-21T11:37:45.809Z] INFO: Query results: {"0":{"id":15,"trip_date":"2025-01-23T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Gate","pickup_time":"07:00:00"},"1":{"id":15,"trip_date":"2025-01-23T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Dorms","pickup_time":"07:10:00"},"2":{"id":15,"trip_date":"2025-01-23T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Library","pickup_time":"07:20:00"}}
+[2025-01-21T11:37:45.810Z] INFO: Creating new trip entry for id: 15
+[2025-01-21T11:37:45.811Z] INFO: Final trips object: {"15":{"id":15,"trip_date":"2025-01-23T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City B Gate","time":"07:00:00"},{"name":"City B Dorms","time":"07:10:00"},{"name":"City B Library","time":"07:20:00"}]}}
+[2025-01-21T11:37:59.646Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-24
+[2025-01-21T11:37:59.647Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-24"}
+[2025-01-21T11:37:59.649Z] INFO: Query results:
+[2025-01-21T11:37:59.649Z] INFO: Final trips object:
+[2025-01-21T11:40:59.318Z] INFO: Database connection is healthy
+[2025-01-21T11:50:59.352Z] INFO: Database connection is healthy
+[2025-01-21T11:55:03.138Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:55:04.961Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:55:28.654Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:55:33.808Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-21T11:55:36.077Z] INFO: Server running on port 5000
+[2025-01-21T11:55:38.661Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:55:49.861Z] INFO: Middleware triggered for GET /api/trips/available?route=Ring%20Road&tripType=Morning&date=2025-01-22
+[2025-01-21T11:55:49.862Z] INFO: Received query parameters: {"route":"Ring Road","tripType":"Morning","date":"2025-01-22"}
+[2025-01-21T11:55:49.867Z] INFO: Query results: {"0":{"id":24,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Gate","pickup_time":"07:00:00"},"1":{"id":24,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Dorms","pickup_time":"07:10:00"},"2":{"id":24,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_name":"City C Library","pickup_time":"07:20:00"}}
+[2025-01-21T11:55:49.869Z] INFO: Creating new trip entry for id: 24
+[2025-01-21T11:55:49.870Z] INFO: Final trips object: {"24":{"id":24,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"07:30:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City C Gate","time":"07:00:00"},{"name":"City C Dorms","time":"07:10:00"},{"name":"City C Library","time":"07:20:00"}]}}
+[2025-01-21T11:56:29.025Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-21T11:56:31.276Z] INFO: Server running on port 5000
+[2025-01-21T11:56:53.904Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T11:56:59.416Z] INFO: Middleware triggered for GET /api/trips/available?route=Ring%20Road&tripType=Afternoon&date=2025-01-22
+[2025-01-21T11:56:59.417Z] INFO: Received query parameters: {"route":"Ring Road","tripType":"Afternoon","date":"2025-01-22"}
+[2025-01-21T11:56:59.422Z] INFO: Query results: {"0":{"id":29,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-21T11:56:59.423Z] INFO: Creating new trip entry for id: 29
+[2025-01-21T11:56:59.424Z] INFO: Final trips object: {"29":{"id":29,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-21T11:57:03.575Z] INFO: Middleware triggered for GET /api/trips/available?route=Ring%20Road&tripType=Afternoon&date=2025-01-22
+[2025-01-21T11:57:03.576Z] INFO: Received query parameters: {"route":"Ring Road","tripType":"Afternoon","date":"2025-01-22"}
+[2025-01-21T11:57:03.579Z] INFO: Query results: {"0":{"id":29,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-21T11:57:03.579Z] INFO: Creating new trip entry for id: 29
+[2025-01-21T11:57:03.580Z] INFO: Final trips object: {"29":{"id":29,"trip_date":"2025-01-22T00:00:00.000Z","trip_time":"16:00:00","available_seats":14,"route_name":"Ring Road","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-21T12:06:30.940Z] INFO: Database connection is healthy
+[2025-01-21T12:16:30.936Z] INFO: Database connection is healthy
+[2025-01-21T12:25:07.391Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-21T12:26:30.951Z] INFO: Database connection is healthy
+[2025-01-21T12:36:30.975Z] INFO: Database connection is healthy
+[2025-01-21T12:46:30.970Z] INFO: Database connection is healthy
+[2025-01-21T12:56:31.010Z] INFO: Database connection is healthy
+[2025-01-21T13:06:30.995Z] INFO: Database connection is healthy
+[2025-01-21T13:16:31.029Z] INFO: Database connection is healthy
+[2025-01-21T13:26:23.946Z] WARN: SIGINT received. Shutting down gracefully...

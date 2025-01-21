@@ -5,26 +5,47 @@ const db = require('../models/dbconnection'); //Database connection
 dotenv.config();
 const logger = require(`${__basedir}/backend/logger`);
 
-// Get available routes and triptypes
-router.get('/routes/available', async (req, res) => {
+// Get active route names
+router.get('/routes/active', async (req, res) => {
     try {
-        // Fetch unique route names and trip types
+        // Fetch distinct route names where status is 'Active'
         const [routes] = await db.query(`
-            SELECT DISTINCT route_name FROM routes
-        `);
-        const [tripTypes] = await db.query(`
-            SELECT DISTINCT trip_type FROM routes
+            SELECT DISTINCT route_name 
+            FROM routes 
+            WHERE status = 'Active'
         `);
 
         const routeNames = routes.map(row => row.route_name);
+
+        res.json({
+            routes: routeNames
+        });
+    } catch (error) {
+        console.error('Error fetching active route names:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+// Get trip types for a specific route
+router.get('/routes/trip-types', async (req, res) => {
+    try {
+        const { routeName } = req.query; // Get the selected route name from query params
+
+        // Fetch trip types for the selected route where status is 'Active'
+        const [tripTypes] = await db.query(`
+            SELECT DISTINCT trip_type 
+            FROM routes 
+            WHERE route_name = ? 
+              AND status = 'Active'
+        `, [routeName]);
+
         const tripTypesList = tripTypes.map(row => row.trip_type);
 
         res.json({
-            routes: routeNames,
             tripTypes: tripTypesList
         });
     } catch (error) {
-        console.error('Error fetching route names and trip types:', error);
+        console.error('Error fetching trip types for route:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });

@@ -9,36 +9,71 @@ const tripsResults = document.getElementById('tripsResults'); // Trips container
 const tripTemplate = document.getElementById('tripTemplate'); // HTML template
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', populateDropdowns);
+document.addEventListener('DOMContentLoaded', populateRouteDropdown);
 searchButton.addEventListener('click', searchTrips);
 
-// Function to populate dropdowns dynamically
-async function populateDropdowns() {
+// Function to populate route names dropdown
+async function populateRouteDropdown() {
     try {
-        const response = await fetch('/api/routes/available');
-        if (!response.ok) throw new Error('Unable to fetch data.');
+        const response = await fetch('/api/routes/active');
+        if (!response.ok) throw new Error('Unable to fetch route data.');
 
-        const { routes, tripTypes } = await response.json();
+        const { routes } = await response.json();
 
-        // Populate route name dropdown
+        // Clear existing options
+        routeSelect.innerHTML = '<option selected disabled>Select Route</option>';
+
+        // Populate route names dropdown
         routes.forEach(route => {
             const option = document.createElement('option');
             option.value = route;
             option.textContent = route;
             routeSelect.appendChild(option);
         });
+    } catch (error) {
+        console.error('Error populating route dropdown:', error);
+    }
+}
 
-        // Populate trip type dropdown
+// Function to populate trip types dropdown based on selected route
+async function populateTripTypeDropdown(routeName) {
+    try {
+        const response = await fetch(`/api/routes/trip-types?routeName=${routeName}`);
+        if (!response.ok) throw new Error('Unable to fetch trip type data.');
+
+        const { tripTypes } = await response.json();
+
+        // Clear existing options
+        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Time</option>';
+
+        // Populate trip types dropdown
         tripTypes.forEach(type => {
             const option = document.createElement('option');
             option.value = type;
             option.textContent = type;
             tripTypeSelect.appendChild(option);
         });
+
+        // Enable the trip type dropdown
+        tripTypeSelect.disabled = false;
     } catch (error) {
-        console.error('Error populating dropdowns:', error);
+        console.error('Error populating trip type dropdown:', error);
     }
 }
+
+// Add event listener to the route dropdown
+routeSelect.addEventListener('change', (event) => {
+    const selectedRoute = event.target.value;
+
+    if (selectedRoute) {
+        // Fetch and populate trip types for the selected route
+        populateTripTypeDropdown(selectedRoute);
+    } else {
+        // If no route is selected, disable and clear the trip type dropdown
+        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Time</option>';
+        tripTypeSelect.disabled = true;
+    }
+});
 
 // Function to search for trips based on user input
 async function searchTrips() {
