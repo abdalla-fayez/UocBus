@@ -123,7 +123,6 @@ async function searchTrips() {
 
                     console.log('List item added to DOM:', listItem);
                 });
-
                 console.log('Final pickup points list for trip:', pickupPointsList.innerHTML);
             }
 
@@ -156,6 +155,12 @@ async function searchTrips() {
             // Append the populated template to the results container
             tripsResults.appendChild(clone);
         });
+    
+    
+    tripsResults.scrollIntoView(); // Focus on the trips results container fix for mobile views
+    tripsResults.focus(); // Focus on the trips results container
+
+
     } catch (error) {
         console.error('An error occurred while fetching trips:', error);
         showError('Something went wrong while fetching trips. Please try again later.');

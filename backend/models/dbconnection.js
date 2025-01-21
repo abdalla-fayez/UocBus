@@ -37,7 +37,7 @@ async function checkDatabaseConnection() {
 }
 
 // Periodically check the connection
-setInterval(checkDatabaseConnection, 60 * 1000); // Every minute
+setInterval(checkDatabaseConnection, 60 * 10000); // Every minute
 
 setInterval(async () => {
   try {
