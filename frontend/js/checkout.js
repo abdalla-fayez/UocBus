@@ -1,7 +1,7 @@
 // Select DOM elements
 const routeName = document.getElementById('routeName');
 const tripType = document.getElementById('tripType');
-const tripDate = document.getElementById('tripDate'); // Added for Date
+const tripDate = document.getElementById('tripDate');
 const seatCount = document.getElementById('seatCount');
 const pricePerSeat = document.getElementById('pricePerSeat');
 const totalAmount = document.getElementById('totalAmount');
@@ -9,7 +9,7 @@ const totalAmount = document.getElementById('totalAmount');
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userId = document.getElementById('userId');
-const userMobile = document.getElementById('userMobile'); // Keeping the field but removing validation
+const userMobile = document.getElementById('userMobile'); 
 const proceedButton = document.getElementById('proceedToPayment');
 
 // Event listener for page load

@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
+const passport = require('./auth');
 global.__basedir = path.resolve(__dirname, '../'); // This sets the base directory as the root of your project
 const db = require('./models/dbconnection'); // Import the MySQL connection
 const bookingRoutes = require('./js/booking');
@@ -12,21 +13,22 @@ const app = express();
 const winston = require('winston');
 const logger = require(`${__basedir}/backend/logger`);
 
-
 process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
 dotenv.config(); // Load environment variables
 
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
 
 app.use(session({
     secret: process.env.SESSION_SECRET, // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
-    saveUninitialized: true, // Save sessions even if they're empty
-    cookie: { maxAge: 15 * 60 * 1000, secure: false }, // 15 minutes cookie // Set true if using HTTPS
+    saveUninitialized: false, // Do not save uninitialized sessions
+    cookie: { secure: false }, // Set true if using HTTPS
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use((req, res, next) => {
     logger.info(`Middleware triggered for ${req.method} ${req.url}`);
@@ -40,17 +42,52 @@ app.use((req, res, next) => {
     next();
 });
 
-// Use the session manager routes
-app.use(sessionStorageRoutes);
+// Authentication routes
+app.get('/auth/microsoft', passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }));
 
-// Use the booking API routes
-app.use('/api', bookingRoutes);
+app.post('/auth/microsoft/callback',
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
+    (req, res) => {
+        logger.info('Authentication successful, redirecting to homepage');
+        logger.info(`User profile: ${JSON.stringify(req.user)}`);
+        res.redirect('/'); // Redirect to homepage on successful login
+    }
+);
 
-// Use the ticcket generation routes
-app.use('/api', ticketGenRoutes);
+// Middleware to check authentication
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        logger.info('User is authenticated');
+        return next();
+    }
+    logger.info('User is not authenticated, redirecting to /auth/microsoft');
+    res.redirect('/auth/microsoft');
+}
 
-// Use the payments API routes
+// Protect all routes except authentication routes
+app.use((req, res, next) => {
+    if (req.path.startsWith('/auth/microsoft') || req.path.startsWith('/api/check-auth')) {
+        return next();
+    }
+    ensureAuthenticated(req, res, next);
+});
+
+// Endpoint to check authentication
+app.get('/api/check-auth', (req, res) => {
+    if (req.isAuthenticated()) {
+        logger.info('User is authenticated for /api/check-auth');
+        res.status(200).json({ authenticated: true });
+    } else {
+        logger.info('User is not authenticated for /api/check-auth');
+        res.status(401).json({ authenticated: false });
+    }
+});
+
+// Define your routes here
 app.use(paymentRoutes);
+app.use('/api/',bookingRoutes);
+app.use('/api/',sessionStorageRoutes);
+app.use('/api/',ticketGenRoutes);
 
 // Capture uncaught exceptions and unhandled promise rejections
 process.on('uncaughtException', (err) => {

@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../../models/dbconnection'); // Database connection
 const logger = require(`${__basedir}/backend/logger`);
 
-router.post('/api/session/booking/store', async (req, res) => {
+router.post('/session/booking/store', async (req, res) => {
     logger.info('Request received at /api/session/booking/store:', req.body);
 
     const { tripId, seatsBooked } = req.body;
@@ -60,7 +60,7 @@ router.post('/api/session/booking/store', async (req, res) => {
     }
 });
 
-router.get('/api/session/booking/retrieve', (req, res) => {
+router.get('/session/booking/retrieve', (req, res) => {
     if (!req.session || !req.session.bookingDetails) {
         return res.status(404).json({ message: 'No booking details found in session' });
     }

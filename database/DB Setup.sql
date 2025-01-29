@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2025 at 11:33 AM
+-- Generation Time: Jan 22, 2025 at 10:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Trip_Automation` ()  MODIFIES SQL D
         SELECT 6 UNION SELECT 7
     ) n
     WHERE
-        DAYOFWEEK(DATE_ADD(CURDATE(), INTERVAL n.num DAY)) NOT IN (6, 7) -- Exclude weekends
+    	r.status = 'Active' -- Only include Active routes
+        AND DAYOFWEEK(DATE_ADD(CURDATE(), INTERVAL n.num DAY)) NOT IN (6, 7) -- Exclude weekends
         AND NOT EXISTS (
             SELECT 1
             FROM trips t
@@ -254,7 +255,8 @@ CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 WE
         SELECT 6 UNION SELECT 7
     ) n
     WHERE
-        DAYOFWEEK(DATE_ADD(CURDATE(), INTERVAL n.num DAY)) NOT IN (6, 7) -- Exclude weekends
+    	r.status = 'Active' -- Only include Active routes
+        AND DAYOFWEEK(DATE_ADD(CURDATE(), INTERVAL n.num DAY)) NOT IN (6, 7) -- Exclude weekends
         AND NOT EXISTS (
             SELECT 1
             FROM trips t

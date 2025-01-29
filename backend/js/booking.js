@@ -152,9 +152,9 @@ router.post('/bookings/create', async (req, res) => {
     try {
         // Insert only student info and timestamp into the bookings table
         const [result] = await db.query(
-            `INSERT INTO bookings (student_name, student_email, student_id, student_mobile_no, created_at)
-             VALUES (?, ?, ?, ?, NOW())`,
-            [studentName, studentEmail, studentId, studentMobileNo]
+            `INSERT INTO bookings (student_name, student_email, student_id, created_at)
+             VALUES (?, ?, ?, NOW())`,
+            [studentName, studentEmail, studentId]
         );
 
         // Save the booking ID in the session for further processing (e.g., linking order_id later)
