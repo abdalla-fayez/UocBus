@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2025 at 10:00 AM
+-- Generation Time: Jan 29, 2025 at 03:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,7 +29,7 @@ DELIMITER $$
 --
 DROP PROCEDURE IF EXISTS `Trip_Automation`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Trip_Automation` ()  MODIFIES SQL DATA COMMENT 'Trip Gen Automation' BEGIN
-    -- Generate trips for the next 7 days, excluding weekends
+    -- Generate trips for the next 2 days, excluding weekends
     INSERT INTO trips (bus_id, route_id, trip_date, available_seats, route_name, trip_type, trip_time)
     SELECT
         r.bus_id,
@@ -41,8 +41,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Trip_Automation` ()  MODIFIES SQL D
         r.time AS trip_time
     FROM routes r
     CROSS JOIN (
-        SELECT 1 AS num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION 
-        SELECT 6 UNION SELECT 7
+        SELECT 1 AS num UNION SELECT 2
     ) n
     WHERE
     	r.status = 'Active' -- Only include Active routes
@@ -69,8 +68,6 @@ CREATE TABLE IF NOT EXISTS `bookings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_name` varchar(255) NOT NULL,
   `student_email` varchar(255) NOT NULL,
-  `student_id` varchar(50) NOT NULL,
-  `student_mobile_no` varchar(15) NOT NULL,
   `order_id` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
@@ -238,8 +235,8 @@ DELIMITER $$
 -- Events
 --
 DROP EVENT IF EXISTS `Trip_Automation`$$
-CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 WEEK STARTS '2025-01-17 00:00:00' ON COMPLETION PRESERVE ENABLE DO BEGIN
-    -- Generate trips for the next 7 days, excluding weekends
+CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 DAY STARTS '2025-01-17 00:00:00' ON COMPLETION PRESERVE ENABLE DO BEGIN
+    -- Generate trips for the next 2 days, excluding weekends
     INSERT INTO trips (bus_id, route_id, trip_date, available_seats, route_name, trip_type, trip_time)
     SELECT
         r.bus_id,
@@ -251,8 +248,7 @@ CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 WE
         r.time AS trip_time
     FROM routes r
     CROSS JOIN (
-        SELECT 1 AS num UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION 
-        SELECT 6 UNION SELECT 7
+        SELECT 1 AS num UNION SELECT 2
     ) n
     WHERE
     	r.status = 'Active' -- Only include Active routes

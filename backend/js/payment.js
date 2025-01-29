@@ -11,7 +11,7 @@ const logger = require(`${__basedir}/backend/logger`);
 
 // Payment initiation endpoint
 router.post('/api/payments/initiate', async (req, res) => {
-    const bookingDetails = req.session.bookingDetails;
+    const bookingDetails = req.session.bookingDetails; // Retrieve booking details from session
     const bookingId = req.session.bookingId; // Retrieve booking ID from session
 
     if (!bookingDetails) {
@@ -153,7 +153,7 @@ router.get('/api/payments/callback', async (req, res) => {
 
         // Fetch booking and payment details
         const [bookingDetails] = await db.query(
-            `SELECT b.student_name, b.student_email, b.student_id,
+            `SELECT b.student_name, b.student_email,
                     t.trip_date, r.route_name, r.trip_type, r.price AS price_per_seat,
                     p.amount AS total_amount, p.seats_booked, p.order_id, bu.driver_mobile
             FROM bookings b

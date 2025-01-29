@@ -1,5 +1,3 @@
-console.log('Starting success.js');
-
 // Get orderId from the URL
 const params = new URLSearchParams(window.location.search);
 const orderId = params.get('orderId');
@@ -8,10 +6,8 @@ console.log('Order ID:', orderId);
 
 // Define paths and elements
 const downloadLink = document.getElementById('downloadLink');
-const studentName = document.getElementById('studentName');
-const studentId = document.getElementById('studentId');
-const studentEmail = document.getElementById('studentEmail');
-const studentMobile = document.getElementById('studentMobile');
+const userName = document.getElementById('userName');
+const userEmail = document.getElementById('userEmail');
 const routeName = document.getElementById('routeName');
 const tripType = document.getElementById('trip-time');
 const tripDate = document.getElementById('tripDate');
@@ -59,10 +55,8 @@ if (orderId) {
             console.log('Fetched Data:', data);
             if (data) {
                 // Populate ticket details
-                safeSetContent(studentName, data.student_name);
-                safeSetContent(studentId, data.student_id);
-                safeSetContent(studentEmail, data.student_email);
-                safeSetContent(studentMobile, data.student_mobile_no);
+                safeSetContent(userName, data.student_name);
+                safeSetContent(userEmail, data.student_email);
                 safeSetContent(routeName, data.route_name);
                 safeSetContent(tripType, data.trip_type);
                 safeSetContent(tripDate, new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(data.trip_date)));

@@ -45,8 +45,8 @@ router.post('/session/booking/store', async (req, res) => {
             ticketPrice,
             amountPayable,
             tripDate: new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(tripDetails.trip_date)),
-            departure: tripDetails.departure,
-            arrival: tripDetails.arrival,
+            // departure: tripDetails.departure,
+            // arrival: tripDetails.arrival,
             routeName: tripDetails.route_name,
             tripType: tripDetails.trip_type
         };
@@ -68,6 +68,15 @@ router.get('/session/booking/retrieve', (req, res) => {
     logger.info('Retrieved booking details:', req.session.bookingDetails);
 
     res.json(req.session.bookingDetails);
+});
+
+// Route to fetch user data from the session
+router.get('/session/user/retrieve', (req, res) => {
+    if (req.session.user) {
+        res.json(req.session.user);
+    } else {
+        res.status(401).json({ message: 'User not authenticated' });
+    }
 });
 
 module.exports = router;

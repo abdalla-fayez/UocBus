@@ -142,19 +142,15 @@ router.get('/trips/available', async (req, res) => {
 
 
 router.post('/bookings/create', async (req, res) => {
-    const { studentName, studentEmail, studentId, studentMobileNo } = req.body;
-
-    // Input validation
-    if (!studentName || !studentEmail || !studentId || !studentMobileNo) {
-        return res.status(400).json({ message: 'All fields are required.' });
-    }
+    // Get user data from session
+    const { displayName, email } = req.session.user;
 
     try {
         // Insert only student info and timestamp into the bookings table
         const [result] = await db.query(
-            `INSERT INTO bookings (student_name, student_email, student_id, created_at)
-             VALUES (?, ?, ?, NOW())`,
-            [studentName, studentEmail, studentId]
+            `INSERT INTO bookings (student_name, student_email, created_at)
+             VALUES (?, ?, NOW())`,
+            [displayName, email]
         );
 
         // Save the booking ID in the session for further processing (e.g., linking order_id later)
@@ -180,9 +176,7 @@ router.get('/bookings/details', async (req, res) => {
         const [details] = await db.query(`
             SELECT 
                 b.student_name, 
-                b.student_id, 
                 b.student_email, 
-                b.student_mobile_no,
                 r.route_name,
                 r.trip_type,
                 t.trip_date, 

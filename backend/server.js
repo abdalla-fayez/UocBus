@@ -50,6 +50,13 @@ app.post('/auth/microsoft/callback',
     (req, res) => {
         logger.info('Authentication successful, redirecting to homepage');
         logger.info(`User profile: ${JSON.stringify(req.user)}`);
+
+        // Store user data in the session
+        req.session.user = {
+            displayName: req.user.displayName,
+            email: req.user._json.email
+        };
+
         res.redirect('/'); // Redirect to homepage on successful login
     }
 );

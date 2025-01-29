@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+// const path = require('path');
+// const logger = require(`${__basedir}/backend/logger`);
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
-const logger = require(`${__basedir}/backend/logger`);
 
 // ../../frontend/assets/TicketLogo.png
 
@@ -20,30 +20,27 @@ async function generateTicket(details, filePath) {
             // Add University Logo
             const logoPath = 'C:/xampp/htdocs/UocBus/frontend/assets/TicketLogo.png';
             doc.image(logoPath, 50, 20, { width: 100 });
-            logger.info('Resolved logo path:', logoPath);
             
             // Title
             doc.fillColor(maroon).fontSize(22).text('Bus Ticket', { align: 'center' });
             doc.moveDown(2);
 
             // Passenger Details Section
-            doc.rect(50, 100, 500, 150).stroke(maroon);
+            doc.rect(50, 100, 500, 92).stroke(maroon);
             doc.fillColor(maroon).fontSize(14).text('Passenger Details', 50, 110, { align: 'center' });
             doc.moveTo(60, 125).lineTo(540, 125).stroke(); // Underline
 
             // Content within Passenger Details Section
             const passengerDetails = [
                 ['Name:', details.student_name],
-                ['Student ID:', details.student_id],
                 ['Email:', details.student_email],
-                ['Mobile:', details.student_mobile_no],
             ];
 
             doc.moveDown(0.5).fillColor('black').fontSize(12);
             passengerDetails.forEach(([label, value], index) => {
                 doc.text(label, 60, 140 + index * 25, { continued: true }).text(` ${value}`);
             });
-
+            
             // Trip Details Section
             const tripDetailsHeight = 220; // Height of the section
             const paddingBelowLine = 20; // Padding below the red line
@@ -79,7 +76,7 @@ async function generateTicket(details, filePath) {
                 { align: 'center', baseline: 'bottom' }
             );
             doc.fontSize(10).fillColor('black').text(
-                'For support, contact us at XXXXXX@XXXX.XXX or 01XXXXXXXX',
+                'For support, please contact us at Fleet@uofcanada.edu.eg',
                 { align: 'center' }
             );
 
@@ -97,16 +94,16 @@ async function generateTicket(details, filePath) {
     });
 }
 
-router.get('/tickets/:orderId', (req, res) => {
-    const { orderId } = req.params;
-    const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
+// router.get('/tickets/:orderId', (req, res) => {
+//     const { orderId } = req.params;
+//     const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
 
-    if (fs.existsSync(ticketPath)) {
-        res.download(ticketPath); // Offer the file as a download
-    } else {
-        res.status(404).json({ message: 'Ticket not found' });
-    }
-});
+//     if (fs.existsSync(ticketPath)) {
+//         res.download(ticketPath); // Offer the file as a download
+//     } else {
+//         res.status(404).json({ message: 'Ticket not found' });
+//     }
+// });
 
 
 

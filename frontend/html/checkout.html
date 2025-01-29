@@ -128,6 +128,16 @@
   <div class="content container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-8 col-sm-10">
+        <!-- User Details Form -->
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h5 class="mb-0">Passenger Details</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Name:</strong> <span id="userName"></span></p>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+          </div>
+        </div>
         <!-- Booking Details Card -->
         <div class="card mb-4 shadow-sm">
           <div class="card-header">
@@ -148,55 +158,20 @@
             </p>
           </div>
         </div>
-
-        <!-- User Details Form -->
-        <div class="card shadow-sm">
-          <div class="card-header">
-            <h5 class="mb-0">Please Enter Your Details</h5>
+          <!-- Checkout Button -->
+          <div class="text-center p-4">
+            <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">
+              Checkout
+            </button>
           </div>
-          <div class="card-body">
-            <form id="userDetailsForm">
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label for="userName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="userName" placeholder="Your full name" required />
-                  <small id="userNameError" class="text-danger d-none"></small>
-                </div>
-                <div class="col-md-6">
-                  <label for="userEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="userEmail" placeholder="Your email" required />
-                  <small id="userEmailError" class="text-danger d-none"></small>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label for="userId" class="form-label">Student ID</label>
-                  <input type="text" class="form-control" id="userId" placeholder="Your Student ID" maxlength="9" required />
-                  <small id="userIdError" class="text-danger d-none"></small>
-                </div>
-                <div class="col-md-6">
-                  <label for="userMobile" class="form-label">Mobile No.</label>
-                  <input type="tel" class="form-control" id="userMobile" placeholder="Your mobile number" required />
-                  <small id="userMobileError" class="text-danger d-none"></small>
-                </div>
-              </div>
-              <!-- Submit Button -->
-              <div class="text-center">
-                <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">
-                  Checkout
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </div>
     <div id="checkoutContainer"></div>
-    <div id="ticketSection" class="mt-4 d-none">
+    <!-- <div id="ticketSection" class="mt-4 d-none">
       <h3>Payment Successful!</h3>
       <p>Your ticket is ready for download.</p>
       <a id="downloadTicketLink" class="btn btn-primary" href="#" target="_blank">Download Your Ticket</a>
-    </div>
+    </div> -->
   </div>
 
   <!-- Footer -->

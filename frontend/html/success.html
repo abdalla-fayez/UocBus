@@ -117,6 +117,7 @@
     </style>
   </head>
   <body>
+    <!-- Banner -->
     <header class="custom-banner mb-4">
       <div class="logo-container">
         <img src="../assets/UOC-Website-Header-Logo1.png" alt="UCE Logo" />
@@ -125,6 +126,7 @@
       <div class="custom-text">Booking Successful!</div>
     </header>
 
+    <!-- Main Content -->
     <div class="content container">
       <p class="text-center">
         Your ticket has been successfully generated. See the details below or
@@ -135,10 +137,10 @@
           <div class="ticket-details">
             <div class="ticket-card">
               <h4 class="text-center mb-4">Ticket Details</h4>
-              <p><strong>Name:</strong> <span id="studentName"></span></p>
-              <p><strong>Student ID:</strong> <span id="studentId"></span></p>
-              <p><strong>Email:</strong> <span id="studentEmail"></span></p>
-              <p><strong>Mobile:</strong> <span id="studentMobile"></span></p>
+              <p><strong>Name:</strong> <span id="userName"></span></p>
+              <!-- <p><strong>Student ID:</strong> <span id="studentId"></span></p> -->
+              <p><strong>Email:</strong> <span id="userEmail"></span></p>
+              <!-- <p><strong>Mobile:</strong> <span id="studentMobile"></span></p> -->
               <p><strong>Route:</strong> <span id="routeName"></span></p>
               <p><strong>Trip Time:</strong> <span id="trip-time"></span></p>
               <p><strong>Date:</strong> <span id="tripDate"></span></p>
@@ -149,11 +151,9 @@
           </div>
 
           <div class="btn-container">
-            <a id="downloadLink" class="btn btn-success btn-lg"
-              >Download Ticket</a
-            >
-            <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
-          </div>
+          <a id="downloadLink" class="btn btn-success btn-lg">Download Ticket</a>
+          <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
+        </div>
         </div>
       </div>
     </div>
