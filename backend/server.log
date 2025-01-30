@@ -13252,3 +13252,1725 @@
 [2025-01-29T13:51:00.528Z] INFO: User is authenticated
 [2025-01-29T13:51:00.529Z] INFO: Retrieved booking details: {"tripId":50,"seatsBooked":"10","ticketPrice":0.1,"amountPayable":1,"tripDate":"30/01/2025","routeName":"El Rehab","tripType":"Afternoon"}
 [2025-01-29T13:51:46.979Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-29T13:51:49.684Z] INFO: Server running on port 5000
+[2025-01-29T13:52:00.079Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T13:52:00.090Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-29T13:52:00.099Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-29T13:52:00.102Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T13:52:00.133Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T13:52:01.102Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T13:52:01.448Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-29T13:52:01.752Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-29T13:52:01.753Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738158325,\"nbf\":1738158325,\"exp\":1738162225,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"PDPUGG24JbnRrbggDwZKeVtpjpux4MMC\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"eWQEgce2NEKlWjsJb6NaAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738158325,"nbf":1738158325,"exp":1738162225,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"PDPUGG24JbnRrbggDwZKeVtpjpux4MMC","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"eWQEgce2NEKlWjsJb6NaAA","ver":"2.0"}}
+[2025-01-29T13:52:01.951Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T13:52:01.952Z] INFO: User is authenticated for /api/check-auth
+[2025-01-29T13:52:01.959Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-29T13:52:01.960Z] INFO: User is authenticated
+[2025-01-29T13:52:13.512Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Rehab
+[2025-01-29T13:52:13.513Z] INFO: User is authenticated
+[2025-01-29T13:52:17.391Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-30
+[2025-01-29T13:52:17.392Z] INFO: User is authenticated
+[2025-01-29T13:52:17.393Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-30"}
+[2025-01-29T13:52:17.396Z] INFO: Query results: {"0":{"id":45,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Gate","pickup_time":"07:00:00"},"1":{"id":45,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Dorms","pickup_time":"07:10:00"},"2":{"id":45,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_name":"City B Library","pickup_time":"07:20:00"}}
+[2025-01-29T13:52:17.397Z] INFO: Creating new trip entry for id: 45
+[2025-01-29T13:52:17.398Z] INFO: Final trips object: {"45":{"id":45,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City B Gate","time":"07:00:00"},{"name":"City B Dorms","time":"07:10:00"},{"name":"City B Library","time":"07:20:00"}]}}
+[2025-01-29T13:52:18.493Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-29T13:52:18.494Z] INFO: User is authenticated
+[2025-01-29T13:52:18.495Z] INFO: Request received at /api/session/booking/store: {"tripId":45,"seatsBooked":"1"}
+[2025-01-29T13:52:18.527Z] INFO: Booking details stored in session: {"tripId":45,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"30/01/2025","routeName":"El Rehab","tripType":"Morning"}
+[2025-01-29T13:52:18.716Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T13:52:18.716Z] INFO: User is authenticated for /api/check-auth
+[2025-01-29T13:52:18.725Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-29T13:52:18.725Z] INFO: User is authenticated
+[2025-01-29T13:52:18.726Z] INFO: Retrieved booking details: {"tripId":45,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"30/01/2025","routeName":"El Rehab","tripType":"Morning"}
+[2025-01-29T13:52:18.734Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-29T13:52:18.734Z] INFO: User is authenticated
+[2025-01-29T14:01:49.310Z] INFO: Database connection is healthy
+[2025-01-29T14:02:36.518Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-29T14:02:36.518Z] INFO: User is authenticated
+[2025-01-29T14:02:36.525Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T14:02:36.525Z] INFO: User is authenticated for /api/check-auth
+[2025-01-29T14:02:38.033Z] INFO: Middleware triggered for GET /api/trips/available?route=Select%20Route&tripType=Select%20Trip%20Time&date=2025-01-30
+[2025-01-29T14:02:38.033Z] INFO: User is authenticated
+[2025-01-29T14:02:38.034Z] INFO: Received query parameters: {"route":"Select Route","tripType":"Select Trip Time","date":"2025-01-30"}
+[2025-01-29T14:02:38.036Z] INFO: Query results:
+[2025-01-29T14:02:38.036Z] INFO: Final trips object:
+[2025-01-29T14:03:54.598Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-29T14:03:54.598Z] INFO: User is authenticated
+[2025-01-29T14:03:58.096Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-30
+[2025-01-29T14:03:58.097Z] INFO: User is authenticated
+[2025-01-29T14:03:58.097Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-30"}
+[2025-01-29T14:03:58.099Z] INFO: Query results: {"0":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Gate","pickup_time":"07:00:00"},"1":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Dorms","pickup_time":"07:10:00"},"2":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Library","pickup_time":"07:20:00"}}
+[2025-01-29T14:03:58.100Z] INFO: Creating new trip entry for id: 35
+[2025-01-29T14:03:58.101Z] INFO: Final trips object: {"35":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City A Gate","time":"07:00:00"},{"name":"City A Dorms","time":"07:10:00"},{"name":"City A Library","time":"07:20:00"}]}}
+[2025-01-29T14:11:49.319Z] INFO: Database connection is healthy
+[2025-01-29T14:18:03.935Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T14:18:03.936Z] INFO: User is authenticated for /api/check-auth
+[2025-01-29T14:18:03.941Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-29T14:18:03.942Z] INFO: User is authenticated
+[2025-01-29T14:18:07.922Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-29T14:18:07.922Z] INFO: User is authenticated
+[2025-01-29T14:18:13.313Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-29
+[2025-01-29T14:18:13.314Z] INFO: User is authenticated
+[2025-01-29T14:18:13.314Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-29"}
+[2025-01-29T14:18:13.316Z] INFO: Query results:
+[2025-01-29T14:18:13.317Z] INFO: Final trips object:
+[2025-01-29T14:18:16.502Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-30
+[2025-01-29T14:18:16.502Z] INFO: User is authenticated
+[2025-01-29T14:18:16.503Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-30"}
+[2025-01-29T14:18:16.505Z] INFO: Query results: {"0":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Gate","pickup_time":"07:00:00"},"1":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Dorms","pickup_time":"07:10:00"},"2":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Library","pickup_time":"07:20:00"}}
+[2025-01-29T14:18:16.506Z] INFO: Creating new trip entry for id: 35
+[2025-01-29T14:18:16.507Z] INFO: Final trips object: {"35":{"id":35,"trip_date":"2025-01-30T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City A Gate","time":"07:00:00"},{"name":"City A Dorms","time":"07:10:00"},{"name":"City A Library","time":"07:20:00"}]}}
+[2025-01-29T14:21:49.328Z] INFO: Database connection is healthy
+[2025-01-29T14:31:49.344Z] INFO: Database connection is healthy
+[2025-01-29T14:41:49.357Z] INFO: Database connection is healthy
+[2025-01-29T14:51:49.375Z] INFO: Database connection is healthy
+[2025-01-29T15:01:49.386Z] INFO: Database connection is healthy
+[2025-01-29T15:11:49.395Z] INFO: Database connection is healthy
+[2025-01-29T15:21:49.425Z] INFO: Database connection is healthy
+[2025-01-29T15:31:49.429Z] INFO: Database connection is healthy
+[2025-01-29T15:41:49.452Z] INFO: Database connection is healthy
+[2025-01-29T15:51:49.469Z] INFO: Database connection is healthy
+[2025-01-29T16:01:49.478Z] INFO: Database connection is healthy
+[2025-01-29T16:11:49.492Z] INFO: Database connection is healthy
+[2025-01-29T16:21:49.498Z] INFO: Database connection is healthy
+[2025-01-29T16:31:49.517Z] INFO: Database connection is healthy
+[2025-01-29T16:41:49.524Z] INFO: Database connection is healthy
+[2025-01-29T16:51:49.544Z] INFO: Database connection is healthy
+[2025-01-29T17:01:49.558Z] INFO: Database connection is healthy
+[2025-01-29T17:11:49.570Z] INFO: Database connection is healthy
+[2025-01-29T17:17:35.226Z] INFO: Middleware triggered for GET /api/routes/available
+[2025-01-29T17:17:35.227Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T17:17:35.265Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T17:21:49.598Z] INFO: Database connection is healthy
+[2025-01-29T17:31:49.613Z] INFO: Database connection is healthy
+[2025-01-29T17:41:49.638Z] INFO: Database connection is healthy
+[2025-01-29T17:51:49.662Z] INFO: Database connection is healthy
+[2025-01-29T18:01:49.672Z] INFO: Database connection is healthy
+[2025-01-29T18:11:49.693Z] INFO: Database connection is healthy
+[2025-01-29T18:20:49.497Z] INFO: Middleware triggered for GET /api/v1/pods
+[2025-01-29T18:20:49.497Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T18:20:49.664Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T18:20:53.934Z] INFO: Middleware triggered for GET /api/sonicos/auth
+[2025-01-29T18:20:53.935Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T18:20:53.960Z] INFO: Middleware triggered for GET /api/sonicos/tfa
+[2025-01-29T18:20:53.960Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T18:20:54.554Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T18:20:54.595Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T18:21:49.709Z] INFO: Database connection is healthy
+[2025-01-29T18:31:49.737Z] INFO: Database connection is healthy
+[2025-01-29T18:41:49.744Z] INFO: Database connection is healthy
+[2025-01-29T18:51:49.754Z] INFO: Database connection is healthy
+[2025-01-29T19:01:49.766Z] INFO: Database connection is healthy
+[2025-01-29T19:11:49.773Z] INFO: Database connection is healthy
+[2025-01-29T19:21:49.797Z] INFO: Database connection is healthy
+[2025-01-29T19:31:49.805Z] INFO: Database connection is healthy
+[2025-01-29T19:41:49.830Z] INFO: Database connection is healthy
+[2025-01-29T19:51:49.848Z] INFO: Database connection is healthy
+[2025-01-29T20:01:49.861Z] INFO: Database connection is healthy
+[2025-01-29T20:11:49.875Z] INFO: Database connection is healthy
+[2025-01-29T20:21:51.660Z] INFO: Database connection is healthy
+[2025-01-29T20:31:51.966Z] INFO: Database connection is healthy
+[2025-01-29T20:41:51.989Z] INFO: Database connection is healthy
+[2025-01-29T20:51:52.010Z] INFO: Database connection is healthy
+[2025-01-29T21:01:52.033Z] INFO: Database connection is healthy
+[2025-01-29T21:11:52.041Z] INFO: Database connection is healthy
+[2025-01-29T21:21:52.083Z] INFO: Database connection is healthy
+[2025-01-29T21:31:52.086Z] INFO: Database connection is healthy
+[2025-01-29T21:41:52.107Z] INFO: Database connection is healthy
+[2025-01-29T21:51:52.128Z] INFO: Database connection is healthy
+[2025-01-29T22:01:52.144Z] INFO: Database connection is healthy
+[2025-01-29T22:07:30.198Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-29T22:07:30.199Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-29T22:07:30.225Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-29T22:07:30.225Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-29T22:07:31.233Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T22:07:31.270Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-29T22:11:52.175Z] INFO: Database connection is healthy
+[2025-01-29T22:21:52.175Z] INFO: Database connection is healthy
+[2025-01-29T22:31:52.192Z] INFO: Database connection is healthy
+[2025-01-29T22:41:52.209Z] INFO: Database connection is healthy
+[2025-01-29T22:51:52.220Z] INFO: Database connection is healthy
+[2025-01-29T23:01:52.242Z] INFO: Database connection is healthy
+[2025-01-29T23:11:52.245Z] INFO: Database connection is healthy
+[2025-01-29T23:21:52.276Z] INFO: Database connection is healthy
+[2025-01-29T23:31:52.285Z] INFO: Database connection is healthy
+[2025-01-29T23:41:52.297Z] INFO: Database connection is healthy
+[2025-01-29T23:51:52.314Z] INFO: Database connection is healthy
+[2025-01-30T00:01:52.320Z] INFO: Database connection is healthy
+[2025-01-30T00:11:52.342Z] INFO: Database connection is healthy
+[2025-01-30T00:21:52.343Z] INFO: Database connection is healthy
+[2025-01-30T00:31:52.360Z] INFO: Database connection is healthy
+[2025-01-30T00:41:52.379Z] INFO: Database connection is healthy
+[2025-01-30T00:51:52.389Z] INFO: Database connection is healthy
+[2025-01-30T01:01:52.414Z] INFO: Database connection is healthy
+[2025-01-30T01:11:52.420Z] INFO: Database connection is healthy
+[2025-01-30T01:21:52.440Z] INFO: Database connection is healthy
+[2025-01-30T01:31:52.453Z] INFO: Database connection is healthy
+[2025-01-30T01:41:52.470Z] INFO: Database connection is healthy
+[2025-01-30T01:51:52.500Z] INFO: Database connection is healthy
+[2025-01-30T02:01:52.517Z] INFO: Database connection is healthy
+[2025-01-30T02:11:52.548Z] INFO: Database connection is healthy
+[2025-01-30T02:21:52.550Z] INFO: Database connection is healthy
+[2025-01-30T02:31:52.576Z] INFO: Database connection is healthy
+[2025-01-30T02:41:52.599Z] INFO: Database connection is healthy
+[2025-01-30T02:51:52.611Z] INFO: Database connection is healthy
+[2025-01-30T03:01:52.644Z] INFO: Database connection is healthy
+[2025-01-30T03:11:52.647Z] INFO: Database connection is healthy
+[2025-01-30T03:21:52.671Z] INFO: Database connection is healthy
+[2025-01-30T03:31:52.682Z] INFO: Database connection is healthy
+[2025-01-30T03:41:52.691Z] INFO: Database connection is healthy
+[2025-01-30T03:51:52.721Z] INFO: Database connection is healthy
+[2025-01-30T03:53:06.528Z] INFO: Middleware triggered for GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[2025-01-30T03:53:06.529Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T04:01:52.724Z] INFO: Database connection is healthy
+[2025-01-30T04:11:52.753Z] INFO: Database connection is healthy
+[2025-01-30T04:21:52.769Z] INFO: Database connection is healthy
+[2025-01-30T04:31:52.790Z] INFO: Database connection is healthy
+[2025-01-30T04:41:52.817Z] INFO: Database connection is healthy
+[2025-01-30T04:51:52.822Z] INFO: Database connection is healthy
+[2025-01-30T05:01:52.851Z] INFO: Database connection is healthy
+[2025-01-30T05:11:52.855Z] INFO: Database connection is healthy
+[2025-01-30T05:21:52.869Z] INFO: Database connection is healthy
+[2025-01-30T05:31:52.891Z] INFO: Database connection is healthy
+[2025-01-30T05:41:52.912Z] INFO: Database connection is healthy
+[2025-01-30T05:51:52.936Z] INFO: Database connection is healthy
+[2025-01-30T06:01:52.943Z] INFO: Database connection is healthy
+[2025-01-30T06:11:52.965Z] INFO: Database connection is healthy
+[2025-01-30T06:21:52.974Z] INFO: Database connection is healthy
+[2025-01-30T06:31:52.985Z] INFO: Database connection is healthy
+[2025-01-30T06:41:53.008Z] INFO: Database connection is healthy
+[2025-01-30T06:51:53.011Z] INFO: Database connection is healthy
+[2025-01-30T07:01:53.033Z] INFO: Database connection is healthy
+[2025-01-30T07:11:53.047Z] INFO: Database connection is healthy
+[2025-01-30T07:21:53.064Z] INFO: Database connection is healthy
+[2025-01-30T07:31:53.089Z] INFO: Database connection is healthy
+[2025-01-30T07:41:53.095Z] INFO: Database connection is healthy
+[2025-01-30T07:51:53.128Z] INFO: Database connection is healthy
+[2025-01-30T08:01:53.135Z] INFO: Database connection is healthy
+[2025-01-30T08:11:53.160Z] INFO: Database connection is healthy
+[2025-01-30T08:21:53.177Z] INFO: Database connection is healthy
+[2025-01-30T08:31:53.197Z] INFO: Database connection is healthy
+[2025-01-30T08:41:53.219Z] INFO: Database connection is healthy
+[2025-01-30T08:51:53.230Z] INFO: Database connection is healthy
+[2025-01-30T09:01:53.253Z] INFO: Database connection is healthy
+[2025-01-30T09:11:53.261Z] INFO: Database connection is healthy
+[2025-01-30T09:21:53.276Z] INFO: Database connection is healthy
+[2025-01-30T09:31:53.293Z] INFO: Database connection is healthy
+[2025-01-30T09:41:53.309Z] INFO: Database connection is healthy
+[2025-01-30T09:51:53.330Z] INFO: Database connection is healthy
+[2025-01-30T10:00:32.117Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T10:00:32.118Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T10:00:32.177Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T10:00:32.178Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T10:00:33.601Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T10:00:33.639Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T10:01:53.335Z] INFO: Database connection is healthy
+[2025-01-30T10:11:53.354Z] INFO: Database connection is healthy
+[2025-01-30T10:16:51.718Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-30
+[2025-01-30T10:16:51.719Z] INFO: User is authenticated
+[2025-01-30T10:16:51.719Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-30"}
+[2025-01-30T10:16:51.722Z] INFO: Query results:
+[2025-01-30T10:16:51.722Z] INFO: Final trips object:
+[2025-01-30T10:16:54.745Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-30
+[2025-01-30T10:16:54.746Z] INFO: User is authenticated
+[2025-01-30T10:16:54.746Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-30"}
+[2025-01-30T10:16:54.748Z] INFO: Query results:
+[2025-01-30T10:16:54.748Z] INFO: Final trips object:
+[2025-01-30T10:16:55.780Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-30
+[2025-01-30T10:16:55.781Z] INFO: User is authenticated
+[2025-01-30T10:16:55.781Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-30"}
+[2025-01-30T10:16:55.783Z] INFO: Query results:
+[2025-01-30T10:16:55.784Z] INFO: Final trips object:
+[2025-01-30T10:16:56.132Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-30
+[2025-01-30T10:16:56.132Z] INFO: User is authenticated
+[2025-01-30T10:16:56.132Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-30"}
+[2025-01-30T10:16:56.135Z] INFO: Query results:
+[2025-01-30T10:16:56.135Z] INFO: Final trips object:
+[2025-01-30T10:16:56.321Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-30
+[2025-01-30T10:16:56.322Z] INFO: User is authenticated
+[2025-01-30T10:16:56.322Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-30"}
+[2025-01-30T10:16:56.324Z] INFO: Query results:
+[2025-01-30T10:16:56.324Z] INFO: Final trips object:
+[2025-01-30T10:17:07.581Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:17:07.581Z] INFO: User is authenticated
+[2025-01-30T10:17:07.582Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:17:07.583Z] INFO: Query results:
+[2025-01-30T10:17:07.584Z] INFO: Final trips object:
+[2025-01-30T10:20:04.879Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:04.879Z] INFO: User is authenticated
+[2025-01-30T10:20:04.880Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:04.882Z] INFO: Query results:
+[2025-01-30T10:20:04.882Z] INFO: Final trips object:
+[2025-01-30T10:20:05.902Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:05.902Z] INFO: User is authenticated
+[2025-01-30T10:20:05.903Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:05.904Z] INFO: Query results:
+[2025-01-30T10:20:05.905Z] INFO: Final trips object:
+[2025-01-30T10:20:06.198Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:06.198Z] INFO: User is authenticated
+[2025-01-30T10:20:06.198Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:06.200Z] INFO: Query results:
+[2025-01-30T10:20:06.200Z] INFO: Final trips object:
+[2025-01-30T10:20:08.049Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T10:20:08.049Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T10:20:08.054Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T10:20:08.054Z] INFO: User is authenticated
+[2025-01-30T10:20:09.935Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T10:20:09.935Z] INFO: User is authenticated
+[2025-01-30T10:20:14.726Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:14.726Z] INFO: User is authenticated
+[2025-01-30T10:20:14.727Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:14.728Z] INFO: Query results:
+[2025-01-30T10:20:14.729Z] INFO: Final trips object:
+[2025-01-30T10:20:15.601Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:15.602Z] INFO: User is authenticated
+[2025-01-30T10:20:15.602Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:15.604Z] INFO: Query results:
+[2025-01-30T10:20:15.604Z] INFO: Final trips object:
+[2025-01-30T10:20:15.829Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:15.830Z] INFO: User is authenticated
+[2025-01-30T10:20:15.830Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:15.832Z] INFO: Query results:
+[2025-01-30T10:20:15.832Z] INFO: Final trips object:
+[2025-01-30T10:20:17.125Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:17.126Z] INFO: User is authenticated
+[2025-01-30T10:20:17.126Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:17.128Z] INFO: Query results:
+[2025-01-30T10:20:17.128Z] INFO: Final trips object:
+[2025-01-30T10:20:17.343Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:17.343Z] INFO: User is authenticated
+[2025-01-30T10:20:17.344Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:17.345Z] INFO: Query results:
+[2025-01-30T10:20:17.346Z] INFO: Final trips object:
+[2025-01-30T10:20:17.510Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:17.511Z] INFO: User is authenticated
+[2025-01-30T10:20:17.511Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:17.513Z] INFO: Query results:
+[2025-01-30T10:20:17.513Z] INFO: Final trips object:
+[2025-01-30T10:20:17.677Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:17.677Z] INFO: User is authenticated
+[2025-01-30T10:20:17.678Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:17.679Z] INFO: Query results:
+[2025-01-30T10:20:17.680Z] INFO: Final trips object:
+[2025-01-30T10:20:17.826Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:17.827Z] INFO: User is authenticated
+[2025-01-30T10:20:17.827Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:17.829Z] INFO: Query results:
+[2025-01-30T10:20:17.829Z] INFO: Final trips object:
+[2025-01-30T10:20:18.394Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:18.395Z] INFO: User is authenticated
+[2025-01-30T10:20:18.395Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:18.397Z] INFO: Query results:
+[2025-01-30T10:20:18.397Z] INFO: Final trips object:
+[2025-01-30T10:20:18.565Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:18.565Z] INFO: User is authenticated
+[2025-01-30T10:20:18.566Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:18.568Z] INFO: Query results:
+[2025-01-30T10:20:18.568Z] INFO: Final trips object:
+[2025-01-30T10:20:18.716Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:18.716Z] INFO: User is authenticated
+[2025-01-30T10:20:18.716Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:18.718Z] INFO: Query results:
+[2025-01-30T10:20:18.718Z] INFO: Final trips object:
+[2025-01-30T10:20:18.861Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:18.862Z] INFO: User is authenticated
+[2025-01-30T10:20:18.862Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:18.864Z] INFO: Query results:
+[2025-01-30T10:20:18.864Z] INFO: Final trips object:
+[2025-01-30T10:20:19.016Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:19.016Z] INFO: User is authenticated
+[2025-01-30T10:20:19.017Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:19.019Z] INFO: Query results:
+[2025-01-30T10:20:19.019Z] INFO: Final trips object:
+[2025-01-30T10:20:19.178Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:19.178Z] INFO: User is authenticated
+[2025-01-30T10:20:19.179Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:19.181Z] INFO: Query results:
+[2025-01-30T10:20:19.181Z] INFO: Final trips object:
+[2025-01-30T10:20:19.331Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-02-03
+[2025-01-30T10:20:19.331Z] INFO: User is authenticated
+[2025-01-30T10:20:19.332Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-02-03"}
+[2025-01-30T10:20:19.333Z] INFO: Query results:
+[2025-01-30T10:20:19.334Z] INFO: Final trips object:
+[2025-01-30T10:21:53.364Z] INFO: Database connection is healthy
+[2025-01-30T10:31:53.379Z] INFO: Database connection is healthy
+[2025-01-30T10:41:53.407Z] INFO: Database connection is healthy
+[2025-01-30T10:47:14.928Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T10:47:14.928Z] INFO: User is authenticated
+[2025-01-30T10:47:14.935Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T10:47:14.935Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T10:47:15.772Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T10:47:15.772Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T10:47:15.779Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T10:47:15.779Z] INFO: User is authenticated
+[2025-01-30T10:47:16.724Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Rehab
+[2025-01-30T10:47:16.724Z] INFO: User is authenticated
+[2025-01-30T10:51:53.419Z] INFO: Database connection is healthy
+[2025-01-30T11:01:53.433Z] INFO: Database connection is healthy
+[2025-01-30T11:04:28.706Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:04:28.706Z] INFO: User is authenticated
+[2025-01-30T11:04:28.712Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:04:28.713Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:04:29.826Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:04:29.827Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:04:29.832Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:04:29.832Z] INFO: User is authenticated
+[2025-01-30T11:05:03.330Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:05:03.330Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:05:03.335Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:05:03.335Z] INFO: User is authenticated
+[2025-01-30T11:05:22.999Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:05:22.999Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:05:23.006Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:05:23.006Z] INFO: User is authenticated
+[2025-01-30T11:05:29.010Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:05:29.010Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:05:29.015Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:05:29.015Z] INFO: User is authenticated
+[2025-01-30T11:06:15.078Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:06:15.079Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:06:15.083Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:06:15.084Z] INFO: User is authenticated
+[2025-01-30T11:07:18.070Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:07:18.070Z] INFO: User is authenticated
+[2025-01-30T11:07:18.074Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:07:18.075Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:07:28.454Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-30T11:07:31.184Z] INFO: Server running on port 5000
+[2025-01-30T11:07:33.450Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:07:33.451Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:07:33.459Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:07:33.460Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:07:33.465Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:07:34.189Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:07:34.705Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:07:34.934Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:07:34.935Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738234857,\"nbf\":1738234857,\"exp\":1738238757,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"PY_yYW1N4lckF5gS6YBC_E-EmTWV68zs\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"2VLG1Astg0Siju24xAqNAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738234857,"nbf":1738234857,"exp":1738238757,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"PY_yYW1N4lckF5gS6YBC_E-EmTWV68zs","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"2VLG1Astg0Siju24xAqNAA","ver":"2.0"}}
+[2025-01-30T11:07:34.989Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:07:34.989Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:07:34.994Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:07:34.995Z] INFO: User is authenticated
+[2025-01-30T11:07:37.661Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:07:37.662Z] INFO: User is authenticated
+[2025-01-30T11:07:41.147Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-29
+[2025-01-30T11:07:41.148Z] INFO: User is authenticated
+[2025-01-30T11:07:41.149Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-29"}
+[2025-01-30T11:07:41.151Z] INFO: Query results:
+[2025-01-30T11:07:41.152Z] INFO: Final trips object:
+[2025-01-30T11:08:50.419Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:50.429Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:50.437Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:50.437Z] INFO: User is authenticated
+[2025-01-30T11:08:52.273Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Rehab
+[2025-01-30T11:08:52.273Z] INFO: User is authenticated
+[2025-01-30T11:08:54.612Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:54.613Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:54.626Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:54.632Z] INFO: User is authenticated
+[2025-01-30T11:08:55.994Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:55.995Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:56.024Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:56.025Z] INFO: User is authenticated
+[2025-01-30T11:08:56.617Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:56.617Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:56.628Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:56.629Z] INFO: User is authenticated
+[2025-01-30T11:08:57.440Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:57.441Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:57.448Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:57.448Z] INFO: User is authenticated
+[2025-01-30T11:08:58.096Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:58.097Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:58.103Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:58.103Z] INFO: User is authenticated
+[2025-01-30T11:08:58.849Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:58.850Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:58.864Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:58.869Z] INFO: User is authenticated
+[2025-01-30T11:08:59.543Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:08:59.544Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:08:59.551Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:08:59.551Z] INFO: User is authenticated
+[2025-01-30T11:09:00.265Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:00.265Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:00.303Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:00.304Z] INFO: User is authenticated
+[2025-01-30T11:09:02.742Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Rehab
+[2025-01-30T11:09:02.742Z] INFO: User is authenticated
+[2025-01-30T11:09:09.067Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-29
+[2025-01-30T11:09:09.068Z] INFO: User is authenticated
+[2025-01-30T11:09:09.068Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-29"}
+[2025-01-30T11:09:09.070Z] INFO: Query results:
+[2025-01-30T11:09:09.070Z] INFO: Final trips object:
+[2025-01-30T11:09:11.943Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Morning&date=2025-01-30
+[2025-01-30T11:09:11.943Z] INFO: User is authenticated
+[2025-01-30T11:09:11.944Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Morning","date":"2025-01-30"}
+[2025-01-30T11:09:11.946Z] INFO: Query results:
+[2025-01-30T11:09:11.946Z] INFO: Final trips object:
+[2025-01-30T11:09:13.194Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:13.194Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:13.200Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:13.200Z] INFO: User is authenticated
+[2025-01-30T11:09:13.894Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:13.894Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:13.899Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:13.899Z] INFO: User is authenticated
+[2025-01-30T11:09:14.378Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:14.378Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:14.384Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:14.384Z] INFO: User is authenticated
+[2025-01-30T11:09:14.669Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:14.670Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:14.674Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:14.674Z] INFO: User is authenticated
+[2025-01-30T11:09:14.836Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:14.836Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:14.843Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:14.843Z] INFO: User is authenticated
+[2025-01-30T11:09:15.017Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.018Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.023Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.023Z] INFO: User is authenticated
+[2025-01-30T11:09:15.178Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.179Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.185Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.186Z] INFO: User is authenticated
+[2025-01-30T11:09:15.348Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.349Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.354Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.355Z] INFO: User is authenticated
+[2025-01-30T11:09:15.486Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.486Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.492Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.492Z] INFO: User is authenticated
+[2025-01-30T11:09:15.643Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.644Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.649Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.650Z] INFO: User is authenticated
+[2025-01-30T11:09:15.812Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.813Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.820Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.820Z] INFO: User is authenticated
+[2025-01-30T11:09:15.953Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:15.953Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:15.959Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:15.959Z] INFO: User is authenticated
+[2025-01-30T11:09:16.107Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.107Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.113Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.113Z] INFO: User is authenticated
+[2025-01-30T11:09:16.278Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.279Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.284Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.284Z] INFO: User is authenticated
+[2025-01-30T11:09:16.457Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.458Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.462Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.463Z] INFO: User is authenticated
+[2025-01-30T11:09:16.629Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.629Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.634Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.635Z] INFO: User is authenticated
+[2025-01-30T11:09:16.803Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.804Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.809Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.809Z] INFO: User is authenticated
+[2025-01-30T11:09:16.976Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:16.977Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:16.982Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:16.982Z] INFO: User is authenticated
+[2025-01-30T11:09:17.142Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:17.142Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:17.148Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:17.149Z] INFO: User is authenticated
+[2025-01-30T11:09:17.307Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:17.307Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:17.312Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:17.312Z] INFO: User is authenticated
+[2025-01-30T11:09:17.429Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:17.429Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:17.435Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:17.435Z] INFO: User is authenticated
+[2025-01-30T11:09:24.586Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:24.586Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:09:24.588Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:24.589Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:09:24.633Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:09:24.637Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:09:25.167Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:25.169Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:09:25.171Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:25.172Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:09:25.176Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:09:25.179Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:09:35.883Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:09:36.273Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:09:36.274Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738234979,\"nbf\":1738234979,\"exp\":1738238879,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"toY-aTnMua_Yyj_zCs0pOccnhfgCQI-e\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"3Oa3QCOY40afupbXgB2XAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738234979,"nbf":1738234979,"exp":1738238879,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"toY-aTnMua_Yyj_zCs0pOccnhfgCQI-e","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"3Oa3QCOY40afupbXgB2XAA","ver":"2.0"}}
+[2025-01-30T11:09:36.376Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:09:36.377Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:09:36.382Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:09:36.382Z] INFO: User is authenticated
+[2025-01-30T11:10:04.415Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:10:04.415Z] INFO: User is authenticated
+[2025-01-30T11:10:04.431Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:10:04.431Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:10:10.738Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:10:10.739Z] INFO: User is authenticated
+[2025-01-30T11:11:42.781Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-30T11:11:45.491Z] INFO: Server running on port 5000
+[2025-01-30T11:11:55.612Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:11:55.622Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:11:55.630Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:11:55.681Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:11:55.686Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:11:56.425Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:11:56.982Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:11:57.263Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:11:57.264Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:11:57.267Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:11:57.289Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:11:57.292Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:11:57.298Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:11:57.543Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:11:57.754Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:11:57.755Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235120,\"nbf\":1738235120,\"exp\":1738239020,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"JBzzxcpWPpUfRY4FPW1p9SdCrQBu9aVT\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"YZ64e77VYkiIyBBR5ZAMAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235120,"nbf":1738235120,"exp":1738239020,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"JBzzxcpWPpUfRY4FPW1p9SdCrQBu9aVT","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"YZ64e77VYkiIyBBR5ZAMAA","ver":"2.0"}}
+[2025-01-30T11:11:57.832Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:11:57.833Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:11:57.840Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:11:57.840Z] INFO: User is authenticated
+[2025-01-30T11:12:02.536Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:02.536Z] INFO: User is authenticated
+[2025-01-30T11:12:02.576Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:02.577Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:02.579Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:02.579Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:02.620Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:02.642Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:02.942Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:03.257Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:03.262Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:03.264Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:03.265Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:03.282Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:03.288Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:03.557Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:04.114Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:04.114Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235127,\"nbf\":1738235127,\"exp\":1738239027,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"ni2mYewckj5wHdiY74JmuauEPkDVhjIl\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"M0xdz9rKOUq8McgchXFGAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235127,"nbf":1738235127,"exp":1738239027,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"ni2mYewckj5wHdiY74JmuauEPkDVhjIl","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"M0xdz9rKOUq8McgchXFGAA","ver":"2.0"}}
+[2025-01-30T11:12:04.183Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:04.183Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:04.190Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:04.190Z] INFO: User is authenticated
+[2025-01-30T11:12:06.743Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:06.743Z] INFO: User is authenticated
+[2025-01-30T11:12:06.784Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:06.785Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:06.786Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:06.788Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:06.831Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:06.854Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:07.108Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:07.308Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:07.309Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:07.311Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:07.313Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:07.416Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:07.431Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:07.666Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:07.917Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:07.917Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235130,\"nbf\":1738235130,\"exp\":1738239030,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"bxCV5y3H_8q0iBHACbpkSrsvzaE_oPNq\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"hPXMKGP8W0-SEJ4fdWpVAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235130,"nbf":1738235130,"exp":1738239030,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"bxCV5y3H_8q0iBHACbpkSrsvzaE_oPNq","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"hPXMKGP8W0-SEJ4fdWpVAA","ver":"2.0"}}
+[2025-01-30T11:12:08.092Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:08.092Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:08.097Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:08.097Z] INFO: User is authenticated
+[2025-01-30T11:12:10.076Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:10.076Z] INFO: User is authenticated
+[2025-01-30T11:12:10.105Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:10.106Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:10.108Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:10.109Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:10.115Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:10.121Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:10.397Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:10.595Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:10.595Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235133,\"nbf\":1738235133,\"exp\":1738239033,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"Jvi2NRa4NeCA90sRAoQhEfnC9-UGMMWk\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"Bq0mKCIOWUCLXbQfggWVAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235133,"nbf":1738235133,"exp":1738239033,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"Jvi2NRa4NeCA90sRAoQhEfnC9-UGMMWk","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"Bq0mKCIOWUCLXbQfggWVAA","ver":"2.0"}}
+[2025-01-30T11:12:10.644Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:10.645Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:10.649Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:10.649Z] INFO: User is authenticated
+[2025-01-30T11:12:11.962Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:11.963Z] INFO: User is authenticated
+[2025-01-30T11:12:11.985Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:11.985Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:11.987Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:11.987Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:11.991Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:11.997Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:12.245Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:12.459Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:12.459Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235135,\"nbf\":1738235135,\"exp\":1738239035,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"vAkjmBYn1p3UmxMugi0oGD6XolLqJuYQ\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"UjFu-hPrJkWFyobQKqRaAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235135,"nbf":1738235135,"exp":1738239035,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"vAkjmBYn1p3UmxMugi0oGD6XolLqJuYQ","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"UjFu-hPrJkWFyobQKqRaAA","ver":"2.0"}}
+[2025-01-30T11:12:12.511Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:12.511Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:12.515Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:12.516Z] INFO: User is authenticated
+[2025-01-30T11:12:13.231Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:13.232Z] INFO: User is authenticated
+[2025-01-30T11:12:13.254Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:13.254Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:13.256Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:13.256Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:13.261Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:13.267Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:13.486Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:13.748Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:13.749Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235136,\"nbf\":1738235136,\"exp\":1738239036,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"uPvdMRRo9rYrzBVS8hOP6b_KSBns2DXn\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"Ktu9_Qfc60-pwYz65wxVAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235136,"nbf":1738235136,"exp":1738239036,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"uPvdMRRo9rYrzBVS8hOP6b_KSBns2DXn","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"Ktu9_Qfc60-pwYz65wxVAA","ver":"2.0"}}
+[2025-01-30T11:12:13.850Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:13.850Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:13.855Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:13.859Z] INFO: User is authenticated
+[2025-01-30T11:12:14.341Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:14.342Z] INFO: User is authenticated
+[2025-01-30T11:12:14.364Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:14.364Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:14.365Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:14.366Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:14.369Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:14.380Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:14.618Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:14.835Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:14.836Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235137,\"nbf\":1738235137,\"exp\":1738239037,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"bMYu3-m49iMonHVhHsJERyxQrvZVQohR\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"hPXMKGP8W0-SEJ4famtVAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235137,"nbf":1738235137,"exp":1738239037,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"bMYu3-m49iMonHVhHsJERyxQrvZVQohR","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"hPXMKGP8W0-SEJ4famtVAA","ver":"2.0"}}
+[2025-01-30T11:12:14.937Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:14.938Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:14.945Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:14.945Z] INFO: User is authenticated
+[2025-01-30T11:12:15.584Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:15.584Z] INFO: User is authenticated
+[2025-01-30T11:12:15.607Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:15.608Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:15.609Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:15.610Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:15.620Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:15.624Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:15.884Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:16.034Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:16.038Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:16.040Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:16.040Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:16.048Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:16.056Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:16.288Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:16.534Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:16.534Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235139,\"nbf\":1738235139,\"exp\":1738239039,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"ud0U8U6T7wQM94WU6yEb7FhPfcHSAci8\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"XUtmOvST6062oOC5KaSeAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235139,"nbf":1738235139,"exp":1738239039,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"ud0U8U6T7wQM94WU6yEb7FhPfcHSAci8","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"XUtmOvST6062oOC5KaSeAA","ver":"2.0"}}
+[2025-01-30T11:12:16.639Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:16.640Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:16.648Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:16.648Z] INFO: User is authenticated
+[2025-01-30T11:12:36.576Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:36.576Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:36.582Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:36.583Z] INFO: User is authenticated
+[2025-01-30T11:12:38.088Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:38.088Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:38.095Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:38.095Z] INFO: User is authenticated
+[2025-01-30T11:12:39.556Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:39.557Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:39.563Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:39.563Z] INFO: User is authenticated
+[2025-01-30T11:12:39.943Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:39.944Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:39.949Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:39.949Z] INFO: User is authenticated
+[2025-01-30T11:12:40.143Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:40.144Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:40.148Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:40.149Z] INFO: User is authenticated
+[2025-01-30T11:12:40.336Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:40.336Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:40.342Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:40.342Z] INFO: User is authenticated
+[2025-01-30T11:12:43.579Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:43.580Z] INFO: User is authenticated
+[2025-01-30T11:12:43.584Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:43.585Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:47.229Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:12:47.229Z] INFO: User is authenticated
+[2025-01-30T11:12:47.252Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:47.252Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:12:47.254Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:47.254Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:12:47.259Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:47.268Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:12:47.493Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:12:47.964Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:12:47.964Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235170,\"nbf\":1738235170,\"exp\":1738239070,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"yeGJSgCyZVZd0G58j1MxH9bvDnjMASoF\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-e29e-e6de-b3fd-863169dea2d8\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"8Phq931bO0WbGwycbsp2AA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235170,"nbf":1738235170,"exp":1738239070,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"yeGJSgCyZVZd0G58j1MxH9bvDnjMASoF","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-e29e-e6de-b3fd-863169dea2d8","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"8Phq931bO0WbGwycbsp2AA","ver":"2.0"}}
+[2025-01-30T11:12:48.017Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:12:48.018Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:12:48.021Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:12:48.022Z] INFO: User is authenticated
+[2025-01-30T11:16:48.837Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-30T11:16:51.502Z] INFO: Server running on port 5000
+[2025-01-30T11:17:05.312Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:05.314Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:17:05.322Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:05.324Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:17:05.328Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:17:07.776Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:17:08.512Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:17:08.752Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:17:08.753Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235431,\"nbf\":1738235431,\"exp\":1738239331,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"KVBrUPk-xhFlvrOrfHfxoUdQ268Ajg9B\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"LBjouhdQK0SyGmxj-ypmAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235431,"nbf":1738235431,"exp":1738239331,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"KVBrUPk-xhFlvrOrfHfxoUdQ268Ajg9B","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"LBjouhdQK0SyGmxj-ypmAA","ver":"2.0"}}
+[2025-01-30T11:17:08.809Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:08.809Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:08.814Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:08.815Z] INFO: User is authenticated
+[2025-01-30T11:17:12.037Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:17:12.037Z] INFO: User is authenticated
+[2025-01-30T11:17:14.120Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:14.121Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:14.134Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:14.135Z] INFO: User is authenticated
+[2025-01-30T11:17:16.639Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:16.639Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:16.646Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:16.646Z] INFO: User is authenticated
+[2025-01-30T11:17:17.114Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:17.114Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:17.119Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:17.119Z] INFO: User is authenticated
+[2025-01-30T11:17:17.310Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:17.310Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:17.315Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:17.316Z] INFO: User is authenticated
+[2025-01-30T11:17:17.530Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:17.530Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:17.535Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:17.536Z] INFO: User is authenticated
+[2025-01-30T11:17:17.733Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:17.734Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:17.739Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:17.739Z] INFO: User is authenticated
+[2025-01-30T11:17:17.950Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:17.950Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:17.955Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:17.956Z] INFO: User is authenticated
+[2025-01-30T11:17:18.135Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:18.136Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:18.141Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:18.141Z] INFO: User is authenticated
+[2025-01-30T11:17:18.327Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:18.327Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:18.332Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:18.332Z] INFO: User is authenticated
+[2025-01-30T11:17:18.500Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:18.501Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:18.508Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:18.509Z] INFO: User is authenticated
+[2025-01-30T11:17:25.848Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:25.848Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:25.853Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:25.853Z] INFO: User is authenticated
+[2025-01-30T11:17:55.703Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:55.740Z] INFO: User is authenticated
+[2025-01-30T11:17:55.763Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:55.763Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:56.812Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:17:56.813Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:17:56.820Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:17:56.820Z] INFO: User is authenticated
+[2025-01-30T11:18:00.397Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:00.397Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:00.403Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:00.403Z] INFO: User is authenticated
+[2025-01-30T11:18:01.472Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:01.472Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:01.477Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:01.477Z] INFO: User is authenticated
+[2025-01-30T11:18:02.174Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:02.175Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:02.180Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:02.180Z] INFO: User is authenticated
+[2025-01-30T11:18:02.842Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:02.842Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:02.853Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:02.853Z] INFO: User is authenticated
+[2025-01-30T11:18:03.057Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:03.058Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:03.066Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:03.067Z] INFO: User is authenticated
+[2025-01-30T11:18:03.271Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:03.271Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:03.278Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:03.279Z] INFO: User is authenticated
+[2025-01-30T11:18:03.502Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:03.503Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:03.507Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:03.507Z] INFO: User is authenticated
+[2025-01-30T11:18:03.780Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:03.780Z] INFO: User is authenticated
+[2025-01-30T11:18:03.791Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:03.791Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:04.066Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:04.066Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:04.078Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:04.079Z] INFO: User is authenticated
+[2025-01-30T11:18:04.236Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:04.236Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:04.243Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:04.244Z] INFO: User is authenticated
+[2025-01-30T11:18:04.419Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:04.419Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:04.427Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:04.428Z] INFO: User is authenticated
+[2025-01-30T11:18:04.859Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:04.859Z] INFO: User is authenticated
+[2025-01-30T11:18:04.866Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:04.867Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.033Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:05.034Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.041Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:05.041Z] INFO: User is authenticated
+[2025-01-30T11:18:05.233Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:05.234Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.240Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:05.240Z] INFO: User is authenticated
+[2025-01-30T11:18:05.414Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:05.414Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.418Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:05.419Z] INFO: User is authenticated
+[2025-01-30T11:18:05.586Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:05.586Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.592Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:05.592Z] INFO: User is authenticated
+[2025-01-30T11:18:05.773Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:05.773Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:05.778Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:05.778Z] INFO: User is authenticated
+[2025-01-30T11:18:06.852Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:06.853Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:06.862Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:06.862Z] INFO: User is authenticated
+[2025-01-30T11:18:07.452Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:07.453Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:07.464Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:07.465Z] INFO: User is authenticated
+[2025-01-30T11:18:09.351Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:09.351Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:09.355Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:09.355Z] INFO: User is authenticated
+[2025-01-30T11:18:09.932Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:09.932Z] INFO: User is authenticated
+[2025-01-30T11:18:09.943Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:09.943Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:10.448Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:10.449Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:10.455Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:10.456Z] INFO: User is authenticated
+[2025-01-30T11:18:10.809Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:10.809Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:10.814Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:10.814Z] INFO: User is authenticated
+[2025-01-30T11:18:11.042Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:11.043Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:11.049Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:11.050Z] INFO: User is authenticated
+[2025-01-30T11:18:11.302Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:11.303Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:11.310Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:11.311Z] INFO: User is authenticated
+[2025-01-30T11:18:11.529Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:11.530Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:11.534Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:11.535Z] INFO: User is authenticated
+[2025-01-30T11:18:25.360Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:18:25.361Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:18:25.366Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:18:25.366Z] INFO: User is authenticated
+[2025-01-30T11:19:27.262Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:19:27.263Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:19:27.268Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:19:27.269Z] INFO: User is authenticated
+[2025-01-30T11:19:35.611Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:19:35.611Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:19:35.613Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:19:35.613Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:19:35.658Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:19:35.662Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:19:35.849Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:19:35.849Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:19:35.851Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:19:35.852Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:19:35.909Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:19:35.918Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:19:45.664Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:19:46.237Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:19:46.238Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235589,\"nbf\":1738235589,\"exp\":1738239489,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"kh-xvd65v9TFRZ__o7Y1NJkuUdrbcVE4\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-8373-ee18-29aa-49614626e99c\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"xVqc5gwZk0OZz-qcEzuRAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235589,"nbf":1738235589,"exp":1738239489,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"kh-xvd65v9TFRZ__o7Y1NJkuUdrbcVE4","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-8373-ee18-29aa-49614626e99c","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"xVqc5gwZk0OZz-qcEzuRAA","ver":"2.0"}}
+[2025-01-30T11:19:46.350Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:19:46.351Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:19:46.358Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:19:46.358Z] INFO: User is authenticated
+[2025-01-30T11:19:48.032Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:19:48.032Z] INFO: User is authenticated
+[2025-01-30T11:19:54.518Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:19:54.521Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:19:54.524Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:19:54.524Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:19:54.590Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:19:54.605Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:06.857Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:20:06.963Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:06.975Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:20:06.978Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:06.991Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:20:06.994Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:06.998Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:07.260Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:20:07.730Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:20:07.730Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235610,\"nbf\":1738235610,\"exp\":1738239510,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"0UZj88oNsMElR5_8c3phQlIzi5pZkARN\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-4bb5-40e9-be26-64879e9a41db\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"e52JPVB9AEuKC8eOeFh4AA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235610,"nbf":1738235610,"exp":1738239510,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"0UZj88oNsMElR5_8c3phQlIzi5pZkARN","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-4bb5-40e9-be26-64879e9a41db","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"e52JPVB9AEuKC8eOeFh4AA","ver":"2.0"}}
+[2025-01-30T11:20:07.790Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:07.790Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:20:07.794Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:07.794Z] INFO: User is authenticated
+[2025-01-30T11:20:12.828Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:20:12.828Z] INFO: User is authenticated
+[2025-01-30T11:20:15.858Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:15.867Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:20:15.869Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:15.869Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:20:15.937Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:15.946Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:23.786Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:20:23.839Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:23.850Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:20:23.853Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:23.854Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:20:23.902Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:23.910Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:24.203Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:20:24.624Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:20:24.624Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235627,\"nbf\":1738235627,\"exp\":1738239527,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"a3f3HvsDEVTex03cLJ6ls_FQQ1KQnULw\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-6eb9-913b-f083-5b61f31d7692\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"2wxomWmis0yOHl-zTcaUAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235627,"nbf":1738235627,"exp":1738239527,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"a3f3HvsDEVTex03cLJ6ls_FQQ1KQnULw","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-6eb9-913b-f083-5b61f31d7692","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"2wxomWmis0yOHl-zTcaUAA","ver":"2.0"}}
+[2025-01-30T11:20:24.681Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:24.682Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:20:24.687Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:24.688Z] INFO: User is authenticated
+[2025-01-30T11:20:26.154Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:20:26.154Z] INFO: User is authenticated
+[2025-01-30T11:20:29.871Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:29.876Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:20:29.878Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:29.894Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:20:29.896Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:29.900Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:39.975Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:39.988Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:20:39.990Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:39.990Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:20:40.034Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:40.041Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:20:40.616Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:20:41.034Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:20:41.034Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235644,\"nbf\":1738235644,\"exp\":1738239544,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"PlDxQH_VJJxkNhU-4Ix386kV9588Rd0R\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"Tj2hMf1180iFYkppH26aAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235644,"nbf":1738235644,"exp":1738239544,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"PlDxQH_VJJxkNhU-4Ix386kV9588Rd0R","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"Tj2hMf1180iFYkppH26aAA","ver":"2.0"}}
+[2025-01-30T11:20:41.079Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:20:41.080Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:20:41.083Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:20:41.084Z] INFO: User is authenticated
+[2025-01-30T11:21:38.192Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:21:38.192Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:21:38.197Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:21:38.197Z] INFO: User is authenticated
+[2025-01-30T11:22:18.314Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:18.315Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:22:18.317Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:18.327Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:22:18.330Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:18.336Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:18.955Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:22:19.066Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:19.073Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:22:19.075Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:19.076Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:22:19.088Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:19.095Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:19.354Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:22:19.750Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:22:19.750Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235742,\"nbf\":1738235742,\"exp\":1738239642,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"OPFbu5PoH_10o6KryjNskI2RcGbApbrz\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"YS-5lwl9BUODgtTjr6NsAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235742,"nbf":1738235742,"exp":1738239642,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"OPFbu5PoH_10o6KryjNskI2RcGbApbrz","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"YS-5lwl9BUODgtTjr6NsAA","ver":"2.0"}}
+[2025-01-30T11:22:19.802Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:19.802Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:22:19.806Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:19.806Z] INFO: User is authenticated
+[2025-01-30T11:22:23.156Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:23.156Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:22:23.161Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:23.161Z] INFO: User is authenticated
+[2025-01-30T11:22:30.355Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:22:30.356Z] INFO: User is authenticated
+[2025-01-30T11:22:45.178Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:45.178Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:22:45.180Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:45.182Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:22:45.187Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:45.196Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:45.449Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:22:45.505Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:45.506Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:22:45.508Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:45.509Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:22:45.560Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:45.580Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:45.868Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:22:46.325Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:22:46.325Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235769,\"nbf\":1738235769,\"exp\":1738239669,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"TkoM7F-dxYJKIFMAQNijeEuoubaZfqYj\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"4d7cda85-9a10-4ffb-9005-2b200d43369f\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"mgC5f1qoBUaKyBfoppRtAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235769,"nbf":1738235769,"exp":1738239669,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"TkoM7F-dxYJKIFMAQNijeEuoubaZfqYj","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"4d7cda85-9a10-4ffb-9005-2b200d43369f","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"mgC5f1qoBUaKyBfoppRtAA","ver":"2.0"}}
+[2025-01-30T11:22:46.493Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:46.494Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:22:46.499Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:46.500Z] INFO: User is authenticated
+[2025-01-30T11:22:52.059Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:52.059Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:22:52.065Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:52.065Z] INFO: User is authenticated
+[2025-01-30T11:22:53.987Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:22:53.988Z] INFO: User is authenticated
+[2025-01-30T11:22:56.931Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:22:56.932Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:22:56.933Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:22:56.934Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:22:57.003Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:22:57.008Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:23:05.036Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:23:05.137Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:23:05.138Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:23:05.142Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:23:05.142Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:23:05.149Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:23:05.161Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:23:05.437Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:23:05.902Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:23:05.902Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235788,\"nbf\":1738235788,\"exp\":1738239688,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"l_MQI0PhjKjLKUcCpP4GAjrsR3kP-48q\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-4e94-273e-ad08-f1c638838201\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"jdPJub_qokShc07R-lidAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235788,"nbf":1738235788,"exp":1738239688,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"l_MQI0PhjKjLKUcCpP4GAjrsR3kP-48q","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-4e94-273e-ad08-f1c638838201","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"jdPJub_qokShc07R-lidAA","ver":"2.0"}}
+[2025-01-30T11:23:05.957Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:23:05.957Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:23:05.961Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:23:05.961Z] INFO: User is authenticated
+[2025-01-30T11:24:04.293Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:04.293Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:24:04.713Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:04.713Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:24:04.818Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:04.953Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:05.101Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:05.101Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:24:05.103Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:05.103Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:24:05.156Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:05.233Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:13.756Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:24:14.182Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:24:14.183Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235857,\"nbf\":1738235857,\"exp\":1738239757,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"Enc19xd35F1pt81PutsNNwScSJnWTTc0\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-731c-4238-2226-bc3e07bced8d\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"H5n1-7msB0KkVSyI0Zt3AA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235857,"nbf":1738235857,"exp":1738239757,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"Enc19xd35F1pt81PutsNNwScSJnWTTc0","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-731c-4238-2226-bc3e07bced8d","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"H5n1-7msB0KkVSyI0Zt3AA","ver":"2.0"}}
+[2025-01-30T11:24:14.347Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:14.347Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:24:14.351Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:14.351Z] INFO: User is authenticated
+[2025-01-30T11:24:15.720Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:15.720Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:24:15.724Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:15.724Z] INFO: User is authenticated
+[2025-01-30T11:24:23.793Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:23.793Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:24:23.798Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:23.798Z] INFO: User is authenticated
+[2025-01-30T11:24:29.231Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:24:29.231Z] INFO: User is authenticated
+[2025-01-30T11:24:33.070Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-30
+[2025-01-30T11:24:33.071Z] INFO: User is authenticated
+[2025-01-30T11:24:33.072Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-30"}
+[2025-01-30T11:24:33.075Z] INFO: Query results:
+[2025-01-30T11:24:33.075Z] INFO: Final trips object:
+[2025-01-30T11:24:36.331Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:24:36.331Z] INFO: User is authenticated
+[2025-01-30T11:24:40.227Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:24:40.390Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:40.390Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:24:40.392Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:40.392Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:24:40.411Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:40.433Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:40.835Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:24:41.321Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:24:41.394Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:24:41.395Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235884,\"nbf\":1738235884,\"exp\":1738239784,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"iJU_Yk3NM8Tsn224ICocrCvScD6jLUhZ\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-731c-4238-2226-bc3e07bced8d\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"OCUZ5XFO5kSpZwsM71GXAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235884,"nbf":1738235884,"exp":1738239784,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"iJU_Yk3NM8Tsn224ICocrCvScD6jLUhZ","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-731c-4238-2226-bc3e07bced8d","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"OCUZ5XFO5kSpZwsM71GXAA","ver":"2.0"}}
+[2025-01-30T11:24:41.506Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:41.506Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:24:41.507Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:41.508Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:24:41.540Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:41.561Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:24:41.869Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:24:42.120Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:24:42.120Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738235885,\"nbf\":1738235885,\"exp\":1738239785,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"dauU8VLc4_iTEOS7p_NO8BofKGKPYKCk\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-731c-4238-2226-bc3e07bced8d\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"vr_0rTsriUKeMPm8jVtvAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738235885,"nbf":1738235885,"exp":1738239785,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"dauU8VLc4_iTEOS7p_NO8BofKGKPYKCk","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-731c-4238-2226-bc3e07bced8d","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"vr_0rTsriUKeMPm8jVtvAA","ver":"2.0"}}
+[2025-01-30T11:24:42.261Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:24:42.262Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:24:42.265Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:24:42.265Z] INFO: User is authenticated
+[2025-01-30T11:26:43.805Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-01-30T11:26:46.577Z] INFO: Server running on port 5000
+[2025-01-30T11:36:46.165Z] INFO: Database connection is healthy
+[2025-01-30T11:39:50.992Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:39:50.996Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:39:51.005Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:39:51.006Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:39:51.056Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:39:51.736Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:39:52.172Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:39:52.172Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:39:52.175Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:39:52.175Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:39:52.214Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:39:52.224Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:39:52.718Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:39:52.921Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:39:52.921Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738236795,\"nbf\":1738236795,\"exp\":1738240695,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"jBhum_az3ARZzYZ9cMHQHSL0SZxVE-LR\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-4e94-273e-ad08-f1c638838201\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"nUzSsBSbIkeYXZt11ZSMAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738236795,"nbf":1738236795,"exp":1738240695,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"jBhum_az3ARZzYZ9cMHQHSL0SZxVE-LR","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-4e94-273e-ad08-f1c638838201","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"nUzSsBSbIkeYXZt11ZSMAA","ver":"2.0"}}
+[2025-01-30T11:39:52.973Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:39:52.974Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:39:52.979Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:39:52.979Z] INFO: User is authenticated
+[2025-01-30T11:39:54.270Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:39:54.270Z] INFO: User is authenticated
+[2025-01-30T11:39:57.776Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-31
+[2025-01-30T11:39:57.776Z] INFO: User is authenticated
+[2025-01-30T11:39:57.777Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-31"}
+[2025-01-30T11:39:57.781Z] INFO: Query results: {"0":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Gate","pickup_time":"07:00:00"},"1":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Dorms","pickup_time":"07:10:00"},"2":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Library","pickup_time":"07:20:00"}}
+[2025-01-30T11:39:57.782Z] INFO: Creating new trip entry for id: 61
+[2025-01-30T11:39:57.783Z] INFO: Final trips object: {"61":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City A Gate","time":"07:00:00"},{"name":"City A Dorms","time":"07:10:00"},{"name":"City A Library","time":"07:20:00"}]}}
+[2025-01-30T11:40:04.447Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-30T11:40:04.448Z] INFO: User is authenticated
+[2025-01-30T11:40:04.449Z] INFO: Request received at /api/session/booking/store: {"tripId":61,"seatsBooked":"10"}
+[2025-01-30T11:40:04.481Z] INFO: Booking details stored in session: {"tripId":61,"seatsBooked":"10","ticketPrice":0.1,"amountPayable":1,"tripDate":"31/01/2025","routeName":"El Obour","tripType":"Morning"}
+[2025-01-30T11:40:04.980Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:40:04.980Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:40:04.985Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-30T11:40:04.986Z] INFO: User is authenticated
+[2025-01-30T11:40:04.987Z] INFO: Retrieved booking details: {"tripId":61,"seatsBooked":"10","ticketPrice":0.1,"amountPayable":1,"tripDate":"31/01/2025","routeName":"El Obour","tripType":"Morning"}
+[2025-01-30T11:40:04.994Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-30T11:40:04.995Z] INFO: User is authenticated
+[2025-01-30T11:40:06.785Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:40:06.786Z] INFO: User is authenticated
+[2025-01-30T11:40:15.415Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:40:15.416Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:40:15.418Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:40:15.418Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:40:15.491Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:40:15.507Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:40:24.784Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:40:24.839Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:40:24.840Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:40:24.842Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:40:24.842Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:40:24.899Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:40:24.905Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:40:25.149Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:40:25.585Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:40:25.585Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738236828,\"nbf\":1738236828,\"exp\":1738240728,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"flfaXkn_KI-xVmMRPsHb1y9_EA_l77j9\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-b5a0-2728-b81a-074e8b1c7240\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"vzc1-KzC_kqdrdgAY-l5AA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738236828,"nbf":1738236828,"exp":1738240728,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"flfaXkn_KI-xVmMRPsHb1y9_EA_l77j9","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-b5a0-2728-b81a-074e8b1c7240","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"vzc1-KzC_kqdrdgAY-l5AA","ver":"2.0"}}
+[2025-01-30T11:40:25.640Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:40:25.641Z] INFO: User is authenticated
+[2025-01-30T11:40:25.644Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:40:25.644Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:40:27.682Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Rehab
+[2025-01-30T11:40:27.682Z] INFO: User is authenticated
+[2025-01-30T11:40:30.993Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Rehab&tripType=Afternoon&date=2025-01-31
+[2025-01-30T11:40:30.993Z] INFO: User is authenticated
+[2025-01-30T11:40:30.994Z] INFO: Received query parameters: {"route":"El Rehab","tripType":"Afternoon","date":"2025-01-31"}
+[2025-01-30T11:40:30.996Z] INFO: Query results: {"0":{"id":67,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-30T11:40:30.997Z] INFO: Creating new trip entry for id: 67
+[2025-01-30T11:40:30.997Z] INFO: Final trips object: {"67":{"id":67,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"16:00:00","available_seats":12,"route_name":"El Rehab","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-30T11:40:32.026Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-30T11:40:32.026Z] INFO: User is authenticated
+[2025-01-30T11:40:32.027Z] INFO: Request received at /api/session/booking/store: {"tripId":67,"seatsBooked":"1"}
+[2025-01-30T11:40:32.028Z] INFO: Booking details stored in session: {"tripId":67,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Rehab","tripType":"Afternoon"}
+[2025-01-30T11:40:32.200Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:40:32.200Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:40:32.204Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-30T11:40:32.205Z] INFO: User is authenticated
+[2025-01-30T11:40:32.205Z] INFO: Retrieved booking details: {"tripId":67,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Rehab","tripType":"Afternoon"}
+[2025-01-30T11:40:32.211Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-30T11:40:32.211Z] INFO: User is authenticated
+[2025-01-30T11:44:34.882Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:44:34.882Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:44:34.888Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-30T11:44:34.888Z] INFO: User is authenticated
+[2025-01-30T11:44:34.888Z] INFO: Retrieved booking details: {"tripId":67,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Rehab","tripType":"Afternoon"}
+[2025-01-30T11:44:34.894Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-30T11:44:34.894Z] INFO: User is authenticated
+[2025-01-30T11:44:38.043Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:44:38.043Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:44:38.047Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-30T11:44:38.048Z] INFO: User is authenticated
+[2025-01-30T11:44:38.048Z] INFO: Retrieved booking details: {"tripId":67,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Rehab","tripType":"Afternoon"}
+[2025-01-30T11:44:38.054Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-30T11:44:38.054Z] INFO: User is authenticated
+[2025-01-30T11:44:39.607Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:44:39.608Z] INFO: User is authenticated
+[2025-01-30T11:44:44.025Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:44:44.026Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:44:44.028Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:44:44.029Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:44:44.034Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:44:44.050Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:46:46.138Z] INFO: Database connection is healthy
+[2025-01-30T11:47:32.288Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:32.342Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:32.343Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:32.345Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:32.346Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:32.397Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:32.404Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:32.651Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:32.854Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:32.855Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:32.858Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:32.865Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:32.876Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:32.884Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:33.191Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:33.392Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:33.393Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:33.395Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:33.395Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:33.404Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:33.421Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:33.653Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:33.784Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:33.785Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:33.787Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:33.788Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:33.842Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:33.850Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:34.128Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:34.258Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:34.259Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:34.261Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:34.261Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:34.313Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:34.325Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:34.557Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:34.677Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:34.677Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:34.679Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:34.679Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:34.754Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:34.768Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:35.010Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:35.130Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:35.130Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:35.132Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:35.132Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:35.185Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:35.194Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:35.421Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:35.559Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:35.559Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:35.561Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:35.561Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:35.634Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:35.639Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:35.885Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:36.004Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:36.004Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:36.006Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:36.006Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:36.058Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:36.074Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:36.308Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:36.427Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:36.428Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:36.429Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:36.430Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:36.488Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:36.495Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:36.705Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:36.817Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:36.817Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:36.819Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:36.819Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:36.875Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:36.880Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:37.149Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:37.277Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:37.278Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:37.279Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:37.280Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:37.332Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:37.339Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:37.575Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:37.700Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:37.701Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:37.702Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:37.703Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:37.758Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:37.765Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:38.011Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:38.129Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:38.129Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:38.131Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:38.131Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:38.185Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:38.198Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:38.475Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:38.599Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:38.600Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:38.601Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:38.602Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:38.654Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:38.669Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:38.946Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:39.066Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:39.067Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:39.068Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:39.069Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:39.121Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:39.129Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:39.403Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:39.552Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:39.552Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:39.554Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:39.555Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:39.584Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:39.597Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:39.835Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:39.986Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:39.987Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:39.991Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:39.997Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:40.004Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:40.015Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:40.251Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:40.378Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:40.378Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:40.380Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:40.380Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:40.442Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:40.451Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:40.683Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:40.882Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:40.884Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:40.887Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:40.893Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:40.905Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:40.909Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:41.157Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:41.288Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:41.288Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:41.290Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:41.291Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:41.359Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:41.371Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:48.194Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:48.252Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:48.252Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:48.254Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:48.255Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:48.325Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:48.329Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:52.218Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:47:52.268Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:47:52.270Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:47:52.272Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:47:52.273Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:47:52.322Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:47:52.330Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:41.409Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:48:41.410Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:48:41.412Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:48:41.412Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:48:41.473Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:41.478Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:43.332Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:48:43.333Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:48:43.335Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:48:43.336Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:48:43.393Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:43.399Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:54.674Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:48:54.675Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:48:54.676Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:48:54.677Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:48:54.737Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:54.742Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:55.232Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:48:55.233Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:48:55.234Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:48:55.236Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:48:55.313Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:48:55.316Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:02.990Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:03.109Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:03.110Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:03.112Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:03.113Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:03.124Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:03.134Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:03.384Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:03.502Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:03.502Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:03.504Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:03.504Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:03.558Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:03.566Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:03.826Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:03.955Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:03.955Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:03.957Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:03.957Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:04.009Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:04.017Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:04.268Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:04.400Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:04.400Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:04.403Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:04.403Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:04.456Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:04.472Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:04.789Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:04.911Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:04.911Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:04.913Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:04.913Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:04.967Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:04.979Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:05.215Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:05.338Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:05.339Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:05.340Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:05.341Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:05.397Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:05.406Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:05.658Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:05.761Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:05.761Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:05.763Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:05.765Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:05.815Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:05.821Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:06.044Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:06.152Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:06.153Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:06.154Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:06.154Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:06.207Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:06.215Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:06.472Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:06.610Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:06.610Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:06.612Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:06.613Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:06.656Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:06.669Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:06.958Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:07.100Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:07.100Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:07.102Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:07.103Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:07.148Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:07.158Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:07.389Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:07.530Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:07.530Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:07.532Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:07.533Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:07.576Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:07.586Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:07.820Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:07.948Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:07.949Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:07.950Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:07.951Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:08.005Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:08.015Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:08.297Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:08.410Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:08.410Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:08.412Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:08.412Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:08.462Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:08.473Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:08.709Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:08.836Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:08.836Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:08.838Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:08.839Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:08.892Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:08.899Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:09.189Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:09.310Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:09.311Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:09.312Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:09.313Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:09.366Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:09.384Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:09.638Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:09.748Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:09.749Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:09.750Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:09.751Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:09.802Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:09.810Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:10.070Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:10.196Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:10.197Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:10.198Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:10.200Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:10.263Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:10.267Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:10.524Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:10.633Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:10.633Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:10.635Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:10.636Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:10.686Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:10.693Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:10.974Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:11.082Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:11.083Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:11.084Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:11.086Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:11.136Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:11.143Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:11.476Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:49:11.600Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:49:11.600Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:49:11.603Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:49:11.604Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:49:11.657Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:49:11.664Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:50:48.140Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:50:48.140Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:50:48.142Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:50:48.142Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:50:48.197Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:50:48.201Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:50:48.453Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:50:48.454Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:50:48.457Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:50:48.458Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:50:48.512Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:50:48.524Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:50:57.578Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:50:58.003Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:50:58.003Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738237461,\"nbf\":1738237461,\"exp\":1738241361,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"pyL1nNenrPL6oToayQ9rIgIa5eW4PCHp\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-9ae6-25ec-e7b1-f109c1c7b6ea\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"wBcOWPUC-ka-GeTJESukAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738237461,"nbf":1738237461,"exp":1738241361,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"pyL1nNenrPL6oToayQ9rIgIa5eW4PCHp","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-9ae6-25ec-e7b1-f109c1c7b6ea","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"wBcOWPUC-ka-GeTJESukAA","ver":"2.0"}}
+[2025-01-30T11:50:58.053Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:50:58.054Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:50:58.057Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:50:58.058Z] INFO: User is authenticated
+[2025-01-30T11:51:00.315Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:51:00.316Z] INFO: User is authenticated
+[2025-01-30T11:51:05.785Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Morning&date=2025-01-31
+[2025-01-30T11:51:05.786Z] INFO: User is authenticated
+[2025-01-30T11:51:05.786Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Morning","date":"2025-01-31"}
+[2025-01-30T11:51:05.788Z] INFO: Query results: {"0":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Gate","pickup_time":"07:00:00"},"1":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Dorms","pickup_time":"07:10:00"},"2":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_name":"City A Library","pickup_time":"07:20:00"}}
+[2025-01-30T11:51:05.789Z] INFO: Creating new trip entry for id: 61
+[2025-01-30T11:51:05.790Z] INFO: Final trips object: {"61":{"id":61,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"07:30:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Morning","pickup_points":[{"name":"City A Gate","time":"07:00:00"},{"name":"City A Dorms","time":"07:10:00"},{"name":"City A Library","time":"07:20:00"}]}}
+[2025-01-30T11:51:09.330Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:51:09.331Z] INFO: User is authenticated
+[2025-01-30T11:51:14.456Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:51:14.462Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:51:14.466Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:51:14.469Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:51:14.477Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:51:14.484Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:51:50.877Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:51:50.982Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:51:50.984Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:51:50.987Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:51:50.988Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:51:50.997Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:51:51.004Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:51:51.196Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:51:51.591Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:51:51.592Z] INFO: User profile: {"sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","displayName":"Work Flow","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738237514,\"nbf\":1738237514,\"exp\":1738241414,\"email\":\"workflow@uofcanada.edu.eg\",\"name\":\"Work Flow\",\"nonce\":\"1fUn0pPGoPLgSuoQqiW1sTqMzytc9Srd\",\"oid\":\"7846cd94-25cd-4f50-b63d-2e0551b0db0f\",\"preferred_username\":\"workflow@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.\",\"sid\":\"0013de09-adff-754f-8498-7318503c32fe\",\"sub\":\"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"5R65rJHmbEKf-TTLrgyIAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738237514,"nbf":1738237514,"exp":1738241414,"email":"workflow@uofcanada.edu.eg","name":"Work Flow","nonce":"1fUn0pPGoPLgSuoQqiW1sTqMzytc9Srd","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","preferred_username":"workflow@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.","sid":"0013de09-adff-754f-8498-7318503c32fe","sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"5R65rJHmbEKf-TTLrgyIAA","ver":"2.0"}}
+[2025-01-30T11:51:51.694Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:51:51.694Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:51:51.699Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:51:51.699Z] INFO: User is authenticated
+[2025-01-30T11:51:54.965Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:51:54.965Z] INFO: User is authenticated
+[2025-01-30T11:52:02.260Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:52:02.261Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:52:02.263Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:52:02.263Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:52:02.274Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:52:02.277Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:52:02.491Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:52:02.622Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:52:02.622Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:52:02.624Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:52:02.624Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:52:02.694Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:52:02.707Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:52:02.951Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:52:03.338Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:52:03.338Z] INFO: User profile: {"sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","displayName":"Work Flow","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738237526,\"nbf\":1738237526,\"exp\":1738241426,\"email\":\"workflow@uofcanada.edu.eg\",\"name\":\"Work Flow\",\"nonce\":\"7JboZS8CTh88JedL_6eW2xH_sGVg66Gc\",\"oid\":\"7846cd94-25cd-4f50-b63d-2e0551b0db0f\",\"preferred_username\":\"workflow@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.\",\"sid\":\"0013de09-adff-754f-8498-7318503c32fe\",\"sub\":\"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"Rs2ai2QLnUG1Ku40nm0pAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738237526,"nbf":1738237526,"exp":1738241426,"email":"workflow@uofcanada.edu.eg","name":"Work Flow","nonce":"7JboZS8CTh88JedL_6eW2xH_sGVg66Gc","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","preferred_username":"workflow@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.","sid":"0013de09-adff-754f-8498-7318503c32fe","sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"Rs2ai2QLnUG1Ku40nm0pAA","ver":"2.0"}}
+[2025-01-30T11:52:03.392Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:52:03.392Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:52:03.396Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:52:03.396Z] INFO: User is authenticated
+[2025-01-30T11:52:06.266Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=El%20Obour
+[2025-01-30T11:52:06.267Z] INFO: User is authenticated
+[2025-01-30T11:52:09.993Z] INFO: Middleware triggered for GET /api/trips/available?route=El%20Obour&tripType=Afternoon&date=2025-01-31
+[2025-01-30T11:52:09.993Z] INFO: User is authenticated
+[2025-01-30T11:52:09.993Z] INFO: Received query parameters: {"route":"El Obour","tripType":"Afternoon","date":"2025-01-31"}
+[2025-01-30T11:52:09.995Z] INFO: Query results: {"0":{"id":63,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"16:00:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Afternoon","pickup_name":"University","pickup_time":"16:00:00"}}
+[2025-01-30T11:52:09.996Z] INFO: Creating new trip entry for id: 63
+[2025-01-30T11:52:09.996Z] INFO: Final trips object: {"63":{"id":63,"trip_date":"2025-01-31T00:00:00.000Z","trip_time":"16:00:00","available_seats":10,"route_name":"El Obour","price":"0.10","trip_type":"Afternoon","pickup_points":[{"name":"University","time":"16:00:00"}]}}
+[2025-01-30T11:52:12.038Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-01-30T11:52:12.038Z] INFO: User is authenticated
+[2025-01-30T11:52:12.039Z] INFO: Request received at /api/session/booking/store: {"tripId":63,"seatsBooked":"1"}
+[2025-01-30T11:52:12.041Z] INFO: Booking details stored in session: {"tripId":63,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Obour","tripType":"Afternoon"}
+[2025-01-30T11:52:12.485Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:52:12.485Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:52:12.494Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-01-30T11:52:12.494Z] INFO: User is authenticated
+[2025-01-30T11:52:12.494Z] INFO: Retrieved booking details: {"tripId":63,"seatsBooked":"1","ticketPrice":0.1,"amountPayable":0.1,"tripDate":"31/01/2025","routeName":"El Obour","tripType":"Afternoon"}
+[2025-01-30T11:52:12.501Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-01-30T11:52:12.501Z] INFO: User is authenticated
+[2025-01-30T11:53:01.446Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:01.447Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:53:01.448Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:01.449Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:53:01.497Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:01.504Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:02.183Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:02.186Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:53:02.190Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:02.190Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:53:02.268Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:02.271Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:12.623Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:53:13.553Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:53:13.554Z] INFO: User profile: {"sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","displayName":"Abdalla Fayez","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738237596,\"nbf\":1738237596,\"exp\":1738241496,\"email\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"name\":\"Abdalla Fayez\",\"nonce\":\"9BjyE_tAkL3b5pvYaDHx87_Mna64oHG0\",\"oid\":\"e9ed6d25-9e9b-4c34-8a29-2570001fdb52\",\"preferred_username\":\"Abdalla.Fayez@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.\",\"sid\":\"0013de09-8a0d-6500-f8ac-249842defa1e\",\"sub\":\"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"EX8L5q_Ttk2Qmi7yJpqJAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738237596,"nbf":1738237596,"exp":1738241496,"email":"Abdalla.Fayez@uofcanada.edu.eg","name":"Abdalla Fayez","nonce":"9BjyE_tAkL3b5pvYaDHx87_Mna64oHG0","oid":"e9ed6d25-9e9b-4c34-8a29-2570001fdb52","preferred_username":"Abdalla.Fayez@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAPofAA.","sid":"0013de09-8a0d-6500-f8ac-249842defa1e","sub":"6SbnVnnOzmQi4_UR7EUeBmw9CLxboy7wzh8FT6VzX90","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"EX8L5q_Ttk2Qmi7yJpqJAA","ver":"2.0"}}
+[2025-01-30T11:53:13.657Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:13.657Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:53:13.662Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:13.663Z] INFO: User is authenticated
+[2025-01-30T11:53:21.565Z] INFO: Middleware triggered for GET /api/logout
+[2025-01-30T11:53:21.565Z] INFO: User is authenticated
+[2025-01-30T11:53:25.394Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:25.396Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:53:25.397Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:25.398Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:53:25.418Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:25.425Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:37.241Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:53:37.297Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:37.298Z] INFO: User is not authenticated for /api/check-auth
+[2025-01-30T11:53:37.300Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:37.300Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-01-30T11:53:37.366Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:37.373Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-01-30T11:53:37.616Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-01-30T11:53:38.075Z] INFO: Authentication successful, redirecting to homepage
+[2025-01-30T11:53:38.075Z] INFO: User profile: {"sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","displayName":"Work Flow","name":{},"_raw":"{\"aud\":\"dbb1ad18-61f2-43b2-9756-4335077b7b91\",\"iss\":\"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0\",\"iat\":1738237621,\"nbf\":1738237621,\"exp\":1738241521,\"email\":\"workflow@uofcanada.edu.eg\",\"name\":\"Work Flow\",\"nonce\":\"iDQi3eJHt1ruFTa-L1jFs5qTmIDbrCS7\",\"oid\":\"7846cd94-25cd-4f50-b63d-2e0551b0db0f\",\"preferred_username\":\"workflow@uofcanada.edu.eg\",\"rh\":\"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.\",\"sid\":\"0013de09-fce7-4122-fe7d-00a6efee9cf6\",\"sub\":\"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI\",\"tid\":\"e28d59e0-f127-462d-96bd-97b027f0abe0\",\"uti\":\"5WL6PLUiM0C92i-rX7SuAA\",\"ver\":\"2.0\"}","_json":{"aud":"dbb1ad18-61f2-43b2-9756-4335077b7b91","iss":"https://login.microsoftonline.com/e28d59e0-f127-462d-96bd-97b027f0abe0/v2.0","iat":1738237621,"nbf":1738237621,"exp":1738241521,"email":"workflow@uofcanada.edu.eg","name":"Work Flow","nonce":"iDQi3eJHt1ruFTa-L1jFs5qTmIDbrCS7","oid":"7846cd94-25cd-4f50-b63d-2e0551b0db0f","preferred_username":"workflow@uofcanada.edu.eg","rh":"1.AR8A4FmN4ifxLUaWvZewJ_Cr4BitsdvyYbJDl1ZDNQd7e5EfAL4fAA.","sid":"0013de09-fce7-4122-fe7d-00a6efee9cf6","sub":"6bZWmlclgYgiJ7tAGwE_hCBTKuyo3EcoNnOtx4fNgSI","tid":"e28d59e0-f127-462d-96bd-97b027f0abe0","uti":"5WL6PLUiM0C92i-rX7SuAA","ver":"2.0"}}
+[2025-01-30T11:53:38.181Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:38.182Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:53:38.189Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:38.189Z] INFO: User is authenticated
+[2025-01-30T11:53:43.586Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-01-30T11:53:43.586Z] INFO: User is authenticated for /api/check-auth
+[2025-01-30T11:53:43.592Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-01-30T11:53:43.592Z] INFO: User is authenticated

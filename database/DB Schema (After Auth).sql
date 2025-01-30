@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2025 at 03:09 PM
+-- Generation Time: Jan 30, 2025 at 12:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,7 +35,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Trip_Automation` ()  MODIFIES SQL D
         r.bus_id,
         r.id AS route_id,
         DATE_ADD(CURDATE(), INTERVAL n.num DAY) AS trip_date,
-        (SELECT b.capacity FROM buses b WHERE b.id = r.bus_id) AS available_seats,
+        (SELECT b.vacant_seats FROM buses b WHERE b.id = r.bus_id) AS available_seats,
         r.route_name AS route_name,
         r.trip_type AS trip_type,
         r.time AS trip_time
@@ -64,14 +64,12 @@ DELIMITER ;
 --
 
 DROP TABLE IF EXISTS `bookings`;
-CREATE TABLE IF NOT EXISTS `bookings` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `bookings` (
+  `id` int(11) NOT NULL,
   `student_name` varchar(255) NOT NULL,
   `student_email` varchar(255) NOT NULL,
   `order_id` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `order_id` (`order_id`)
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -87,12 +85,11 @@ CREATE TABLE IF NOT EXISTS `bookings` (
 --
 
 DROP TABLE IF EXISTS `buses`;
-CREATE TABLE IF NOT EXISTS `buses` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `buses` (
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `capacity` int(11) NOT NULL,
-  `driver_mobile` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `vacant_seats` int(11) NOT NULL,
+  `driver_mobile` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -106,18 +103,15 @@ CREATE TABLE IF NOT EXISTS `buses` (
 --
 
 DROP TABLE IF EXISTS `payments`;
-CREATE TABLE IF NOT EXISTS `payments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL,
   `order_id` varchar(255) NOT NULL,
   `trip_id` int(11) NOT NULL,
   `seats_booked` int(11) NOT NULL,
   `amount` decimal(10,2) NOT NULL,
   `status` enum('PENDING','SUCCESS','FAILED','CANCELLED') DEFAULT 'PENDING',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `order_id` (`order_id`),
-  KEY `payments_ibfk_1` (`trip_id`)
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -133,13 +127,11 @@ CREATE TABLE IF NOT EXISTS `payments` (
 --
 
 DROP TABLE IF EXISTS `pickup_points`;
-CREATE TABLE IF NOT EXISTS `pickup_points` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `pickup_points` (
+  `id` int(11) NOT NULL,
   `route_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `time` time NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `route_id` (`route_id`)
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -155,8 +147,8 @@ CREATE TABLE IF NOT EXISTS `pickup_points` (
 --
 
 DROP TABLE IF EXISTS `routes`;
-CREATE TABLE IF NOT EXISTS `routes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `routes` (
+  `id` int(11) NOT NULL,
   `departure` varchar(255) NOT NULL,
   `arrival` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
@@ -164,8 +156,7 @@ CREATE TABLE IF NOT EXISTS `routes` (
   `bus_id` int(11) NOT NULL,
   `route_name` varchar(255) NOT NULL,
   `time` time NOT NULL,
-  `status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
-  PRIMARY KEY (`id`)
+  `status` enum('Active','Inactive') NOT NULL DEFAULT 'Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -179,18 +170,15 @@ CREATE TABLE IF NOT EXISTS `routes` (
 --
 
 DROP TABLE IF EXISTS `trips`;
-CREATE TABLE IF NOT EXISTS `trips` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `trips` (
+  `id` int(11) NOT NULL,
   `bus_id` int(11) NOT NULL,
   `route_id` int(11) NOT NULL,
   `trip_date` date NOT NULL,
   `trip_time` time NOT NULL,
   `available_seats` int(11) NOT NULL,
   `route_name` varchar(255) NOT NULL,
-  `trip_type` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `bus_id` (`bus_id`),
-  KEY `route_id` (`route_id`)
+  `trip_type` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -200,6 +188,92 @@ CREATE TABLE IF NOT EXISTS `trips` (
 --   `route_id`
 --       `routes` -> `id`
 --
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `bookings`
+--
+ALTER TABLE `bookings`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_id` (`order_id`);
+
+--
+-- Indexes for table `buses`
+--
+ALTER TABLE `buses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `order_id` (`order_id`),
+  ADD KEY `payments_ibfk_1` (`trip_id`);
+
+--
+-- Indexes for table `pickup_points`
+--
+ALTER TABLE `pickup_points`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `route_id` (`route_id`);
+
+--
+-- Indexes for table `routes`
+--
+ALTER TABLE `routes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `trips`
+--
+ALTER TABLE `trips`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `bus_id` (`bus_id`),
+  ADD KEY `route_id` (`route_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `bookings`
+--
+ALTER TABLE `bookings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buses`
+--
+ALTER TABLE `buses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pickup_points`
+--
+ALTER TABLE `pickup_points`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `routes`
+--
+ALTER TABLE `routes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `trips`
+--
+ALTER TABLE `trips`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -242,7 +316,7 @@ CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 DA
         r.bus_id,
         r.id AS route_id,
         DATE_ADD(CURDATE(), INTERVAL n.num DAY) AS trip_date,
-        (SELECT b.capacity FROM buses b WHERE b.id = r.bus_id) AS available_seats,
+        (SELECT b.vacant_seats FROM buses b WHERE b.id = r.bus_id) AS available_seats,
         r.route_name AS route_name,
         r.trip_type AS trip_type,
         r.time AS trip_time

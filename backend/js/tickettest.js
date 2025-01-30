@@ -4,16 +4,16 @@ const { generateTicket } = require('./ticketgenerator.js'); // Adjust path as ne
 
 // Sample data for testing
 const sampleDetails = {
-    student_name: "John Doe",
-    student_email: "johndoe@example.com",
-    from: "New Cairo Campus",
-    to: "Giza Campus",
-    trip_date: "2024-01-15",
-    seats_booked: 2,
+    student_name: "V",
+    student_email: "V@uofcanada.edu.eg",
+    route_name: "Night City",
+    trip_type: "High Noon",
+    trip_date: "2077-01-10",
+    seats_booked: 1,
     price_per_seat: 50,
     total_amount: 100,
-    order_id: "TICK12345",
-    driver_mobile: "0100000000",
+    order_id: "77-77777",
+    driver_mobile: "0177777777",
 };
 
 // File path where the ticket will be saved

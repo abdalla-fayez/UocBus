@@ -239,3 +239,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logoutButton');
+
+    logoutButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/api/logout';
+    });
+});

@@ -86,6 +86,25 @@ async function handleProceedToPayment() {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logoutButton');
+
+    logoutButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/api/logout';
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 // // Call handlePaymentSuccess after successful payment confirmation
 // async function handlePaymentSuccess(orderId) {
 //     try {

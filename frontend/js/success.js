@@ -84,3 +84,12 @@ if (orderId) {
     showError('No ticket information found.');
     alert('No ticket information found.');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutButton = document.getElementById('logoutButton');
+
+    logoutButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = '/api/logout';
+    });
+});

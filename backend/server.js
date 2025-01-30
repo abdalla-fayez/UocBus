@@ -90,6 +90,23 @@ app.get('/api/check-auth', (req, res) => {
     }
 });
 
+// Logout route
+app.get('/api/logout', (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            return next(err);
+        }
+        req.session.destroy((err) => {
+            if (err) {
+                return next(err);
+            }
+            res.clearCookie('connect.sid'); // Clear the session cookie
+            const logoutUrl = `https://login.microsoftonline.com/${process.env.AZURE_TENANT_ID}/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent('https://busticketing.uofcanada.edu.eg')}`;
+            res.redirect(logoutUrl); 
+        });
+    });
+});
+
 // Define your routes here
 app.use(paymentRoutes);
 app.use('/api/',bookingRoutes);
