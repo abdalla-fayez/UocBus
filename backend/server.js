@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded d
 app.use(session({
     secret: process.env.SESSION_SECRET, // Replace with a strong secret key
     resave: false, // Prevent unnecessary session save operations
-    saveUninitialized: false, // Do not save uninitialized sessions
+    saveUninitialized: true, // Do not save uninitialized sessions
     cookie: { secure: false }, // Set true if using HTTPS
 }));
 
@@ -49,14 +49,16 @@ app.post('/auth/microsoft/callback',
     passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
     (req, res) => {
         logger.info('Authentication successful, redirecting to homepage');
-        logger.info(`User profile: ${JSON.stringify(req.user)}`);
+        // logger.info(`User profile: ${JSON.stringify(req.user)}`);
 
         // Store user data in the session
         req.session.user = {
             displayName: req.user.displayName,
-            email: req.user._json.email
+            email: req.user._json.email,
+            photo: req.user.photo
         };
 
+        // logger.info(`Session data: ${JSON.stringify(req.session)}`);
         res.redirect('/'); // Redirect to homepage on successful login
     }
 );

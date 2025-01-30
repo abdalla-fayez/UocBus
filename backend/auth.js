@@ -1,6 +1,7 @@
 const passport = require('passport');
 const OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 const dotenv = require('dotenv');
+const fetch = require('node-fetch');
 dotenv.config();
 
 passport.use(new OIDCStrategy(
@@ -14,7 +15,7 @@ passport.use(new OIDCStrategy(
         validateIssuer: true,
         issuer: `https://login.microsoftonline.com/${process.env.AZURE_TENANT_ID}/v2.0`,
         passReqToCallback: false,
-        scope: ['profile', 'offline_access', 'email'],
+        scope: ['profile', 'offline_access', 'email', 'User.Read'],
         loggingLevel: 'info',
         nonceLifetime: null,
         nonceMaxAmount: 5,
@@ -25,13 +26,38 @@ passport.use(new OIDCStrategy(
         ],
         clockSkew: 300,
     },
-    (iss, sub, profile, accessToken, refreshToken, done) => {
+    async (iss, sub, profile, accessToken, refreshToken, done) => {
         if (!profile.oid) {
             console.error("No OID found in user profile.");
             return done(new Error("No OID found in user profile."));
         }
+        // Fetch the user's profile photo from Microsoft Graph API
+        try {
+            console.log('Fetching profile photo with access token:', accessToken);
+            const photoResponse = await fetch(`https://graph.microsoft.com/v1.0/me/photo/$value`, {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            });
+
+            console.log('Photo response status:', photoResponse.status);
+            console.log('Photo response status text:', photoResponse.statusText);
+
+            if (photoResponse.ok) {
+                const photoBuffer = await photoResponse.buffer();
+                const photoBase64 = photoBuffer.toString('base64');
+                profile.photo = `data:image/jpeg;base64,${photoBase64}`;
+                console.log('Profile photo fetched successfully');
+            } else {
+                console.error('Failed to fetch profile photo:', photoResponse.status, photoResponse.statusText);
+                profile.photo = null;
+            }
+        } catch (error) {
+            console.error('Error fetching profile photo:', error);
+            profile.photo = null;
+        }
+
         console.log("Authentication successful, user profile:", profile);
-        // Save user profile or perform additional checks here
         return done(null, profile);
     }
 ));

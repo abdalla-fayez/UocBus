@@ -40,9 +40,13 @@
       /* Red stripe */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       /* Adds depth */
-      padding: 15px 20px;
+      padding: 10px 15px;
       text-align: center;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .custom-banner .logo-container {
@@ -63,6 +67,7 @@
     .custom-banner .custom-text {
       font-size: 1.6rem;
       color: #000;
+      margin-top: 5px;
     }
 
     .custom-banner::after {
@@ -77,6 +82,30 @@
       left: 0;
     }
 
+    /* User Preview */
+    .user-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .user-preview img {
+      cursor: pointer;
+    }
+
+    .user-preview .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+
+    .user-preview #displayName {
+      font-size: 1rem;
+    }
     /* Results Section Styling */
     .results-container {
       margin-top: 20px;
@@ -103,21 +132,6 @@
       color: #ddd;
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .custom-banner {
-        padding: 15px 10px;
-      }
-
-      .custom-banner .custom-text {
-        font-size: 1.2rem;
-      }
-
-      .card {
-        padding: 20px;
-      }
-    }
-
     .btn-danger {
       background-color: #a30000;
       border: none;
@@ -142,6 +156,47 @@
       font-size: 0.9em;
       margin-bottom: 5px;
     }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .card {
+        padding: 20px;
+
+      }
+      .custom-banner {
+        padding: 10px 5px;
+      }
+
+      .custom-banner .logo-container img {
+        max-height: 40px;
+        margin: 0 5px;
+      }
+
+      .custom-banner .custom-text {
+        font-size: 1.1rem;
+        margin-top: 5px;
+      }
+
+      .user-preview {
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+      }
+
+      .user-preview img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .user-preview #displayName {
+        font-size: 0.6rem;
+      }
+
+      .user-preview .dropdown-menu {
+        right: 5px;
+      }
+    }
+
   </style>
 </head>
 
@@ -153,7 +208,14 @@
       <img src="../assets/UOC-Website-Header-Logo2.png" alt="UPEI Logo" />
     </div>
     <div class="custom-text">Bus Booking</div>
-    <a class="nav-link" style="text-align: right;" href="#" id="logoutButton">Logout</a>
+    <!-- User Preview -->
+    <div class="dropdown" style="position: absolute; top: 20px; right: 20px;">
+      <img id="profilePhoto" src="" class="rounded-circle dropdown-toggle" width="60" height="60" data-bs-toggle="dropdown" aria-expanded="false">
+      <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+      </ul>
+      <div id="displayName" class="text-center mt-2"></div>
+    </div>
   </header>
 
   <!-- Main Content -->
@@ -272,5 +334,6 @@
 <!-- Main JS -->
 <script src="../js/auth-check.js" defer></script>
 <script src="../js/main.js" defer></script>
+<script src="../js/userpreview.js" defer></script>
 
 </html>
