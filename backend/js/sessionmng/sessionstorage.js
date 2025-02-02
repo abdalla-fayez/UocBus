@@ -15,7 +15,7 @@ router.post('/session/booking/store', async (req, res) => {
     try {
          // Fetch trip details, including price, departure, arrival, and date
         const [rows] = await db.query(
-        `SELECT routes.price AS ticketPrice, routes.departure, routes.arrival, trips.trip_date, routes.route_name, routes.trip_type
+        `SELECT routes.price AS ticketPrice, trips.trip_date, routes.route_name, routes.trip_type
          FROM trips 
          JOIN routes ON trips.route_id = routes.id 
          WHERE trips.id = ?`,
@@ -45,8 +45,6 @@ router.post('/session/booking/store', async (req, res) => {
             ticketPrice,
             amountPayable,
             tripDate: new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(tripDetails.trip_date)),
-            // departure: tripDetails.departure,
-            // arrival: tripDetails.arrival,
             routeName: tripDetails.route_name,
             tripType: tripDetails.trip_type
         };

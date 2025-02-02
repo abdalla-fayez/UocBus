@@ -139,8 +139,6 @@ router.get('/trips/available', async (req, res) => {
     }
 });
 
-
-
 router.post('/bookings/create', async (req, res) => {
     // Get user data from session
     const { displayName, email } = req.session.user;
@@ -200,7 +198,5 @@ router.get('/bookings/details', async (req, res) => {
         res.status(500).json({ message: 'Server error while fetching booking details' });
     }
 });
-
-
 
 module.exports = router;
