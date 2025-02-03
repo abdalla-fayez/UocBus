@@ -9,11 +9,12 @@ router.post('/session/booking/store', async (req, res) => {
     const { tripId, seatsBooked } = req.body;
 
     if (!tripId || !seatsBooked || seatsBooked <= 0) {
+        console.error(`Invalid Booking Data`);
         return res.status(400).json({ message: 'Invalid booking data' });
     }
 
     try {
-         // Fetch trip details, including price, departure, arrival, and date
+         // Fetch trip details, including price and date
         const [rows] = await db.query(
         `SELECT routes.price AS ticketPrice, trips.trip_date, routes.route_name, routes.trip_type
          FROM trips 

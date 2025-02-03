@@ -16617,3 +16617,218 @@
 [2025-02-02T19:42:10.376Z] INFO: Query results:
 [2025-02-02T19:42:10.376Z] INFO: Final trips object:
 [2025-02-02T19:48:53.468Z] INFO: Database connection is healthy
+[2025-02-02T19:58:53.475Z] INFO: Database connection is healthy
+[2025-02-02T20:08:53.487Z] INFO: Database connection is healthy
+[2025-02-02T20:11:15.233Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-02T20:11:15.234Z] INFO: User is authenticated for /api/check-auth
+[2025-02-02T20:11:15.248Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-02T20:11:15.249Z] INFO: User is authenticated
+[2025-02-02T20:11:15.259Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-02T20:11:15.259Z] INFO: User is authenticated
+[2025-02-02T20:18:53.512Z] INFO: Database connection is healthy
+[2025-02-02T20:28:55.163Z] INFO: Database connection is healthy
+[2025-02-02T20:38:55.631Z] INFO: Database connection is healthy
+[2025-02-02T20:48:55.660Z] INFO: Database connection is healthy
+[2025-02-02T20:58:55.677Z] INFO: Database connection is healthy
+[2025-02-02T21:08:55.700Z] INFO: Database connection is healthy
+[2025-02-02T21:18:55.717Z] INFO: Database connection is healthy
+[2025-02-02T21:28:55.741Z] INFO: Database connection is healthy
+[2025-02-02T21:38:55.754Z] INFO: Database connection is healthy
+[2025-02-02T21:48:55.779Z] INFO: Database connection is healthy
+[2025-02-02T21:58:55.784Z] INFO: Database connection is healthy
+[2025-02-02T22:08:55.797Z] INFO: Database connection is healthy
+[2025-02-02T22:18:55.823Z] INFO: Database connection is healthy
+[2025-02-02T22:28:55.831Z] INFO: Database connection is healthy
+[2025-02-02T22:38:55.863Z] INFO: Database connection is healthy
+[2025-02-02T22:48:55.867Z] INFO: Database connection is healthy
+[2025-02-02T22:58:55.881Z] INFO: Database connection is healthy
+[2025-02-02T23:08:55.898Z] INFO: Database connection is healthy
+[2025-02-02T23:18:55.915Z] INFO: Database connection is healthy
+[2025-02-02T23:28:55.948Z] INFO: Database connection is healthy
+[2025-02-02T23:38:55.947Z] INFO: Database connection is healthy
+[2025-02-02T23:48:55.971Z] INFO: Database connection is healthy
+[2025-02-02T23:58:55.989Z] INFO: Database connection is healthy
+[2025-02-03T00:08:56.003Z] INFO: Database connection is healthy
+[2025-02-03T00:18:56.033Z] INFO: Database connection is healthy
+[2025-02-03T00:28:56.039Z] INFO: Database connection is healthy
+[2025-02-03T00:38:56.066Z] INFO: Database connection is healthy
+[2025-02-03T00:48:56.069Z] INFO: Database connection is healthy
+[2025-02-03T00:58:56.080Z] INFO: Database connection is healthy
+[2025-02-03T01:08:56.099Z] INFO: Database connection is healthy
+[2025-02-03T01:18:56.103Z] INFO: Database connection is healthy
+[2025-02-03T01:28:56.132Z] INFO: Database connection is healthy
+[2025-02-03T01:38:56.144Z] INFO: Database connection is healthy
+[2025-02-03T01:48:56.165Z] INFO: Database connection is healthy
+[2025-02-03T01:58:56.179Z] INFO: Database connection is healthy
+[2025-02-03T02:08:56.193Z] INFO: Database connection is healthy
+[2025-02-03T02:18:56.215Z] INFO: Database connection is healthy
+[2025-02-03T02:28:56.227Z] INFO: Database connection is healthy
+[2025-02-03T02:38:56.252Z] INFO: Database connection is healthy
+[2025-02-03T02:48:56.258Z] INFO: Database connection is healthy
+[2025-02-03T02:58:56.272Z] INFO: Database connection is healthy
+[2025-02-03T03:08:56.296Z] INFO: Database connection is healthy
+[2025-02-03T03:18:56.312Z] INFO: Database connection is healthy
+[2025-02-03T03:28:56.339Z] INFO: Database connection is healthy
+[2025-02-03T03:38:56.341Z] INFO: Database connection is healthy
+[2025-02-03T03:48:56.362Z] INFO: Database connection is healthy
+[2025-02-03T03:58:56.387Z] INFO: Database connection is healthy
+[2025-02-03T04:08:56.401Z] INFO: Database connection is healthy
+[2025-02-03T04:18:56.430Z] INFO: Database connection is healthy
+[2025-02-03T04:28:56.439Z] INFO: Database connection is healthy
+[2025-02-03T04:38:56.462Z] INFO: Database connection is healthy
+[2025-02-03T04:48:56.474Z] INFO: Database connection is healthy
+[2025-02-03T04:58:56.484Z] INFO: Database connection is healthy
+[2025-02-03T05:08:56.512Z] INFO: Database connection is healthy
+[2025-02-03T05:18:56.520Z] INFO: Database connection is healthy
+[2025-02-03T05:28:56.552Z] INFO: Database connection is healthy
+[2025-02-03T05:38:56.560Z] INFO: Database connection is healthy
+[2025-02-03T05:48:56.573Z] INFO: Database connection is healthy
+[2025-02-03T05:58:56.596Z] INFO: Database connection is healthy
+[2025-02-03T06:08:56.603Z] INFO: Database connection is healthy
+[2025-02-03T06:18:56.634Z] INFO: Database connection is healthy
+[2025-02-03T06:28:56.635Z] INFO: Database connection is healthy
+[2025-02-03T06:38:56.652Z] INFO: Database connection is healthy
+[2025-02-03T06:48:56.676Z] INFO: Database connection is healthy
+[2025-02-03T06:58:56.683Z] INFO: Database connection is healthy
+[2025-02-03T07:01:13.922Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T07:01:13.923Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T07:01:13.936Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T07:01:13.937Z] INFO: User is authenticated
+[2025-02-03T07:01:13.948Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T07:01:13.948Z] INFO: User is authenticated
+[2025-02-03T07:01:33.268Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Maadi
+[2025-02-03T07:01:33.268Z] INFO: User is authenticated
+[2025-02-03T07:01:33.649Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T07:01:33.650Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-03T07:01:33.651Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T07:01:33.652Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-03T07:01:33.653Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T07:01:33.653Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-03T07:01:33.691Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T07:01:33.696Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T07:01:33.702Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T07:01:34.844Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-03T07:01:35.495Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-03T07:01:35.578Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T07:01:35.578Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T07:01:35.592Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T07:01:35.592Z] INFO: User is authenticated
+[2025-02-03T07:01:35.606Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T07:01:35.606Z] INFO: User is authenticated
+[2025-02-03T07:01:42.371Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Helwan
+[2025-02-03T07:01:42.372Z] INFO: User is authenticated
+[2025-02-03T07:01:46.331Z] INFO: Middleware triggered for GET /api/trips/available?route=Helwan&tripType=Morning&date=2025-02-03
+[2025-02-03T07:01:46.332Z] INFO: User is authenticated
+[2025-02-03T07:01:46.332Z] INFO: Received query parameters: {"route":"Helwan","tripType":"Morning","date":"2025-02-03"}
+[2025-02-03T07:01:46.333Z] INFO: Query results:
+[2025-02-03T07:01:46.334Z] INFO: Final trips object:
+[2025-02-03T07:08:56.713Z] INFO: Database connection is healthy
+[2025-02-03T07:18:56.717Z] INFO: Database connection is healthy
+[2025-02-03T07:28:56.748Z] INFO: Database connection is healthy
+[2025-02-03T07:38:56.757Z] INFO: Database connection is healthy
+[2025-02-03T07:39:01.603Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T07:39:01.604Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T07:39:01.622Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T07:39:01.622Z] INFO: User is authenticated
+[2025-02-03T07:39:01.634Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T07:39:01.634Z] INFO: User is authenticated
+[2025-02-03T07:48:56.769Z] INFO: Database connection is healthy
+[2025-02-03T07:58:56.783Z] INFO: Database connection is healthy
+[2025-02-03T08:08:56.788Z] INFO: Database connection is healthy
+[2025-02-03T08:13:57.578Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:13:57.579Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:13:57.594Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:13:57.595Z] INFO: User is authenticated
+[2025-02-03T08:13:57.606Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:13:57.607Z] INFO: User is authenticated
+[2025-02-03T08:13:59.507Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Helwan
+[2025-02-03T08:13:59.507Z] INFO: User is authenticated
+[2025-02-03T08:15:26.198Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:15:26.198Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:15:26.213Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:15:26.213Z] INFO: User is authenticated
+[2025-02-03T08:15:26.225Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:15:26.226Z] INFO: User is authenticated
+[2025-02-03T08:15:29.281Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr%20City%202
+[2025-02-03T08:15:29.281Z] INFO: User is authenticated
+[2025-02-03T08:15:33.065Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr%20City%202&tripType=Morning&date=2025-02-04
+[2025-02-03T08:15:33.065Z] INFO: User is authenticated
+[2025-02-03T08:15:33.066Z] INFO: Received query parameters: {"route":"Nasr City 2","tripType":"Morning","date":"2025-02-04"}
+[2025-02-03T08:15:33.067Z] INFO: Query results:
+[2025-02-03T08:15:33.068Z] INFO: Final trips object:
+[2025-02-03T08:17:19.299Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:17:19.300Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:17:19.325Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:17:19.326Z] INFO: User is authenticated
+[2025-02-03T08:17:19.337Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:17:19.337Z] INFO: User is authenticated
+[2025-02-03T08:17:21.040Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:17:21.041Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:17:21.054Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:17:21.054Z] INFO: User is authenticated
+[2025-02-03T08:17:21.066Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:17:21.067Z] INFO: User is authenticated
+[2025-02-03T08:17:23.533Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr%20City%202
+[2025-02-03T08:17:23.534Z] INFO: User is authenticated
+[2025-02-03T08:17:27.332Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr%20City%202&tripType=Morning&date=2025-02-04
+[2025-02-03T08:17:27.332Z] INFO: User is authenticated
+[2025-02-03T08:17:27.332Z] INFO: Received query parameters: {"route":"Nasr City 2","tripType":"Morning","date":"2025-02-04"}
+[2025-02-03T08:17:27.335Z] INFO: Query results: {"0":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rashdan Mosque","pickup_time":"06:45:00"},"1":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Mostafa Mosque","pickup_time":"06:45:00"},"2":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Zohoor Club","pickup_time":"06:50:00"},"3":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Khedr El Touni","pickup_time":"06:50:00"},"4":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Waziri Aldifae","pickup_time":"06:50:00"},"5":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"KFC Pilot","pickup_time":"06:55:00"},"6":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Hay El-Sabae","pickup_time":"07:00:00"},"7":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Enpi - Zaker Husein","pickup_time":"07:05:00"},"8":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mintaqah Altaseah","pickup_time":"07:05:00"},"9":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Vodafone 10th","pickup_time":"07:10:00"},"10":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Raihana","pickup_time":"07:10:00"},"11":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa Al Slab","pickup_time":"07:15:00"},"12":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa (Watanih)","pickup_time":"07:15:00"},"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Nakheel Gate","pickup_time":"07:20:00"},"14":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Khazan","pickup_time":"07:25:00"},"15":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 9","pickup_time":"07:30:00"},"16":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 6","pickup_time":"07:30:00"},"17":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 1","pickup_time":"07:35:00"},"18":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Lotus","pickup_time":"07:40:00"},"19":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mobil","pickup_time":"07:40:00"},"20":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"U of Canada","pickup_time":"08:15:00"}}
+[2025-02-03T08:17:27.338Z] INFO: Creating new trip entry for id: 13
+[2025-02-03T08:17:27.343Z] INFO: Final trips object: {"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_points":[{"name":"Al-Rashdan Mosque","time":"06:45:00"},{"name":"Al-Mostafa Mosque","time":"06:45:00"},{"name":"Al-Zohoor Club","time":"06:50:00"},{"name":"Khedr El Touni","time":"06:50:00"},{"name":"Waziri Aldifae","time":"06:50:00"},{"name":"KFC Pilot","time":"06:55:00"},{"name":"Al-Hay El-Sabae","time":"07:00:00"},{"name":"Enpi - Zaker Husein","time":"07:05:00"},{"name":"Mintaqah Altaseah","time":"07:05:00"},{"name":"Vodafone 10th","time":"07:10:00"},{"name":"Raihana","time":"07:10:00"},{"name":"Al Zahraa Al Slab","time":"07:15:00"},{"name":"Al Zahraa (Watanih)","time":"07:15:00"},{"name":"Nakheel Gate","time":"07:20:00"},{"name":"Al-Khazan","time":"07:25:00"},{"name":"Al-Rehab Gate 9","time":"07:30:00"},{"name":"Al-Rehab Gate 6","time":"07:30:00"},{"name":"Al-Rehab Gate 1","time":"07:35:00"},{"name":"Lotus","time":"07:40:00"},{"name":"Mobil","time":"07:40:00"},{"name":"U of Canada","time":"08:15:00"}]}}
+[2025-02-03T08:18:09.604Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-02-03T08:18:09.605Z] INFO: User is authenticated
+[2025-02-03T08:18:09.605Z] INFO: Request received at /api/session/booking/store: {"tripId":13,"seatsBooked":"10"}
+[2025-02-03T08:18:13.123Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-02-03T08:18:13.123Z] INFO: User is authenticated
+[2025-02-03T08:18:13.124Z] INFO: Request received at /api/session/booking/store: {"tripId":13,"seatsBooked":"10"}
+[2025-02-03T08:18:56.814Z] INFO: Database connection is healthy
+[2025-02-03T08:18:56.830Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr%20City%202&tripType=Morning&date=2025-02-04
+[2025-02-03T08:18:56.830Z] INFO: User is authenticated
+[2025-02-03T08:18:56.830Z] INFO: Received query parameters: {"route":"Nasr City 2","tripType":"Morning","date":"2025-02-04"}
+[2025-02-03T08:18:56.833Z] INFO: Query results: {"0":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rashdan Mosque","pickup_time":"06:45:00"},"1":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Mostafa Mosque","pickup_time":"06:45:00"},"2":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Zohoor Club","pickup_time":"06:50:00"},"3":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Khedr El Touni","pickup_time":"06:50:00"},"4":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Waziri Aldifae","pickup_time":"06:50:00"},"5":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"KFC Pilot","pickup_time":"06:55:00"},"6":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Hay El-Sabae","pickup_time":"07:00:00"},"7":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Enpi - Zaker Husein","pickup_time":"07:05:00"},"8":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mintaqah Altaseah","pickup_time":"07:05:00"},"9":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Vodafone 10th","pickup_time":"07:10:00"},"10":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Raihana","pickup_time":"07:10:00"},"11":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa Al Slab","pickup_time":"07:15:00"},"12":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa (Watanih)","pickup_time":"07:15:00"},"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Nakheel Gate","pickup_time":"07:20:00"},"14":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Khazan","pickup_time":"07:25:00"},"15":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 9","pickup_time":"07:30:00"},"16":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 6","pickup_time":"07:30:00"},"17":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 1","pickup_time":"07:35:00"},"18":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Lotus","pickup_time":"07:40:00"},"19":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mobil","pickup_time":"07:40:00"},"20":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"U of Canada","pickup_time":"08:15:00"}}
+[2025-02-03T08:18:56.837Z] INFO: Creating new trip entry for id: 13
+[2025-02-03T08:18:56.843Z] INFO: Final trips object: {"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_points":[{"name":"Al-Rashdan Mosque","time":"06:45:00"},{"name":"Al-Mostafa Mosque","time":"06:45:00"},{"name":"Al-Zohoor Club","time":"06:50:00"},{"name":"Khedr El Touni","time":"06:50:00"},{"name":"Waziri Aldifae","time":"06:50:00"},{"name":"KFC Pilot","time":"06:55:00"},{"name":"Al-Hay El-Sabae","time":"07:00:00"},{"name":"Enpi - Zaker Husein","time":"07:05:00"},{"name":"Mintaqah Altaseah","time":"07:05:00"},{"name":"Vodafone 10th","time":"07:10:00"},{"name":"Raihana","time":"07:10:00"},{"name":"Al Zahraa Al Slab","time":"07:15:00"},{"name":"Al Zahraa (Watanih)","time":"07:15:00"},{"name":"Nakheel Gate","time":"07:20:00"},{"name":"Al-Khazan","time":"07:25:00"},{"name":"Al-Rehab Gate 9","time":"07:30:00"},{"name":"Al-Rehab Gate 6","time":"07:30:00"},{"name":"Al-Rehab Gate 1","time":"07:35:00"},{"name":"Lotus","time":"07:40:00"},{"name":"Mobil","time":"07:40:00"},{"name":"U of Canada","time":"08:15:00"}]}}
+[2025-02-03T08:18:58.884Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-02-03T08:18:58.884Z] INFO: User is authenticated
+[2025-02-03T08:18:58.885Z] INFO: Request received at /api/session/booking/store: {"tripId":13,"seatsBooked":"1"}
+[2025-02-03T08:23:31.544Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-03T08:23:34.275Z] INFO: Server running on port 5000
+[2025-02-03T08:23:50.009Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:23:50.012Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-03T08:23:50.022Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:23:50.023Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-03T08:23:50.027Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:23:50.028Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-03T08:23:50.048Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T08:23:50.614Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T08:23:50.619Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-03T08:23:51.074Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-03T08:23:51.647Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-03T08:23:51.836Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:23:51.836Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:23:51.854Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-03T08:23:51.854Z] INFO: User is authenticated
+[2025-02-03T08:23:51.872Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:23:51.872Z] INFO: User is authenticated
+[2025-02-03T08:23:55.074Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr%20City%202
+[2025-02-03T08:23:55.074Z] INFO: User is authenticated
+[2025-02-03T08:23:59.729Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr%20City%202&tripType=Morning&date=2025-02-04
+[2025-02-03T08:23:59.730Z] INFO: User is authenticated
+[2025-02-03T08:23:59.731Z] INFO: Received query parameters: {"route":"Nasr City 2","tripType":"Morning","date":"2025-02-04"}
+[2025-02-03T08:23:59.735Z] INFO: Query results: {"0":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rashdan Mosque","pickup_time":"06:45:00"},"1":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Mostafa Mosque","pickup_time":"06:45:00"},"2":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Zohoor Club","pickup_time":"06:50:00"},"3":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Khedr El Touni","pickup_time":"06:50:00"},"4":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Waziri Aldifae","pickup_time":"06:50:00"},"5":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"KFC Pilot","pickup_time":"06:55:00"},"6":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Hay El-Sabae","pickup_time":"07:00:00"},"7":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Enpi - Zaker Husein","pickup_time":"07:05:00"},"8":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mintaqah Altaseah","pickup_time":"07:05:00"},"9":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Vodafone 10th","pickup_time":"07:10:00"},"10":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Raihana","pickup_time":"07:10:00"},"11":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa Al Slab","pickup_time":"07:15:00"},"12":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al Zahraa (Watanih)","pickup_time":"07:15:00"},"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Nakheel Gate","pickup_time":"07:20:00"},"14":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Khazan","pickup_time":"07:25:00"},"15":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 9","pickup_time":"07:30:00"},"16":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 6","pickup_time":"07:30:00"},"17":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Al-Rehab Gate 1","pickup_time":"07:35:00"},"18":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Lotus","pickup_time":"07:40:00"},"19":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"Mobil","pickup_time":"07:40:00"},"20":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_name":"U of Canada","pickup_time":"08:15:00"}}
+[2025-02-03T08:23:59.739Z] INFO: Creating new trip entry for id: 13
+[2025-02-03T08:23:59.745Z] INFO: Final trips object: {"13":{"id":13,"trip_date":"2025-02-04T00:00:00.000Z","trip_time":"06:30:00","available_seats":10,"route_name":"Nasr City 2","price":"999.00","trip_type":"Morning","pickup_points":[{"name":"Al-Rashdan Mosque","time":"06:45:00"},{"name":"Al-Mostafa Mosque","time":"06:45:00"},{"name":"Al-Zohoor Club","time":"06:50:00"},{"name":"Khedr El Touni","time":"06:50:00"},{"name":"Waziri Aldifae","time":"06:50:00"},{"name":"KFC Pilot","time":"06:55:00"},{"name":"Al-Hay El-Sabae","time":"07:00:00"},{"name":"Enpi - Zaker Husein","time":"07:05:00"},{"name":"Mintaqah Altaseah","time":"07:05:00"},{"name":"Vodafone 10th","time":"07:10:00"},{"name":"Raihana","time":"07:10:00"},{"name":"Al Zahraa Al Slab","time":"07:15:00"},{"name":"Al Zahraa (Watanih)","time":"07:15:00"},{"name":"Nakheel Gate","time":"07:20:00"},{"name":"Al-Khazan","time":"07:25:00"},{"name":"Al-Rehab Gate 9","time":"07:30:00"},{"name":"Al-Rehab Gate 6","time":"07:30:00"},{"name":"Al-Rehab Gate 1","time":"07:35:00"},{"name":"Lotus","time":"07:40:00"},{"name":"Mobil","time":"07:40:00"},{"name":"U of Canada","time":"08:15:00"}]}}
+[2025-02-03T08:24:02.209Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-02-03T08:24:02.209Z] INFO: User is authenticated
+[2025-02-03T08:24:02.210Z] INFO: Request received at /api/session/booking/store: {"tripId":13,"seatsBooked":"1"}
+[2025-02-03T08:24:02.242Z] INFO: Booking details stored in session: {"tripId":13,"seatsBooked":"1","ticketPrice":999,"amountPayable":999,"tripDate":"04/02/2025","routeName":"Nasr City 2","tripType":"Morning"}
+[2025-02-03T08:24:02.821Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-03T08:24:02.821Z] INFO: User is authenticated for /api/check-auth
+[2025-02-03T08:24:02.846Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-02-03T08:24:02.847Z] INFO: User is authenticated
+[2025-02-03T08:24:02.848Z] INFO: Retrieved booking details: {"tripId":13,"seatsBooked":"1","ticketPrice":999,"amountPayable":999,"tripDate":"04/02/2025","routeName":"Nasr City 2","tripType":"Morning"}
+[2025-02-03T08:24:02.860Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:24:02.861Z] INFO: User is authenticated
+[2025-02-03T08:24:02.882Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-03T08:24:02.883Z] INFO: User is authenticated

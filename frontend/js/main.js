@@ -1,4 +1,3 @@
-// JavaScript to dynamically populate trips and pickup points
 const routeSelect = document.getElementById('routeName');
 const tripTypeSelect = document.getElementById('tripType');
 const dateInput = document.getElementById('tripDate');
