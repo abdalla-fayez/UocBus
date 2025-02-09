@@ -8,11 +8,12 @@ const logger = require(`${__basedir}/backend/logger`);
 // Get active route names
 router.get('/routes/active', async (req, res) => {
     try {
-        // Fetch distinct route names where status is 'Active'
+        // Fetch distinct route names where status is 'Active', sorted alphabetically
         const [routes] = await db.query(`
             SELECT DISTINCT route_name 
             FROM routes 
             WHERE status = 'Active'
+            ORDER BY route_name ASC
         `);
 
         const routeNames = routes.map(row => row.route_name);

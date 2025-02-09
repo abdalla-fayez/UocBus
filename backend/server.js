@@ -1,9 +1,11 @@
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
+dotenv.config(); // Load environment variables
 const path = require('path');
-const passport = require('./auth');
 global.__basedir = path.resolve(__dirname, '../'); // This sets the base directory as the root of your project
+const passport = require('./auth');
+const adminAuthRoutes = require('./adminauth');
 const db = require('./models/dbconnection'); // Import the MySQL connection
 const bookingRoutes = require('./js/booking');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
@@ -13,9 +15,8 @@ const app = express();
 const winston = require('winston');
 const logger = require(`${__basedir}/backend/logger`);
 
-process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
-dotenv.config(); // Load environment variables
+process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
@@ -114,6 +115,7 @@ app.use(paymentRoutes);
 app.use('/api/',bookingRoutes);
 app.use('/api/',sessionStorageRoutes);
 app.use('/api/',ticketGenRoutes);
+app.use('/api/',adminAuthRoutes);
 
 // Capture uncaught exceptions and unhandled promise rejections
 process.on('uncaughtException', (err) => {

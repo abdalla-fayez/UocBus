@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
-const logger = require(`${__basedir}/backend/logger`);
 dotenv.config();
+const logger = require('../logger');
 
 
 const pool = mysql.createPool({
