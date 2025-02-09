@@ -18012,3 +18012,1143 @@
 [2025-02-06T11:30:47.419Z] INFO: Creating new trip entry for id: 22
 [2025-02-06T11:30:47.420Z] INFO: Final trips object: {"22":{"id":22,"trip_date":"2025-02-06T00:00:00.000Z","trip_time":"16:00:00","available_seats":10,"route_name":"5th Settlement","price":"1.00","trip_type":"Afternoon","pickup_points":[{"name":"U of Canada","time":"16:00:00"}]}}
 [2025-02-06T11:31:53.260Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-09T08:14:37.033Z] INFO: Server running on port 5000
+[2025-02-09T08:24:36.723Z] INFO: Database connection is healthy
+[2025-02-09T08:27:09.549Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:27:09.550Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T08:27:09.561Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:27:09.562Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:09.566Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:27:09.566Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:09.569Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:27:09.570Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T08:27:09.576Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:27:09.576Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:09.578Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:27:09.579Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:09.582Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:10.275Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:10.287Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:10.296Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:10.306Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:10.317Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:51.153Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T08:27:51.227Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:27:51.227Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T08:27:51.238Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:27:51.238Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:51.240Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:27:51.241Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:27:51.254Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:51.262Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:51.271Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:27:51.492Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T08:27:52.381Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T08:27:52.482Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:27:52.483Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T08:27:52.498Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:27:52.499Z] INFO: User is authenticated
+[2025-02-09T08:27:52.510Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:27:52.510Z] INFO: User is authenticated
+[2025-02-09T08:34:36.701Z] INFO: Database connection is healthy
+[2025-02-09T08:38:44.029Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:38:44.029Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T08:38:44.032Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:38:44.033Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:38:44.037Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:38:44.038Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T08:38:44.046Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:38:44.050Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:38:44.054Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T08:38:44.480Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T08:38:45.383Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T08:38:45.442Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T08:38:45.442Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T08:38:45.456Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T08:38:45.457Z] INFO: User is authenticated
+[2025-02-09T08:38:45.467Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T08:38:45.467Z] INFO: User is authenticated
+[2025-02-09T08:44:36.711Z] INFO: Database connection is healthy
+[2025-02-09T08:54:36.711Z] INFO: Database connection is healthy
+[2025-02-09T09:04:36.714Z] INFO: Database connection is healthy
+[2025-02-09T09:05:31.059Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:05:31.059Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:05:31.075Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:05:31.075Z] INFO: User is authenticated
+[2025-02-09T09:05:31.086Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:05:31.086Z] INFO: User is authenticated
+[2025-02-09T09:05:31.220Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:05:31.221Z] INFO: User is authenticated
+[2025-02-09T09:05:31.233Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:05:31.233Z] INFO: User is authenticated
+[2025-02-09T09:05:31.247Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:05:31.247Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:06:24.883Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis%201
+[2025-02-09T09:06:24.883Z] INFO: User is authenticated
+[2025-02-09T09:06:37.330Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis%201&tripType=Afternoon&date=2025-02-10
+[2025-02-09T09:06:37.331Z] INFO: User is authenticated
+[2025-02-09T09:06:37.332Z] INFO: Received query parameters: {"route":"Heliopolis 1","tripType":"Afternoon","date":"2025-02-10"}
+[2025-02-09T09:06:37.335Z] INFO: Query results:
+[2025-02-09T09:06:37.335Z] INFO: Final trips object:
+[2025-02-09T09:07:04.888Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:07:04.888Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:07:04.903Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:07:04.903Z] INFO: User is authenticated
+[2025-02-09T09:07:04.914Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:07:04.914Z] INFO: User is authenticated
+[2025-02-09T09:08:06.992Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-09T09:08:09.746Z] INFO: Server running on port 5000
+[2025-02-09T09:08:13.743Z] INFO: Middleware triggered for GET /api/logout
+[2025-02-09T09:08:13.744Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:13.765Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:14.912Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:15.500Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:08:16.443Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:16.444Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:08:16.461Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:16.462Z] INFO: User is authenticated
+[2025-02-09T09:08:16.476Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:16.476Z] INFO: User is authenticated
+[2025-02-09T09:08:28.027Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:28.027Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:08:28.031Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:28.031Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:28.033Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:28.033Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:28.043Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:28.050Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:28.054Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:28.482Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:29.295Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:08:29.348Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:29.349Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:08:29.362Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:29.363Z] INFO: User is authenticated
+[2025-02-09T09:08:29.374Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:29.374Z] INFO: User is authenticated
+[2025-02-09T09:08:35.556Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-09T09:08:38.309Z] INFO: Server running on port 5000
+[2025-02-09T09:08:40.391Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:40.393Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:08:40.402Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:40.403Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:40.407Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:40.411Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:40.415Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.094Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.099Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.310Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:41.414Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:41.415Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:08:41.418Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:41.418Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:41.420Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:41.420Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:41.468Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.475Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.479Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:41.711Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:42.291Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:08:42.348Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:42.349Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:08:42.362Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:42.363Z] INFO: User is authenticated
+[2025-02-09T09:08:42.376Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:42.377Z] INFO: User is authenticated
+[2025-02-09T09:08:50.877Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:50.878Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:50.881Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:50.881Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:08:50.882Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:50.882Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:50.893Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:50.903Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:50.912Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:51.232Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:51.232Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:08:51.234Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:51.235Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:51.238Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:51.238Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:08:51.251Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:51.261Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:51.271Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:08:51.360Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:51.506Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:08:52.335Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:08:52.450Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:08:52.630Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:52.630Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:08:52.644Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:52.644Z] INFO: User is authenticated
+[2025-02-09T09:08:52.655Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:52.656Z] INFO: User is authenticated
+[2025-02-09T09:08:52.673Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:08:52.673Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:08:52.687Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:08:52.687Z] INFO: User is authenticated
+[2025-02-09T09:08:52.710Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:08:52.710Z] INFO: User is authenticated
+[2025-02-09T09:08:58.594Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Helwan
+[2025-02-09T09:08:58.595Z] INFO: User is authenticated
+[2025-02-09T09:09:04.646Z] INFO: Middleware triggered for GET /api/trips/available?route=Helwan&tripType=Afternoon&date=2025-02-09
+[2025-02-09T09:09:04.647Z] INFO: User is authenticated
+[2025-02-09T09:09:04.648Z] INFO: Received query parameters: {"route":"Helwan","tripType":"Afternoon","date":"2025-02-09"}
+[2025-02-09T09:09:04.651Z] INFO: Query results:
+[2025-02-09T09:09:04.651Z] INFO: Final trips object:
+[2025-02-09T09:18:37.975Z] INFO: Database connection is healthy
+[2025-02-09T09:27:36.951Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:27:36.952Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:27:36.954Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:27:36.954Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:27:36.956Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:27:36.956Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:27:36.978Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:27:36.981Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:27:36.990Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:27:37.585Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:27:38.447Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:27:38.583Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:27:38.583Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:27:38.598Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:27:38.598Z] INFO: User is authenticated
+[2025-02-09T09:27:38.609Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:27:38.609Z] INFO: User is authenticated
+[2025-02-09T09:28:37.985Z] INFO: Database connection is healthy
+[2025-02-09T09:30:17.189Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:30:17.189Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:30:17.205Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:30:17.205Z] INFO: User is authenticated
+[2025-02-09T09:30:17.222Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:30:17.223Z] INFO: User is authenticated
+[2025-02-09T09:33:03.493Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:33:03.493Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:33:03.508Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:33:03.509Z] INFO: User is authenticated
+[2025-02-09T09:33:03.520Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:33:03.520Z] INFO: User is authenticated
+[2025-02-09T09:33:19.332Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:33:19.333Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:33:19.347Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:33:19.347Z] INFO: User is authenticated
+[2025-02-09T09:33:19.358Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:33:19.359Z] INFO: User is authenticated
+[2025-02-09T09:38:37.994Z] INFO: Database connection is healthy
+[2025-02-09T09:42:22.791Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:42:22.792Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:42:22.794Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:42:22.794Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:42:22.796Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:42:22.796Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:42:22.831Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:42:22.835Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:42:22.859Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:42:22.970Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:42:22.970Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:42:22.993Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:42:24.245Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:42:24.249Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:42:24.285Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:42:24.285Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:42:24.332Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:42:24.616Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:42:24.894Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:42:25.082Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:42:25.082Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:42:25.123Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:42:25.123Z] INFO: User is authenticated
+[2025-02-09T09:42:25.145Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:42:25.146Z] INFO: User is authenticated
+[2025-02-09T09:42:25.280Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:42:25.346Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:42:25.346Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:42:25.368Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:42:25.368Z] INFO: User is authenticated
+[2025-02-09T09:42:25.380Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:42:25.380Z] INFO: User is authenticated
+[2025-02-09T09:47:16.705Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:47:16.706Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:47:16.708Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:47:16.708Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:47:16.710Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:47:16.711Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:47:16.714Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:47:16.714Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:47:16.730Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:47:16.730Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:47:16.732Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:47:16.732Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:47:16.773Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:47:16.780Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:47:16.784Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:47:16.789Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:47:16.816Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:47:16.824Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:48:24.976Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:48:25.987Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:48:26.259Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:48:26.259Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:48:26.449Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:48:26.450Z] INFO: User is authenticated
+[2025-02-09T09:48:26.462Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:48:26.462Z] INFO: User is authenticated
+[2025-02-09T09:48:36.024Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis%202
+[2025-02-09T09:48:36.025Z] INFO: User is authenticated
+[2025-02-09T09:48:38.008Z] INFO: Database connection is healthy
+[2025-02-09T09:48:45.837Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis%202&tripType=Afternoon&date=2025-02-10
+[2025-02-09T09:48:45.837Z] INFO: User is authenticated
+[2025-02-09T09:48:45.837Z] INFO: Received query parameters: {"route":"Heliopolis 2","tripType":"Afternoon","date":"2025-02-10"}
+[2025-02-09T09:48:45.839Z] INFO: Query results:
+[2025-02-09T09:48:45.840Z] INFO: Final trips object:
+[2025-02-09T09:51:44.473Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:51:44.474Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:51:44.752Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:51:44.753Z] INFO: User is authenticated
+[2025-02-09T09:51:44.765Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:51:44.765Z] INFO: User is authenticated
+[2025-02-09T09:51:44.861Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:51:44.862Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:51:44.883Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:51:44.884Z] INFO: User is authenticated
+[2025-02-09T09:51:44.992Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:51:44.993Z] INFO: User is authenticated
+[2025-02-09T09:52:51.269Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:52:51.269Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:52:51.372Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:52:51.372Z] INFO: User is authenticated
+[2025-02-09T09:52:51.473Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:52:51.473Z] INFO: User is authenticated
+[2025-02-09T09:52:51.583Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:52:51.583Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:52:51.602Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:52:51.602Z] INFO: User is authenticated
+[2025-02-09T09:52:51.621Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:52:51.622Z] INFO: User is authenticated
+[2025-02-09T09:53:32.359Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:53:32.359Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:53:32.535Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:53:32.535Z] INFO: User is authenticated
+[2025-02-09T09:53:32.605Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:53:32.606Z] INFO: User is authenticated
+[2025-02-09T09:53:32.728Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:53:32.729Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:53:32.743Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:53:32.743Z] INFO: User is authenticated
+[2025-02-09T09:53:32.763Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:53:32.763Z] INFO: User is authenticated
+[2025-02-09T09:54:04.916Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:04.916Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:05.069Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:05.069Z] INFO: User is authenticated
+[2025-02-09T09:54:05.154Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:05.154Z] INFO: User is authenticated
+[2025-02-09T09:54:05.294Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:05.295Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:05.308Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:05.309Z] INFO: User is authenticated
+[2025-02-09T09:54:05.320Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:05.320Z] INFO: User is authenticated
+[2025-02-09T09:54:38.102Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:38.102Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:38.489Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:38.490Z] INFO: User is authenticated
+[2025-02-09T09:54:38.516Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:38.516Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:38.647Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:38.647Z] INFO: User is authenticated
+[2025-02-09T09:54:38.673Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:38.674Z] INFO: User is authenticated
+[2025-02-09T09:54:38.703Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:38.703Z] INFO: User is authenticated
+[2025-02-09T09:54:55.594Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:55.595Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:55.902Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:54:55.903Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:54:55.991Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:55.991Z] INFO: User is authenticated
+[2025-02-09T09:54:56.022Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:56.022Z] INFO: User is authenticated
+[2025-02-09T09:54:56.080Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:54:56.080Z] INFO: User is authenticated
+[2025-02-09T09:54:56.125Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:54:56.126Z] INFO: User is authenticated
+[2025-02-09T09:55:24.541Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:24.542Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:24.734Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:24.734Z] INFO: User is authenticated
+[2025-02-09T09:55:24.745Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:24.745Z] INFO: User is authenticated
+[2025-02-09T09:55:24.852Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:24.852Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:24.866Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:24.866Z] INFO: User is authenticated
+[2025-02-09T09:55:24.877Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:24.877Z] INFO: User is authenticated
+[2025-02-09T09:55:49.832Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:49.833Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:55:49.883Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:49.883Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T09:55:49.894Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:55:50.062Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:50.062Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T09:55:50.080Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T09:55:50.485Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:55:50.532Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T09:55:51.448Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:55:51.533Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:51.533Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:51.563Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T09:55:51.577Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:51.577Z] INFO: User is authenticated
+[2025-02-09T09:55:51.599Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:51.599Z] INFO: User is authenticated
+[2025-02-09T09:55:51.631Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:51.631Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:51.655Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:51.655Z] INFO: User is authenticated
+[2025-02-09T09:55:51.668Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:51.668Z] INFO: User is authenticated
+[2025-02-09T09:55:52.250Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:52.251Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:52.554Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:52.554Z] INFO: User is authenticated
+[2025-02-09T09:55:52.568Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:52.569Z] INFO: User is authenticated
+[2025-02-09T09:55:52.592Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:55:52.592Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:55:52.606Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:55:52.606Z] INFO: User is authenticated
+[2025-02-09T09:55:52.718Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:55:52.718Z] INFO: User is authenticated
+[2025-02-09T09:56:29.194Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:56:29.194Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:56:29.422Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:56:29.422Z] INFO: User is authenticated
+[2025-02-09T09:56:29.557Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:56:29.557Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:56:29.577Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:56:29.577Z] INFO: User is authenticated
+[2025-02-09T09:56:29.592Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:56:29.592Z] INFO: User is authenticated
+[2025-02-09T09:56:29.740Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:56:29.740Z] INFO: User is authenticated
+[2025-02-09T09:56:39.289Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:56:39.290Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:56:39.438Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:56:39.439Z] INFO: User is authenticated
+[2025-02-09T09:56:39.490Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:56:39.490Z] INFO: User is authenticated
+[2025-02-09T09:56:39.663Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:56:39.663Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:56:39.677Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:56:39.678Z] INFO: User is authenticated
+[2025-02-09T09:56:39.689Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:56:39.689Z] INFO: User is authenticated
+[2025-02-09T09:58:38.013Z] INFO: Database connection is healthy
+[2025-02-09T09:59:04.527Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:59:04.528Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:59:04.549Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T09:59:04.550Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T09:59:04.571Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:59:04.571Z] INFO: User is authenticated
+[2025-02-09T09:59:04.584Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T09:59:04.584Z] INFO: User is authenticated
+[2025-02-09T09:59:04.613Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:59:04.613Z] INFO: User is authenticated
+[2025-02-09T09:59:04.635Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T09:59:04.636Z] INFO: User is authenticated
+[2025-02-09T10:08:38.014Z] INFO: Database connection is healthy
+[2025-02-09T10:08:58.095Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:08:58.095Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:08:58.252Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:08:58.252Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:09:15.156Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:15.156Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:09:15.275Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:09:15.341Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:15.341Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:09:15.349Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:15.350Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:09:15.371Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:15.372Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:09:15.373Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:09:15.394Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:09:16.530Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:09:16.578Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:09:16.688Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:16.688Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:09:16.759Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:16.760Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:09:16.775Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:09:17.055Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:09:17.367Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:09:17.518Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:17.518Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:17.532Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:17.532Z] INFO: User is authenticated
+[2025-02-09T10:09:17.544Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:17.544Z] INFO: User is authenticated
+[2025-02-09T10:09:17.870Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:09:17.971Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:17.971Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:17.985Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:17.985Z] INFO: User is authenticated
+[2025-02-09T10:09:17.997Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:17.997Z] INFO: User is authenticated
+[2025-02-09T10:09:23.369Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:23.369Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:23.412Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:23.412Z] INFO: User is authenticated
+[2025-02-09T10:09:23.457Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:23.457Z] INFO: User is authenticated
+[2025-02-09T10:09:24.229Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:24.229Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:24.244Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:24.244Z] INFO: User is authenticated
+[2025-02-09T10:09:24.255Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:24.255Z] INFO: User is authenticated
+[2025-02-09T10:09:30.017Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:30.017Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:30.098Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:30.098Z] INFO: User is authenticated
+[2025-02-09T10:09:30.109Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:30.109Z] INFO: User is authenticated
+[2025-02-09T10:09:47.608Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:47.609Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:47.688Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:47.688Z] INFO: User is authenticated
+[2025-02-09T10:09:47.699Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:47.699Z] INFO: User is authenticated
+[2025-02-09T10:09:47.896Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:47.896Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:47.910Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:47.911Z] INFO: User is authenticated
+[2025-02-09T10:09:47.921Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:47.921Z] INFO: User is authenticated
+[2025-02-09T10:09:48.229Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:48.229Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:48.243Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:48.244Z] INFO: User is authenticated
+[2025-02-09T10:09:48.254Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:48.254Z] INFO: User is authenticated
+[2025-02-09T10:09:48.418Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:48.418Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:48.432Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:48.433Z] INFO: User is authenticated
+[2025-02-09T10:09:48.443Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:48.443Z] INFO: User is authenticated
+[2025-02-09T10:09:48.598Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:48.598Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:48.612Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:48.612Z] INFO: User is authenticated
+[2025-02-09T10:09:48.623Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:48.624Z] INFO: User is authenticated
+[2025-02-09T10:09:48.781Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:48.782Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:48.796Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:48.797Z] INFO: User is authenticated
+[2025-02-09T10:09:48.807Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:48.807Z] INFO: User is authenticated
+[2025-02-09T10:09:48.952Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:48.953Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:48.967Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:48.967Z] INFO: User is authenticated
+[2025-02-09T10:09:48.977Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:48.978Z] INFO: User is authenticated
+[2025-02-09T10:09:49.114Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:09:49.115Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:09:49.129Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:09:49.130Z] INFO: User is authenticated
+[2025-02-09T10:09:49.141Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:09:49.141Z] INFO: User is authenticated
+[2025-02-09T10:11:56.095Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:11:56.096Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:11:56.144Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:11:56.146Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:11:56.146Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:11:56.152Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:11:56.153Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:11:56.165Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:11:56.982Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:11:56.984Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:11:57.028Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:11:57.029Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:11:57.031Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:11:57.031Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:11:57.046Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:11:57.060Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:11:57.430Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:11:57.937Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:11:57.999Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:11:58.000Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:11:58.021Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:11:58.021Z] INFO: User is authenticated
+[2025-02-09T10:11:58.034Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:11:58.034Z] INFO: User is authenticated
+[2025-02-09T10:11:58.371Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:11:58.622Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:11:58.622Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:11:58.644Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:11:58.644Z] INFO: User is authenticated
+[2025-02-09T10:11:58.656Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:11:58.656Z] INFO: User is authenticated
+[2025-02-09T10:14:06.091Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:06.091Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:14:06.214Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:06.214Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:14:06.320Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:14:06.387Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:14:08.623Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:14:08.651Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:14:08.729Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:08.730Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:14:08.827Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:08.827Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:14:08.847Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:14:09.013Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:14:09.369Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:14:09.519Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:14:09.587Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:09.587Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:09.601Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:09.601Z] INFO: User is authenticated
+[2025-02-09T10:14:09.613Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:09.613Z] INFO: User is authenticated
+[2025-02-09T10:14:09.834Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:09.835Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:09.850Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:09.851Z] INFO: User is authenticated
+[2025-02-09T10:14:09.862Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:09.863Z] INFO: User is authenticated
+[2025-02-09T10:14:42.414Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:42.415Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:42.471Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:42.471Z] INFO: User is authenticated
+[2025-02-09T10:14:42.512Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:42.512Z] INFO: User is authenticated
+[2025-02-09T10:14:43.175Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:43.175Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:43.189Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:43.190Z] INFO: User is authenticated
+[2025-02-09T10:14:43.200Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:43.201Z] INFO: User is authenticated
+[2025-02-09T10:14:43.915Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:43.916Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:43.931Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:43.931Z] INFO: User is authenticated
+[2025-02-09T10:14:43.941Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:43.942Z] INFO: User is authenticated
+[2025-02-09T10:14:44.631Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:44.631Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:44.645Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:44.645Z] INFO: User is authenticated
+[2025-02-09T10:14:44.656Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:44.656Z] INFO: User is authenticated
+[2025-02-09T10:14:46.331Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:46.332Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:46.346Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:46.347Z] INFO: User is authenticated
+[2025-02-09T10:14:46.357Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:46.357Z] INFO: User is authenticated
+[2025-02-09T10:14:47.758Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:47.758Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:47.774Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:47.775Z] INFO: User is authenticated
+[2025-02-09T10:14:47.785Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:47.785Z] INFO: User is authenticated
+[2025-02-09T10:14:48.498Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:48.498Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:48.512Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:48.512Z] INFO: User is authenticated
+[2025-02-09T10:14:48.523Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:48.523Z] INFO: User is authenticated
+[2025-02-09T10:14:49.296Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:14:49.297Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:14:49.310Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:14:49.311Z] INFO: User is authenticated
+[2025-02-09T10:14:49.321Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:14:49.321Z] INFO: User is authenticated
+[2025-02-09T10:14:55.441Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Mokattam%20&%20Northern%2090
+[2025-02-09T10:14:55.441Z] INFO: User is authenticated
+[2025-02-09T10:15:03.062Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Helwan
+[2025-02-09T10:15:03.062Z] INFO: User is authenticated
+[2025-02-09T10:15:11.848Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Mokattam%20&%20Northern%2090
+[2025-02-09T10:15:11.849Z] INFO: User is authenticated
+[2025-02-09T10:15:22.137Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Maadi
+[2025-02-09T10:15:22.137Z] INFO: User is authenticated
+[2025-02-09T10:15:24.961Z] INFO: Middleware triggered for GET /api/trips/available?route=Maadi&tripType=Afternoon&date=2025-02-10
+[2025-02-09T10:15:24.961Z] INFO: User is authenticated
+[2025-02-09T10:15:24.962Z] INFO: Received query parameters: {"route":"Maadi","tripType":"Afternoon","date":"2025-02-10"}
+[2025-02-09T10:15:24.964Z] INFO: Query results:
+[2025-02-09T10:15:24.964Z] INFO: Final trips object:
+[2025-02-09T10:15:29.881Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:15:29.882Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:15:29.926Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:15:29.927Z] INFO: User is authenticated
+[2025-02-09T10:15:29.980Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:15:29.981Z] INFO: User is authenticated
+[2025-02-09T10:15:31.545Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:15:31.545Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:15:31.559Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:15:31.559Z] INFO: User is authenticated
+[2025-02-09T10:15:31.570Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:15:31.570Z] INFO: User is authenticated
+[2025-02-09T10:15:31.962Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:15:31.962Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:15:31.976Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:15:31.977Z] INFO: User is authenticated
+[2025-02-09T10:15:31.987Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:15:31.987Z] INFO: User is authenticated
+[2025-02-09T10:15:32.812Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:15:32.812Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:15:32.826Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:15:32.826Z] INFO: User is authenticated
+[2025-02-09T10:15:32.838Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:15:32.838Z] INFO: User is authenticated
+[2025-02-09T10:15:55.652Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Mokattam%20&%20Northern%2090
+[2025-02-09T10:15:55.652Z] INFO: User is authenticated
+[2025-02-09T10:16:07.581Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:16:07.581Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:16:07.596Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:16:07.596Z] INFO: User is authenticated
+[2025-02-09T10:16:07.607Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:16:07.607Z] INFO: User is authenticated
+[2025-02-09T10:16:09.553Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Mokattam%20&%20Northern%2090
+[2025-02-09T10:16:09.554Z] INFO: User is authenticated
+[2025-02-09T10:16:24.868Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Maadi
+[2025-02-09T10:16:24.868Z] INFO: User is authenticated
+[2025-02-09T10:16:27.049Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Helwan
+[2025-02-09T10:16:27.049Z] INFO: User is authenticated
+[2025-02-09T10:16:29.632Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis%202
+[2025-02-09T10:16:29.633Z] INFO: User is authenticated
+[2025-02-09T10:16:31.146Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis%201
+[2025-02-09T10:16:31.147Z] INFO: User is authenticated
+[2025-02-09T10:16:32.449Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal%20&%20Mohandessin
+[2025-02-09T10:16:32.449Z] INFO: User is authenticated
+[2025-02-09T10:16:39.619Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Shorouk%20&%20Badr
+[2025-02-09T10:16:39.619Z] INFO: User is authenticated
+[2025-02-09T10:16:42.376Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Sheikh%20Zayed%20&%206%20October
+[2025-02-09T10:16:42.376Z] INFO: User is authenticated
+[2025-02-09T10:17:15.027Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-09T10:17:17.811Z] INFO: Server running on port 5000
+[2025-02-09T10:17:19.588Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:17:19.590Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:17:19.599Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:17:19.600Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:17:19.604Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:17:19.606Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:17:19.610Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:20.400Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:20.405Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:20.905Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:17:21.012Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:17:21.013Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:17:21.017Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:17:21.017Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:17:21.018Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:17:21.019Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:17:21.071Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:21.077Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:21.080Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:17:21.530Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:17:22.161Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:17:22.221Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:17:22.221Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:17:22.234Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:17:22.235Z] INFO: User is authenticated
+[2025-02-09T10:17:22.248Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:17:22.248Z] INFO: User is authenticated
+[2025-02-09T10:17:24.256Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal%20&%20Mohandessin
+[2025-02-09T10:17:24.256Z] INFO: User is authenticated
+[2025-02-09T10:17:39.642Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th%20of%20Ramadan
+[2025-02-09T10:17:39.643Z] INFO: User is authenticated
+[2025-02-09T10:23:54.887Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:23:54.888Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:23:54.891Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:23:54.891Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:23:54.896Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:23:54.896Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:23:54.913Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:23:54.945Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:24:17.884Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:24:17.885Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:24:17.898Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:24:17.898Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:24:17.912Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:24:17.937Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:24:18.097Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:24:18.098Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:24:18.122Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:24:18.123Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:24:18.132Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:24:18.185Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:24:18.683Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:24:18.836Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:24:19.667Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:24:19.790Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:24:19.805Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:24:19.806Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:24:19.828Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:24:19.829Z] INFO: User is authenticated
+[2025-02-09T10:24:19.842Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:24:19.842Z] INFO: User is authenticated
+[2025-02-09T10:24:19.875Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:24:19.876Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:24:19.897Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:24:19.898Z] INFO: User is authenticated
+[2025-02-09T10:24:19.929Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:24:19.929Z] INFO: User is authenticated
+[2025-02-09T10:26:59.846Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:26:59.847Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:26:59.849Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:26:59.849Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:26:59.934Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:26:59.934Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:26:59.989Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:00.017Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:00.259Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:00.876Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:27:00.877Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:27:00.879Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:27:00.879Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:27:00.880Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:27:00.880Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:27:01.079Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:01.094Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:01.438Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:27:17.470Z] INFO: Database connection is healthy
+[2025-02-09T10:29:50.349Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:29:50.350Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:29:50.352Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:29:50.352Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:29:50.353Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:29:50.354Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:29:50.469Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:29:50.519Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:29:50.636Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:29:51.142Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:29:51.143Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:29:51.146Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:29:51.146Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:29:51.149Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:29:51.159Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:29:51.175Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:29:51.184Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:29:51.692Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:29.353Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:32:29.354Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:32:29.395Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:32:29.396Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:32:29.397Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:32:29.398Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:32:29.429Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:29.437Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:29.566Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:29.711Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:32:29.711Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:32:29.714Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:32:29.714Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:32:29.715Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:32:29.716Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:32:29.724Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:29.732Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:32:30.016Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:21.216Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:33:21.216Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:33:21.220Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:33:21.220Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:33:21.221Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:33:21.221Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:33:21.228Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:21.235Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:21.478Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:21.838Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:33:21.838Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:33:21.841Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:33:21.841Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:33:21.842Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:33:21.843Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:33:22.031Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:22.060Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:33:23.291Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:03.801Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:34:03.802Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:34:03.811Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:34:03.811Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:34:03.820Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:34:03.820Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:34:03.822Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:03.829Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:04.084Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:04.320Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:34:04.320Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:34:04.322Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:34:04.322Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:34:04.324Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:34:04.324Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:34:04.332Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:04.339Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:34:04.758Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:07.523Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:07.523Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:07.526Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:37:07.526Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:07.527Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:07.527Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:37:07.537Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:07.546Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:07.730Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:08.058Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:08.058Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:37:08.060Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:08.060Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:08.061Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:37:08.062Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:08.072Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:08.083Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:08.689Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:14.911Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:14.912Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:37:14.925Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:37:14.926Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:14.962Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:14.962Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:14.964Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:14.987Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:15.015Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:15.015Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:37:15.017Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:15.017Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:37:15.033Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:15.053Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:37:15.557Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:37:15.623Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:37:16.419Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:37:16.518Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:37:16.577Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:16.578Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:37:16.599Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:16.599Z] INFO: User is authenticated
+[2025-02-09T10:37:16.613Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:37:16.613Z] INFO: User is authenticated
+[2025-02-09T10:37:16.643Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:37:16.643Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:37:16.701Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:37:16.701Z] INFO: User is authenticated
+[2025-02-09T10:37:16.714Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:37:16.715Z] INFO: User is authenticated
+[2025-02-09T10:37:17.472Z] INFO: Database connection is healthy
+[2025-02-09T10:41:41.380Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:41.381Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:41.423Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:41.424Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:41.565Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:41:51.273Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:51.274Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:51.453Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:51.454Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:51.502Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:41:51.503Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:41:59.354Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:59.354Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:59.436Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:41:59.436Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:41:59.568Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:41:59.615Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:42:00.795Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:42:00.900Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:42:01.674Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:42:01.685Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:42:01.963Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:01.964Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:42:01.979Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:42:01.979Z] INFO: User is authenticated
+[2025-02-09T10:42:02.037Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:42:02.037Z] INFO: User is authenticated
+[2025-02-09T10:42:02.165Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:02.165Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:42:02.179Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:42:02.180Z] INFO: User is authenticated
+[2025-02-09T10:42:02.190Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:42:02.190Z] INFO: User is authenticated
+[2025-02-09T10:42:23.367Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:23.368Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:42:23.482Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:23.482Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:42:23.584Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:42:31.476Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:31.477Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:42:31.618Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:42:50.291Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:50.292Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:42:50.365Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:42:50.366Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:42:50.578Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:43.580Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:44:43.581Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:44:43.624Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:44:43.624Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:44:43.732Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:43.829Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:44:43.829Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:44:43.838Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:44:43.839Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:44:43.849Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:43.886Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:45.130Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:44:45.172Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:44:45.274Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:44:45.275Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:44:45.281Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:44:45.282Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:44:45.302Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:44:45.302Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:44:45.340Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:45.343Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:45.491Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:44:45.917Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:44:46.029Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:44:46.030Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:44:46.045Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:44:46.045Z] INFO: User is authenticated
+[2025-02-09T10:44:46.056Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:44:46.056Z] INFO: User is authenticated
+[2025-02-09T10:44:46.553Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:44:46.673Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:44:46.673Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:44:46.687Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:44:46.687Z] INFO: User is authenticated
+[2025-02-09T10:44:46.698Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:44:46.698Z] INFO: User is authenticated
+[2025-02-09T10:47:07.650Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:47:07.650Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:47:08.034Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:47:08.035Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:47:08.050Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:47:08.050Z] INFO: User is authenticated
+[2025-02-09T10:47:08.100Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:47:08.101Z] INFO: User is authenticated
+[2025-02-09T10:47:08.140Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:47:08.141Z] INFO: User is authenticated
+[2025-02-09T10:47:08.179Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:47:08.179Z] INFO: User is authenticated
+[2025-02-09T10:47:17.482Z] INFO: Database connection is healthy
+[2025-02-09T10:48:47.869Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:48:47.869Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:48:48.175Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:48:48.175Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:48:48.345Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:48:48.345Z] INFO: User is authenticated
+[2025-02-09T10:48:48.357Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:48:48.357Z] INFO: User is authenticated
+[2025-02-09T10:48:48.423Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:48:48.423Z] INFO: User is authenticated
+[2025-02-09T10:48:48.435Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:48:48.435Z] INFO: User is authenticated
+[2025-02-09T10:49:22.892Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:49:22.893Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:49:22.975Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:49:22.975Z] INFO: User is authenticated
+[2025-02-09T10:49:22.987Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:49:22.987Z] INFO: User is authenticated
+[2025-02-09T10:49:25.339Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Maadi
+[2025-02-09T10:49:25.339Z] INFO: User is authenticated
+[2025-02-09T10:49:35.299Z] INFO: Middleware triggered for GET /api/trips/available?route=Maadi&tripType=Morning&date=2025-02-10
+[2025-02-09T10:49:35.300Z] INFO: User is authenticated
+[2025-02-09T10:49:35.301Z] INFO: Received query parameters: {"route":"Maadi","tripType":"Morning","date":"2025-02-10"}
+[2025-02-09T10:49:35.303Z] INFO: Query results:
+[2025-02-09T10:49:35.304Z] INFO: Final trips object:
+[2025-02-09T10:49:42.595Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:49:42.595Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:49:42.648Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:49:42.648Z] INFO: User is authenticated
+[2025-02-09T10:49:42.700Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:49:42.700Z] INFO: User is authenticated
+[2025-02-09T10:51:55.367Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:51:55.367Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:51:55.579Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:51:55.580Z] INFO: User is authenticated
+[2025-02-09T10:51:55.623Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:51:55.623Z] INFO: User is authenticated
+[2025-02-09T10:51:55.744Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:51:55.744Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:51:55.758Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:51:55.758Z] INFO: User is authenticated
+[2025-02-09T10:51:55.770Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:51:55.770Z] INFO: User is authenticated
+[2025-02-09T10:52:15.725Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:52:15.726Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:52:15.814Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:52:15.815Z] INFO: User is authenticated
+[2025-02-09T10:52:15.826Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:52:15.826Z] INFO: User is authenticated
+[2025-02-09T10:54:21.870Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:54:21.870Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:54:22.073Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:54:22.073Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:54:22.159Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:54:22.159Z] INFO: User is authenticated
+[2025-02-09T10:54:22.170Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:54:22.171Z] INFO: User is authenticated
+[2025-02-09T10:56:21.525Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:56:21.525Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:56:21.528Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:56:21.528Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:56:21.530Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:56:21.530Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:56:21.582Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:56:21.586Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:56:21.628Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:56:21.646Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:56:21.646Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T10:56:21.651Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:56:21.651Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:56:21.655Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:56:21.656Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T10:56:21.677Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:56:21.682Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T10:57:12.474Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T10:57:13.198Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T10:57:13.374Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T10:57:13.374Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T10:57:13.587Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T10:57:13.587Z] INFO: User is authenticated
+[2025-02-09T10:57:13.598Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T10:57:13.599Z] INFO: User is authenticated
+[2025-02-09T10:57:17.492Z] INFO: Database connection is healthy
+[2025-02-09T11:00:19.193Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-02-09T11:00:21.967Z] INFO: Server running on port 5000
+[2025-02-09T11:00:26.199Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T11:00:26.200Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T11:00:26.210Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T11:00:26.211Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T11:00:26.215Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T11:00:26.216Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T11:00:26.220Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:26.919Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:26.924Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:27.374Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T11:00:27.475Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T11:00:27.475Z] INFO: User is not authenticated for /api/check-auth
+[2025-02-09T11:00:27.478Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T11:00:27.479Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T11:00:27.480Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T11:00:27.480Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-02-09T11:00:27.528Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:27.536Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:27.541Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-02-09T11:00:27.789Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-02-09T11:00:28.363Z] INFO: Authentication successful, redirecting to homepage
+[2025-02-09T11:00:28.418Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-02-09T11:00:28.418Z] INFO: User is authenticated for /api/check-auth
+[2025-02-09T11:00:28.432Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-02-09T11:00:28.432Z] INFO: User is authenticated
+[2025-02-09T11:00:28.446Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-02-09T11:00:28.446Z] INFO: User is authenticated
+[2025-02-09T11:00:30.277Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal%20&%20Mohandessin
+[2025-02-09T11:00:30.277Z] INFO: User is authenticated
+[2025-02-09T11:01:00.798Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=5th%20Settlement
+[2025-02-09T11:01:00.798Z] INFO: User is authenticated
+[2025-02-09T11:01:03.563Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal%20&%20Mohandessin
+[2025-02-09T11:01:03.563Z] INFO: User is authenticated
+[2025-02-09T11:02:53.600Z] WARN: SIGINT received. Shutting down gracefully...

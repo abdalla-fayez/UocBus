@@ -30,7 +30,7 @@ router.get('/routes/active', async (req, res) => {
 // Get trip types for a specific route
 router.get('/routes/trip-types', async (req, res) => {
     try {
-        const { routeName } = req.query; // Get the selected route name from query params
+          const { routeName } = req.query; // Get the selected route name from query params
 
         // Fetch trip types for the selected route where status is 'Active'
         const [tripTypes] = await db.query(`

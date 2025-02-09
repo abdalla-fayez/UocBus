@@ -12,6 +12,7 @@ const paymentRoutes = require('./js/payment'); // Import the payment routes
 const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
 const ticketGenRoutes = require('./js/ticketgenerator');
 const app = express();
+const qs = require('qs');
 const winston = require('winston');
 const logger = require(`${__basedir}/backend/logger`);
 
@@ -20,6 +21,7 @@ process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT A
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
+app.set('query parser', (str) => qs.parse(str));
 
 app.use(session({
     secret: process.env.SESSION_SECRET, // Replace with a strong secret key

@@ -37,7 +37,7 @@ async function populateRouteDropdown() {
 // Function to populate trip types dropdown based on selected route
 async function populateTripTypeDropdown(routeName) {
     try {
-        const response = await fetch(`/api/routes/trip-types?routeName=${routeName}`);
+        const response = await fetch(`/api/routes/trip-types?${new URLSearchParams({ routeName })}`);
         if (!response.ok) throw new Error('Unable to fetch trip type data.');
 
         const { tripTypes } = await response.json();
@@ -92,7 +92,7 @@ async function searchTrips() {
         }
 
         // Send a request to the backend API to fetch available trips
-        const response = await fetch(`/api/trips/available?route=${route}&tripType=${tripType}&date=${date}`);
+        const response = await fetch(`/api/trips/available?${new URLSearchParams({ route })}&tripType=${tripType}&date=${date}`);
         if (!response.ok) throw new Error('Unable to fetch data. Please try again later.');
 
         const trips = await response.json(); // Parse the JSON response
