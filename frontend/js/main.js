@@ -43,7 +43,7 @@ async function populateTripTypeDropdown(routeName) {
         const { tripTypes } = await response.json();
 
         // Clear existing options
-        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Time</option>';
+        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Type</option>';
 
         // Populate trip types dropdown
         tripTypes.forEach(type => {
@@ -69,7 +69,7 @@ routeSelect.addEventListener('change', (event) => {
         populateTripTypeDropdown(selectedRoute);
     } else {
         // If no route is selected, disable and clear the trip type dropdown
-        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Time</option>';
+        tripTypeSelect.innerHTML = '<option selected disabled>Select Trip Type</option>';
         tripTypeSelect.disabled = true;
     }
 });
@@ -111,7 +111,7 @@ async function searchTrips() {
 
             // Populate trip details
             clone.querySelector('.route-name').textContent = trip.route_name;
-            clone.querySelector('.trip-time').textContent = trip.trip_type;
+            clone.querySelector('.trip-type').textContent = trip.trip_type;
             clone.querySelector('.trip-date').textContent = new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(trip.trip_date));
             clone.querySelector('.available-seats').textContent = trip.available_seats;
             clone.querySelector('.trip-price').textContent = trip.price;

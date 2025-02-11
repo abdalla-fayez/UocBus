@@ -122,8 +122,8 @@ router.get('/trips/available', async (req, res) => {
                     time: row.pickup_time
                 });
 
-                // Include pickup points only for morning routes or single point for afternoon
-                if (row.trip_type === 'Morning' || row.trip_type === 'Afternoon') {
+                // Include pickup points only for to campus routes or single point for from campus routes
+                if (row.trip_type === 'To Campus' || row.trip_type === 'From Campus') {
                     trips[row.id].pickup_points.push({
                         name: row.pickup_name,
                         time: row.pickup_time
