@@ -56,6 +56,29 @@ passport.use(new OIDCStrategy(
             console.error('Error fetching profile photo:', error);
             profile.photo = null;
         }
+        
+        // Fetch the user's job title (student ID) from Microsoft Graph API
+        try {
+            console.log('Fetching job title with access token:', accessToken);
+            const jobResponse = await fetch(`https://graph.microsoft.com/v1.0/me?$select=jobTitle`, {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            });
+            console.log('Job title response status:', jobResponse.status);
+            console.log('Job title response status text:', jobResponse.statusText);
+            if (jobResponse.ok) {
+                const jobData = await jobResponse.json();
+                profile.jobTitle = jobData.jobTitle; // This represents the student ID
+                console.log('Job title fetched successfully:', profile.jobTitle);
+            } else {
+                console.error('Failed to fetch job title:', jobResponse.status, jobResponse.statusText);
+                profile.jobTitle = null;
+            }
+        } catch (error) {
+            console.error('Error fetching job title:', error);
+            profile.jobTitle = null;
+        }
 
         console.log("Authentication successful, user profile:", profile);
         return done(null, profile);

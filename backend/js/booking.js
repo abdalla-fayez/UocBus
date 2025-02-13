@@ -142,14 +142,14 @@ router.get('/trips/available', async (req, res) => {
 
 router.post('/bookings/create', async (req, res) => {
     // Get user data from session
-    const { displayName, email } = req.session.user;
+    const { displayName, email, jobTitle } = req.session.user;
 
     try {
         // Insert only student info and timestamp into the bookings table
         const [result] = await db.query(
-            `INSERT INTO bookings (student_name, student_email, created_at)
-             VALUES (?, ?, NOW())`,
-            [displayName, email]
+            `INSERT INTO bookings (student_name, student_id, student_email, created_at)
+             VALUES (?, ?, ?, NOW())`,
+            [displayName, jobTitle, email]
         );
 
         // Save the booking ID in the session for further processing (e.g., linking order_id later)
@@ -174,8 +174,9 @@ router.get('/bookings/details', async (req, res) => {
     try {
         const [details] = await db.query(`
             SELECT 
-                b.student_name, 
-                b.student_email, 
+                b.student_name,
+                b.student_email,
+                b.student_id,
                 r.route_name,
                 r.trip_type,
                 t.trip_date, 

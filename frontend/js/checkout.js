@@ -31,6 +31,7 @@ async function populateBookingDetails() {
         
         // Populate the placeholders in the user details card
         userName.textContent = userData.displayName;
+        userId.textContent = userData.jobTitle;
         userEmail.textContent = userData.email;
         // Populate the placeholders in the booking details card
         routeName.textContent = bookingData.routeName;
@@ -85,23 +86,6 @@ async function handleProceedToPayment() {
         alert('An error occurred. Please try again.');
     }
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-    const logoutButton = document.getElementById('logoutButton');
-
-    logoutButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.href = '/api/logout';
-    });
-});
-
-
-
-
-
-
-
-
 
 
 

@@ -58,7 +58,8 @@ app.post('/auth/microsoft/callback',
         req.session.user = {
             displayName: req.user.displayName,
             email: req.user._json.email,
-            photo: req.user.photo
+            photo: req.user.photo,
+            jobTitle: req.user.jobTitle
         };
 
         // logger.info(`Session data: ${JSON.stringify(req.session)}`);

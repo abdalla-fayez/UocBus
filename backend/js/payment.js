@@ -153,7 +153,7 @@ router.get('/api/payments/callback', async (req, res) => {
 
         // Fetch booking and payment details
         const [bookingDetails] = await db.query(
-            `SELECT b.student_name, b.student_email,
+            `SELECT b.student_name, b.student_id, b.student_email,
                     t.trip_date, r.route_name, r.trip_type, r.price AS price_per_seat,
                     p.amount AS total_amount, p.seats_booked, p.order_id, bu.driver_mobile
             FROM bookings b

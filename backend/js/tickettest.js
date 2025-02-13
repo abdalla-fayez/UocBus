@@ -5,6 +5,7 @@ const { generateTicket } = require('./ticketgenerator.js'); // Adjust path as ne
 // Sample data for testing
 const sampleDetails = {
     student_name: "V",
+    student_id: "202477777",
     student_email: "V@uofcanada.edu.eg",
     route_name: "Night City",
     trip_type: "High Noon",

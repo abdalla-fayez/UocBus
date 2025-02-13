@@ -56,6 +56,7 @@ if (orderId) {
             if (data) {
                 // Populate ticket details
                 safeSetContent(userName, data.student_name);
+                safeSetContent(userId, data.student_id);
                 safeSetContent(userEmail, data.student_email);
                 safeSetContent(routeName, data.route_name);
                 safeSetContent(tripType, data.trip_type);
