@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Pickup Points</title>
+  <link rel="stylesheet" href="../../css/admin.css">
+  <!-- Include Bootstrap CSS from CDN for button styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Optional styling for route headers and expandable sections */
+    .route-header {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .pickup-points-container {
+      padding: 10px;
+      border: 1px solid #dee2e6;
+      margin-bottom: 15px;
+      display: none; /* Hidden by default; toggled on header click */
+    }
+  </style>
+</head>
+<body>
+  <header class="mb-4">
+    <h1>Manage Pickup Points</h1>
+    <nav class="d-flex justify-content-between align-items-center">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item"><a class="nav-link active" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
+      </ul>
+      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- This container will be populated with route blocks -->
+    <div id="routesContainer"></div>
+  </main>
+  <script src="../../js/adminauth-check.js" defer></script>
+  <script src="../../js/adminPickupPoints.js"></script>
+</body>
+</html>

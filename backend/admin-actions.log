@@ -1,0 +1,89 @@
+[2025-02-16T11:43:55.471Z] INFO: [object Object]
+[2025-02-16T11:45:20.251Z] INFO: [object Object]
+[2025-02-16T11:47:19.719Z] INFO: CREATE BUS by it: Created bus with ID 24 (Name: fafsfae1, Vacant Seats: 2, Driver Mobile: 01000000111)
+[2025-02-16T11:47:58.475Z] INFO: DELETE BUS by it: Deleted bus ID 24
+[2025-02-16T12:03:48.561Z] INFO: CREATE BUS by it:
+{
+  "id": 25,
+  "name": "fafsfae",
+  "vacant_seats": "2",
+  "driver_mobile": "010000001111111"
+}
+[2025-02-16T12:06:01.623Z] INFO: DELETE BUS by user (it):
+{
+  "id": 25,
+  "name": "fafsfae",
+  "vacant_seats": 2,
+  "driver_mobile": "010000001111111"
+}
+[2025-02-16T12:13:29.208Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "1",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "1",
+  "route_name": "Helwan",
+  "time": "06:30:00",
+  "status": "Inactive"
+}
+[2025-02-16T12:13:47.675Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "1",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "1",
+  "route_name": "Helwan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-16T12:13:58.786Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-16T12:14:05.757Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-16T12:14:37.478Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-16T12:16:15.259Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-16T12:16:15.400Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-16T12:16:27.514Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-16T12:16:27.656Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-16T14:02:40.150Z] INFO: CREATE PICKUP POINT by user (it):
+{
+  "id": 212,
+  "route_id": 1,
+  "name": "test",
+  "time": "08:06"
+}
+[2025-02-16T14:03:43.431Z] INFO: DELETE PICKUP POINT by user (it):
+{
+  "id": 212,
+  "route_id": 1,
+  "name": "test",
+  "time": "08:06:00",
+  "route_name": null,
+  "trip_type": null
+}

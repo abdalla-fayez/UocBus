@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <!-- Custom admin CSS -->
+  <link rel="stylesheet" href="../../css/admin.css" />
+  <!-- Bootstrap CSS for styling tabs and tables -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Optional: highlight active tab */
+    .nav-tabs .nav-link.active {
+      background-color: #f8f9fa;
+      border-color: #dee2e6 #dee2e6 #fff;
+    }
+    /* Indicate sortable headers */
+    th.sortable:hover {
+      cursor: pointer;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header class="mb-4">
+    <h1>Admin Dashboard</h1>
+    <nav class="d-flex justify-content-between align-items-center">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link active" href="adminDashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
+      </ul>
+      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs mb-3" id="dashboardTabs">
+      <li class="nav-item">
+        <a class="nav-link active" id="bookingsTab" href="#">Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tripsTab" href="#">Trips</a>
+      </li>
+    </ul>
+
+    <!-- Bookings Section -->
+    <section id="bookingsSection">
+      <h2>Bookings</h2>
+      <table class="table table-bordered" id="bookingsTable">
+        <thead class="thead-dark">
+          <tr>
+            <th class="sortable">ID</th>
+            <th>Order ID</th>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Email</th>
+            <th>Trip</th>
+            <th class="sortable">Trip Date</th>
+            <th>Seats Booked</th>
+            <th>Booking Status</th>
+            <th class="sortable">Created At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Booking rows injected via JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Trips Section (hidden by default) -->
+    <section id="tripsSection" style="display: none;">
+      <h2>Upcoming Trips</h2>
+      <table class="table table-bordered" id="tripsTable">
+        <thead class="thead-dark">
+          <tr>
+            <th class="sortable">ID</th>
+            <th class="sortable">Route Name</th>
+            <th class="sortable">Trip Type</th>
+            <th class="sortable">Date</th>
+            <th class="sortable">Time</th>
+            <th>Available Seats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Trip rows injected via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="../../js/adminauth-check.js" defer></script>
+  <script src="../../js/adminDashboard.js"></script>
+</body>
+</html>

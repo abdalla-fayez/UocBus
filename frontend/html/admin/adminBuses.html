@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Buses</title>
+  <!-- Link to your custom admin CSS -->
+  <link rel="stylesheet" href="../../css/admin.css" />
+  <!-- Include Bootstrap CSS from CDN for button styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="mb-4">
+    <h1>Manage Buses</h1>
+    <nav class="d-flex justify-content-between align-items-center">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link active" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
+      </ul>
+      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- Section: List Buses (View List) -->
+    <section id="listBusSection" class="mb-5">
+      <h2>Buses</h2>
+      <table class="table table-bordered" id="busesTable">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Vacant Seats</th>
+            <th>Driver Mobile</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Bus rows will be dynamically injected here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section: Add New Bus -->
+    <section id="addBusSection" class="mb-5">
+      <h2>Add New Bus</h2>
+      <form id="addBusForm">
+        <div class="form-group">
+          <label for="newBusName">Name</label>
+          <input type="text" class="form-control" id="newBusName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="newBusVacantSeats">Vacant Seats</label>
+          <input type="number" class="form-control" id="newBusVacantSeats" name="vacant_seats" required>
+        </div>
+        <div class="form-group">
+          <label for="newBusDriverMobile">Driver Mobile</label>
+          <input type="text" class="form-control" id="newBusDriverMobile" name="driver_mobile">
+        </div>
+        <button type="submit" class="btn btn-success">Add Bus</button>
+      </form>
+    </section>
+
+    <!-- Section: Edit Bus (initially hidden) -->
+    <section id="editBusSection" style="display: none;">
+      <h2>Edit Bus</h2>
+      <form id="editBusForm">
+        <!-- Hidden field for bus id; used for updates but not editable -->
+        <input type="hidden" name="id" id="busId" />
+        <div class="form-group">
+          <label for="busName">Name</label>
+          <input type="text" class="form-control" name="name" id="busName" required>
+        </div>
+        <div class="form-group">
+          <label for="busVacantSeats">Vacant Seats</label>
+          <input type="number" class="form-control" name="vacant_seats" id="busVacantSeats" required>
+        </div>
+        <div class="form-group">
+          <label for="busDriverMobile">Driver Mobile</label>
+          <input type="text" class="form-control" name="driver_mobile" id="busDriverMobile">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+      </form>
+    </section>
+  </main>
+  <script src="../../js/adminauth-check.js" defer></script>
+  <script src="../../js/adminBuses.js"></script>
+</body>
+</html>

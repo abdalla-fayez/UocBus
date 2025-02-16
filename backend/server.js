@@ -11,11 +11,12 @@ const bookingRoutes = require('./js/booking');
 const paymentRoutes = require('./js/payment'); // Import the payment routes
 const sessionStorageRoutes = require('./js/sessionmng/sessionstorage');
 const ticketGenRoutes = require('./js/ticketgenerator');
+const adminOpsRoutes = require('./adminops');
 const app = express();
 const qs = require('qs');
 const winston = require('winston');
 const logger = require(`${__basedir}/backend/logger`);
-
+const adminLogger = require(`${__basedir}/backend/adminLogger`);
 
 process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
@@ -79,13 +80,13 @@ function ensureAuthenticated(req, res, next) {
 
 // Protect all routes except authentication routes
 app.use((req, res, next) => {
-    if (req.path.startsWith('/auth/microsoft') || req.path.startsWith('/api/check-auth')) {
+    if (req.path.startsWith('/auth/microsoft') || req.path.startsWith('/api/check-auth') || req.path.startsWith('/api/admin')) {
         return next();
     }
     ensureAuthenticated(req, res, next);
 });
 
-// Endpoint to check authentication
+// Endpoint to check MS authentication
 app.get('/api/check-auth', (req, res) => {
     if (req.isAuthenticated()) {
         logger.info('User is authenticated for /api/check-auth');
@@ -113,12 +114,32 @@ app.get('/api/logout', (req, res) => {
     });
 });
 
+// Middleware to ensure an admin is authenticated
+function ensureAdminAuthenticated(req, res, next) {
+    if (req.session && req.session.adminUser) {
+      logger.info('Admin is authenticated');
+      return next();
+    }
+    logger.info('Admin is not authenticated, redirecting to /api/admin/login');
+    res.redirect('/api/admin/login');
+  }
+  
+  // Protect all routes under /api/admin except for /login and /check-auth
+  app.use('/api/admin', (req, res, next) => {
+    // Allow login and auth-check endpoints to be accessed without an admin session
+    if (req.path.startsWith('/login') || req.path.startsWith('/check-auth')) {
+      return next();
+    }
+    ensureAdminAuthenticated(req, res, next);
+  });
+  
 // Define your routes here
 app.use(paymentRoutes);
 app.use('/api/',bookingRoutes);
 app.use('/api/',sessionStorageRoutes);
 app.use('/api/',ticketGenRoutes);
-app.use('/api/',adminAuthRoutes);
+app.use('/api/admin',adminOpsRoutes);
+app.use('/api/admin',adminAuthRoutes);
 
 // Capture uncaught exceptions and unhandled promise rejections
 process.on('uncaughtException', (err) => {

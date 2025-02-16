@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Routes</title>
+  <!-- Link to your custom admin CSS -->
+  <link rel="stylesheet" href="../../css/admin.css" />
+  <!-- Include Bootstrap CSS from CDN for button styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="mb-4">
+    <h1>Manage Routes</h1>
+    <nav class="d-flex justify-content-between align-items-center">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item"><a class="nav-link active" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
+      </ul>
+      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- Section: View List -->
+    <section id="listRouteSection" class="mb-5">
+      <h2>Routes</h2>
+      <table class="table table-bordered" id="routesTable">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Route Name</th>
+            <th>Trip Type</th>
+            <th>Bus Name</th>
+            <th>Price</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Routes rows will be dynamically injected here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section: Add New Route -->
+    <section id="addRouteSection" class="mb-5">
+      <h2>Add New Route</h2>
+      <form id="addRouteForm">
+        <div class="form-group">
+          <label for="newRouteName">Route Name</label>
+          <input type="text" class="form-control" id="newRouteName" name="route_name" required>
+        </div>
+        <div class="form-group">
+          <label for="newRouteTripType">Trip Type</label>
+          <select class="form-control" id="newRouteTripType" name="trip_type" required>
+            <option value="To Campus">To Campus</option>
+            <option value="From Campus">From Campus</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="newRouteBusId">Bus</label>
+          <!-- This select will be populated dynamically with bus names -->
+          <select class="form-control" id="newRouteBusId" name="bus_id" required></select>
+        </div>
+        <div class="form-group">
+          <label for="newRoutePrice">Price</label>
+          <input type="number" step="0.01" class="form-control" id="newRoutePrice" name="price" required>
+        </div>
+        <div class="form-group">
+          <label for="newRouteTime">Time</label>
+          <input type="time" class="form-control" id="newRouteTime" name="time" required>
+        </div>
+        <div class="form-group">
+          <label for="newRouteStatus">Status</label>
+          <select class="form-control" id="newRouteStatus" name="status" required>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success">Add Route</button>
+      </form>
+    </section>
+
+    <!-- Section: Edit Route (initially hidden) -->
+    <section id="editRouteSection" style="display: none;" class="mb-5">
+      <h2>Edit Route</h2>
+      <form id="editRouteForm">
+        <!-- Hidden field for route id; used for updates but not editable -->
+        <input type="hidden" name="id" id="routeId">
+        <div class="form-group">
+          <label for="editRouteName">Route Name</label>
+          <input type="text" class="form-control" name="route_name" id="editRouteName" required>
+        </div>
+        <div class="form-group">
+          <label for="editRouteTripType">Trip Type</label>
+          <select class="form-control" name="trip_type" id="editRouteTripType" required>
+            <option value="To Campus">To Campus</option>
+            <option value="From Campus">From Campus</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="editRouteBusId">Bus</label>
+          <!-- This select will be populated dynamically with bus names -->
+          <select class="form-control" name="bus_id" id="editRouteBusId" required></select>
+        </div>
+        <div class="form-group">
+          <label for="editRoutePrice">Price</label>
+          <input type="number" step="0.01" class="form-control" name="price" id="editRoutePrice" required>
+        </div>
+        <div class="form-group">
+          <label for="editRouteTime">Time</label>
+          <input type="time" class="form-control" name="time" id="editRouteTime" required>
+        </div>
+        <div class="form-group">
+          <label for="editRouteStatus">Status</label>
+          <select class="form-control" name="status" id="editRouteStatus" required>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="button" id="cancelRouteEdit" class="btn btn-secondary">Cancel</button>
+      </form>
+    </section>
+  </main>
+  <script src="../../js/adminauth-check.js" defer></script>
+  <script src="../../js/adminRoutes.js"></script>
+</body>
+</html>

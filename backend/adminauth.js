@@ -2,38 +2,31 @@ const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const path = require('path');
 const db = require('./models/dbconnection'); // adjust the path if needed
 
-
-// Render a simple login page for admin (assuming you serve HTML from here)
-router.get('/admin/login', (req, res) => {
-  // You can render a view or send HTML directly; for now, we'll send simple HTML:
-  res.send(`
-    <form method="POST" action="/admin/login">
-      <input name="username" placeholder="Username" required/>
-      <input name="password" type="password" placeholder="Password" required/>
-      <button type="submit">Login</button>
-    </form>
-  `);
+// Serve the admin login page
+router.get('/login', (req, res) => {
+  // This will serve the login page at /api/admin/login
+  res.redirect('https://busticketing.uofcanada.edu.eg/admin/adminLogin.html');
 });
 
-// Process login
-router.post('/admin/login', express.urlencoded({ extended: true }), async (req, res) => {
+// Process login using plain-text password comparison
+router.post('/login', express.urlencoded({ extended: true }), async (req, res) => {
   const { username, password } = req.body;
   try {
-    const [adminUser] = await db.query("SELECT * FROM admin_users WHERE username = ?", [username]);
-    
-    // Check if a user was found and if the password matches
-    if (adminUser && await bcrypt.compare(password, adminUser.password_hash)) {
-      // Set session
+    const [rows] = await db.query("SELECT * FROM admin_users WHERE username = ?", [username]);
+    const adminUser = rows[0]; // extract first result
+    if (adminUser && password === adminUser.password) {
+      // Set session for authenticated admin user
       req.session.adminUser = {
         id: adminUser.id,
         username: adminUser.username
       };
-      return res.redirect('/api/admin/dashboard');
+      // Redirect to the dashboard page (use the absolute URL as needed)
+      return res.redirect('https://busticketing.uofcanada.edu.eg/admin/admindashboard.html');
     } else {
-      return res.send('Invalid username or password.');
+      return res.status(401).send('Invalid username or password.');
     }
   } catch (error) {
     console.error(error);
@@ -41,28 +34,22 @@ router.post('/admin/login', express.urlencoded({ extended: true }), async (req, 
   }
 });
 
-// Middleware to protect admin routes
-function adminAuthMiddleware(req, res, next) {
-  if (req.session && req.session.adminUser) {
-    next();
-  } else {
-    res.redirect('/api/admin/login');
-  }
-}
-
-// Example of a protected route (admin dashboard)
-router.get('/admin/dashboard', adminAuthMiddleware, (req, res) => {
-  res.send(`Welcome, ${req.session.adminUser.username}. This is the admin dashboard.`);
-});
-
 // Logout route
-router.get('/api/admin/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   req.session.destroy(err => {
-    if (err) {
-      console.error(err);
-    }
-    res.redirect('/api/admin/login');
+    if (err) console.error(err);
+    // Relative redirect: sends the user to /api/admin/login
+    res.redirect('login');
   });
 });
+
+// Endpoint to check if an admin user is authenticated
+router.get('/check-auth', (req, res) => {
+    if (req.session && req.session.adminUser) {
+      res.status(200).json({ authenticated: true });
+    } else {
+      res.status(401).json({ authenticated: false });
+    }
+  });
 
 module.exports = router;
