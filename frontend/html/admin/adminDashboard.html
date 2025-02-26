@@ -14,17 +14,29 @@
       background-color: #f8f9fa;
       border-color: #dee2e6 #dee2e6 #fff;
     }
+    .nav-tabs .nav-link:hover {
+      color: #333 !important;
+      background-color: #f8f9fa; 
+    }
     /* Indicate sortable headers */
     th.sortable:hover {
       cursor: pointer;
+      color: #000000 !important;
       background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
   <header class="mb-4">
-    <h1>Admin Dashboard</h1>
+    <div class="d-flex justify-content-between align-items-center" style="padding-bottom: 1rem;">
+      <h1>Admin Dashboard</h1>
+      <h1>U of Canada Bus Ticketing System Admin</h1>
+      <a>
+        <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
+      </a>
+    </div>
     <nav class="d-flex justify-content-between align-items-center">
+      <!-- Left: Navigation Links -->
       <ul class="nav">
         <li class="nav-item"><a class="nav-link active" href="adminDashboard.html">Dashboard</a></li>
         <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
@@ -32,10 +44,11 @@
         <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
         <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
       </ul>
-      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+      <button id="logoutBtn" class="btn btn-dark mr-2">Logout</button>
     </nav>
   </header>
-  <main class="container">
+  
+  <main>
     <!-- Navigation Tabs -->
     <ul class="nav nav-tabs mb-3" id="dashboardTabs">
       <li class="nav-item">
@@ -60,7 +73,7 @@
             <th>Trip</th>
             <th class="sortable">Trip Date</th>
             <th>Seats Booked</th>
-            <th>Booking Status</th>
+            <th>Payment Status</th>
             <th class="sortable">Created At</th>
           </tr>
         </thead>

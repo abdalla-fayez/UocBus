@@ -11,7 +11,13 @@
 </head>
 <body>
   <header class="mb-4">
-    <h1>Manage Routes</h1>
+    <div class="d-flex justify-content-between align-items-center" style="padding-bottom: 1rem;">
+      <h1>Manage Routes</h1>
+      <h1>U of Canada Bus Ticketing System Admin</h1>
+      <a>
+        <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
+      </a>
+    </div>
     <nav class="d-flex justify-content-between align-items-center">
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
@@ -23,7 +29,7 @@
       <button id="logoutBtn" class="btn btn-dark">Logout</button>
     </nav>
   </header>
-  <main class="container">
+  <main>
     <!-- Section: View List -->
     <section id="listRouteSection" class="mb-5">
       <h2>Routes</h2>
@@ -82,48 +88,6 @@
           </select>
         </div>
         <button type="submit" class="btn btn-success">Add Route</button>
-      </form>
-    </section>
-
-    <!-- Section: Edit Route (initially hidden) -->
-    <section id="editRouteSection" style="display: none;" class="mb-5">
-      <h2>Edit Route</h2>
-      <form id="editRouteForm">
-        <!-- Hidden field for route id; used for updates but not editable -->
-        <input type="hidden" name="id" id="routeId">
-        <div class="form-group">
-          <label for="editRouteName">Route Name</label>
-          <input type="text" class="form-control" name="route_name" id="editRouteName" required>
-        </div>
-        <div class="form-group">
-          <label for="editRouteTripType">Trip Type</label>
-          <select class="form-control" name="trip_type" id="editRouteTripType" required>
-            <option value="To Campus">To Campus</option>
-            <option value="From Campus">From Campus</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="editRouteBusId">Bus</label>
-          <!-- This select will be populated dynamically with bus names -->
-          <select class="form-control" name="bus_id" id="editRouteBusId" required></select>
-        </div>
-        <div class="form-group">
-          <label for="editRoutePrice">Price</label>
-          <input type="number" step="0.01" class="form-control" name="price" id="editRoutePrice" required>
-        </div>
-        <div class="form-group">
-          <label for="editRouteTime">Time</label>
-          <input type="time" class="form-control" name="time" id="editRouteTime" required>
-        </div>
-        <div class="form-group">
-          <label for="editRouteStatus">Status</label>
-          <select class="form-control" name="status" id="editRouteStatus" required>
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-        <button type="button" id="cancelRouteEdit" class="btn btn-secondary">Cancel</button>
       </form>
     </section>
   </main>

@@ -18,22 +18,48 @@ async function generateTicket(details, filePath) {
         const stream = fs.createWriteStream(filePath);
         doc.pipe(stream);
   
-        // Dynamic logo placement above the title:
-        const logoPath = 'C:/xampp/htdocs/UocBus/frontend/assets/TicketLogo2.png';
-        if (fs.existsSync(logoPath)) {
-          // Get actual dimensions of the logo
-          const dimensions = sizeOf(logoPath);
-          const logoWidth = 100; // fixed width
-          // Compute height while preserving aspect ratio
-          const logoHeight = dimensions.height * (logoWidth / dimensions.width);
-          // Center the logo horizontally
-          const logoX = (doc.page.width - logoWidth) / 2;
-          const logoY = 20;
-          doc.image(logoPath, logoX, logoY, { width: logoWidth });
-          // Adjust current y position: add extra spacing after the logo (20 pts)
-          doc.y = logoY + logoHeight + 20;
-        }
+// Existing logo code modified:
+const logoPath = 'C:/xampp/htdocs/UocBus/frontend/assets/TicketLogo2.png';
+if (fs.existsSync(logoPath)) {
+  const dimensions = sizeOf(logoPath);
+  const logoWidth = 100; // fixed width for the logo
+  const logoHeight = dimensions.height * (logoWidth / dimensions.width);
   
+  // Place the logo on the right side:
+  const rightMargin = (doc.page.margins && doc.page.margins.right) || 50;
+  const logoX = doc.page.width - rightMargin - logoWidth;
+  const logoY = 20;
+  doc.image(logoPath, logoX, logoY, { width: logoWidth });
+  
+  // Set the current y position for subsequent content
+  doc.y = logoY + logoHeight + 10;
+  
+  // --- New code for user photo ---
+  if (details.photo && details.photo.startsWith('data:image')) {
+    // Extract the base64-encoded portion from the Data URL
+    const base64Data = details.photo.split(',')[1];
+    const photoBuffer = Buffer.from(base64Data, 'base64');
+    
+    // Set desired dimensions: 120px diameter (i.e., larger than before)
+    const photoDiameter = 120;
+    const photoRadius = photoDiameter / 2;
+    
+    // Determine the left margin (default to 50 if not set)
+    const leftMargin = (doc.page.margins && doc.page.margins.left) || 50;
+    // Position the photo at the left margin
+    const photoX = leftMargin;
+    // Align the photo vertically with the logo
+    const photoY = logoY;
+    
+    doc.save();
+    // Create a circular clipping path for the user photo
+    doc.circle(photoX + photoRadius, photoY + photoRadius, photoRadius).clip();
+    // Draw the user photo using the buffer
+    doc.image(photoBuffer, photoX, photoY, { width: photoDiameter, height: photoDiameter });
+    doc.restore();
+  }
+}
+
         // Title (centered) below the logo
         doc.fillColor('black')
            .fontSize(22)
@@ -170,7 +196,7 @@ async function generateTicket(details, filePath) {
         doc.moveDown(0.3);
         doc.fillColor('black')
            .fontSize(10)
-           .text('For support, please contact us at Fleet@uofcanada.edu.eg', { align: 'center' });
+           .text('For support, please contact us at 01008470311.', { align: 'center' });
         
         // Finalize the PDF
         doc.end();

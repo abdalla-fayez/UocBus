@@ -170,7 +170,7 @@ router.get('/api/payments/callback', async (req, res) => {
         }
 
         const ticketDetails = bookingDetails[0];
-
+        ticketDetails.photo = req.session.user.photo;
         // Generate ticket
         const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
         await generateTicket(ticketDetails, ticketPath);

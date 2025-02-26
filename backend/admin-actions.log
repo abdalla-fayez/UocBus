@@ -87,3 +87,779 @@
   "route_name": null,
   "trip_type": null
 }
+[2025-02-17T06:19:48.589Z] INFO: CREATE PICKUP POINT by user (it):
+{
+  "id": 213,
+  "route_id": 1,
+  "name": "testhel",
+  "time": "08:04"
+}
+[2025-02-17T06:20:26.148Z] INFO: DELETE PICKUP POINT by user (it):
+{
+  "id": 213,
+  "route_id": 1,
+  "name": "testhel",
+  "time": "08:04:00",
+  "route_name": null,
+  "trip_type": null
+}
+[2025-02-17T08:00:41.840Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "4",
+  "driver_mobile": "Helwan Bus"
+}
+[2025-02-17T08:00:57.758Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "Helwan Bus"
+}
+[2025-02-17T08:06:29.964Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "2"
+}
+[2025-02-17T08:08:25.073Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "2"
+}
+[2025-02-17T08:08:30.341Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "2"
+}
+[2025-02-17T08:14:13.215Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "2",
+  "name": "Maadi Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "1061102281"
+}
+[2025-02-17T08:14:18.672Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "2",
+  "name": "Maadi Bus",
+  "vacant_seats": "1",
+  "driver_mobile": "1061102281"
+}
+[2025-02-17T08:14:22.274Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "2",
+  "name": "Maadi Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "1061102281"
+}
+[2025-02-17T08:16:44.530Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "0106123123"
+}
+[2025-02-17T08:18:28.566Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "2",
+  "name": "Maadi Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061102281"
+}
+[2025-02-17T08:18:34.539Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "3",
+  "name": "Nasr City 1 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060971122"
+}
+[2025-02-17T08:18:40.869Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "4",
+  "name": "Nasr City 2 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061107447"
+}
+[2025-02-17T08:18:46.579Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "5",
+  "name": "Heliopolis 1 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061122839"
+}
+[2025-02-17T08:18:53.302Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "6",
+  "name": "Heliopolis 2 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061122875"
+}
+[2025-02-17T08:18:57.618Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "7",
+  "name": "Obour & Madinaty Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061122104"
+}
+[2025-02-17T08:19:01.828Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "8",
+  "name": "Shorouk & Badr Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060933011"
+}
+[2025-02-17T08:19:05.241Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "9",
+  "name": "Rehab City (Housing) Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061122958"
+}
+[2025-02-17T08:19:08.725Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "10",
+  "name": "Northern 90 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060933110"
+}
+[2025-02-17T08:19:13.058Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "11",
+  "name": "5th Settlement Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061107211"
+}
+[2025-02-17T08:19:16.899Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "12",
+  "name": "Ring Road Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060912211"
+}
+[2025-02-17T08:19:20.220Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "13",
+  "name": "Sheikh Zayed & 6 October Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01022662306"
+}
+[2025-02-17T08:20:04.069Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "14",
+  "name": "Mokattam & Northern 90 Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061019988"
+}
+[2025-02-17T08:20:08.139Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "15",
+  "name": "Faisal & Mohandessin Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01010314412"
+}
+[2025-02-17T08:20:11.840Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "16",
+  "name": "Rehab City Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061122073"
+}
+[2025-02-17T08:20:15.484Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "17",
+  "name": "10th of Ramadan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01061022115"
+}
+[2025-02-17T08:20:41.097Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060994299"
+}
+[2025-02-17T08:59:29.465Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "33",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-17T09:16:53.280Z] INFO: CREATE ROUTE by user (it):
+{
+  "id": 36,
+  "price": "1",
+  "trip_type": "To Campus",
+  "bus_id": "1",
+  "route_name": "Helwan Awy b2a",
+  "time": "06:30",
+  "status": "Active"
+}
+[2025-02-17T09:18:27.427Z] INFO: CREATE PICKUP POINT by user (it):
+{
+  "id": 214,
+  "route_id": 36,
+  "name": "testhel",
+  "time": "06:00"
+}
+[2025-02-17T09:18:52.278Z] INFO: CREATE BUS by user (it):
+{
+  "id": 26,
+  "name": "testhel bus",
+  "vacant_seats": "2",
+  "driver_mobile": "011111111111"
+}
+[2025-02-17T09:19:28.797Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "36",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "26",
+  "route_name": "Helwan Awy b2a",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-17T09:24:58.087Z] INFO: DELETE ROUTE by user (it):
+{
+  "id": 36,
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": 26,
+  "route_name": "Helwan Awy b2a",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-17T09:25:08.108Z] INFO: DELETE BUS by user (it):
+{
+  "id": 26,
+  "name": "testhel bus",
+  "vacant_seats": 2,
+  "driver_mobile": "011111111111"
+}
+[2025-02-17T18:59:58.132Z] INFO: UPDATE BUS by user (it):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "2",
+  "driver_mobile": "01060994299"
+}
+[2025-02-17T19:00:56.229Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-17T19:04:47.913Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-17T19:04:50.208Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-24T12:56:50.330Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "33",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T12:56:57.499Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "34",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T12:57:11.030Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "21",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "11",
+  "route_name": "5th Settlement",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T12:57:17.384Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "22",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "11",
+  "route_name": "5th Settlement",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:00.626Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "29",
+  "price": "170",
+  "trip_type": "To Campus",
+  "bus_id": "15",
+  "route_name": "Faisal & Mohandessin",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:06.962Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "30",
+  "price": "170",
+  "trip_type": "From Campus",
+  "bus_id": "15",
+  "route_name": "Faisal & Mohandessin",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:24.529Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "9",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "5",
+  "route_name": "Heliopolis 1",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:31.612Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "10",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "5",
+  "route_name": "Heliopolis 1",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:37.352Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "11",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "6",
+  "route_name": "Heliopolis 2",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T12:58:42.254Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "12",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "6",
+  "route_name": "Heliopolis 2",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:00:48.617Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "1",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "1",
+  "route_name": "Helwan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:00:53.997Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "2",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "1",
+  "route_name": "Helwan",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:01:32.279Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "3",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "2",
+  "route_name": "Maadi",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:01:37.765Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "4",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "2",
+  "route_name": "Maadi",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:01:54.727Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "27",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "14",
+  "route_name": "Mokattam & Northern 90",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:01.223Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "28",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "14",
+  "route_name": "Mokattam & Northern 90",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:13.354Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "5",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "3",
+  "route_name": "Nasr City 1",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:18.158Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "6",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "3",
+  "route_name": "Nasr City 1",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:27.888Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "7",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "4",
+  "route_name": "Nasr City 2",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:32.752Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "8",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "4",
+  "route_name": "Nasr City 2",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:50.969Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "19",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "10",
+  "route_name": "Northern 90",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:02:56.431Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "20",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "10",
+  "route_name": "Northern 90",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:06.759Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "13",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "7",
+  "route_name": "Obour & Madinaty",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:12.621Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "14",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "7",
+  "route_name": "Obour & Madinaty",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:26.514Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "31",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "16",
+  "route_name": "Rehab City",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:31.613Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "32",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "16",
+  "route_name": "Rehab City",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:39.116Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "17",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "9",
+  "route_name": "Rehab City (Housing)",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:43.521Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "18",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "9",
+  "route_name": "Rehab City (Housing)",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:51.864Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "23",
+  "price": "150",
+  "trip_type": "To Campus",
+  "bus_id": "12",
+  "route_name": "Ring Road",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:03:56.563Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "24",
+  "price": "150",
+  "trip_type": "From Campus",
+  "bus_id": "12",
+  "route_name": "Ring Road",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:04:54.644Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "25",
+  "price": "200",
+  "trip_type": "To Campus",
+  "bus_id": "13",
+  "route_name": "Sheikh Zayed & 6 October",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:04:59.704Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "26",
+  "price": "200",
+  "trip_type": "From Campus",
+  "bus_id": "13",
+  "route_name": "Sheikh Zayed & 6 October",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-24T13:05:07.716Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "15",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "8",
+  "route_name": "Shorouk & Badr",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-24T13:05:13.567Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "16",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "8",
+  "route_name": "Shorouk & Badr",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-26T09:00:09.007Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T09:00:10.765Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:21:57.263Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T10:21:57.968Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:45:00.676Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T10:45:01.687Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:45:06.792Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T10:45:10.752Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:45:10.757Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:45:11.405Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T10:45:12.134Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T10:45:13.012Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T10:45:13.878Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T11:57:16.528Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "33",
+  "price": "1",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-26T11:57:20.739Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "34",
+  "price": "1",
+  "trip_type": "From Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-26T13:20:23.562Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "33",
+  "price": "140",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-02-26T13:20:28.685Z] INFO: UPDATE ROUTE by user (it):
+{
+  "id": "34",
+  "price": "140",
+  "trip_type": "From Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "16:00:00",
+  "status": "Active"
+}
+[2025-02-26T13:21:18.548Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T13:21:23.299Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T13:22:23.919Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T13:22:24.485Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T13:31:25.920Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T13:31:26.747Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T13:31:28.709Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T13:31:45.199Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-02-26T13:32:07.234Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-02-26T13:32:09.485Z] INFO: TOGGLE TRIP AUTOMATION by user (it):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}

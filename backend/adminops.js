@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('./models/dbconnection'); // DB connection module
 const { logAdminAction } = require('./adminLogger');
+const { Parser } = require('json2csv');
 
 /* ============
    BUSES CRUD
@@ -10,7 +11,7 @@ const { logAdminAction } = require('./adminLogger');
 // Get all buses (read-only, no logging)
 router.get('/buses', async (req, res) => {
   try {
-    const [results] = await db.query('SELECT * FROM buses');
+    const [results] = await db.query('SELECT * FROM buses ORDER BY name');
     res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -66,7 +67,7 @@ router.delete('/buses/:id', async (req, res) => {
 // Get all routes (read-only, no logging)
 router.get('/routes', async (req, res) => {
   try {
-    const [results] = await db.query('SELECT * FROM routes');
+    const [results] = await db.query('SELECT * FROM routes ORDER BY route_name');
     res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -121,7 +122,7 @@ router.delete('/routes/:id', async (req, res) => {
 // Get all pickup points (read-only)
 router.get('/pickup_points', async (req, res) => {
   try {
-    const [results] = await db.query('SELECT * FROM pickup_points');
+    const [results] = await db.query('SELECT * FROM pickup_points ORDER BY time');
     res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -198,7 +199,7 @@ router.get('/dashboard/bookings', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-  
+
 // Dashboard: Get upcoming trips (only trips that have not yet passed)
 router.get('/dashboard/trips', async (req, res) => {
   try {
@@ -212,7 +213,7 @@ router.get('/dashboard/trips', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-  
+
 // Get the current status of the Trip_Automation event
 router.get('/other/trip-automation-status', async (req, res) => {
   try {
@@ -234,7 +235,7 @@ router.get('/other/trip-automation-status', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-  
+
 // Toggle the Trip_Automation event (enable if disabled, disable if enabled)
 router.post('/other/toggle-trip-automation', async (req, res) => {
   try {
@@ -272,5 +273,47 @@ router.post('/other/toggle-trip-automation', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-  
+
+/* =======================
+    REPORTS GENERATION
+    ======================= */
+
+router.get('/bookingsreport', async (req, res) => {
+  try {
+    const reportDate = req.query.date; // Expecting date in 'YYYY-MM-DD' format
+    if (!reportDate) {
+      return res.status(400).json({ error: 'Date parameter is required (format: YYYY-MM-DD)' });
+    }
+    
+    const [results] = await db.query(`
+      SELECT 
+        b.id,
+        b.student_name AS Student_Name,
+        b.student_id AS Student_ID,
+        b.student_email AS Student_Email,
+        b.order_id AS Ticket_ID,
+        b.created_at  AS Booking_Date,
+        p.status AS Payment_Status,
+        p.seats_booked AS Seats_Booked,
+        COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date,
+        COALESCE(t.route_name, 'N/A') AS Route_Name,
+        COALESCE(t.trip_type, 'N/A') AS Trip_Type
+      FROM bookings b
+      LEFT JOIN payments p ON b.order_id = p.order_id
+      LEFT JOIN trips t ON p.trip_id = t.id
+      WHERE DATE(t.trip_date) = ?
+    `, [reportDate]);
+    
+    const json2csvParser = new Parser();
+    const csv = json2csvParser.parse(results);
+    
+    res.header('Content-Type', 'text/csv');
+    res.attachment(`bookings-report-${reportDate}.csv`);
+    return res.send(csv);
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// Export the router
 module.exports = router;

@@ -11,7 +11,13 @@
 </head>
 <body>
   <header class="mb-4">
-    <h1>Other Settings</h1>
+    <div class="d-flex justify-content-between align-items-center" style="padding-bottom: 1rem;">
+      <h1>Other Settings</h1>
+      <h1>U of Canada Bus Ticketing System Admin</h1>
+      <a>
+        <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
+      </a>
+    </div>
     <nav class="d-flex justify-content-between align-items-center">
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
@@ -24,13 +30,31 @@
     </nav>
   </header>
   <main class="container">
-    <section id="toggleTripAutomationSection" class="mb-5">
-    <h2>Daily Trip Generation</h2>
-    <div class="d-flex justify-content-between">
-        <p id="tripAutomationStatus">Loading current status...</p>
+
+  <section id="toggleTripAutomationSection" class="mb-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Daily Trip Generation</h5>
+        <p class="card-text" id="tripAutomationStatus">Loading current status...</p>
         <button id="toggleTripAutomationBtn" class="btn btn-primary">Toggle Trip Automation</button>
+      </div>
     </div>
+  </section>
+
+    <section id="downloadReportSection" class="mb-5">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Bookings Report (Daily)</h5>
+          <p class="card-text">Select a date and download the report in CSV format.</p>
+          <div class="form-group">
+            <label for="reportDate">Trip Date:</label>
+            <input type="date" id="reportDate" class="form-control">
+          </div>
+          <button id="downloadReportBtn" class="btn btn-primary mt-2">Download Report</button>
+        </div>
+      </div>
     </section>
+
     <!-- You can add more miscellaneous settings below -->
   </main>
   <!-- Common admin authentication check script -->

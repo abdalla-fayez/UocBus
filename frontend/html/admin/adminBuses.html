@@ -11,7 +11,13 @@
 </head>
 <body>
   <header class="mb-4">
-    <h1>Manage Buses</h1>
+    <div class="d-flex justify-content-between align-items-center" style="padding-bottom: 1rem;">
+      <h1>Manage Buses</h1>
+      <h1>U of Canada Bus Ticketing System Admin</h1>
+      <a>
+        <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
+      </a>
+    </div>
     <nav class="d-flex justify-content-between align-items-center">
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
@@ -23,7 +29,7 @@
       <button id="logoutBtn" class="btn btn-dark">Logout</button>
     </nav>
   </header>
-  <main class="container">
+  <main>
     <!-- Section: List Buses (View List) -->
     <section id="listBusSection" class="mb-5">
       <h2>Buses</h2>
@@ -42,7 +48,7 @@
         </tbody>
       </table>
     </section>
-
+  
     <!-- Section: Add New Bus -->
     <section id="addBusSection" class="mb-5">
       <h2>Add New Bus</h2>
@@ -62,30 +68,8 @@
         <button type="submit" class="btn btn-success">Add Bus</button>
       </form>
     </section>
-
-    <!-- Section: Edit Bus (initially hidden) -->
-    <section id="editBusSection" style="display: none;">
-      <h2>Edit Bus</h2>
-      <form id="editBusForm">
-        <!-- Hidden field for bus id; used for updates but not editable -->
-        <input type="hidden" name="id" id="busId" />
-        <div class="form-group">
-          <label for="busName">Name</label>
-          <input type="text" class="form-control" name="name" id="busName" required>
-        </div>
-        <div class="form-group">
-          <label for="busVacantSeats">Vacant Seats</label>
-          <input type="number" class="form-control" name="vacant_seats" id="busVacantSeats" required>
-        </div>
-        <div class="form-group">
-          <label for="busDriverMobile">Driver Mobile</label>
-          <input type="text" class="form-control" name="driver_mobile" id="busDriverMobile">
-        </div>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-        <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
-      </form>
-    </section>
   </main>
+  
   <script src="../../js/adminauth-check.js" defer></script>
   <script src="../../js/adminBuses.js"></script>
 </body>
