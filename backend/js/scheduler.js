@@ -1,7 +1,9 @@
 // scheduler.js
 const schedule = require('node-schedule');
 const db = require('../models/dbconnection'); // Adjust the path if needed
-const logger = require('../logger'); // Optional: use your logger for info and errors
+const dotenv = require('dotenv');
+dotenv.config();
+const logger = require(`${__basedir}/backend/logger`);
 
 // Function to expire pending payments older than 7 minutes
 async function expirePendingPayments() {
@@ -15,7 +17,7 @@ async function expirePendingPayments() {
     `);
 
     if (pendingPayments.length === 0) {
-      logger.info('No expired pending payments found.');
+      // logger.info('No expired pending payments found.');
       return;
     }
 

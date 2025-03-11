@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2025 at 09:26 AM
+-- Generation Time: Mar 03, 2025 at 12:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,12 +80,12 @@ WHERE NOT EXISTS (
       AND pp.time = p.time
 )$$
 
-DROP PROCEDURE IF EXISTS `Route_Creation`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Route_Creation` ()  MODIFIES SQL DATA COMMENT 'IFNOTEXISTS Morning/Afternoon 6:30am 4:00pm 100EGP' BEGIN
+DROP PROCEDURE IF EXISTS `Route Creation SQL Template (DO NOT RUN)`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Route Creation SQL Template (DO NOT RUN)` ()  MODIFIES SQL DATA COMMENT 'IFNOTEXISTS Morning/Afternoon 6:30am 4:00pm 150EGP' BEGIN
     INSERT INTO routes (price, trip_type, bus_id, route_name, time)
     SELECT 
-        100.00 AS price,                -- Default price value
-        tt.trip_type,                 -- Either 'Morning' or 'Afternoon'
+        150.00 AS price,                -- Default price value
+        tt.trip_type,                 -- Either 'To Campus' or 'From Campus'
         b.id AS bus_id,               -- The bus's id from the buses table
         CASE 
             WHEN LOCATE(' Bus', b.name) > 0 THEN SUBSTRING_INDEX(b.name, ' Bus', 1)
@@ -93,14 +93,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Route_Creation` ()  MODIFIES SQL DA
             ELSE b.name
         END AS route_name,            -- Removes " Bus" or " bus" from the bus name
         CASE 
-            WHEN tt.trip_type = 'Morning' THEN '06:30:00'
-            WHEN tt.trip_type = 'Afternoon' THEN '16:00:00'
+            WHEN tt.trip_type = 'To Campus' THEN '06:30:00'
+            WHEN tt.trip_type = 'From Campus' THEN '16:00:00'
         END AS time
     FROM buses b
     CROSS JOIN (
-        SELECT 'Morning' AS trip_type
+        SELECT 'To Campus' AS trip_type
         UNION
-        SELECT 'Afternoon'
+        SELECT 'From Campus'
     ) tt
     WHERE NOT EXISTS (
         SELECT 1 
@@ -143,6 +143,26 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin_users`
+--
+
+DROP TABLE IF EXISTS `admin_users`;
+CREATE TABLE IF NOT EXISTS `admin_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `admin_users`:
+--
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `bookings`
 --
 
@@ -150,6 +170,7 @@ DROP TABLE IF EXISTS `bookings`;
 CREATE TABLE IF NOT EXISTS `bookings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_name` varchar(255) NOT NULL,
+  `student_id` varchar(255) DEFAULT NULL,
   `student_email` varchar(255) NOT NULL,
   `order_id` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -195,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `trip_id` int(11) NOT NULL,
   `seats_booked` int(11) NOT NULL,
   `amount` decimal(10,2) NOT NULL,
-  `status` enum('PENDING','SUCCESS','FAILED','CANCELLED') DEFAULT 'PENDING',
+  `status` enum('PENDING','SUCCESS','FAILED','CANCELLED','EXPIRED') DEFAULT 'PENDING',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`),
@@ -222,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `pickup_points` (
   `name` varchar(255) NOT NULL,
   `time` time NOT NULL,
   `route_name` varchar(255) DEFAULT NULL,
-  `trip_type` enum('Morning','Afternoon') DEFAULT NULL,
+  `trip_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `pickup_points_ibfk_1` (`route_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -243,7 +264,7 @@ DROP TABLE IF EXISTS `routes`;
 CREATE TABLE IF NOT EXISTS `routes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `price` decimal(10,2) NOT NULL,
-  `trip_type` enum('Morning','Afternoon') NOT NULL,
+  `trip_type` enum('To Campus','From Campus') NOT NULL,
   `bus_id` int(11) NOT NULL,
   `route_name` varchar(255) NOT NULL,
   `time` time NOT NULL,

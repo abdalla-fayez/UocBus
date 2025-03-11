@@ -109,7 +109,7 @@ router.post('/api/payments/initiate', async (req, res) => {
 
         res.json({ sessionId, orderId });
     } catch (error) {
-        console.error('Error initiating payment:', error);
+        logger.error('Error initiating payment:', error);
 
         // Rollback seat reservation if payment initiation fails
         await db.query(
@@ -184,7 +184,7 @@ router.get('/api/payments/callback', async (req, res) => {
         // Potential error below:
         res.redirect(`https://busticketing.uofcanada.edu.eg/success.html?orderId=${orderId}`);
     } catch (error) {
-        console.error('Error processing payment callback:', error);
+        logger.error('Error processing payment callback:', error);
         res.status(500).json({ message: 'Error processing payment callback.' });
     }
 });
@@ -195,7 +195,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
 
     try {
         if (!orderId) {
-            console.error('Missing orderId in cancellation callback');
+            logger.error('Missing orderId in cancellation callback');
             return res.status(400).json({ message: 'Invalid cancellation callback data' });
         }
 
@@ -238,7 +238,7 @@ router.get('/api/payments/callback/cancel', async (req, res) => {
         logger.info(`Payment cancelled for Order ID: ${orderId}`);
         res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Redirect to the homepage
     } catch (error) {
-        console.error('Error handling cancellation:', error);
+        logger.error('Error handling cancellation:', error);
         res.redirect('https://busticketing.uofcanada.edu.eg/?payment=cancelled'); // Still redirect on error, but optionally log the issue
     }
 });
@@ -250,7 +250,7 @@ router.get('/api/payments/callback/error', async (req, res) => {
 
     try {
         if (!orderId) {
-            console.error('Missing orderId in error callback');
+            logger.error('Missing orderId in error callback');
             return res.status(400).json({ message: 'Invalid error callback data' });
         }
 
@@ -289,7 +289,7 @@ router.get('/api/payments/callback/error', async (req, res) => {
         logger.info(`Payment error for Order ID: ${orderId}`);
         res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Redirect to the homepage
     } catch (error) {
-        console.error('Error handling payment error:', error);
+        logger.error('Error handling payment error:', error);
         res.redirect('https://busticketing.uofcanada.edu.eg/?payment=error'); // Still redirect on error, but optionally log the issue
     }
 });

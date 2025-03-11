@@ -1,15 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../../models/dbconnection'); // Database connection
+const dotenv = require('dotenv');
+dotenv.config();
 const logger = require(`${__basedir}/backend/logger`);
 
 router.post('/session/booking/store', async (req, res) => {
-    logger.info('Request received at /api/session/booking/store:', req.body);
+    // logger.info('Request received at /api/session/booking/store:', req.body);
 
     const { tripId, seatsBooked } = req.body;
 
     if (!tripId || !seatsBooked || seatsBooked <= 0) {
-        console.error(`Invalid Booking Data`);
+        logger.error(`Invalid Booking Data`);
         return res.status(400).json({ message: 'Invalid booking data' });
     }
 
@@ -24,7 +26,7 @@ router.post('/session/booking/store', async (req, res) => {
         );
 
         if (rows.length === 0) {
-            console.error(`No trip found for tripId: ${tripId}`);
+            logger.error(`No trip found for tripId: ${tripId}`);
             return res.status(404).json({ message: 'Trip not found' });
         }
 
@@ -32,7 +34,7 @@ router.post('/session/booking/store', async (req, res) => {
         const ticketPrice = parseFloat(tripDetails.ticketPrice);
 
         if (isNaN(ticketPrice)) {
-            console.error(`Invalid ticket price for tripId: ${tripId}`);
+            logger.error(`Invalid ticket price for tripId: ${tripId}`);
             return res.status(500).json({ message: 'Ticket price not available' });
         }
 
@@ -50,11 +52,11 @@ router.post('/session/booking/store', async (req, res) => {
             tripType: tripDetails.trip_type
         };
 
-        logger.info('Booking details stored in session:', req.session.bookingDetails);
+        // logger.info('Booking details stored in session:', req.session.bookingDetails);
 
         res.json({ message: 'Booking details stored successfully' });
     } catch (error) {
-        console.error('Error storing booking details:', error);
+        logger.error('Error storing booking details:', error);
         res.status(500).json({ message: 'An error occurred while storing booking details' });
     }
 });
@@ -64,7 +66,7 @@ router.get('/session/booking/retrieve', (req, res) => {
         return res.status(404).json({ message: 'No booking details found in session' });
     }
 
-    logger.info('Retrieved booking details:', req.session.bookingDetails);
+    // logger.info('Retrieved booking details:', req.session.bookingDetails);
 
     res.json(req.session.bookingDetails);
 });

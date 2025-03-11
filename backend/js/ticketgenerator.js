@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-// const path = require('path');
-// const logger = require(`${__basedir}/backend/logger`);
+const dotenv = require('dotenv');
+dotenv.config();
+const logger = require(`${__basedir}/backend/logger`);
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
 const puppeteer = require('puppeteer');

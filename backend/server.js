@@ -72,7 +72,7 @@ app.post('/auth/microsoft/callback',
 // Middleware to check authentication
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
-        logger.info('User is authenticated');
+        // logger.info('User is authenticated');
         return next();
     }
     logger.info('User is not authenticated, redirecting to /auth/microsoft');

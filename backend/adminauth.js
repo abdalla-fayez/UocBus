@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const db = require('./models/dbconnection'); // adjust the path if needed
+const logger = require(`${__basedir}/backend/logger`);
 
 // Serve the admin login page
 router.get('/login', (req, res) => {
@@ -29,7 +30,7 @@ router.post('/login', express.urlencoded({ extended: true }), async (req, res) =
       return res.status(401).send('Invalid username or password.');
     }
   } catch (error) {
-    console.error(error);
+    logger.error(error);
     return res.status(500).send('Internal Server Error');
   }
 });
@@ -37,7 +38,7 @@ router.post('/login', express.urlencoded({ extended: true }), async (req, res) =
 // Logout route
 router.get('/logout', (req, res) => {
   req.session.destroy(err => {
-    if (err) console.error(err);
+    if (err) logger.error(err);
     // Relative redirect: sends the user to /api/admin/login
     res.redirect('login');
   });

@@ -192,7 +192,7 @@ async function searchTrips() {
     
     
     tripsResults.scrollIntoView(); // Focus on the trips results container fix for mobile views
-    tripsResults.focus(); // Focus on the trips results container
+    // tripsResults.focus(); // Focus on the trips results container
 
 
     } catch (error) {

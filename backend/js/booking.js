@@ -22,7 +22,7 @@ router.get('/routes/active', async (req, res) => {
             routes: routeNames
         });
     } catch (error) {
-        console.error('Error fetching active route names:', error);
+        logger.error('Error fetching active route names:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });
@@ -46,7 +46,7 @@ router.get('/routes/trip-types', async (req, res) => {
             tripTypes: tripTypesList
         });
     } catch (error) {
-        console.error('Error fetching trip types for route:', error);
+        logger.error('Error fetching trip types for route:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });
@@ -55,10 +55,10 @@ router.get('/routes/trip-types', async (req, res) => {
 router.get('/trips/available', async (req, res) => {
     const { route, tripType, date } = req.query;
 
-    logger.info('Received query parameters:', { route, tripType, date });
+    // logger.info('Received query parameters:', { route, tripType, date });
 
     if (!route || !tripType || !date) {
-        console.warn('Missing required query parameters.');
+        // console.warn('Missing required query parameters.');
         return res.status(400).json({ message: 'All fields are required.' });
     }
 
@@ -89,21 +89,21 @@ router.get('/trips/available', async (req, res) => {
             ORDER BY trip_date, trip_time, pickup_time;
         `;
 
-        console.log('Executing SQL query for fetching trip details with filters:', {
-            route,
-            tripType,
-            date
-        });
+        // logger.info('Executing SQL query for fetching trip details with filters:', {
+        //     route,
+        //     tripType,
+        //     date
+        // });
 
         const [results] = await db.query(query, [route, tripType, date]);
 
-        logger.info('Query results:', results);
+        // logger.info('Query results:', results);
 
         // Group trips by id, adding pickup points to each trip
         const trips = {};
         results.forEach(row => {
             if (!trips[row.id]) {
-                logger.info(`Creating new trip entry for id: ${row.id}`);
+                // logger.info(`Creating new trip entry for id: ${row.id}`);
                 trips[row.id] = {
                     id: row.id,
                     trip_date: row.trip_date,
@@ -117,10 +117,10 @@ router.get('/trips/available', async (req, res) => {
             }
 
             if (row.pickup_name && row.pickup_time) {
-                console.log(`Adding pickup point for id ${row.id}:`, {
-                    name: row.pickup_name,
-                    time: row.pickup_time
-                });
+                // logger.info(`Adding pickup point for id ${row.id}:`, {
+                //     name: row.pickup_name,
+                //     time: row.pickup_time
+                // });
 
                 // Include pickup points only for to campus routes or single point for from campus routes
                 if (row.trip_type === 'To Campus' || row.trip_type === 'From Campus') {
@@ -132,10 +132,10 @@ router.get('/trips/available', async (req, res) => {
             }
         });
 
-        logger.info('Final trips object:', trips);
+        // logger.info('Final trips object:', trips);
         res.json(Object.values(trips));
     } catch (error) {
-        console.error('Error fetching trips:', error);
+        logger.error('Error fetching trips:', error);
         res.status(500).json({ message: 'Server error' });
     }
 });
@@ -159,7 +159,7 @@ router.post('/bookings/create', async (req, res) => {
 
         res.json({ message: 'Booking details stored successfully.', bookingId: result.insertId });
     } catch (error) {
-        console.error('Error storing booking details:', error);
+        logger.error('Error storing booking details:', error);
         res.status(500).json({ message: 'An error occurred while storing booking details.' });
     }
 });
@@ -196,7 +196,7 @@ router.get('/bookings/details', async (req, res) => {
 
         res.json(details[0]);
     } catch (error) {
-        console.error('Error fetching booking details:', error);
+        logger.error('Error fetching booking details:', error);
         res.status(500).json({ message: 'Server error while fetching booking details' });
     }
 });
