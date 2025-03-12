@@ -7067,3 +7067,220 @@
 [2025-03-11T07:29:24.022Z] INFO: User is authenticated for /api/check-auth
 [2025-03-11T07:29:24.025Z] INFO: Middleware triggered for GET /api/routes/active
 [2025-03-11T07:29:24.027Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T07:32:29.798Z] INFO: Database connection is healthy
+[2025-03-11T07:42:29.806Z] INFO: Database connection is healthy
+[2025-03-11T07:52:29.809Z] INFO: Database connection is healthy
+[2025-03-11T08:02:29.821Z] INFO: Database connection is healthy
+[2025-03-11T08:12:29.825Z] INFO: Database connection is healthy
+[2025-03-11T08:22:29.826Z] INFO: Database connection is healthy
+[2025-03-11T08:32:29.833Z] INFO: Database connection is healthy
+[2025-03-11T08:42:29.834Z] INFO: Database connection is healthy
+[2025-03-11T08:45:06.594Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T08:45:06.595Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T08:45:06.597Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T08:45:06.598Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T08:45:06.635Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T08:45:06.635Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T08:45:06.638Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:07.232Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:07.250Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:07.686Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-03-11T08:45:07.845Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T08:45:07.845Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T08:45:07.847Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T08:45:07.847Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T08:45:07.865Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T08:45:07.866Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T08:45:07.871Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:07.882Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:07.893Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T08:45:08.152Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-03-11T08:45:09.126Z] INFO: Authentication successful, redirecting to homepage
+[2025-03-11T08:45:09.325Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T08:45:09.325Z] INFO: User is authenticated for /api/check-auth
+[2025-03-11T08:45:09.330Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T08:45:09.334Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T08:46:52.679Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T08:46:52.680Z] INFO: User is authenticated for /api/check-auth
+[2025-03-11T08:46:52.683Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T08:46:52.711Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T08:52:29.845Z] INFO: Database connection is healthy
+[2025-03-11T09:02:29.853Z] INFO: Database connection is healthy
+[2025-03-11T09:12:29.862Z] INFO: Database connection is healthy
+[2025-03-11T09:22:29.861Z] INFO: Database connection is healthy
+[2025-03-11T09:30:17.828Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T09:30:17.828Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T09:30:17.865Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T09:30:17.865Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T09:30:17.869Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:30:18.412Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T09:30:18.413Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T09:30:18.432Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:32:29.861Z] INFO: Database connection is healthy
+[2025-03-11T09:42:29.862Z] INFO: Database connection is healthy
+[2025-03-11T09:42:49.145Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T09:42:49.146Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T09:42:49.191Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-03-11T09:42:49.191Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T09:42:49.196Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T09:42:49.197Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T09:42:49.204Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:42:49.214Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:42:49.305Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-03-11T09:42:49.305Z] INFO: User is not authenticated for /api/check-auth
+[2025-03-11T09:42:49.307Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-03-11T09:42:49.308Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T09:42:49.319Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:42:49.322Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-11T09:52:29.862Z] INFO: Database connection is healthy
+[2025-03-11T10:02:29.862Z] INFO: Database connection is healthy
+[2025-03-11T10:03:18.646Z] INFO: Middleware triggered for GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[2025-03-11T10:03:18.647Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-11T10:12:29.862Z] INFO: Database connection is healthy
+[2025-03-11T10:22:29.862Z] INFO: Database connection is healthy
+[2025-03-11T10:30:07.212Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-03-11T10:30:43.438Z] INFO: Server running on port 5000
+[2025-03-11T10:40:40.995Z] INFO: Database connection is healthy
+[2025-03-11T10:50:41.009Z] INFO: Database connection is healthy
+[2025-03-11T11:00:41.014Z] INFO: Database connection is healthy
+[2025-03-11T11:10:41.017Z] INFO: Database connection is healthy
+[2025-03-11T11:20:41.023Z] INFO: Database connection is healthy
+[2025-03-11T11:30:41.023Z] INFO: Database connection is healthy
+[2025-03-11T11:40:41.034Z] INFO: Database connection is healthy
+[2025-03-11T11:50:41.035Z] INFO: Database connection is healthy
+[2025-03-11T12:00:41.045Z] INFO: Database connection is healthy
+[2025-03-11T12:10:41.057Z] INFO: Database connection is healthy
+[2025-03-11T12:20:41.059Z] INFO: Database connection is healthy
+[2025-03-11T12:30:41.064Z] INFO: Database connection is healthy
+[2025-03-11T12:40:41.074Z] INFO: Database connection is healthy
+[2025-03-11T12:50:41.080Z] INFO: Database connection is healthy
+[2025-03-11T13:00:41.091Z] INFO: Database connection is healthy
+[2025-03-11T13:10:41.105Z] INFO: Database connection is healthy
+[2025-03-11T13:20:41.107Z] INFO: Database connection is healthy
+[2025-03-11T13:30:41.115Z] INFO: Database connection is healthy
+[2025-03-11T13:40:41.123Z] INFO: Database connection is healthy
+[2025-03-11T13:50:41.124Z] INFO: Database connection is healthy
+[2025-03-11T14:00:41.133Z] INFO: Database connection is healthy
+[2025-03-11T14:10:41.133Z] INFO: Database connection is healthy
+[2025-03-11T14:20:41.146Z] INFO: Database connection is healthy
+[2025-03-11T14:30:41.146Z] INFO: Database connection is healthy
+[2025-03-11T14:40:41.148Z] INFO: Database connection is healthy
+[2025-03-11T14:50:41.156Z] INFO: Database connection is healthy
+[2025-03-11T15:00:41.171Z] INFO: Database connection is healthy
+[2025-03-11T15:10:41.174Z] INFO: Database connection is healthy
+[2025-03-11T15:20:41.173Z] INFO: Database connection is healthy
+[2025-03-11T15:30:41.186Z] INFO: Database connection is healthy
+[2025-03-11T15:40:41.197Z] INFO: Database connection is healthy
+[2025-03-11T15:50:41.211Z] INFO: Database connection is healthy
+[2025-03-11T16:00:41.220Z] INFO: Database connection is healthy
+[2025-03-11T16:10:41.231Z] INFO: Database connection is healthy
+[2025-03-11T16:20:41.239Z] INFO: Database connection is healthy
+[2025-03-11T16:30:41.241Z] INFO: Database connection is healthy
+[2025-03-11T16:40:41.248Z] INFO: Database connection is healthy
+[2025-03-11T16:50:41.257Z] INFO: Database connection is healthy
+[2025-03-11T17:00:41.260Z] INFO: Database connection is healthy
+[2025-03-11T17:10:41.268Z] INFO: Database connection is healthy
+[2025-03-11T17:20:41.269Z] INFO: Database connection is healthy
+[2025-03-11T17:30:41.284Z] INFO: Database connection is healthy
+[2025-03-11T17:40:41.285Z] INFO: Database connection is healthy
+[2025-03-11T17:50:41.296Z] INFO: Database connection is healthy
+[2025-03-11T18:00:41.306Z] INFO: Database connection is healthy
+[2025-03-11T18:10:41.310Z] INFO: Database connection is healthy
+[2025-03-11T18:20:41.325Z] INFO: Database connection is healthy
+[2025-03-11T18:30:41.336Z] INFO: Database connection is healthy
+[2025-03-11T18:40:41.335Z] INFO: Database connection is healthy
+[2025-03-11T18:50:41.345Z] INFO: Database connection is healthy
+[2025-03-11T19:00:41.353Z] INFO: Database connection is healthy
+[2025-03-11T19:10:41.354Z] INFO: Database connection is healthy
+[2025-03-11T19:20:41.360Z] INFO: Database connection is healthy
+[2025-03-11T19:30:41.368Z] INFO: Database connection is healthy
+[2025-03-11T19:40:41.377Z] INFO: Database connection is healthy
+[2025-03-11T19:50:41.392Z] INFO: Database connection is healthy
+[2025-03-11T20:00:41.403Z] INFO: Database connection is healthy
+[2025-03-11T20:10:41.409Z] INFO: Database connection is healthy
+[2025-03-11T20:20:41.418Z] INFO: Database connection is healthy
+[2025-03-11T20:30:41.424Z] INFO: Database connection is healthy
+[2025-03-11T20:40:41.440Z] INFO: Database connection is healthy
+[2025-03-11T20:50:41.444Z] INFO: Database connection is healthy
+[2025-03-11T21:00:41.455Z] INFO: Database connection is healthy
+[2025-03-11T21:10:41.462Z] INFO: Database connection is healthy
+[2025-03-11T21:20:41.471Z] INFO: Database connection is healthy
+[2025-03-11T21:30:41.485Z] INFO: Database connection is healthy
+[2025-03-11T21:40:41.493Z] INFO: Database connection is healthy
+[2025-03-11T21:50:41.499Z] INFO: Database connection is healthy
+[2025-03-11T22:00:41.502Z] INFO: Database connection is healthy
+[2025-03-11T22:10:41.507Z] INFO: Database connection is healthy
+[2025-03-11T22:20:41.521Z] INFO: Database connection is healthy
+[2025-03-11T22:30:41.526Z] INFO: Database connection is healthy
+[2025-03-11T22:40:41.528Z] INFO: Database connection is healthy
+[2025-03-11T22:50:41.539Z] INFO: Database connection is healthy
+[2025-03-11T23:00:41.543Z] INFO: Database connection is healthy
+[2025-03-11T23:10:41.553Z] INFO: Database connection is healthy
+[2025-03-11T23:20:41.562Z] INFO: Database connection is healthy
+[2025-03-11T23:30:41.562Z] INFO: Database connection is healthy
+[2025-03-11T23:40:41.564Z] INFO: Database connection is healthy
+[2025-03-11T23:50:41.576Z] INFO: Database connection is healthy
+[2025-03-12T00:00:41.581Z] INFO: Database connection is healthy
+[2025-03-12T00:10:41.595Z] INFO: Database connection is healthy
+[2025-03-12T00:20:41.609Z] INFO: Database connection is healthy
+[2025-03-12T00:30:41.609Z] INFO: Database connection is healthy
+[2025-03-12T00:40:41.618Z] INFO: Database connection is healthy
+[2025-03-12T00:50:41.633Z] INFO: Database connection is healthy
+[2025-03-12T01:00:41.636Z] INFO: Database connection is healthy
+[2025-03-12T01:10:41.635Z] INFO: Database connection is healthy
+[2025-03-12T01:20:41.648Z] INFO: Database connection is healthy
+[2025-03-12T01:30:41.662Z] INFO: Database connection is healthy
+[2025-03-12T01:40:41.666Z] INFO: Database connection is healthy
+[2025-03-12T01:50:41.668Z] INFO: Database connection is healthy
+[2025-03-12T02:00:41.673Z] INFO: Database connection is healthy
+[2025-03-12T02:10:41.680Z] INFO: Database connection is healthy
+[2025-03-12T02:20:41.688Z] INFO: Database connection is healthy
+[2025-03-12T02:30:41.692Z] INFO: Database connection is healthy
+[2025-03-12T02:40:41.695Z] INFO: Database connection is healthy
+[2025-03-12T02:48:07.011Z] INFO: Middleware triggered for GET /api/sonicos/auth
+[2025-03-12T02:48:07.012Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-12T02:48:07.029Z] INFO: Middleware triggered for GET /api/sonicos/tfa
+[2025-03-12T02:48:07.029Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-03-12T02:48:07.830Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-12T02:48:07.954Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-03-12T02:50:41.698Z] INFO: Database connection is healthy
+[2025-03-12T03:00:41.704Z] INFO: Database connection is healthy
+[2025-03-12T03:10:41.709Z] INFO: Database connection is healthy
+[2025-03-12T03:20:41.715Z] INFO: Database connection is healthy
+[2025-03-12T03:30:41.725Z] INFO: Database connection is healthy
+[2025-03-12T03:40:41.733Z] INFO: Database connection is healthy
+[2025-03-12T03:50:41.734Z] INFO: Database connection is healthy
+[2025-03-12T04:00:41.744Z] INFO: Database connection is healthy
+[2025-03-12T04:10:41.756Z] INFO: Database connection is healthy
+[2025-03-12T04:20:41.768Z] INFO: Database connection is healthy
+[2025-03-12T04:30:41.780Z] INFO: Database connection is healthy
+[2025-03-12T04:40:41.789Z] INFO: Database connection is healthy
+[2025-03-12T04:50:41.800Z] INFO: Database connection is healthy
+[2025-03-12T05:00:41.811Z] INFO: Database connection is healthy
+[2025-03-12T05:10:41.825Z] INFO: Database connection is healthy
+[2025-03-12T05:20:41.827Z] INFO: Database connection is healthy
+[2025-03-12T05:30:41.839Z] INFO: Database connection is healthy
+[2025-03-12T05:40:41.841Z] INFO: Database connection is healthy
+[2025-03-12T05:50:41.852Z] INFO: Database connection is healthy
+[2025-03-12T06:00:41.856Z] INFO: Database connection is healthy
+[2025-03-12T06:10:41.858Z] INFO: Database connection is healthy
+[2025-03-12T06:20:41.872Z] INFO: Database connection is healthy
+[2025-03-12T06:30:41.880Z] INFO: Database connection is healthy
+[2025-03-12T06:40:41.885Z] INFO: Database connection is healthy
+[2025-03-12T06:50:41.897Z] INFO: Database connection is healthy
+[2025-03-12T07:00:41.906Z] INFO: Database connection is healthy
+[2025-03-12T07:10:41.910Z] INFO: Database connection is healthy
+[2025-03-12T07:20:41.911Z] INFO: Database connection is healthy
+[2025-03-12T07:30:41.911Z] INFO: Database connection is healthy
+[2025-03-12T07:36:58.502Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-03-12T07:38:19.769Z] INFO: Server running on port 5000
+[2025-03-12T07:40:46.442Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-03-12T07:44:51.278Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-03-12T07:44:51.299Z] INFO: Server running on port 5000
+[2025-03-12T07:44:55.997Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-03-12T07:44:59.621Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-03-12T07:44:59.644Z] INFO: Server running on port 5000
+[2025-03-12T07:53:57.254Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-03-12T07:54:00.882Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-03-12T07:54:00.908Z] INFO: Server running on port 5000
+[2025-03-12T07:56:53.330Z] WARN: SIGINT received. Shutting down gracefully...

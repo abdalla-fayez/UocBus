@@ -1,4 +1,3 @@
-// scheduler.js
 const schedule = require('node-schedule');
 const db = require('../models/dbconnection'); // Adjust the path if needed
 const dotenv = require('dotenv');

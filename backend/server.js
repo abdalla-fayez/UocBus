@@ -17,8 +17,8 @@ const qs = require('qs');
 const winston = require('winston');
 const logger = require(`${__basedir}/backend/logger`);
 const adminLogger = require(`${__basedir}/backend/adminLogger`);
-const scheduler = require('./js/scheduler');
-
+const pendingScheduler = require('./js/pendingScheduler');
+const dbBackupScheduler = require('./js/dbBackupScheduler');
 process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
 app.use(express.json());
