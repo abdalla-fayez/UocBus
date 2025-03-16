@@ -863,3 +863,33 @@
   "previousStatus": "DISABLED",
   "newStatus": "ENABLED"
 }
+[2025-03-13T22:30:45.768Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-03-13T22:30:49.234Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-03-13T22:30:50.721Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-03-13T22:30:51.271Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-03-13T22:30:52.384Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-03-13T22:30:53.825Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2025 at 11:02 AM
+-- Generation Time: Mar 16, 2025 at 08:04 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,11 +80,11 @@ WHERE NOT EXISTS (
       AND pp.time = p.time
 )$$
 
-DROP PROCEDURE IF EXISTS `Route_Creation`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Route_Creation` ()  MODIFIES SQL DATA COMMENT 'IFNOTEXISTS Morning/Afternoon 6:30am 4:00pm 100EGP' BEGIN
+DROP PROCEDURE IF EXISTS `Route Creation SQL Template (DO NOT RUN)`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Route Creation SQL Template (DO NOT RUN)` ()  MODIFIES SQL DATA COMMENT 'IFNOTEXISTS Morning/Afternoon 6:30am 4:00pm 150EGP' BEGIN
     INSERT INTO routes (price, trip_type, bus_id, route_name, time)
     SELECT 
-        100.00 AS price,                -- Default price value
+        150.00 AS price,                -- Default price value
         tt.trip_type,                 -- Either 'To Campus' or 'From Campus'
         b.id AS bus_id,               -- The bus's id from the buses table
         CASE 
@@ -150,7 +150,7 @@ DROP TABLE IF EXISTS `admin_users`;
 CREATE TABLE IF NOT EXISTS `admin_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
-  `password_hash` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `trip_id` int(11) NOT NULL,
   `seats_booked` int(11) NOT NULL,
   `amount` decimal(10,2) NOT NULL,
-  `status` enum('PENDING','SUCCESS','FAILED','CANCELLED') DEFAULT 'PENDING',
+  `status` enum('PENDING','SUCCESS','FAILED','CANCELLED','EXPIRED') DEFAULT 'PENDING',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`),
@@ -348,7 +348,7 @@ DELIMITER $$
 -- Events
 --
 DROP EVENT IF EXISTS `Trip_Automation`$$
-CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 DAY STARTS '2025-01-17 00:00:00' ON COMPLETION PRESERVE DISABLE DO BEGIN
+CREATE DEFINER=`root`@`localhost` EVENT `Trip_Automation` ON SCHEDULE EVERY 1 DAY STARTS '2025-01-17 00:00:00' ON COMPLETION PRESERVE ENABLE DO BEGIN
     -- Generate trips for the next 2 days, excluding weekends
     INSERT INTO trips (bus_id, route_id, trip_date, available_seats, route_name, trip_type, trip_time)
     SELECT
