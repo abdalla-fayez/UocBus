@@ -57,14 +57,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle report download
-  downloadReportBtn.addEventListener('click', () => {
+  downloadReportBtn.addEventListener('click', async () => {
     const reportDate = document.getElementById('reportDate').value;
     if (!reportDate) {
       alert('Please select a trip date before downloading the report.');
       return;
     }
     const downloadUrl = `/api/admin/bookingsreport?date=${reportDate}`;
-    window.location.href = downloadUrl;
+    try {
+      const response = await fetch(downloadUrl);
+      const contentType = response.headers.get("content-type");
+      
+      // If the response is JSON, parse it and display the message
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        const data = await response.json();
+        if(data.message) {
+          alert(data.message);
+        } else if(data.error) {
+          alert(data.error);
+        }
+      } else {
+        // Otherwise, if it's CSV, trigger the download
+        window.location.href = downloadUrl;
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred: " + err.message);
+    }
   });
   
   // Initial fetch of the event status when the page loads

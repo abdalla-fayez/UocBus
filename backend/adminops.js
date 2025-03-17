@@ -292,7 +292,7 @@ router.get('/bookingsreport', async (req, res) => {
         b.student_id AS Student_ID,
         b.student_email AS Student_Email,
         b.order_id AS Ticket_ID,
-        b.created_at  AS Booking_Date,
+        b.created_at AS Booking_Date,
         p.status AS Payment_Status,
         p.seats_booked AS Seats_Booked,
         COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date,
@@ -304,6 +304,12 @@ router.get('/bookingsreport', async (req, res) => {
       WHERE DATE(t.trip_date) = ?
     `, [reportDate]);
     
+    // Check if there are no results
+    if (results.length === 0) {
+      return res.status(200).json({ message: "There are no bookings for this date." });
+    }
+    
+    // Generate CSV if data is available
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(results);
     
@@ -314,6 +320,7 @@ router.get('/bookingsreport', async (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 });
+
 
 // Export the router
 module.exports = router;
