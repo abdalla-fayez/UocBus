@@ -4,9 +4,11 @@ const router = express.Router();
 const db = require('../models/dbconnection'); // Replace with your DB model
 const dotenv = require('dotenv');
 const path = require('path');
+const fs = require('fs').promises;
 const { generateTicket } = require('./ticketgenerator');
+const { sendTicketEmail } = require('../mailer');
 dotenv.config();
-const logger = require(`${__basedir}/backend/logger`);
+const logger = require(`../logger`);
 
 
 // Payment initiation endpoint
@@ -83,7 +85,7 @@ router.post('/api/payments/initiate', async (req, res) => {
                 interaction: {
                     operation: 'PURCHASE',
                     merchant: {
-                        name: 'University of Canada',
+                        name: 'Universities of Canada in Egypt',
                         address: {
                             line1: 'New Capital',
                             line2: 'New Capital',
@@ -171,16 +173,73 @@ router.get('/api/payments/callback', async (req, res) => {
 
         const ticketDetails = bookingDetails[0];
         ticketDetails.photo = req.session.user.photo;
+
         // Generate ticket
         const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
         await generateTicket(ticketDetails, ticketPath);
+        
+        logger.info(`Ticket generated: ${ticketPath}`);
+
+        // Read the generated PDF into a buffer
+        const pdfBuffer = await fs.readFile(ticketPath);
+
+        // Prepare email options
+        const studentEmailOptions = {
+            to: ticketDetails.student_email,
+            subject: 'Bus Ticket Booking Confirmation',
+            text: `Dear ${ticketDetails.student_name},
+
+Thank you for your booking. Please find attached your bus ticket for your upcoming trip on ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(ticketDetails.trip_date))}.
+
+For support, please contact us at 01008470311.
+
+Safe travels!
+
+Universities of Canada in Egypt`,
+            pdfBuffer,
+            pdfFilename: `${orderId}.pdf`
+        };
+
+        // Prepare email options for the fleet manager.
+        // You can set a fixed email or fetch it from your configuration.
+        const fleetManagerEmail = 'development.team@uofcanada.edu.eg';
+        const fleetEmailBody = `
+Ticket Details:
+---------------
+
+Student Name: ${ticketDetails.student_name}
+Student ID: ${ticketDetails.student_id}
+Trip Date: ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(ticketDetails.trip_date))}
+Route: ${ticketDetails.route_name}
+Trip Type: ${ticketDetails.trip_type}
+Seats Booked: ${ticketDetails.seats_booked}
+Total Amount: ${ticketDetails.total_amount} EGP
+Driver Mobile: ${ticketDetails.driver_mobile || 'N/A'}
+
+Ticket Number: ${ticketDetails.order_id}
+
+The PDF ticket is attached for further reference.
+        `;
+        const fleetEmailOptions = {
+            to: fleetManagerEmail,
+            subject: `New Bus Ticket Booking: ${orderId}`,
+            text: fleetEmailBody,
+            pdfBuffer,
+            pdfFilename: `${orderId}.pdf`
+        };
+        
+        // Send emails 
+        await Promise.all([
+            sendTicketEmail(studentEmailOptions),
+            sendTicketEmail(fleetEmailOptions)
+        ]);
 
         logger.info(`Payment successful for orderId: ${orderId}, tripId: ${tripId}`);
-        logger.info(`Ticket generated: ${ticketPath}`);
 
         // Clean up session data
         req.session.bookingId = null;
         req.session.bookingDetails = null;
+
         // Potential error below:
         res.redirect(`https://busticketing.uofcanada.edu.eg/success.html?orderId=${orderId}`);
     } catch (error) {
