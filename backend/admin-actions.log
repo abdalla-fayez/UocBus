@@ -930,3 +930,49 @@
   "time": "06:30:00",
   "status": "Active"
 }
+[2025-03-25T14:12:14.619Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "180",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-03-26T12:16:59.178Z] INFO: CREATE PICKUP POINT by user (app_team):
+{
+  "id": 182,
+  "route_id": 9,
+  "name": "Test point",
+  "time": "07:06"
+}
+[2025-03-26T12:17:13.891Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 182,
+  "route_id": 9,
+  "name": "Test point",
+  "time": "07:06:00",
+  "route_name": null,
+  "trip_type": null
+}
+[2025-03-26T12:17:20.784Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-03-26T12:17:23.962Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}
+[2025-03-26T12:17:44.353Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "ENABLED",
+  "newStatus": "DISABLED"
+}
+[2025-03-26T12:24:07.350Z] INFO: TOGGLE TRIP AUTOMATION by user (app_team):
+{
+  "previousStatus": "DISABLED",
+  "newStatus": "ENABLED"
+}

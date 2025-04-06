@@ -287,7 +287,6 @@ router.get('/bookingsreport', async (req, res) => {
     
     const [results] = await db.query(`
       SELECT 
-        b.id,
         b.student_name AS Student_Name,
         b.student_id AS Student_ID,
         b.student_email AS Student_Email,
@@ -295,6 +294,7 @@ router.get('/bookingsreport', async (req, res) => {
         b.created_at AS Booking_Date,
         p.status AS Payment_Status,
         p.seats_booked AS Seats_Booked,
+        p.amount AS Total_Amount,
         COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date,
         COALESCE(t.route_name, 'N/A') AS Route_Name,
         COALESCE(t.trip_type, 'N/A') AS Trip_Type
@@ -320,7 +320,6 @@ router.get('/bookingsreport', async (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 });
-
 
 // Export the router
 module.exports = router;

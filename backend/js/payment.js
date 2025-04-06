@@ -157,7 +157,7 @@ router.get('/api/payments/callback', async (req, res) => {
         const [bookingDetails] = await db.query(
             `SELECT b.student_name, b.student_id, b.student_email,
                     t.trip_date, r.route_name, r.trip_type, r.price AS price_per_seat,
-                    p.amount AS total_amount, p.seats_booked, p.order_id, bu.driver_mobile
+                    p.amount AS total_amount, p.seats_booked, p.order_id, bu.driver_mobile, t.available_seats
             FROM bookings b
             JOIN payments p ON b.order_id = p.order_id
             JOIN trips t ON p.trip_id = t.id
@@ -209,6 +209,7 @@ Ticket Details:
 
 Student Name: ${ticketDetails.student_name}
 Student ID: ${ticketDetails.student_id}
+Ticket Number: ${ticketDetails.order_id}
 Trip Date: ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(ticketDetails.trip_date))}
 Route: ${ticketDetails.route_name}
 Trip Type: ${ticketDetails.trip_type}
@@ -216,7 +217,7 @@ Seats Booked: ${ticketDetails.seats_booked}
 Total Amount: ${ticketDetails.total_amount} EGP
 Driver Mobile: ${ticketDetails.driver_mobile || 'N/A'}
 
-Ticket Number: ${ticketDetails.order_id}
+Available seats remaining for this trip: ${ticketDetails.available_seats}
 
 The PDF ticket is attached for further reference.
         `;
