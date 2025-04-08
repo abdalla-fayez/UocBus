@@ -21,21 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
     bookingsTab.classList.remove('active');
     bookingsSection.style.display = 'none';
     tripsSection.style.display = 'block';
-    // (Optional) You can refetch trips here if needed.
+    // (Optional) Can refetch trips here if needed.
   });
-
+  
   // --------------------------
-  // Fetch and Render Bookings
+  // Fetch and Render Bookings using DataTables
   // --------------------------
   let bookingsData = [];
-  let currentBookingsSortColumn = 'id';
-  let currentBookingsSortOrder = 'desc'; // "asc" or "desc"
 
   async function fetchBookings() {
     try {
       const response = await fetch('/api/admin/dashboard/bookings');
       bookingsData = await response.json();
-      sortAndRenderBookings(currentBookingsSortColumn, currentBookingsSortOrder);
+      renderBookings(bookingsData);
     } catch (error) {
       console.error('Error fetching bookings:', error);
     }
@@ -44,34 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderBookings(bookings) {
     const tbody = document.querySelector('#bookingsTable tbody');
     tbody.innerHTML = '';
-    
+
     // Formatter for created_at in dd/mm/yyyy HH:MM:SS format (adjusted by subtracting 2 hours)
     const createdAtFormatter = new Intl.DateTimeFormat('en-GB', {
       day: '2-digit', month: '2-digit', year: 'numeric',
       hour: '2-digit', minute: '2-digit', second: '2-digit',
       timeZone: 'Africa/Cairo'
     });
-    
+
     // Formatter for trip_date (using short date style)
     const tripDateFormatter = new Intl.DateTimeFormat('en-GB', {
       dateStyle: 'short',
       timeZone: 'Africa/Cairo'
     });
-    
+
     bookings.forEach(booking => {
       // Adjust created_at: subtract 2 hours
       const createdAt = new Date(new Date(booking.created_at).getTime() - 7200000);
       const formattedCreatedAt = createdAtFormatter.format(createdAt);
-      
-      // Format trip_date: if the value is "N/A", keep it; otherwise format the date
+
+      // Format trip_date: if it's "N/A", leave as is; otherwise format as date
       let formattedTripDate = booking.trip_date;
       if (booking.trip_date !== 'N/A') {
         formattedTripDate = tripDateFormatter.format(new Date(booking.trip_date));
       }
-      
-      // Compute the "Trip" as a combination of route_name and trip_type, using "N/A" if missing
+
+      // Compute the "Trip" as route_name and trip_type combination
       const tripCombined = `${booking.route_name} (${booking.trip_type})`;
-      
+
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td>${booking.id}</td>
@@ -87,83 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       tbody.appendChild(tr);
     });
-  }
-  
 
-  function sortAndRenderBookings(column, order) {
-    const sortedBookings = bookingsData.sort((a, b) => {
-      let valA, valB;
-      
-      if (column === 'created_at') {
-        // For created_at, convert to Date objects
-        valA = new Date(a.created_at);
-        valB = new Date(b.created_at);
-      } else if (column === 'id') {
-        // Numeric comparison for ID
-        valA = Number(a.id);
-        valB = Number(b.id);
-      } else if (column === 'trip_date') {
-        // For trip_date, if the value is "N/A", use 0, otherwise use the timestamp
-        valA = (a.trip_date === 'N/A') ? 0 : new Date(a.trip_date).getTime();
-        valB = (b.trip_date === 'N/A') ? 0 : new Date(b.trip_date).getTime();
-      } else if (column === 'trip') {
-        // For the computed "Trip" column, combine route_name and trip_type (if missing, default to "N/A")
-        valA = ((a.route_name || 'N/A') + " " + (a.trip_type || 'N/A')).toLowerCase();
-        valB = ((b.route_name || 'N/A') + " " + (b.trip_type || 'N/A')).toLowerCase();
-      } else {
-        // For any other column, do a basic comparison
-        valA = a[column];
-        valB = b[column];
-        if (typeof valA === 'string') {
-          valA = valA.toLowerCase();
-          valB = valB.toLowerCase();
-        }
-      }
-      
-      if (valA < valB) {
-        return order === 'asc' ? -1 : 1;
-      }
-      if (valA > valB) {
-        return order === 'asc' ? 1 : -1;
-      }
-      return 0;
-    });
-    
-    renderBookings(sortedBookings);
-  }
-  
+    // If DataTable is already initialized on #bookingsTable, destroy it first.
+    if ($.fn.DataTable.isDataTable('#bookingsTable')) {
+      $('#bookingsTable').DataTable().destroy();
+    }
 
-  // Attach click event listeners to sortable headers in bookings table
-  const bookingsHeaders = document.querySelectorAll('#bookingsTable th.sortable');
-  bookingsHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      let sortColumn;
-      switch (header.textContent.trim()) {
-        case 'ID':
-          sortColumn = 'id';
-          break;
-        case 'Created At':
-          sortColumn = 'created_at';
-          break;
-        case 'Trip Date':
-          sortColumn = 'trip_date';
-          break;
-        case 'Trip':
-          sortColumn = 'trip';
-          break;
-        default:
-          sortColumn = 'id';
-      }
-      // Toggle sort order if the same column is clicked again
-      if (currentBookingsSortColumn === sortColumn) {
-        currentBookingsSortOrder = currentBookingsSortOrder === 'asc' ? 'desc' : 'asc';
-      } else {
-        currentBookingsSortColumn = sortColumn;
-        currentBookingsSortOrder = 'asc';
-      }
-      sortAndRenderBookings(currentBookingsSortColumn, currentBookingsSortOrder);
+    // Initialize DataTables on the bookings table.
+    $('#bookingsTable').DataTable({
+      pageLength: 10,
+      lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+      order: [] // Let DataTables handle default ordering.
     });
-  });
+  }
 
   // --------------------------
   // Fetch and Render Upcoming Trips
