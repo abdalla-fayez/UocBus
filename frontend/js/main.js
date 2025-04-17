@@ -162,11 +162,45 @@ async function searchTrips() {
 
             // Handle "Book" button click
             clone.querySelector('.book-btn').addEventListener('click', async () => {
-                const seatsBooked = seatDropdown.value;
-                if (!seatsBooked) {
-                    showError('Please select a valid number of seats.');
-                    return;
+                const seatsBooked = Number(seatDropdown.value);
+                if (!seatsBooked || isNaN(seatsBooked) || seatsBooked <= 0) {
+                  showError('Please select a valid number of seats.');
+                  return;
                 }
+
+                let globalTicketAllowance;
+                try {
+                  // Fetch global ticket allowance from the API
+                  globalTicketAllowance = await fetchTicketAllowance();
+                } catch (error) {
+                  console.error('Error fetching global ticket allowance:', error);
+                  showError("An error occurred while retrieving the ticket allowance. Please try again later.");
+                  return;
+                }
+                try {
+                    // Fetch current ticket count for the logged-in user
+                    const response = await fetch('/api/user/ticketsbooked');
+                    if (!response.ok) {
+                      throw new Error("Failed to fetch user's ticket count.");
+                    }
+                    const data = await response.json();
+                    const currentTickets = Number(data.ticketsBooked);
+                    
+                    // Check condition A: if user already booked the maximum allowed tickets
+                    if (currentTickets >= globalTicketAllowance) {
+                      alert("You have already booked the maximum number of tickets allowed this semester.");
+                      return;
+                    }
+                    // Check condition B: if adding new seats exceeds the allowed maximum
+                    if ((currentTickets + seatsBooked) > globalTicketAllowance) {
+                      alert("Booking these seats would exceed your ticket allowance for this semester.");
+                      return;
+                    }
+                }   catch (error) {
+                    console.error('Error fetching user ticket count:', error);
+                    showError("An error occurred while checking your ticket count. Please try again later.");
+                    return;
+                    }
 
                 try {
                     const storeResponse = await fetch('/api/session/booking/store', {
@@ -180,10 +214,10 @@ async function searchTrips() {
                     } else {
                         showError('Failed to process your booking. Please try again.');
                     }
-                } catch (error) {
+                }   catch (error) {
                     console.error('Error storing booking details:', error);
                     showError('An error occurred while processing your booking.');
-                }
+                    }
             });
 
             // Append the populated template to the results container
@@ -238,6 +272,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+
+// Function to fetch the global ticket allowance from the backend
+async function fetchTicketAllowance() {
+    const response = await fetch('/api/system/maxTicketAllowance');
+    if (!response.ok) {
+      throw new Error("Failed to fetch ticket allowance");
+    }
+    const data = await response.json();
+    return Number(data.maxTicketAllowance);
+}
 
 // // Moved to its own file: frontend/js/userpreview.js
 // document.addEventListener('DOMContentLoaded', () => {

@@ -976,3 +976,122 @@
   "previousStatus": "DISABLED",
   "newStatus": "ENABLED"
 }
+[2025-04-17T11:32:31.926Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "10",
+  "name": "Northern 90 Bus",
+  "vacant_seats": "7",
+  "driver_mobile": "01060933110"
+}
+[2025-04-17T11:33:22.543Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "11",
+  "name": "5th Settlement Bus",
+  "vacant_seats": "8",
+  "driver_mobile": "01061107211"
+}
+[2025-04-17T11:35:05.850Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "14",
+  "name": "Mokattam & Northern 90 Bus",
+  "vacant_seats": "0",
+  "driver_mobile": "01061019988"
+}
+[2025-04-17T11:38:05.505Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "9",
+  "name": "Rehab City (Housing) Bus",
+  "vacant_seats": "4",
+  "driver_mobile": "01061122958"
+}
+[2025-04-17T11:38:21.599Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "16",
+  "name": "Rehab City Bus",
+  "vacant_seats": "7",
+  "driver_mobile": "01061122073"
+}
+[2025-04-17T11:38:30.988Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "12",
+  "name": "Ring Road Bus",
+  "vacant_seats": "7",
+  "driver_mobile": "01060912211"
+}
+[2025-04-17T11:39:24.836Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "8",
+  "name": "Shorouk & Badr Bus",
+  "vacant_seats": "0",
+  "driver_mobile": "01060933011"
+}
+[2025-04-17T11:39:37.707Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "17",
+  "name": "10th of Ramadan Bus",
+  "vacant_seats": "1",
+  "driver_mobile": "01061022115"
+}
+[2025-04-17T11:40:15.140Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "2",
+  "name": "Maadi Bus",
+  "vacant_seats": "5",
+  "driver_mobile": "01061102281"
+}
+[2025-04-17T11:40:31.698Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "1",
+  "name": "Helwan Bus",
+  "vacant_seats": "7",
+  "driver_mobile": "01060994299"
+}
+[2025-04-17T11:40:51.202Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "7",
+  "name": "Obour & Madinaty Bus",
+  "vacant_seats": "16",
+  "driver_mobile": "01061122104"
+}
+[2025-04-17T11:41:18.265Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "3",
+  "name": "Nasr City 1 Bus",
+  "vacant_seats": "8",
+  "driver_mobile": "01060971122"
+}
+[2025-04-17T11:41:23.134Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "4",
+  "name": "Nasr City 2 Bus",
+  "vacant_seats": "0",
+  "driver_mobile": "01061107447"
+}
+[2025-04-17T11:41:35.466Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "5",
+  "name": "Heliopolis 1 Bus",
+  "vacant_seats": "9",
+  "driver_mobile": "01061122839"
+}
+[2025-04-17T11:41:45.692Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "6",
+  "name": "Heliopolis 2 Bus",
+  "vacant_seats": "8",
+  "driver_mobile": "01061122875"
+}
+[2025-04-17T11:42:15.562Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "15",
+  "name": "Faisal & Mohandessin Bus",
+  "vacant_seats": "0",
+  "driver_mobile": "01010314412"
+}
+[2025-04-17T11:42:22.464Z] INFO: UPDATE BUS by user (app_team):
+{
+  "id": "13",
+  "name": "Sheikh Zayed & 6 October Bus",
+  "vacant_seats": "0",
+  "driver_mobile": "01022662306"
+}

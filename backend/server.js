@@ -52,7 +52,7 @@ app.get('/auth/microsoft', passport.authenticate('azuread-openidconnect', { fail
 
 app.post('/auth/microsoft/callback',
     passport.authenticate('azuread-openidconnect', { failureRedirect: '/' }),
-    (req, res) => {
+    async (req, res) => {
         logger.info('Authentication successful, redirecting to homepage');
         // logger.info(`User profile: ${JSON.stringify(req.user)}`);
 
@@ -63,7 +63,20 @@ app.post('/auth/microsoft/callback',
             photo: req.user.photo,
             jobTitle: req.user.jobTitle
         };
-
+        try {
+            // Check if the user already exists in the database
+            const [rows] = await db.query(`SELECT * FROM users WHERE student_email = ?`, [req.user._json.email]);
+            if (rows.length === 0) {
+                // User does not exist, insert new user
+                await db.query(
+                    `INSERT INTO users (student_name, student_email, student_id) VALUES (?, ?, ?)`,
+                    [req.user.displayName, req.user._json.email, req.user.jobTitle]
+                );
+            }
+        } catch (error) {
+            logger.error('Error while checking or inserting user:', error);
+            return res.status(500).json({ message: 'Internal server error' });
+        }
         // logger.info(`Session data: ${JSON.stringify(req.session)}`);
         res.redirect('/'); // Redirect to homepage on successful login
     }
@@ -90,7 +103,7 @@ app.use((req, res, next) => {
 // Endpoint to check MS authentication
 app.get('/api/check-auth', (req, res) => {
     if (req.isAuthenticated()) {
-        logger.info('User is authenticated for /api/check-auth');
+        logger.info(`User ${req.session.user.email} is authenticated for /api/check-auth`);
         res.status(200).json({ authenticated: true });
     } else {
         logger.info('User is not authenticated for /api/check-auth');

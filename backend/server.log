@@ -12908,3 +12908,2273 @@
 [2025-04-08T14:11:36.812Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
 [2025-04-08T14:11:36.813Z] INFO: Admin is authenticated
 [2025-04-08T14:11:36.816Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-08T14:16:11.853Z] INFO: Database connection is healthy
+[2025-04-08T14:26:11.860Z] INFO: Database connection is healthy
+[2025-04-08T14:36:11.869Z] INFO: Database connection is healthy
+[2025-04-08T14:46:11.881Z] INFO: Database connection is healthy
+[2025-04-08T14:56:11.895Z] INFO: Database connection is healthy
+[2025-04-08T15:06:11.912Z] INFO: Database connection is healthy
+[2025-04-08T15:16:11.920Z] INFO: Database connection is healthy
+[2025-04-08T15:26:11.934Z] INFO: Database connection is healthy
+[2025-04-08T15:36:11.954Z] INFO: Database connection is healthy
+[2025-04-08T15:46:11.966Z] INFO: Database connection is healthy
+[2025-04-08T15:56:11.979Z] INFO: Database connection is healthy
+[2025-04-08T16:06:11.989Z] INFO: Database connection is healthy
+[2025-04-08T16:16:11.995Z] INFO: Database connection is healthy
+[2025-04-08T16:26:12.008Z] INFO: Database connection is healthy
+[2025-04-08T16:36:12.020Z] INFO: Database connection is healthy
+[2025-04-08T16:46:12.037Z] INFO: Database connection is healthy
+[2025-04-08T16:56:12.050Z] INFO: Database connection is healthy
+[2025-04-08T17:06:12.065Z] INFO: Database connection is healthy
+[2025-04-08T17:16:12.073Z] INFO: Database connection is healthy
+[2025-04-08T17:26:12.082Z] INFO: Database connection is healthy
+[2025-04-08T17:36:12.102Z] INFO: Database connection is healthy
+[2025-04-08T17:46:12.110Z] INFO: Database connection is healthy
+[2025-04-08T17:56:12.123Z] INFO: Database connection is healthy
+[2025-04-08T18:06:12.138Z] INFO: Database connection is healthy
+[2025-04-08T18:16:12.146Z] INFO: Database connection is healthy
+[2025-04-08T18:26:12.162Z] INFO: Database connection is healthy
+[2025-04-08T18:36:12.181Z] INFO: Database connection is healthy
+[2025-04-08T18:46:12.202Z] INFO: Database connection is healthy
+[2025-04-08T18:56:12.214Z] INFO: Database connection is healthy
+[2025-04-08T19:06:12.234Z] INFO: Database connection is healthy
+[2025-04-08T19:16:12.253Z] INFO: Database connection is healthy
+[2025-04-08T19:26:12.267Z] INFO: Database connection is healthy
+[2025-04-08T19:36:12.284Z] INFO: Database connection is healthy
+[2025-04-08T19:45:02.869Z] INFO: Middleware triggered for GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[2025-04-08T19:45:02.869Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-08T19:46:12.307Z] INFO: Database connection is healthy
+[2025-04-08T19:56:12.315Z] INFO: Database connection is healthy
+[2025-04-08T20:06:12.325Z] INFO: Database connection is healthy
+[2025-04-08T20:16:12.336Z] INFO: Database connection is healthy
+[2025-04-08T20:26:12.349Z] INFO: Database connection is healthy
+[2025-04-08T20:36:12.358Z] INFO: Database connection is healthy
+[2025-04-08T20:46:12.374Z] INFO: Database connection is healthy
+[2025-04-08T20:56:12.392Z] INFO: Database connection is healthy
+[2025-04-08T21:06:12.409Z] INFO: Database connection is healthy
+[2025-04-08T21:16:12.426Z] INFO: Database connection is healthy
+[2025-04-08T21:26:13.525Z] INFO: Database connection is healthy
+[2025-04-08T21:36:14.789Z] INFO: Database connection is healthy
+[2025-04-08T21:46:14.903Z] INFO: Database connection is healthy
+[2025-04-08T21:56:14.940Z] INFO: Database connection is healthy
+[2025-04-08T22:06:14.949Z] INFO: Database connection is healthy
+[2025-04-08T22:16:14.976Z] INFO: Database connection is healthy
+[2025-04-08T22:26:14.992Z] INFO: Database connection is healthy
+[2025-04-08T22:36:15.009Z] INFO: Database connection is healthy
+[2025-04-08T22:46:15.033Z] INFO: Database connection is healthy
+[2025-04-08T22:56:15.037Z] INFO: Database connection is healthy
+[2025-04-08T23:06:15.069Z] INFO: Database connection is healthy
+[2025-04-08T23:16:15.069Z] INFO: Database connection is healthy
+[2025-04-08T23:26:15.076Z] INFO: Database connection is healthy
+[2025-04-08T23:36:15.089Z] INFO: Database connection is healthy
+[2025-04-08T23:46:15.092Z] INFO: Database connection is healthy
+[2025-04-08T23:55:00.015Z] INFO: Starting database backup...
+[2025-04-08T23:55:00.117Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250408.sql
+[2025-04-08T23:56:15.121Z] INFO: Database connection is healthy
+[2025-04-09T00:06:15.122Z] INFO: Database connection is healthy
+[2025-04-09T00:16:15.144Z] INFO: Database connection is healthy
+[2025-04-09T00:26:15.160Z] INFO: Database connection is healthy
+[2025-04-09T00:36:15.162Z] INFO: Database connection is healthy
+[2025-04-09T00:46:15.180Z] INFO: Database connection is healthy
+[2025-04-09T00:56:15.182Z] INFO: Database connection is healthy
+[2025-04-09T01:06:15.204Z] INFO: Database connection is healthy
+[2025-04-09T01:16:15.209Z] INFO: Database connection is healthy
+[2025-04-09T01:26:15.227Z] INFO: Database connection is healthy
+[2025-04-09T01:36:15.245Z] INFO: Database connection is healthy
+[2025-04-09T01:46:15.253Z] INFO: Database connection is healthy
+[2025-04-09T01:56:15.274Z] INFO: Database connection is healthy
+[2025-04-09T02:06:15.278Z] INFO: Database connection is healthy
+[2025-04-09T02:16:15.288Z] INFO: Database connection is healthy
+[2025-04-09T02:26:15.303Z] INFO: Database connection is healthy
+[2025-04-09T02:36:15.307Z] INFO: Database connection is healthy
+[2025-04-09T02:46:15.334Z] INFO: Database connection is healthy
+[2025-04-09T02:56:15.332Z] INFO: Database connection is healthy
+[2025-04-09T03:06:15.360Z] INFO: Database connection is healthy
+[2025-04-09T03:16:15.370Z] INFO: Database connection is healthy
+[2025-04-09T03:26:15.375Z] INFO: Database connection is healthy
+[2025-04-09T03:36:15.398Z] INFO: Database connection is healthy
+[2025-04-09T03:46:15.412Z] INFO: Database connection is healthy
+[2025-04-09T03:56:15.432Z] INFO: Database connection is healthy
+[2025-04-09T04:06:15.437Z] INFO: Database connection is healthy
+[2025-04-09T04:16:15.450Z] INFO: Database connection is healthy
+[2025-04-09T04:26:15.461Z] INFO: Database connection is healthy
+[2025-04-09T04:36:15.469Z] INFO: Database connection is healthy
+[2025-04-09T04:46:15.490Z] INFO: Database connection is healthy
+[2025-04-09T04:56:15.501Z] INFO: Database connection is healthy
+[2025-04-09T05:06:15.517Z] INFO: Database connection is healthy
+[2025-04-09T05:16:15.534Z] INFO: Database connection is healthy
+[2025-04-09T05:26:15.540Z] INFO: Database connection is healthy
+[2025-04-09T05:36:15.555Z] INFO: Database connection is healthy
+[2025-04-09T05:46:15.560Z] INFO: Database connection is healthy
+[2025-04-09T05:56:15.584Z] INFO: Database connection is healthy
+[2025-04-09T06:06:15.592Z] INFO: Database connection is healthy
+[2025-04-09T06:16:15.602Z] INFO: Database connection is healthy
+[2025-04-09T06:26:15.620Z] INFO: Database connection is healthy
+[2025-04-09T06:36:15.626Z] INFO: Database connection is healthy
+[2025-04-09T06:46:15.649Z] INFO: Database connection is healthy
+[2025-04-09T06:56:15.654Z] INFO: Database connection is healthy
+[2025-04-09T07:06:15.672Z] INFO: Database connection is healthy
+[2025-04-09T07:16:15.681Z] INFO: Database connection is healthy
+[2025-04-09T07:26:15.692Z] INFO: Database connection is healthy
+[2025-04-09T07:36:15.713Z] INFO: Database connection is healthy
+[2025-04-09T07:46:15.720Z] INFO: Database connection is healthy
+[2025-04-09T07:56:15.741Z] INFO: Database connection is healthy
+[2025-04-09T08:06:15.744Z] INFO: Database connection is healthy
+[2025-04-09T08:16:15.750Z] INFO: Database connection is healthy
+[2025-04-09T08:26:15.761Z] INFO: Database connection is healthy
+[2025-04-09T08:36:15.778Z] INFO: Database connection is healthy
+[2025-04-09T08:46:15.791Z] INFO: Database connection is healthy
+[2025-04-09T08:56:15.793Z] INFO: Database connection is healthy
+[2025-04-09T09:06:15.805Z] INFO: Database connection is healthy
+[2025-04-09T09:16:15.818Z] INFO: Database connection is healthy
+[2025-04-09T09:26:15.826Z] INFO: Database connection is healthy
+[2025-04-09T09:36:15.848Z] INFO: Database connection is healthy
+[2025-04-09T09:46:15.857Z] INFO: Database connection is healthy
+[2025-04-09T09:56:15.880Z] INFO: Database connection is healthy
+[2025-04-09T10:06:15.896Z] INFO: Database connection is healthy
+[2025-04-09T10:16:15.903Z] INFO: Database connection is healthy
+[2025-04-09T10:17:04.745Z] INFO: Middleware triggered for GET /api/.env
+[2025-04-09T10:17:04.745Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-09T10:26:15.913Z] INFO: Database connection is healthy
+[2025-04-09T10:36:15.922Z] INFO: Database connection is healthy
+[2025-04-09T10:46:15.940Z] INFO: Database connection is healthy
+[2025-04-09T10:56:15.946Z] INFO: Database connection is healthy
+[2025-04-09T11:06:15.952Z] INFO: Database connection is healthy
+[2025-04-09T11:16:15.971Z] INFO: Database connection is healthy
+[2025-04-09T11:26:15.976Z] INFO: Database connection is healthy
+[2025-04-09T11:36:16.000Z] INFO: Database connection is healthy
+[2025-04-09T11:46:16.010Z] INFO: Database connection is healthy
+[2025-04-09T11:56:16.032Z] INFO: Database connection is healthy
+[2025-04-09T12:06:16.044Z] INFO: Database connection is healthy
+[2025-04-09T12:16:16.059Z] INFO: Database connection is healthy
+[2025-04-09T12:20:07.500Z] INFO: Middleware triggered for GET /api/v1/pods
+[2025-04-09T12:20:07.501Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-09T12:20:07.638Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-09T12:21:28.182Z] INFO: Middleware triggered for GET /api/sonicos/tfa
+[2025-04-09T12:21:28.183Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-09T12:21:28.192Z] INFO: Middleware triggered for GET /api/sonicos/auth
+[2025-04-09T12:21:28.192Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-09T12:21:28.817Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-09T12:21:28.832Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-09T12:26:16.080Z] INFO: Database connection is healthy
+[2025-04-09T12:36:16.095Z] INFO: Database connection is healthy
+[2025-04-09T12:41:51.970Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-09T12:41:51.970Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:41:51.973Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-09T12:41:51.973Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:41:51.975Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:41:52.509Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:41:52.557Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:41:52.636Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:41:57.366Z] INFO: Middleware triggered for POST /api/admin/login
+[2025-04-09T12:41:57.632Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-09T12:41:57.632Z] INFO: Admin is authenticated
+[2025-04-09T12:41:57.639Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-09T12:41:57.639Z] INFO: Admin is authenticated
+[2025-04-09T12:41:57.726Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:42:03.174Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:42:03.186Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-09T12:42:03.186Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:42:03.330Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:42:03.332Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:42:03.368Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-09T12:42:03.368Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:42:11.416Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:42:16.602Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:42:16.605Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-09T12:42:16.605Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:42:16.756Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:42:17.209Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:42:47.704Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-09T12:42:47.705Z] INFO: Admin is authenticated
+[2025-04-09T12:42:47.767Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:44:15.513Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:44:21.209Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-09T12:44:21.210Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:44:21.213Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:44:21.379Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:44:21.393Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T12:44:21.762Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-09T12:44:21.763Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T12:44:24.544Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-09T12:44:24.545Z] INFO: Admin is authenticated
+[2025-04-09T12:44:24.558Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-09T12:44:24.558Z] INFO: Admin is authenticated
+[2025-04-09T12:44:24.567Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T12:46:16.119Z] INFO: Database connection is healthy
+[2025-04-09T12:56:16.129Z] INFO: Database connection is healthy
+[2025-04-09T13:06:16.134Z] INFO: Database connection is healthy
+[2025-04-09T13:16:16.150Z] INFO: Database connection is healthy
+[2025-04-09T13:26:16.163Z] INFO: Database connection is healthy
+[2025-04-09T13:36:16.175Z] INFO: Database connection is healthy
+[2025-04-09T13:46:16.185Z] INFO: Database connection is healthy
+[2025-04-09T13:56:16.206Z] INFO: Database connection is healthy
+[2025-04-09T14:06:16.222Z] INFO: Database connection is healthy
+[2025-04-09T14:16:16.234Z] INFO: Database connection is healthy
+[2025-04-09T14:26:16.247Z] INFO: Database connection is healthy
+[2025-04-09T14:27:55.677Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-09T14:27:55.678Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T14:27:55.680Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-09T14:27:55.681Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-09T14:27:55.682Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-09T14:27:55.710Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T14:27:55.745Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T14:27:55.826Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-09T14:36:16.253Z] INFO: Database connection is healthy
+[2025-04-09T14:46:16.275Z] INFO: Database connection is healthy
+[2025-04-09T14:56:16.289Z] INFO: Database connection is healthy
+[2025-04-09T15:06:16.305Z] INFO: Database connection is healthy
+[2025-04-09T15:16:16.324Z] INFO: Database connection is healthy
+[2025-04-09T15:26:16.337Z] INFO: Database connection is healthy
+[2025-04-09T15:36:16.350Z] INFO: Database connection is healthy
+[2025-04-09T15:46:16.356Z] INFO: Database connection is healthy
+[2025-04-09T15:56:16.376Z] INFO: Database connection is healthy
+[2025-04-09T16:06:16.400Z] INFO: Database connection is healthy
+[2025-04-09T16:16:16.405Z] INFO: Database connection is healthy
+[2025-04-09T16:26:16.417Z] INFO: Database connection is healthy
+[2025-04-09T16:36:16.425Z] INFO: Database connection is healthy
+[2025-04-09T16:46:16.444Z] INFO: Database connection is healthy
+[2025-04-09T16:56:16.463Z] INFO: Database connection is healthy
+[2025-04-09T17:06:16.469Z] INFO: Database connection is healthy
+[2025-04-09T17:16:16.487Z] INFO: Database connection is healthy
+[2025-04-09T17:26:16.490Z] INFO: Database connection is healthy
+[2025-04-09T17:36:16.506Z] INFO: Database connection is healthy
+[2025-04-09T17:46:16.515Z] INFO: Database connection is healthy
+[2025-04-09T17:56:16.520Z] INFO: Database connection is healthy
+[2025-04-09T18:06:16.530Z] INFO: Database connection is healthy
+[2025-04-09T18:16:16.539Z] INFO: Database connection is healthy
+[2025-04-09T18:26:16.550Z] INFO: Database connection is healthy
+[2025-04-09T18:36:16.562Z] INFO: Database connection is healthy
+[2025-04-09T18:46:16.572Z] INFO: Database connection is healthy
+[2025-04-09T18:56:16.588Z] INFO: Database connection is healthy
+[2025-04-09T19:06:16.595Z] INFO: Database connection is healthy
+[2025-04-09T19:16:16.618Z] INFO: Database connection is healthy
+[2025-04-09T19:26:16.626Z] INFO: Database connection is healthy
+[2025-04-09T19:36:16.634Z] INFO: Database connection is healthy
+[2025-04-09T19:46:16.645Z] INFO: Database connection is healthy
+[2025-04-09T19:56:16.654Z] INFO: Database connection is healthy
+[2025-04-09T20:06:16.675Z] INFO: Database connection is healthy
+[2025-04-09T20:16:16.693Z] INFO: Database connection is healthy
+[2025-04-09T20:26:16.717Z] INFO: Database connection is healthy
+[2025-04-09T20:36:16.721Z] INFO: Database connection is healthy
+[2025-04-09T20:46:16.739Z] INFO: Database connection is healthy
+[2025-04-09T20:56:16.759Z] INFO: Database connection is healthy
+[2025-04-09T21:06:16.770Z] INFO: Database connection is healthy
+[2025-04-09T21:16:16.793Z] INFO: Database connection is healthy
+[2025-04-09T21:26:16.799Z] INFO: Database connection is healthy
+[2025-04-09T21:36:16.821Z] INFO: Database connection is healthy
+[2025-04-09T21:46:16.836Z] INFO: Database connection is healthy
+[2025-04-09T21:56:16.855Z] INFO: Database connection is healthy
+[2025-04-09T22:06:16.882Z] INFO: Database connection is healthy
+[2025-04-09T22:16:16.899Z] INFO: Database connection is healthy
+[2025-04-09T22:26:16.921Z] INFO: Database connection is healthy
+[2025-04-09T22:36:16.926Z] INFO: Database connection is healthy
+[2025-04-09T22:46:16.934Z] INFO: Database connection is healthy
+[2025-04-09T22:56:16.951Z] INFO: Database connection is healthy
+[2025-04-09T23:06:16.962Z] INFO: Database connection is healthy
+[2025-04-09T23:16:16.987Z] INFO: Database connection is healthy
+[2025-04-09T23:26:16.995Z] INFO: Database connection is healthy
+[2025-04-09T23:36:17.005Z] INFO: Database connection is healthy
+[2025-04-09T23:46:17.023Z] INFO: Database connection is healthy
+[2025-04-09T23:55:00.018Z] INFO: Starting database backup...
+[2025-04-09T23:55:00.130Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250409.sql
+[2025-04-09T23:55:00.131Z] INFO: Deleted old backup: backup_20250402.sql
+[2025-04-09T23:55:00.131Z] INFO: Deleted old backup: backup_20250401.sql
+[2025-04-09T23:56:17.038Z] INFO: Database connection is healthy
+[2025-04-10T00:06:17.058Z] INFO: Database connection is healthy
+[2025-04-10T00:16:17.072Z] INFO: Database connection is healthy
+[2025-04-10T00:26:17.081Z] INFO: Database connection is healthy
+[2025-04-10T00:36:17.101Z] INFO: Database connection is healthy
+[2025-04-10T00:46:17.117Z] INFO: Database connection is healthy
+[2025-04-10T00:56:17.140Z] INFO: Database connection is healthy
+[2025-04-10T01:06:17.152Z] INFO: Database connection is healthy
+[2025-04-10T01:16:17.162Z] INFO: Database connection is healthy
+[2025-04-10T01:26:17.168Z] INFO: Database connection is healthy
+[2025-04-10T01:36:17.182Z] INFO: Database connection is healthy
+[2025-04-10T01:46:17.204Z] INFO: Database connection is healthy
+[2025-04-10T01:56:17.220Z] INFO: Database connection is healthy
+[2025-04-10T02:06:17.229Z] INFO: Database connection is healthy
+[2025-04-10T02:16:17.243Z] INFO: Database connection is healthy
+[2025-04-10T02:26:17.259Z] INFO: Database connection is healthy
+[2025-04-10T02:36:17.269Z] INFO: Database connection is healthy
+[2025-04-10T02:46:17.289Z] INFO: Database connection is healthy
+[2025-04-10T02:56:17.298Z] INFO: Database connection is healthy
+[2025-04-10T03:06:17.311Z] INFO: Database connection is healthy
+[2025-04-10T03:16:17.335Z] INFO: Database connection is healthy
+[2025-04-10T03:26:17.354Z] INFO: Database connection is healthy
+[2025-04-10T03:36:17.369Z] INFO: Database connection is healthy
+[2025-04-10T03:46:17.381Z] INFO: Database connection is healthy
+[2025-04-10T03:56:17.394Z] INFO: Database connection is healthy
+[2025-04-10T04:06:17.405Z] INFO: Database connection is healthy
+[2025-04-10T04:16:17.410Z] INFO: Database connection is healthy
+[2025-04-10T04:26:17.430Z] INFO: Database connection is healthy
+[2025-04-10T04:36:17.451Z] INFO: Database connection is healthy
+[2025-04-10T04:46:17.462Z] INFO: Database connection is healthy
+[2025-04-10T04:56:17.479Z] INFO: Database connection is healthy
+[2025-04-10T05:06:17.496Z] INFO: Database connection is healthy
+[2025-04-10T05:16:17.508Z] INFO: Database connection is healthy
+[2025-04-10T05:26:17.520Z] INFO: Database connection is healthy
+[2025-04-10T05:36:17.528Z] INFO: Database connection is healthy
+[2025-04-10T05:46:17.544Z] INFO: Database connection is healthy
+[2025-04-10T05:56:17.559Z] INFO: Database connection is healthy
+[2025-04-10T06:06:17.575Z] INFO: Database connection is healthy
+[2025-04-10T06:16:17.583Z] INFO: Database connection is healthy
+[2025-04-10T06:20:04.645Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:04.646Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-10T06:20:04.649Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:04.650Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-10T06:20:04.651Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T06:20:04.659Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-10T06:20:04.668Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-10T06:20:04.675Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-10T06:20:07.704Z] INFO: Middleware triggered for POST /api/admin/login
+[2025-04-10T06:20:07.766Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:07.774Z] INFO: Admin is authenticated
+[2025-04-10T06:20:07.775Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:07.776Z] INFO: Admin is authenticated
+[2025-04-10T06:20:07.776Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T06:20:10.542Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:10.543Z] INFO: Admin is authenticated
+[2025-04-10T06:20:11.478Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:11.478Z] INFO: Admin is authenticated
+[2025-04-10T06:20:14.615Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:14.615Z] INFO: Admin is authenticated
+[2025-04-10T06:20:15.070Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:15.070Z] INFO: Admin is authenticated
+[2025-04-10T06:20:16.501Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:16.502Z] INFO: Admin is authenticated
+[2025-04-10T06:20:16.941Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:16.942Z] INFO: Admin is authenticated
+[2025-04-10T06:20:18.942Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:18.943Z] INFO: Admin is authenticated
+[2025-04-10T06:20:19.326Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T06:20:19.326Z] INFO: Admin is authenticated
+[2025-04-10T06:20:30.361Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T06:20:30.362Z] INFO: Admin is authenticated
+[2025-04-10T06:26:17.603Z] INFO: Database connection is healthy
+[2025-04-10T06:36:17.611Z] INFO: Database connection is healthy
+[2025-04-10T06:46:17.554Z] INFO: Database connection is healthy
+[2025-04-10T06:56:17.549Z] INFO: Database connection is healthy
+[2025-04-10T07:06:19.406Z] INFO: Database connection is healthy
+[2025-04-10T07:16:19.681Z] INFO: Database connection is healthy
+[2025-04-10T07:26:19.697Z] INFO: Database connection is healthy
+[2025-04-10T07:36:19.705Z] INFO: Database connection is healthy
+[2025-04-10T07:46:19.723Z] INFO: Database connection is healthy
+[2025-04-10T07:56:19.733Z] INFO: Database connection is healthy
+[2025-04-10T08:06:19.754Z] INFO: Database connection is healthy
+[2025-04-10T08:16:19.753Z] INFO: Database connection is healthy
+[2025-04-10T08:25:22.735Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-10T08:25:22.736Z] INFO: Admin is authenticated
+[2025-04-10T08:25:23.670Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-10T08:25:23.671Z] INFO: Admin is authenticated
+[2025-04-10T08:25:24.789Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-10T08:25:24.798Z] INFO: Admin is authenticated
+[2025-04-10T08:25:24.800Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-10T08:25:24.801Z] INFO: Admin is authenticated
+[2025-04-10T08:25:24.804Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T08:26:19.759Z] INFO: Database connection is healthy
+[2025-04-10T08:29:28.790Z] INFO: Middleware triggered for GET /api/admin/other/trip-automation-status
+[2025-04-10T08:29:28.791Z] INFO: Admin is authenticated
+[2025-04-10T08:29:28.822Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T08:36:19.775Z] INFO: Database connection is healthy
+[2025-04-10T08:46:19.781Z] INFO: Database connection is healthy
+[2025-04-10T08:56:19.812Z] INFO: Database connection is healthy
+[2025-04-10T09:06:19.810Z] INFO: Database connection is healthy
+[2025-04-10T09:06:56.427Z] INFO: Middleware triggered for GET /api/admin/other/trip-automation-status
+[2025-04-10T09:06:56.428Z] INFO: Admin is authenticated
+[2025-04-10T09:06:56.432Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T09:06:57.295Z] INFO: Middleware triggered for GET /api/admin/other/trip-automation-status
+[2025-04-10T09:06:57.296Z] INFO: Admin is authenticated
+[2025-04-10T09:06:57.297Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-10T09:16:19.825Z] INFO: Database connection is healthy
+[2025-04-10T09:26:19.838Z] INFO: Database connection is healthy
+[2025-04-10T09:36:19.848Z] INFO: Database connection is healthy
+[2025-04-10T09:46:19.869Z] INFO: Database connection is healthy
+[2025-04-10T09:56:19.868Z] INFO: Database connection is healthy
+[2025-04-10T10:06:19.886Z] INFO: Database connection is healthy
+[2025-04-10T10:16:19.886Z] INFO: Database connection is healthy
+[2025-04-10T10:26:19.898Z] INFO: Database connection is healthy
+[2025-04-10T10:36:19.920Z] INFO: Database connection is healthy
+[2025-04-10T10:46:19.926Z] INFO: Database connection is healthy
+[2025-04-10T10:56:19.947Z] INFO: Database connection is healthy
+[2025-04-10T11:06:19.951Z] INFO: Database connection is healthy
+[2025-04-10T11:16:19.974Z] INFO: Database connection is healthy
+[2025-04-10T11:26:19.989Z] INFO: Database connection is healthy
+[2025-04-10T11:36:20.004Z] INFO: Database connection is healthy
+[2025-04-10T11:46:20.031Z] INFO: Database connection is healthy
+[2025-04-10T11:56:20.033Z] INFO: Database connection is healthy
+[2025-04-10T12:06:20.060Z] INFO: Database connection is healthy
+[2025-04-10T12:16:20.070Z] INFO: Database connection is healthy
+[2025-04-10T12:26:20.074Z] INFO: Database connection is healthy
+[2025-04-10T12:36:20.092Z] INFO: Database connection is healthy
+[2025-04-10T12:46:20.093Z] INFO: Database connection is healthy
+[2025-04-10T12:56:20.118Z] INFO: Database connection is healthy
+[2025-04-10T13:06:20.131Z] INFO: Database connection is healthy
+[2025-04-10T13:16:20.142Z] INFO: Database connection is healthy
+[2025-04-10T13:26:20.152Z] INFO: Database connection is healthy
+[2025-04-10T13:36:20.160Z] INFO: Database connection is healthy
+[2025-04-10T13:46:20.180Z] INFO: Database connection is healthy
+[2025-04-10T13:56:20.182Z] INFO: Database connection is healthy
+[2025-04-10T14:06:20.195Z] INFO: Database connection is healthy
+[2025-04-10T14:16:20.203Z] INFO: Database connection is healthy
+[2025-04-10T14:26:20.208Z] INFO: Database connection is healthy
+[2025-04-10T14:36:20.221Z] INFO: Database connection is healthy
+[2025-04-10T14:46:20.227Z] INFO: Database connection is healthy
+[2025-04-10T14:56:20.243Z] INFO: Database connection is healthy
+[2025-04-10T15:06:20.255Z] INFO: Database connection is healthy
+[2025-04-10T15:16:20.264Z] INFO: Database connection is healthy
+[2025-04-10T15:26:20.278Z] INFO: Database connection is healthy
+[2025-04-10T15:36:20.279Z] INFO: Database connection is healthy
+[2025-04-10T15:46:20.296Z] INFO: Database connection is healthy
+[2025-04-10T15:56:20.304Z] INFO: Database connection is healthy
+[2025-04-10T16:06:20.322Z] INFO: Database connection is healthy
+[2025-04-10T16:16:20.333Z] INFO: Database connection is healthy
+[2025-04-10T16:26:20.337Z] INFO: Database connection is healthy
+[2025-04-10T16:36:20.363Z] INFO: Database connection is healthy
+[2025-04-10T16:46:20.113Z] INFO: Database connection is healthy
+[2025-04-10T16:56:22.912Z] INFO: Database connection is healthy
+[2025-04-10T17:06:22.904Z] INFO: Database connection is healthy
+[2025-04-10T17:16:21.435Z] INFO: Database connection is healthy
+[2025-04-10T17:26:20.634Z] INFO: Database connection is healthy
+[2025-04-10T17:36:20.572Z] INFO: Database connection is healthy
+[2025-04-10T17:46:20.561Z] INFO: Database connection is healthy
+[2025-04-10T17:56:20.576Z] INFO: Database connection is healthy
+[2025-04-10T18:06:20.588Z] INFO: Database connection is healthy
+[2025-04-10T18:16:20.591Z] INFO: Database connection is healthy
+[2025-04-10T18:26:20.596Z] INFO: Database connection is healthy
+[2025-04-10T18:36:20.606Z] INFO: Database connection is healthy
+[2025-04-10T18:46:20.263Z] INFO: Database connection is healthy
+[2025-04-10T18:56:20.214Z] INFO: Database connection is healthy
+[2025-04-10T19:06:20.218Z] INFO: Database connection is healthy
+[2025-04-10T19:16:20.232Z] INFO: Database connection is healthy
+[2025-04-10T19:26:20.235Z] INFO: Database connection is healthy
+[2025-04-10T19:36:20.245Z] INFO: Database connection is healthy
+[2025-04-10T19:46:20.241Z] INFO: Database connection is healthy
+[2025-04-10T19:56:20.253Z] INFO: Database connection is healthy
+[2025-04-10T20:06:20.267Z] INFO: Database connection is healthy
+[2025-04-10T20:16:20.271Z] INFO: Database connection is healthy
+[2025-04-10T20:26:22.355Z] INFO: Database connection is healthy
+[2025-04-10T20:36:22.942Z] INFO: Database connection is healthy
+[2025-04-10T20:46:22.976Z] INFO: Database connection is healthy
+[2025-04-10T20:56:22.992Z] INFO: Database connection is healthy
+[2025-04-10T21:06:23.013Z] INFO: Database connection is healthy
+[2025-04-10T21:16:23.032Z] INFO: Database connection is healthy
+[2025-04-10T21:26:23.059Z] INFO: Database connection is healthy
+[2025-04-10T21:36:23.073Z] INFO: Database connection is healthy
+[2025-04-10T21:46:23.095Z] INFO: Database connection is healthy
+[2025-04-10T21:56:23.104Z] INFO: Database connection is healthy
+[2025-04-10T22:06:23.120Z] INFO: Database connection is healthy
+[2025-04-10T22:16:23.137Z] INFO: Database connection is healthy
+[2025-04-10T22:26:23.145Z] INFO: Database connection is healthy
+[2025-04-10T22:36:23.171Z] INFO: Database connection is healthy
+[2025-04-10T22:46:23.180Z] INFO: Database connection is healthy
+[2025-04-10T22:56:23.206Z] INFO: Database connection is healthy
+[2025-04-10T23:06:23.221Z] INFO: Database connection is healthy
+[2025-04-10T23:16:23.236Z] INFO: Database connection is healthy
+[2025-04-10T23:26:23.257Z] INFO: Database connection is healthy
+[2025-04-10T23:36:23.278Z] INFO: Database connection is healthy
+[2025-04-10T23:46:23.304Z] INFO: Database connection is healthy
+[2025-04-10T23:55:00.007Z] INFO: Starting database backup...
+[2025-04-10T23:55:00.116Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250410.sql
+[2025-04-10T23:56:23.317Z] INFO: Database connection is healthy
+[2025-04-11T00:06:23.332Z] INFO: Database connection is healthy
+[2025-04-11T00:16:23.347Z] INFO: Database connection is healthy
+[2025-04-11T00:26:23.356Z] INFO: Database connection is healthy
+[2025-04-11T00:36:23.375Z] INFO: Database connection is healthy
+[2025-04-11T00:46:23.392Z] INFO: Database connection is healthy
+[2025-04-11T00:56:23.405Z] INFO: Database connection is healthy
+[2025-04-11T01:06:23.424Z] INFO: Database connection is healthy
+[2025-04-11T01:16:23.443Z] INFO: Database connection is healthy
+[2025-04-11T01:26:23.469Z] INFO: Database connection is healthy
+[2025-04-11T01:36:23.476Z] INFO: Database connection is healthy
+[2025-04-11T01:46:23.492Z] INFO: Database connection is healthy
+[2025-04-11T01:56:23.511Z] INFO: Database connection is healthy
+[2025-04-11T02:06:23.524Z] INFO: Database connection is healthy
+[2025-04-11T02:16:23.550Z] INFO: Database connection is healthy
+[2025-04-11T02:26:23.566Z] INFO: Database connection is healthy
+[2025-04-11T02:36:23.589Z] INFO: Database connection is healthy
+[2025-04-11T02:46:23.611Z] INFO: Database connection is healthy
+[2025-04-11T02:56:23.627Z] INFO: Database connection is healthy
+[2025-04-11T03:06:23.650Z] INFO: Database connection is healthy
+[2025-04-11T03:16:23.661Z] INFO: Database connection is healthy
+[2025-04-11T03:26:23.685Z] INFO: Database connection is healthy
+[2025-04-11T03:36:23.694Z] INFO: Database connection is healthy
+[2025-04-11T03:45:48.132Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-11T03:45:48.133Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-11T03:45:48.135Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-11T03:45:48.135Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-11T03:45:48.137Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-11T03:45:48.137Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-11T03:45:48.184Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T03:45:48.912Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T03:45:48.951Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T03:46:23.706Z] INFO: Database connection is healthy
+[2025-04-11T03:56:23.727Z] INFO: Database connection is healthy
+[2025-04-11T04:06:23.736Z] INFO: Database connection is healthy
+[2025-04-11T04:16:23.755Z] INFO: Database connection is healthy
+[2025-04-11T04:26:23.773Z] INFO: Database connection is healthy
+[2025-04-11T04:36:23.796Z] INFO: Database connection is healthy
+[2025-04-11T04:46:23.805Z] INFO: Database connection is healthy
+[2025-04-11T04:56:23.826Z] INFO: Database connection is healthy
+[2025-04-11T05:06:23.851Z] INFO: Database connection is healthy
+[2025-04-11T05:16:23.872Z] INFO: Database connection is healthy
+[2025-04-11T05:26:23.885Z] INFO: Database connection is healthy
+[2025-04-11T05:36:23.905Z] INFO: Database connection is healthy
+[2025-04-11T05:46:23.918Z] INFO: Database connection is healthy
+[2025-04-11T05:56:23.935Z] INFO: Database connection is healthy
+[2025-04-11T06:06:23.955Z] INFO: Database connection is healthy
+[2025-04-11T06:16:23.973Z] INFO: Database connection is healthy
+[2025-04-11T06:26:23.983Z] INFO: Database connection is healthy
+[2025-04-11T06:36:24.007Z] INFO: Database connection is healthy
+[2025-04-11T06:46:24.026Z] INFO: Database connection is healthy
+[2025-04-11T06:56:24.048Z] INFO: Database connection is healthy
+[2025-04-11T07:06:24.061Z] INFO: Database connection is healthy
+[2025-04-11T07:16:24.070Z] INFO: Database connection is healthy
+[2025-04-11T07:26:24.081Z] INFO: Database connection is healthy
+[2025-04-11T07:36:24.103Z] INFO: Database connection is healthy
+[2025-04-11T07:46:24.118Z] INFO: Database connection is healthy
+[2025-04-11T07:56:24.134Z] INFO: Database connection is healthy
+[2025-04-11T08:06:24.153Z] INFO: Database connection is healthy
+[2025-04-11T08:16:24.178Z] INFO: Database connection is healthy
+[2025-04-11T08:26:24.199Z] INFO: Database connection is healthy
+[2025-04-11T08:36:24.213Z] INFO: Database connection is healthy
+[2025-04-11T08:46:24.237Z] INFO: Database connection is healthy
+[2025-04-11T08:56:24.246Z] INFO: Database connection is healthy
+[2025-04-11T09:06:24.270Z] INFO: Database connection is healthy
+[2025-04-11T09:16:24.288Z] INFO: Database connection is healthy
+[2025-04-11T09:26:24.302Z] INFO: Database connection is healthy
+[2025-04-11T09:36:24.324Z] INFO: Database connection is healthy
+[2025-04-11T09:46:24.343Z] INFO: Database connection is healthy
+[2025-04-11T09:56:24.354Z] INFO: Database connection is healthy
+[2025-04-11T10:06:24.368Z] INFO: Database connection is healthy
+[2025-04-11T10:16:24.385Z] INFO: Database connection is healthy
+[2025-04-11T10:26:24.402Z] INFO: Database connection is healthy
+[2025-04-11T10:36:24.416Z] INFO: Database connection is healthy
+[2025-04-11T10:46:24.438Z] INFO: Database connection is healthy
+[2025-04-11T10:56:24.447Z] INFO: Database connection is healthy
+[2025-04-11T11:06:24.468Z] INFO: Database connection is healthy
+[2025-04-11T11:16:24.478Z] INFO: Database connection is healthy
+[2025-04-11T11:26:24.489Z] INFO: Database connection is healthy
+[2025-04-11T11:36:24.500Z] INFO: Database connection is healthy
+[2025-04-11T11:46:24.516Z] INFO: Database connection is healthy
+[2025-04-11T11:56:24.528Z] INFO: Database connection is healthy
+[2025-04-11T12:06:24.536Z] INFO: Database connection is healthy
+[2025-04-11T12:16:24.559Z] INFO: Database connection is healthy
+[2025-04-11T12:26:24.573Z] INFO: Database connection is healthy
+[2025-04-11T12:36:24.584Z] INFO: Database connection is healthy
+[2025-04-11T12:46:24.606Z] INFO: Database connection is healthy
+[2025-04-11T12:56:24.617Z] INFO: Database connection is healthy
+[2025-04-11T12:59:12.271Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-11T12:59:47.765Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-11T12:59:47.782Z] INFO: Server running on port 5000
+[2025-04-11T13:09:42.935Z] INFO: Database connection is healthy
+[2025-04-11T13:19:44.937Z] INFO: Database connection is healthy
+[2025-04-11T13:30:35.971Z] INFO: Database connection is healthy
+[2025-04-11T13:40:35.450Z] INFO: Database connection is healthy
+[2025-04-11T13:50:35.381Z] INFO: Database connection is healthy
+[2025-04-11T14:00:35.484Z] INFO: Database connection is healthy
+[2025-04-11T14:10:35.414Z] INFO: Database connection is healthy
+[2025-04-11T14:20:35.424Z] INFO: Database connection is healthy
+[2025-04-11T14:30:35.460Z] INFO: Database connection is healthy
+[2025-04-11T14:40:35.447Z] INFO: Database connection is healthy
+[2025-04-11T14:50:35.402Z] INFO: Database connection is healthy
+[2025-04-11T15:00:35.501Z] INFO: Database connection is healthy
+[2025-04-11T15:10:35.481Z] INFO: Database connection is healthy
+[2025-04-11T15:20:35.538Z] INFO: Database connection is healthy
+[2025-04-11T15:30:35.530Z] INFO: Database connection is healthy
+[2025-04-11T15:40:35.549Z] INFO: Database connection is healthy
+[2025-04-11T15:50:35.568Z] INFO: Database connection is healthy
+[2025-04-11T16:00:35.543Z] INFO: Database connection is healthy
+[2025-04-11T16:10:35.589Z] INFO: Database connection is healthy
+[2025-04-11T16:20:35.558Z] INFO: Database connection is healthy
+[2025-04-11T16:30:35.591Z] INFO: Database connection is healthy
+[2025-04-11T16:40:36.749Z] INFO: Database connection is healthy
+[2025-04-11T16:50:37.595Z] INFO: Database connection is healthy
+[2025-04-11T17:00:37.693Z] INFO: Database connection is healthy
+[2025-04-11T17:10:37.677Z] INFO: Database connection is healthy
+[2025-04-11T17:15:45.585Z] INFO: Middleware triggered for GET /api/sonicos/auth
+[2025-04-11T17:15:45.586Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-11T17:15:45.602Z] INFO: Middleware triggered for GET /api/sonicos/tfa
+[2025-04-11T17:15:45.603Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-11T17:15:46.185Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T17:15:46.305Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T17:20:37.722Z] INFO: Database connection is healthy
+[2025-04-11T17:28:20.060Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-11T17:30:37.719Z] INFO: Database connection is healthy
+[2025-04-11T17:40:37.717Z] INFO: Database connection is healthy
+[2025-04-11T17:50:37.746Z] INFO: Database connection is healthy
+[2025-04-11T18:00:37.736Z] INFO: Database connection is healthy
+[2025-04-11T18:10:37.765Z] INFO: Database connection is healthy
+[2025-04-11T18:20:37.759Z] INFO: Database connection is healthy
+[2025-04-11T18:30:37.772Z] INFO: Database connection is healthy
+[2025-04-11T18:40:37.783Z] INFO: Database connection is healthy
+[2025-04-11T18:50:37.775Z] INFO: Database connection is healthy
+[2025-04-11T19:00:37.798Z] INFO: Database connection is healthy
+[2025-04-11T19:10:37.778Z] INFO: Database connection is healthy
+[2025-04-11T19:20:37.810Z] INFO: Database connection is healthy
+[2025-04-11T19:30:37.823Z] INFO: Database connection is healthy
+[2025-04-11T19:40:37.819Z] INFO: Database connection is healthy
+[2025-04-11T19:50:37.839Z] INFO: Database connection is healthy
+[2025-04-11T20:00:37.825Z] INFO: Database connection is healthy
+[2025-04-11T20:10:37.856Z] INFO: Database connection is healthy
+[2025-04-11T20:20:37.846Z] INFO: Database connection is healthy
+[2025-04-11T20:30:37.855Z] INFO: Database connection is healthy
+[2025-04-11T20:40:37.872Z] INFO: Database connection is healthy
+[2025-04-11T20:50:37.857Z] INFO: Database connection is healthy
+[2025-04-11T21:00:37.886Z] INFO: Database connection is healthy
+[2025-04-11T21:10:37.871Z] INFO: Database connection is healthy
+[2025-04-11T21:20:37.888Z] INFO: Database connection is healthy
+[2025-04-11T21:30:37.890Z] INFO: Database connection is healthy
+[2025-04-11T21:40:37.891Z] INFO: Database connection is healthy
+[2025-04-11T21:50:37.909Z] INFO: Database connection is healthy
+[2025-04-11T21:55:00.004Z] INFO: Starting database backup...
+[2025-04-11T21:55:00.255Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250411.sql
+[2025-04-11T21:55:00.256Z] INFO: Deleted old backup: backup_20250403.sql
+[2025-04-11T22:00:37.899Z] INFO: Database connection is healthy
+[2025-04-11T22:10:37.933Z] INFO: Database connection is healthy
+[2025-04-11T22:20:37.932Z] INFO: Database connection is healthy
+[2025-04-11T22:30:37.941Z] INFO: Database connection is healthy
+[2025-04-11T22:40:37.953Z] INFO: Database connection is healthy
+[2025-04-11T22:50:37.949Z] INFO: Database connection is healthy
+[2025-04-11T23:00:37.973Z] INFO: Database connection is healthy
+[2025-04-11T23:10:37.962Z] INFO: Database connection is healthy
+[2025-04-11T23:20:37.986Z] INFO: Database connection is healthy
+[2025-04-11T23:30:37.993Z] INFO: Database connection is healthy
+[2025-04-11T23:40:37.991Z] INFO: Database connection is healthy
+[2025-04-11T23:50:38.006Z] INFO: Database connection is healthy
+[2025-04-12T00:00:37.984Z] INFO: Database connection is healthy
+[2025-04-12T00:10:38.008Z] INFO: Database connection is healthy
+[2025-04-12T00:20:38.018Z] INFO: Database connection is healthy
+[2025-04-12T00:30:38.013Z] INFO: Database connection is healthy
+[2025-04-12T00:40:38.029Z] INFO: Database connection is healthy
+[2025-04-12T00:50:38.016Z] INFO: Database connection is healthy
+[2025-04-12T01:00:38.041Z] INFO: Database connection is healthy
+[2025-04-12T01:10:38.045Z] INFO: Database connection is healthy
+[2025-04-12T01:20:38.063Z] INFO: Database connection is healthy
+[2025-04-12T01:30:38.076Z] INFO: Database connection is healthy
+[2025-04-12T01:40:38.066Z] INFO: Database connection is healthy
+[2025-04-12T01:50:38.092Z] INFO: Database connection is healthy
+[2025-04-12T02:00:38.076Z] INFO: Database connection is healthy
+[2025-04-12T02:10:38.106Z] INFO: Database connection is healthy
+[2025-04-12T02:20:38.122Z] INFO: Database connection is healthy
+[2025-04-12T02:30:38.117Z] INFO: Database connection is healthy
+[2025-04-12T02:40:38.133Z] INFO: Database connection is healthy
+[2025-04-12T02:50:38.130Z] INFO: Database connection is healthy
+[2025-04-12T03:00:38.158Z] INFO: Database connection is healthy
+[2025-04-12T03:10:38.166Z] INFO: Database connection is healthy
+[2025-04-12T03:20:38.170Z] INFO: Database connection is healthy
+[2025-04-12T03:30:38.191Z] INFO: Database connection is healthy
+[2025-04-12T03:40:38.192Z] INFO: Database connection is healthy
+[2025-04-12T03:50:38.220Z] INFO: Database connection is healthy
+[2025-04-12T03:52:57.837Z] INFO: Middleware triggered for GET /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[2025-04-12T03:52:57.837Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-12T04:00:38.212Z] INFO: Database connection is healthy
+[2025-04-12T04:10:38.232Z] INFO: Database connection is healthy
+[2025-04-12T04:20:38.247Z] INFO: Database connection is healthy
+[2025-04-12T04:30:38.244Z] INFO: Database connection is healthy
+[2025-04-12T04:40:38.267Z] INFO: Database connection is healthy
+[2025-04-12T04:50:38.262Z] INFO: Database connection is healthy
+[2025-04-12T05:00:38.282Z] INFO: Database connection is healthy
+[2025-04-12T05:10:38.290Z] INFO: Database connection is healthy
+[2025-04-12T05:20:38.293Z] INFO: Database connection is healthy
+[2025-04-12T05:30:38.312Z] INFO: Database connection is healthy
+[2025-04-12T05:40:38.313Z] INFO: Database connection is healthy
+[2025-04-12T05:50:38.329Z] INFO: Database connection is healthy
+[2025-04-12T06:00:38.329Z] INFO: Database connection is healthy
+[2025-04-12T06:10:38.342Z] INFO: Database connection is healthy
+[2025-04-12T06:20:38.357Z] INFO: Database connection is healthy
+[2025-04-12T06:30:38.360Z] INFO: Database connection is healthy
+[2025-04-12T06:40:38.384Z] INFO: Database connection is healthy
+[2025-04-12T06:50:38.383Z] INFO: Database connection is healthy
+[2025-04-12T07:00:38.398Z] INFO: Database connection is healthy
+[2025-04-12T07:10:38.400Z] INFO: Database connection is healthy
+[2025-04-12T07:20:38.395Z] INFO: Database connection is healthy
+[2025-04-12T07:30:38.415Z] INFO: Database connection is healthy
+[2025-04-12T07:40:38.405Z] INFO: Database connection is healthy
+[2025-04-12T07:50:38.425Z] INFO: Database connection is healthy
+[2025-04-12T08:00:38.436Z] INFO: Database connection is healthy
+[2025-04-12T08:10:38.447Z] INFO: Database connection is healthy
+[2025-04-12T08:20:38.463Z] INFO: Database connection is healthy
+[2025-04-12T08:30:38.459Z] INFO: Database connection is healthy
+[2025-04-12T08:40:38.477Z] INFO: Database connection is healthy
+[2025-04-12T08:50:38.474Z] INFO: Database connection is healthy
+[2025-04-12T09:00:38.496Z] INFO: Database connection is healthy
+[2025-04-12T09:10:38.508Z] INFO: Database connection is healthy
+[2025-04-12T09:20:38.502Z] INFO: Database connection is healthy
+[2025-04-12T09:30:38.514Z] INFO: Database connection is healthy
+[2025-04-12T09:40:38.508Z] INFO: Database connection is healthy
+[2025-04-12T09:50:38.531Z] INFO: Database connection is healthy
+[2025-04-12T10:00:38.529Z] INFO: Database connection is healthy
+[2025-04-12T10:10:38.535Z] INFO: Database connection is healthy
+[2025-04-12T10:20:38.551Z] INFO: Database connection is healthy
+[2025-04-12T10:30:38.550Z] INFO: Database connection is healthy
+[2025-04-12T10:40:38.572Z] INFO: Database connection is healthy
+[2025-04-12T10:50:38.567Z] INFO: Database connection is healthy
+[2025-04-12T11:00:38.573Z] INFO: Database connection is healthy
+[2025-04-12T11:10:38.591Z] INFO: Database connection is healthy
+[2025-04-12T11:20:38.599Z] INFO: Database connection is healthy
+[2025-04-12T11:30:38.618Z] INFO: Database connection is healthy
+[2025-04-12T11:40:38.612Z] INFO: Database connection is healthy
+[2025-04-12T11:50:38.625Z] INFO: Database connection is healthy
+[2025-04-12T12:00:38.628Z] INFO: Database connection is healthy
+[2025-04-12T12:10:38.634Z] INFO: Database connection is healthy
+[2025-04-12T12:20:38.642Z] INFO: Database connection is healthy
+[2025-04-12T12:30:38.638Z] INFO: Database connection is healthy
+[2025-04-12T12:40:38.657Z] INFO: Database connection is healthy
+[2025-04-12T12:50:38.654Z] INFO: Database connection is healthy
+[2025-04-12T13:00:38.668Z] INFO: Database connection is healthy
+[2025-04-12T13:10:38.686Z] INFO: Database connection is healthy
+[2025-04-12T13:20:38.692Z] INFO: Database connection is healthy
+[2025-04-12T13:30:38.684Z] INFO: Database connection is healthy
+[2025-04-12T13:40:38.853Z] INFO: Database connection is healthy
+[2025-04-12T13:50:40.068Z] INFO: Database connection is healthy
+[2025-04-12T14:00:40.185Z] INFO: Database connection is healthy
+[2025-04-12T14:10:40.197Z] INFO: Database connection is healthy
+[2025-04-12T14:20:40.200Z] INFO: Database connection is healthy
+[2025-04-12T14:30:40.207Z] INFO: Database connection is healthy
+[2025-04-12T14:40:40.213Z] INFO: Database connection is healthy
+[2025-04-12T14:50:40.225Z] INFO: Database connection is healthy
+[2025-04-12T15:00:40.236Z] INFO: Database connection is healthy
+[2025-04-12T15:10:40.243Z] INFO: Database connection is healthy
+[2025-04-12T15:20:40.248Z] INFO: Database connection is healthy
+[2025-04-12T15:30:40.254Z] INFO: Database connection is healthy
+[2025-04-12T15:40:40.269Z] INFO: Database connection is healthy
+[2025-04-12T15:50:40.275Z] INFO: Database connection is healthy
+[2025-04-12T16:00:40.280Z] INFO: Database connection is healthy
+[2025-04-12T16:10:40.286Z] INFO: Database connection is healthy
+[2025-04-12T16:20:40.297Z] INFO: Database connection is healthy
+[2025-04-12T16:30:40.303Z] INFO: Database connection is healthy
+[2025-04-12T16:40:40.313Z] INFO: Database connection is healthy
+[2025-04-12T16:50:40.324Z] INFO: Database connection is healthy
+[2025-04-12T17:00:40.330Z] INFO: Database connection is healthy
+[2025-04-12T17:10:40.332Z] INFO: Database connection is healthy
+[2025-04-12T17:20:40.345Z] INFO: Database connection is healthy
+[2025-04-12T17:30:40.350Z] INFO: Database connection is healthy
+[2025-04-12T17:40:40.363Z] INFO: Database connection is healthy
+[2025-04-12T17:50:40.375Z] INFO: Database connection is healthy
+[2025-04-12T18:00:40.385Z] INFO: Database connection is healthy
+[2025-04-12T18:10:40.385Z] INFO: Database connection is healthy
+[2025-04-12T18:20:40.390Z] INFO: Database connection is healthy
+[2025-04-12T18:30:40.396Z] INFO: Database connection is healthy
+[2025-04-12T18:40:40.397Z] INFO: Database connection is healthy
+[2025-04-12T18:50:40.405Z] INFO: Database connection is healthy
+[2025-04-12T19:00:40.406Z] INFO: Database connection is healthy
+[2025-04-12T19:06:55.833Z] INFO: Middleware triggered for POST /api/v1/validate/code
+[2025-04-12T19:06:55.833Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-12T19:10:40.410Z] INFO: Database connection is healthy
+[2025-04-12T19:20:40.421Z] INFO: Database connection is healthy
+[2025-04-12T19:30:40.427Z] INFO: Database connection is healthy
+[2025-04-12T19:40:40.435Z] INFO: Database connection is healthy
+[2025-04-12T19:50:40.441Z] INFO: Database connection is healthy
+[2025-04-12T20:00:40.454Z] INFO: Database connection is healthy
+[2025-04-12T20:10:40.455Z] INFO: Database connection is healthy
+[2025-04-12T20:20:40.464Z] INFO: Database connection is healthy
+[2025-04-12T20:30:40.469Z] INFO: Database connection is healthy
+[2025-04-12T20:40:40.472Z] INFO: Database connection is healthy
+[2025-04-12T20:50:40.475Z] INFO: Database connection is healthy
+[2025-04-12T21:00:40.481Z] INFO: Database connection is healthy
+[2025-04-12T21:10:40.488Z] INFO: Database connection is healthy
+[2025-04-12T21:20:40.490Z] INFO: Database connection is healthy
+[2025-04-12T21:30:42.695Z] INFO: Database connection is healthy
+[2025-04-12T21:40:41.637Z] INFO: Database connection is healthy
+[2025-04-12T21:50:40.501Z] INFO: Database connection is healthy
+[2025-04-12T22:00:40.405Z] INFO: Database connection is healthy
+[2025-04-12T22:10:40.393Z] INFO: Database connection is healthy
+[2025-04-12T22:20:40.413Z] INFO: Database connection is healthy
+[2025-04-12T22:30:40.413Z] INFO: Database connection is healthy
+[2025-04-12T22:40:40.428Z] INFO: Database connection is healthy
+[2025-04-12T22:50:40.438Z] INFO: Database connection is healthy
+[2025-04-12T23:00:40.440Z] INFO: Database connection is healthy
+[2025-04-12T23:10:40.456Z] INFO: Database connection is healthy
+[2025-04-12T23:20:40.449Z] INFO: Database connection is healthy
+[2025-04-12T23:30:40.470Z] INFO: Database connection is healthy
+[2025-04-12T23:40:40.485Z] INFO: Database connection is healthy
+[2025-04-12T23:50:40.482Z] INFO: Database connection is healthy
+[2025-04-12T23:55:00.022Z] INFO: Starting database backup...
+[2025-04-12T23:55:00.125Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250412.sql
+[2025-04-12T23:55:00.126Z] INFO: Deleted old backup: backup_20250405.sql
+[2025-04-12T23:55:00.126Z] INFO: Deleted old backup: backup_20250404.sql
+[2025-04-13T00:00:40.498Z] INFO: Database connection is healthy
+[2025-04-13T00:10:40.499Z] INFO: Database connection is healthy
+[2025-04-13T00:20:40.512Z] INFO: Database connection is healthy
+[2025-04-13T00:30:40.524Z] INFO: Database connection is healthy
+[2025-04-13T00:40:40.534Z] INFO: Database connection is healthy
+[2025-04-13T00:50:40.771Z] INFO: Database connection is healthy
+[2025-04-13T01:00:40.868Z] INFO: Database connection is healthy
+[2025-04-13T01:10:40.885Z] INFO: Database connection is healthy
+[2025-04-13T01:20:40.881Z] INFO: Database connection is healthy
+[2025-04-13T01:30:40.886Z] INFO: Database connection is healthy
+[2025-04-13T01:40:40.896Z] INFO: Database connection is healthy
+[2025-04-13T01:50:40.895Z] INFO: Database connection is healthy
+[2025-04-13T02:00:40.912Z] INFO: Database connection is healthy
+[2025-04-13T02:10:40.914Z] INFO: Database connection is healthy
+[2025-04-13T02:20:43.001Z] INFO: Database connection is healthy
+[2025-04-13T02:30:43.221Z] INFO: Database connection is healthy
+[2025-04-13T02:40:43.247Z] INFO: Database connection is healthy
+[2025-04-13T02:50:43.263Z] INFO: Database connection is healthy
+[2025-04-13T03:00:43.271Z] INFO: Database connection is healthy
+[2025-04-13T03:10:43.281Z] INFO: Database connection is healthy
+[2025-04-13T03:20:43.299Z] INFO: Database connection is healthy
+[2025-04-13T03:30:43.307Z] INFO: Database connection is healthy
+[2025-04-13T03:40:43.322Z] INFO: Database connection is healthy
+[2025-04-13T03:50:43.330Z] INFO: Database connection is healthy
+[2025-04-13T04:00:43.348Z] INFO: Database connection is healthy
+[2025-04-13T04:10:43.368Z] INFO: Database connection is healthy
+[2025-04-13T04:20:43.388Z] INFO: Database connection is healthy
+[2025-04-13T04:30:43.399Z] INFO: Database connection is healthy
+[2025-04-13T04:40:43.411Z] INFO: Database connection is healthy
+[2025-04-13T04:50:43.429Z] INFO: Database connection is healthy
+[2025-04-13T05:00:43.442Z] INFO: Database connection is healthy
+[2025-04-13T05:10:43.463Z] INFO: Database connection is healthy
+[2025-04-13T05:20:43.474Z] INFO: Database connection is healthy
+[2025-04-13T05:30:43.495Z] INFO: Database connection is healthy
+[2025-04-13T05:40:43.509Z] INFO: Database connection is healthy
+[2025-04-13T05:50:43.520Z] INFO: Database connection is healthy
+[2025-04-13T06:00:43.541Z] INFO: Database connection is healthy
+[2025-04-13T06:10:43.554Z] INFO: Database connection is healthy
+[2025-04-13T06:20:43.561Z] INFO: Database connection is healthy
+[2025-04-13T06:30:43.568Z] INFO: Database connection is healthy
+[2025-04-13T06:40:43.577Z] INFO: Database connection is healthy
+[2025-04-13T06:50:43.591Z] INFO: Database connection is healthy
+[2025-04-13T07:00:43.601Z] INFO: Database connection is healthy
+[2025-04-13T07:10:43.615Z] INFO: Database connection is healthy
+[2025-04-13T07:20:43.630Z] INFO: Database connection is healthy
+[2025-04-13T07:30:43.647Z] INFO: Database connection is healthy
+[2025-04-13T07:40:43.666Z] INFO: Database connection is healthy
+[2025-04-13T07:50:43.676Z] INFO: Database connection is healthy
+[2025-04-13T08:00:43.692Z] INFO: Database connection is healthy
+[2025-04-13T08:10:43.705Z] INFO: Database connection is healthy
+[2025-04-13T08:20:43.722Z] INFO: Database connection is healthy
+[2025-04-13T08:30:43.737Z] INFO: Database connection is healthy
+[2025-04-13T08:40:43.758Z] INFO: Database connection is healthy
+[2025-04-13T08:50:43.768Z] INFO: Database connection is healthy
+[2025-04-13T09:00:43.786Z] INFO: Database connection is healthy
+[2025-04-13T09:10:43.801Z] INFO: Database connection is healthy
+[2025-04-13T09:20:43.814Z] INFO: Database connection is healthy
+[2025-04-13T09:30:43.824Z] INFO: Database connection is healthy
+[2025-04-13T09:40:43.831Z] INFO: Database connection is healthy
+[2025-04-13T09:50:43.845Z] INFO: Database connection is healthy
+[2025-04-13T10:00:43.853Z] INFO: Database connection is healthy
+[2025-04-13T10:10:43.861Z] INFO: Database connection is healthy
+[2025-04-13T10:20:43.869Z] INFO: Database connection is healthy
+[2025-04-13T10:30:43.885Z] INFO: Database connection is healthy
+[2025-04-13T10:40:43.901Z] INFO: Database connection is healthy
+[2025-04-13T10:50:43.909Z] INFO: Database connection is healthy
+[2025-04-13T11:00:43.917Z] INFO: Database connection is healthy
+[2025-04-13T11:10:43.926Z] INFO: Database connection is healthy
+[2025-04-13T11:20:43.942Z] INFO: Database connection is healthy
+[2025-04-13T11:30:43.958Z] INFO: Database connection is healthy
+[2025-04-13T11:40:43.977Z] INFO: Database connection is healthy
+[2025-04-13T11:42:30.999Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T11:42:31.003Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T11:42:31.010Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T11:42:31.011Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T11:42:31.015Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T11:42:31.016Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T11:42:31.021Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:31.026Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:31.029Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:34.108Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T11:42:34.150Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T11:42:34.155Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T11:42:34.158Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T11:42:34.168Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T11:42:34.169Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T11:42:34.171Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T11:42:34.175Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:34.182Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:34.189Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T11:42:34.659Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T11:42:35.644Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-13T11:42:35.696Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T11:42:35.697Z] INFO: User is authenticated for /api/check-auth
+[2025-04-13T11:42:35.703Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T11:42:35.705Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T11:42:40.010Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-13T11:42:44.784Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-14
+[2025-04-13T11:50:43.996Z] INFO: Database connection is healthy
+[2025-04-13T12:00:44.016Z] INFO: Database connection is healthy
+[2025-04-13T12:10:44.026Z] INFO: Database connection is healthy
+[2025-04-13T12:20:44.045Z] INFO: Database connection is healthy
+[2025-04-13T12:30:44.058Z] INFO: Database connection is healthy
+[2025-04-13T12:40:44.065Z] INFO: Database connection is healthy
+[2025-04-13T12:50:44.071Z] INFO: Database connection is healthy
+[2025-04-13T13:00:44.078Z] INFO: Database connection is healthy
+[2025-04-13T13:10:44.099Z] INFO: Database connection is healthy
+[2025-04-13T13:20:44.117Z] INFO: Database connection is healthy
+[2025-04-13T13:27:13.325Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T13:27:13.325Z] INFO: User is authenticated for /api/check-auth
+[2025-04-13T13:27:13.330Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T13:27:13.332Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T13:30:44.128Z] INFO: Database connection is healthy
+[2025-04-13T13:40:44.134Z] INFO: Database connection is healthy
+[2025-04-13T13:50:44.150Z] INFO: Database connection is healthy
+[2025-04-13T14:00:44.156Z] INFO: Database connection is healthy
+[2025-04-13T14:01:06.002Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-13T14:01:09.530Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-13T14:01:09.544Z] INFO: Server running on port 5000
+[2025-04-13T14:01:15.417Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:01:15.419Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T14:01:15.430Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:01:15.432Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:01:15.437Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:01:15.438Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:01:15.443Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:16.308Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:16.313Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:16.949Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T14:01:16.984Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:01:16.985Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T14:01:16.989Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:01:16.989Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:01:16.991Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:01:17.004Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:01:17.008Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:17.013Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:17.019Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:01:17.247Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T14:01:18.241Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-13T14:01:18.329Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:01:18.330Z] INFO: User is authenticated for /api/check-auth
+[2025-04-13T14:01:18.334Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:01:18.336Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:01:43.692Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-13T14:01:47.397Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-13T14:01:47.411Z] INFO: Server running on port 5000
+[2025-04-13T14:01:55.727Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-13T14:01:59.418Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-13T14:01:59.432Z] INFO: Server running on port 5000
+[2025-04-13T14:03:28.544Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:03:28.550Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T14:03:28.565Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:03:28.568Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:03:28.573Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:03:28.573Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:03:28.581Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:03:29.310Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:03:29.316Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:03:29.895Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T14:03:30.538Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-13T14:03:30.583Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:03:30.584Z] INFO: User is authenticated for /api/check-auth
+[2025-04-13T14:03:30.589Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:03:30.592Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:05:54.020Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-13T14:05:57.595Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-13T14:05:57.608Z] INFO: Server running on port 5000
+[2025-04-13T14:15:56.543Z] INFO: Database connection is healthy
+[2025-04-13T14:22:55.931Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:22:55.932Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:22:56.023Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:01.824Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:23:01.824Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:23:01.834Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:23:01.835Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:23:01.935Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:23:01.935Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T14:23:01.987Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:02.015Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:23:02.015Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-13T14:23:02.032Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:23:02.032Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:23:02.035Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:23:02.036Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T14:23:02.104Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:02.151Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:02.174Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:02.263Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:02.568Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-13T14:23:03.043Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-13T14:23:04.097Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-13T14:23:04.385Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-13T14:23:04.386Z] INFO: User is authenticated for /api/check-auth
+[2025-04-13T14:23:04.391Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-13T14:23:04.394Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-13T14:25:56.552Z] INFO: Database connection is healthy
+[2025-04-13T14:35:56.573Z] INFO: Database connection is healthy
+[2025-04-13T14:45:56.588Z] INFO: Database connection is healthy
+[2025-04-13T14:55:56.602Z] INFO: Database connection is healthy
+[2025-04-13T15:05:56.615Z] INFO: Database connection is healthy
+[2025-04-13T15:15:56.622Z] INFO: Database connection is healthy
+[2025-04-13T15:25:56.640Z] INFO: Database connection is healthy
+[2025-04-13T15:35:56.490Z] INFO: Database connection is healthy
+[2025-04-13T15:45:56.371Z] INFO: Database connection is healthy
+[2025-04-13T15:55:56.374Z] INFO: Database connection is healthy
+[2025-04-13T16:05:56.383Z] INFO: Database connection is healthy
+[2025-04-13T16:15:56.382Z] INFO: Database connection is healthy
+[2025-04-13T16:25:56.397Z] INFO: Database connection is healthy
+[2025-04-13T16:35:56.410Z] INFO: Database connection is healthy
+[2025-04-13T16:45:56.425Z] INFO: Database connection is healthy
+[2025-04-13T16:55:56.430Z] INFO: Database connection is healthy
+[2025-04-13T17:05:56.441Z] INFO: Database connection is healthy
+[2025-04-13T17:15:56.444Z] INFO: Database connection is healthy
+[2025-04-13T17:25:56.457Z] INFO: Database connection is healthy
+[2025-04-13T17:35:56.458Z] INFO: Database connection is healthy
+[2025-04-13T17:45:56.463Z] INFO: Database connection is healthy
+[2025-04-13T17:55:56.473Z] INFO: Database connection is healthy
+[2025-04-13T18:05:56.491Z] INFO: Database connection is healthy
+[2025-04-13T18:15:56.497Z] INFO: Database connection is healthy
+[2025-04-13T18:18:55.373Z] INFO: Middleware triggered for GET /api/v1/.git/config
+[2025-04-13T18:18:55.373Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T18:19:02.679Z] INFO: Middleware triggered for GET /api/v2/.git/config
+[2025-04-13T18:19:02.679Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T18:19:04.221Z] INFO: Middleware triggered for GET /auth/.git/config
+[2025-04-13T18:19:04.222Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-13T18:25:56.497Z] INFO: Database connection is healthy
+[2025-04-13T18:35:56.512Z] INFO: Database connection is healthy
+[2025-04-13T18:45:56.517Z] INFO: Database connection is healthy
+[2025-04-13T18:55:56.523Z] INFO: Database connection is healthy
+[2025-04-13T19:05:56.532Z] INFO: Database connection is healthy
+[2025-04-13T19:15:56.543Z] INFO: Database connection is healthy
+[2025-04-13T19:25:56.545Z] INFO: Database connection is healthy
+[2025-04-13T19:35:56.556Z] INFO: Database connection is healthy
+[2025-04-13T19:45:56.567Z] INFO: Database connection is healthy
+[2025-04-13T19:55:56.566Z] INFO: Database connection is healthy
+[2025-04-13T20:05:56.580Z] INFO: Database connection is healthy
+[2025-04-13T20:15:56.586Z] INFO: Database connection is healthy
+[2025-04-13T20:25:56.597Z] INFO: Database connection is healthy
+[2025-04-13T20:35:56.599Z] INFO: Database connection is healthy
+[2025-04-13T20:45:56.608Z] INFO: Database connection is healthy
+[2025-04-13T20:55:56.610Z] INFO: Database connection is healthy
+[2025-04-13T21:05:56.608Z] INFO: Database connection is healthy
+[2025-04-13T21:15:56.613Z] INFO: Database connection is healthy
+[2025-04-13T21:25:56.614Z] INFO: Database connection is healthy
+[2025-04-13T21:35:56.622Z] INFO: Database connection is healthy
+[2025-04-13T21:45:56.627Z] INFO: Database connection is healthy
+[2025-04-13T21:55:00.014Z] INFO: Starting database backup...
+[2025-04-13T21:55:00.174Z] INFO: Backup created: C:\xampp\htdocs\UocBus\database\Backups\backup_20250413.sql
+[2025-04-13T21:55:00.174Z] INFO: Deleted old backup: backup_20250406.sql
+[2025-04-13T21:55:56.629Z] INFO: Database connection is healthy
+[2025-04-13T22:05:56.630Z] INFO: Database connection is healthy
+[2025-04-13T22:15:56.637Z] INFO: Database connection is healthy
+[2025-04-13T22:25:56.651Z] INFO: Database connection is healthy
+[2025-04-13T22:35:56.665Z] INFO: Database connection is healthy
+[2025-04-13T22:45:56.673Z] INFO: Database connection is healthy
+[2025-04-13T22:55:56.685Z] INFO: Database connection is healthy
+[2025-04-13T23:05:56.689Z] INFO: Database connection is healthy
+[2025-04-13T23:15:56.704Z] INFO: Database connection is healthy
+[2025-04-13T23:25:56.731Z] INFO: Database connection is healthy
+[2025-04-13T23:35:56.745Z] INFO: Database connection is healthy
+[2025-04-13T23:45:56.758Z] INFO: Database connection is healthy
+[2025-04-13T23:55:56.763Z] INFO: Database connection is healthy
+[2025-04-14T00:05:56.774Z] INFO: Database connection is healthy
+[2025-04-14T00:15:56.775Z] INFO: Database connection is healthy
+[2025-04-14T00:25:56.784Z] INFO: Database connection is healthy
+[2025-04-14T00:35:56.797Z] INFO: Database connection is healthy
+[2025-04-14T00:45:56.805Z] INFO: Database connection is healthy
+[2025-04-14T00:55:56.815Z] INFO: Database connection is healthy
+[2025-04-14T01:05:56.829Z] INFO: Database connection is healthy
+[2025-04-14T01:15:56.841Z] INFO: Database connection is healthy
+[2025-04-14T01:25:56.847Z] INFO: Database connection is healthy
+[2025-04-14T01:35:56.850Z] INFO: Database connection is healthy
+[2025-04-14T01:45:56.866Z] INFO: Database connection is healthy
+[2025-04-14T01:55:56.875Z] INFO: Database connection is healthy
+[2025-04-14T02:05:56.898Z] INFO: Database connection is healthy
+[2025-04-14T02:15:56.909Z] INFO: Database connection is healthy
+[2025-04-14T02:25:56.917Z] INFO: Database connection is healthy
+[2025-04-14T02:35:56.919Z] INFO: Database connection is healthy
+[2025-04-14T02:45:56.928Z] INFO: Database connection is healthy
+[2025-04-14T02:55:56.930Z] INFO: Database connection is healthy
+[2025-04-14T03:05:56.937Z] INFO: Database connection is healthy
+[2025-04-14T03:15:56.950Z] INFO: Database connection is healthy
+[2025-04-14T03:25:56.957Z] INFO: Database connection is healthy
+[2025-04-14T03:35:56.970Z] INFO: Database connection is healthy
+[2025-04-14T03:45:56.984Z] INFO: Database connection is healthy
+[2025-04-14T03:55:56.988Z] INFO: Database connection is healthy
+[2025-04-14T04:05:56.995Z] INFO: Database connection is healthy
+[2025-04-14T04:15:56.996Z] INFO: Database connection is healthy
+[2025-04-14T04:25:57.010Z] INFO: Database connection is healthy
+[2025-04-14T04:35:57.023Z] INFO: Database connection is healthy
+[2025-04-14T04:45:57.025Z] INFO: Database connection is healthy
+[2025-04-14T04:55:57.033Z] INFO: Database connection is healthy
+[2025-04-14T05:05:57.042Z] INFO: Database connection is healthy
+[2025-04-14T05:15:57.051Z] INFO: Database connection is healthy
+[2025-04-14T05:25:57.055Z] INFO: Database connection is healthy
+[2025-04-14T05:35:57.064Z] INFO: Database connection is healthy
+[2025-04-14T05:45:57.078Z] INFO: Database connection is healthy
+[2025-04-14T05:55:57.079Z] INFO: Database connection is healthy
+[2025-04-14T06:05:57.094Z] INFO: Database connection is healthy
+[2025-04-14T06:15:57.101Z] INFO: Database connection is healthy
+[2025-04-14T06:25:57.113Z] INFO: Database connection is healthy
+[2025-04-14T06:35:57.123Z] INFO: Database connection is healthy
+[2025-04-14T06:45:57.131Z] INFO: Database connection is healthy
+[2025-04-14T06:55:57.132Z] INFO: Database connection is healthy
+[2025-04-14T07:05:57.133Z] INFO: Database connection is healthy
+[2025-04-14T07:15:57.139Z] INFO: Database connection is healthy
+[2025-04-14T07:25:57.144Z] INFO: Database connection is healthy
+[2025-04-14T07:35:57.145Z] INFO: Database connection is healthy
+[2025-04-14T07:45:57.149Z] INFO: Database connection is healthy
+[2025-04-14T07:55:57.151Z] INFO: Database connection is healthy
+[2025-04-14T08:05:57.154Z] INFO: Database connection is healthy
+[2025-04-14T08:15:57.169Z] INFO: Database connection is healthy
+[2025-04-14T08:25:57.184Z] INFO: Database connection is healthy
+[2025-04-14T08:35:57.186Z] INFO: Database connection is healthy
+[2025-04-14T08:42:22.728Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:42:22.733Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T08:42:22.737Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:42:22.740Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:42:22.742Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:42:22.746Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:42:22.758Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:23.576Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:23.581Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:24.081Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T08:42:24.123Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:42:24.124Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T08:42:24.127Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:42:24.131Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:42:24.133Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:42:24.135Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:42:24.139Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:24.149Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:24.153Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:42:24.417Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T08:42:25.244Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-14T08:42:25.295Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:42:25.299Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:42:25.303Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:42:25.305Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:42:50.631Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal+%26+Mohandessin
+[2025-04-14T08:43:08.075Z] INFO: Middleware triggered for GET /api/trips/available?route=Faisal+%26+Mohandessin&tripType=From%20Campus&date=2025-04-15
+[2025-04-14T08:43:13.794Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T08:43:16.895Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T08:43:17.361Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:43:17.362Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:43:17.367Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:43:23.147Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:43:23.147Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:43:23.152Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T08:43:23.156Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:43:23.164Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:43:59.155Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:43:59.155Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T08:43:59.157Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:43:59.158Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:43:59.161Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:43:59.162Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T08:43:59.235Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:43:59.305Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:43:59.365Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T08:44:00.298Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T08:44:01.597Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-14T08:44:02.124Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:44:02.125Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:44:02.129Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:44:02.130Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:44:04.365Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-14T08:44:18.245Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-15
+[2025-04-14T08:44:19.883Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T08:44:22.723Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T08:44:23.962Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:44:23.963Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:44:24.043Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:44:26.218Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:44:26.219Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:44:26.284Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T08:44:26.363Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:44:26.461Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:44:39.163Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:44:39.163Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:44:39.167Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T08:44:39.244Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:45:13.660Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T08:45:13.661Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T08:45:13.665Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T08:45:13.669Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:45:13.703Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T08:45:57.192Z] INFO: Database connection is healthy
+[2025-04-14T08:55:57.197Z] INFO: Database connection is healthy
+[2025-04-14T09:05:57.205Z] INFO: Database connection is healthy
+[2025-04-14T09:11:24.800Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:11:24.801Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T09:11:24.803Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:11:24.804Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T09:11:24.805Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:11:24.805Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T09:11:24.841Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:11:24.859Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:11:24.882Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:11:26.875Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T09:11:28.008Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-14T09:11:28.196Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:11:28.199Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:11:28.199Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:11:28.202Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:13:44.256Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:13:44.261Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:13:44.265Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:13:44.268Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:13:45.917Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:13:45.928Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:13:45.932Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:13:45.934Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:13:50.941Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-14T09:13:56.749Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-15
+[2025-04-14T09:14:11.473Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-14T09:14:13.908Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T09:14:14.271Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:14:14.272Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:14:14.277Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T09:14:14.281Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:14:14.286Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:14:18.431Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=To%20Campus&date=2025-04-14
+[2025-04-14T09:14:39.633Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=To%20Campus&date=2025-04-15
+[2025-04-14T09:15:57.216Z] INFO: Database connection is healthy
+[2025-04-14T09:16:02.475Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T09:16:04.072Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:16:04.073Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:16:04.077Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T09:16:04.094Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:16:04.115Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:25:57.221Z] INFO: Database connection is healthy
+[2025-04-14T09:35:57.228Z] INFO: Database connection is healthy
+[2025-04-14T09:45:57.238Z] INFO: Database connection is healthy
+[2025-04-14T09:45:58.249Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:45:58.249Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T09:45:58.258Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:45:58.258Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T09:45:58.270Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:45:58.270Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T09:45:58.288Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:45:59.062Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:45:59.084Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T09:46:00.141Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T09:46:15.962Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-14T09:46:16.277Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:46:16.277Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:46:16.281Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:46:16.289Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:46:53.449Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+1
+[2025-04-14T09:47:02.786Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+1&tripType=To%20Campus&date=2025-04-15
+[2025-04-14T09:47:36.084Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:47:36.085Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:47:36.119Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:47:36.139Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:50:57.062Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:50:57.063Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:50:57.067Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:50:57.070Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:50:58.999Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:50:59.000Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:50:59.004Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:50:59.007Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:51:05.380Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:51:05.381Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:51:05.449Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:51:05.530Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:51:17.838Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:51:17.838Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:51:17.916Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:51:17.983Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T09:55:57.239Z] INFO: Database connection is healthy
+[2025-04-14T09:59:57.533Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T09:59:57.534Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T09:59:57.584Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T09:59:57.643Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T10:05:57.249Z] INFO: Database connection is healthy
+[2025-04-14T10:15:57.261Z] INFO: Database connection is healthy
+[2025-04-14T10:25:57.275Z] INFO: Database connection is healthy
+[2025-04-14T10:35:57.281Z] INFO: Database connection is healthy
+[2025-04-14T10:45:57.290Z] INFO: Database connection is healthy
+[2025-04-14T10:55:57.292Z] INFO: Database connection is healthy
+[2025-04-14T11:05:57.293Z] INFO: Database connection is healthy
+[2025-04-14T11:07:41.065Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-14T11:07:44.713Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-14T11:07:44.727Z] INFO: Server running on port 5000
+[2025-04-14T11:07:51.702Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:07:51.704Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-14T11:07:51.718Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T11:07:51.720Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T11:07:51.727Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:07:51.728Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-14T11:07:51.734Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T11:07:52.683Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T11:07:52.689Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-14T11:07:53.288Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-14T11:07:54.303Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-14T11:07:54.379Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:07:54.382Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:07:54.387Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T11:07:54.390Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:00.808Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-14T11:08:05.783Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-15
+[2025-04-14T11:08:08.206Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T11:08:08.762Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:08:08.767Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:08:08.773Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T11:08:08.777Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:08.784Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:28.337Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:08:28.344Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:08:28.349Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:28.353Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T11:08:30.344Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-14T11:08:53.065Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-15
+[2025-04-14T11:08:55.415Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-14T11:08:55.574Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:08:55.575Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:08:55.579Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-14T11:08:55.583Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:55.588Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:08:59.356Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:08:59.357Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:08:59.361Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T11:08:59.363Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:09:02.017Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-14T11:09:06.679Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=From%20Campus&date=2025-04-15
+[2025-04-14T11:09:08.294Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-14T11:09:08.301Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-14T11:09:42.223Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-14T11:09:42.223Z] INFO: User is authenticated for /api/check-auth
+[2025-04-14T11:09:42.228Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-14T11:09:42.230Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-14T11:09:43.288Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=5th+Settlement
+[2025-04-14T11:09:46.830Z] INFO: Middleware triggered for GET /api/trips/available?route=5th+Settlement&tripType=From%20Campus&date=2025-04-15
+[2025-04-14T11:09:48.094Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-14T11:09:48.102Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-14T11:09:59.442Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T08:24:14.360Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T08:24:14.374Z] INFO: Server running on port 5000
+[2025-04-17T08:24:19.036Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T08:24:22.645Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T08:24:22.660Z] INFO: Server running on port 5000
+[2025-04-17T08:24:42.241Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:24:42.242Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T08:24:42.253Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:24:42.254Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:42.258Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:24:42.259Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:42.277Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:42.959Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:42.972Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:43.327Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T08:24:44.074Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T08:24:44.110Z] ERROR: Error while checking or inserting user: Column 'student_id' cannot be null {"code":"ER_BAD_NULL_ERROR","errno":1048,"sql":"INSERT INTO users (student_name, student_email, student_id) VALUES ('Ahmed Gad', 'Ahmed.Gad@uofcanada.edu.eg', NULL)","sqlState":"23000","sqlMessage":"Column 'student_id' cannot be null","stack":"Error: Column 'student_id' cannot be null\n    at PromisePool.query (C:\\xampp\\htdocs\\UocBus\\node_modules\\mysql2\\lib\\promise\\pool.js:36:22)\n    at Object.query (C:\\xampp\\htdocs\\UocBus\\backend\\models\\dbconnection.js:51:39)\n    at C:\\xampp\\htdocs\\UocBus\\backend\\server.js:71:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+[2025-04-17T08:24:52.914Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:24:52.916Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T08:24:52.922Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:24:52.924Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:52.926Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:24:52.927Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:52.933Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:52.938Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:53.002Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:53.568Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T08:24:54.713Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T08:24:54.759Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:24:54.759Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:24:54.764Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:24:54.766Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:24:56.388Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:24:56.388Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T08:24:56.391Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:24:56.391Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:56.393Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:24:56.393Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:24:56.407Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:56.418Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:56.431Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:24:56.973Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T08:24:57.495Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T08:24:57.498Z] ERROR: Error while checking or inserting user: Column 'student_id' cannot be null {"code":"ER_BAD_NULL_ERROR","errno":1048,"sql":"INSERT INTO users (student_name, student_email, student_id) VALUES ('Ahmed Gad', 'Ahmed.Gad@uofcanada.edu.eg', NULL)","sqlState":"23000","sqlMessage":"Column 'student_id' cannot be null","stack":"Error: Column 'student_id' cannot be null\n    at PromisePool.query (C:\\xampp\\htdocs\\UocBus\\node_modules\\mysql2\\lib\\promise\\pool.js:36:22)\n    at Object.query (C:\\xampp\\htdocs\\UocBus\\backend\\models\\dbconnection.js:51:39)\n    at C:\\xampp\\htdocs\\UocBus\\backend\\server.js:71:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+[2025-04-17T08:25:10.864Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:10.864Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T08:25:10.867Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:10.867Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:25:10.869Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:10.869Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:25:10.892Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:25:10.908Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:25:10.922Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:25:12.793Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T08:25:15.081Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:15.082Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:15.087Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:15.097Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:15.689Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T08:25:15.907Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:15.907Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:15.912Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:15.914Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:21.991Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:21.993Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:21.999Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:22.011Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:27.427Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:27.428Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:27.435Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:27.436Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:29.076Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:29.076Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:29.082Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:29.084Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:29.839Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:29.843Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:29.843Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:29.847Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:30.334Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:30.335Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:30.340Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:30.341Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:30.381Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:30.382Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:30.401Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:30.404Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:30.547Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:30.549Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:30.549Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:30.558Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:31.136Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:31.137Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:31.143Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:31.145Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:31.358Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:31.359Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:31.364Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:31.366Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:31.556Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:31.557Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:31.562Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:31.563Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:31.757Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:31.757Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:25:31.763Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:31.764Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:59.200Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:25:59.200Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T08:25:59.209Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:25:59.209Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:25:59.260Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:25:59.260Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:25:59.294Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:25:59.375Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:25:59.507Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:26:00.370Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T08:26:01.331Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T08:26:01.615Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T08:26:01.616Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T08:26:01.627Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T08:26:01.629Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T08:29:06.456Z] INFO: Middleware triggered for GET /api/.git/config
+[2025-04-17T08:29:06.457Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:29:06.850Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:29:22.376Z] INFO: Middleware triggered for GET /api/.git/config
+[2025-04-17T08:29:22.376Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T08:29:22.769Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T08:34:21.586Z] INFO: Database connection is healthy
+[2025-04-17T08:44:21.590Z] INFO: Database connection is healthy
+[2025-04-17T08:54:21.591Z] INFO: Database connection is healthy
+[2025-04-17T09:04:21.600Z] INFO: Database connection is healthy
+[2025-04-17T09:05:54.096Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T09:05:54.096Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T09:05:54.102Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T09:05:54.104Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:05:55.689Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=5th+Settlement
+[2025-04-17T09:06:00.808Z] INFO: Middleware triggered for GET /api/trips/available?route=5th+Settlement&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T09:14:21.613Z] INFO: Database connection is healthy
+[2025-04-17T09:24:21.623Z] INFO: Database connection is healthy
+[2025-04-17T09:30:57.898Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T09:30:57.899Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T09:30:57.901Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T09:30:57.902Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T09:30:57.903Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:30:57.903Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T09:30:57.989Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T09:30:58.849Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T09:30:58.933Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T09:34:21.629Z] INFO: Database connection is healthy
+[2025-04-17T09:36:11.997Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T09:36:11.998Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T09:36:12.004Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T09:36:12.006Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:36:13.363Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-17T09:36:18.041Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T09:39:52.335Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-17T09:39:52.344Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-17T09:40:48.284Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-17T09:40:48.292Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-17T09:40:48.301Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-17T09:40:48.870Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T09:40:48.871Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T09:40:48.876Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-17T09:40:48.879Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:40:48.886Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:43:40.133Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T09:43:40.133Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T09:43:40.139Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T09:43:40.140Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T09:43:41.281Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-17T09:43:45.711Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T09:44:21.644Z] INFO: Database connection is healthy
+[2025-04-17T09:54:21.649Z] INFO: Database connection is healthy
+[2025-04-17T10:04:21.655Z] INFO: Database connection is healthy
+[2025-04-17T10:14:21.671Z] INFO: Database connection is healthy
+[2025-04-17T10:24:21.679Z] INFO: Database connection is healthy
+[2025-04-17T10:34:21.684Z] INFO: Database connection is healthy
+[2025-04-17T10:44:21.687Z] INFO: Database connection is healthy
+[2025-04-17T10:54:21.716Z] INFO: Database connection is healthy
+[2025-04-17T11:00:27.113Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T11:00:27.114Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T11:00:27.118Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T11:00:27.150Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:04:21.730Z] INFO: Database connection is healthy
+[2025-04-17T11:07:03.310Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:07:03.310Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-17T11:07:03.316Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:07:03.316Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-17T11:07:03.319Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:03.357Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T11:07:03.363Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T11:07:03.368Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T11:07:06.266Z] INFO: Middleware triggered for POST /api/admin/login
+[2025-04-17T11:07:06.322Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:07:06.328Z] INFO: Admin is authenticated
+[2025-04-17T11:07:06.331Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:07:06.338Z] INFO: Admin is authenticated
+[2025-04-17T11:07:06.339Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:17.339Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:07:17.339Z] INFO: Admin is authenticated
+[2025-04-17T11:07:17.341Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:18.960Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:07:18.961Z] INFO: Admin is authenticated
+[2025-04-17T11:07:18.962Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-17T11:07:18.963Z] INFO: Admin is authenticated
+[2025-04-17T11:07:18.968Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:27.357Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-17T11:07:27.358Z] INFO: Admin is authenticated
+[2025-04-17T11:07:27.360Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:27.376Z] INFO: Middleware triggered for GET /api/admin/pickup_points
+[2025-04-17T11:07:27.377Z] INFO: Admin is authenticated
+[2025-04-17T11:07:52.659Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:07:52.666Z] INFO: Admin is authenticated
+[2025-04-17T11:07:52.669Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-17T11:07:52.670Z] INFO: Admin is authenticated
+[2025-04-17T11:07:52.674Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:07:53.534Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:07:53.534Z] INFO: Admin is authenticated
+[2025-04-17T11:07:53.542Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:14:21.731Z] INFO: Database connection is healthy
+[2025-04-17T11:20:02.003Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T11:20:02.003Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T11:20:02.006Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T11:20:02.006Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T11:20:02.007Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:20:02.008Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T11:20:02.060Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T11:20:03.012Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T11:20:03.033Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T11:20:04.723Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T11:20:05.690Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T11:20:05.787Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T11:20:05.788Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T11:20:05.793Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:20:05.798Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T11:20:09.817Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr+City+2
+[2025-04-17T11:20:26.975Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+2&tripType=To%20Campus&date=2025-04-17
+[2025-04-17T11:20:54.798Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+2&tripType=To%20Campus&date=2025-04-17
+[2025-04-17T11:20:57.344Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+2&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T11:21:17.388Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-17T11:21:17.411Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-17T11:21:17.439Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-17T11:21:19.124Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T11:21:19.125Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T11:21:19.129Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-17T11:21:19.144Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:21:19.175Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:21:23.221Z] INFO: Middleware triggered for POST /api/bookings/create
+[2025-04-17T11:21:23.226Z] INFO: Booking entry created with ID:
+[2025-04-17T11:21:23.255Z] INFO: Middleware triggered for POST /api/payments/initiate
+[2025-04-17T11:21:23.266Z] INFO: Order ID 8-1744888883259 linked to booking ID 2
+[2025-04-17T11:21:23.796Z] INFO: Payment initiation response: {"sessionId":"SESSION0002246287573K38262691M1","orderId":"8-1744888883259"}
+[2025-04-17T11:21:42.286Z] INFO: Middleware triggered for GET /api/payments/callback/cancel?orderId=8-1744888883259
+[2025-04-17T11:21:42.287Z] INFO: Processing cancellation for orderId: 8-1744888883259
+[2025-04-17T11:21:42.289Z] INFO: Releasing seats: 1 for Trip ID: 8
+[2025-04-17T11:21:42.295Z] INFO: Payment cancelled for Order ID: 8-1744888883259
+[2025-04-17T11:21:42.509Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T11:21:42.510Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T11:21:42.515Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T11:21:42.531Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T11:24:21.739Z] INFO: Database connection is healthy
+[2025-04-17T11:31:50.048Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:31:50.050Z] INFO: Admin is authenticated
+[2025-04-17T11:31:50.052Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-17T11:31:50.053Z] INFO: Admin is authenticated
+[2025-04-17T11:31:50.058Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:31:59.048Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:31:59.055Z] INFO: Admin is authenticated
+[2025-04-17T11:31:59.058Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:32:31.921Z] INFO: Middleware triggered for PUT /api/admin/buses/10
+[2025-04-17T11:32:31.921Z] INFO: Admin is authenticated
+[2025-04-17T11:32:33.599Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:32:33.599Z] INFO: Admin is authenticated
+[2025-04-17T11:33:22.538Z] INFO: Middleware triggered for PUT /api/admin/buses/11
+[2025-04-17T11:33:22.539Z] INFO: Admin is authenticated
+[2025-04-17T11:33:23.649Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:33:23.650Z] INFO: Admin is authenticated
+[2025-04-17T11:33:26.900Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:33:26.901Z] INFO: Admin is authenticated
+[2025-04-17T11:33:26.904Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:33:26.907Z] INFO: Admin is authenticated
+[2025-04-17T11:33:26.909Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:33:42.361Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:33:42.362Z] INFO: Admin is authenticated
+[2025-04-17T11:33:42.369Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:34:21.740Z] INFO: Database connection is healthy
+[2025-04-17T11:35:05.845Z] INFO: Middleware triggered for PUT /api/admin/buses/14
+[2025-04-17T11:35:05.846Z] INFO: Admin is authenticated
+[2025-04-17T11:35:06.876Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:35:06.876Z] INFO: Admin is authenticated
+[2025-04-17T11:36:34.968Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Rehab+City
+[2025-04-17T11:36:43.742Z] INFO: Middleware triggered for GET /api/trips/available?route=Rehab+City&tripType=To%20Campus&date=2025-04-17
+[2025-04-17T11:38:05.500Z] INFO: Middleware triggered for PUT /api/admin/buses/9
+[2025-04-17T11:38:05.500Z] INFO: Admin is authenticated
+[2025-04-17T11:38:06.872Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:38:06.872Z] INFO: Admin is authenticated
+[2025-04-17T11:38:21.594Z] INFO: Middleware triggered for PUT /api/admin/buses/16
+[2025-04-17T11:38:21.595Z] INFO: Admin is authenticated
+[2025-04-17T11:38:22.768Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:38:22.768Z] INFO: Admin is authenticated
+[2025-04-17T11:38:30.983Z] INFO: Middleware triggered for PUT /api/admin/buses/12
+[2025-04-17T11:38:30.984Z] INFO: Admin is authenticated
+[2025-04-17T11:38:32.191Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:38:32.192Z] INFO: Admin is authenticated
+[2025-04-17T11:39:24.832Z] INFO: Middleware triggered for PUT /api/admin/buses/8
+[2025-04-17T11:39:24.833Z] INFO: Admin is authenticated
+[2025-04-17T11:39:26.320Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:39:26.320Z] INFO: Admin is authenticated
+[2025-04-17T11:39:37.702Z] INFO: Middleware triggered for PUT /api/admin/buses/17
+[2025-04-17T11:39:37.703Z] INFO: Admin is authenticated
+[2025-04-17T11:39:38.662Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:39:38.663Z] INFO: Admin is authenticated
+[2025-04-17T11:40:15.136Z] INFO: Middleware triggered for PUT /api/admin/buses/2
+[2025-04-17T11:40:15.136Z] INFO: Admin is authenticated
+[2025-04-17T11:40:16.365Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:40:16.366Z] INFO: Admin is authenticated
+[2025-04-17T11:40:31.693Z] INFO: Middleware triggered for PUT /api/admin/buses/1
+[2025-04-17T11:40:31.694Z] INFO: Admin is authenticated
+[2025-04-17T11:40:32.622Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:40:32.622Z] INFO: Admin is authenticated
+[2025-04-17T11:40:51.198Z] INFO: Middleware triggered for PUT /api/admin/buses/7
+[2025-04-17T11:40:51.199Z] INFO: Admin is authenticated
+[2025-04-17T11:40:52.550Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:40:52.551Z] INFO: Admin is authenticated
+[2025-04-17T11:41:18.261Z] INFO: Middleware triggered for PUT /api/admin/buses/3
+[2025-04-17T11:41:18.261Z] INFO: Admin is authenticated
+[2025-04-17T11:41:19.269Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:41:19.269Z] INFO: Admin is authenticated
+[2025-04-17T11:41:23.130Z] INFO: Middleware triggered for PUT /api/admin/buses/4
+[2025-04-17T11:41:23.131Z] INFO: Admin is authenticated
+[2025-04-17T11:41:24.309Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:41:24.309Z] INFO: Admin is authenticated
+[2025-04-17T11:41:35.461Z] INFO: Middleware triggered for PUT /api/admin/buses/5
+[2025-04-17T11:41:35.462Z] INFO: Admin is authenticated
+[2025-04-17T11:41:36.804Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:41:36.804Z] INFO: Admin is authenticated
+[2025-04-17T11:41:45.686Z] INFO: Middleware triggered for PUT /api/admin/buses/6
+[2025-04-17T11:41:45.687Z] INFO: Admin is authenticated
+[2025-04-17T11:41:46.838Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:41:46.838Z] INFO: Admin is authenticated
+[2025-04-17T11:42:15.558Z] INFO: Middleware triggered for PUT /api/admin/buses/15
+[2025-04-17T11:42:15.558Z] INFO: Admin is authenticated
+[2025-04-17T11:42:16.596Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:42:16.596Z] INFO: Admin is authenticated
+[2025-04-17T11:42:22.459Z] INFO: Middleware triggered for PUT /api/admin/buses/13
+[2025-04-17T11:42:22.460Z] INFO: Admin is authenticated
+[2025-04-17T11:42:23.355Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T11:42:23.356Z] INFO: Admin is authenticated
+[2025-04-17T11:42:26.078Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:42:26.078Z] INFO: Admin is authenticated
+[2025-04-17T11:42:26.082Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:42:26.082Z] INFO: Admin is authenticated
+[2025-04-17T11:42:26.084Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:42:27.079Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:42:27.080Z] INFO: Admin is authenticated
+[2025-04-17T11:42:27.083Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:42:27.083Z] INFO: Admin is authenticated
+[2025-04-17T11:42:27.084Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:42:28.241Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:42:28.241Z] INFO: Admin is authenticated
+[2025-04-17T11:42:28.244Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:42:28.244Z] INFO: Admin is authenticated
+[2025-04-17T11:42:28.245Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:44:21.759Z] INFO: Database connection is healthy
+[2025-04-17T11:48:00.681Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T11:48:00.681Z] INFO: Admin is authenticated
+[2025-04-17T11:48:00.684Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T11:48:00.684Z] INFO: Admin is authenticated
+[2025-04-17T11:48:00.685Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T11:54:21.761Z] INFO: Database connection is healthy
+[2025-04-17T12:04:21.762Z] INFO: Database connection is healthy
+[2025-04-17T12:12:04.484Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:12:04.485Z] INFO: Admin is authenticated
+[2025-04-17T12:12:04.488Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:12:04.489Z] INFO: Admin is authenticated
+[2025-04-17T12:12:04.490Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:12:05.638Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:12:05.638Z] INFO: Admin is authenticated
+[2025-04-17T12:12:05.641Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:12:05.641Z] INFO: Admin is authenticated
+[2025-04-17T12:12:05.642Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:13:47.892Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:13:47.893Z] INFO: Admin is authenticated
+[2025-04-17T12:13:47.896Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:47.896Z] INFO: Admin is authenticated
+[2025-04-17T12:13:47.897Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:13:49.274Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:49.275Z] INFO: Admin is authenticated
+[2025-04-17T12:13:50.657Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:13:50.658Z] INFO: Admin is authenticated
+[2025-04-17T12:13:50.661Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:50.661Z] INFO: Admin is authenticated
+[2025-04-17T12:13:50.662Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:13:54.787Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:13:54.788Z] INFO: Admin is authenticated
+[2025-04-17T12:13:54.791Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:54.791Z] INFO: Admin is authenticated
+[2025-04-17T12:13:54.792Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:13:56.727Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:13:56.727Z] INFO: Admin is authenticated
+[2025-04-17T12:13:56.729Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:56.730Z] INFO: Admin is authenticated
+[2025-04-17T12:13:56.731Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:13:57.909Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:13:57.911Z] INFO: Admin is authenticated
+[2025-04-17T12:13:57.914Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:13:57.914Z] INFO: Admin is authenticated
+[2025-04-17T12:13:57.915Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:14:21.770Z] INFO: Database connection is healthy
+[2025-04-17T12:14:22.035Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:14:22.042Z] INFO: Admin is authenticated
+[2025-04-17T12:14:22.045Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:14:22.046Z] INFO: Admin is authenticated
+[2025-04-17T12:14:22.047Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:15:31.529Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:15:31.530Z] INFO: Admin is authenticated
+[2025-04-17T12:15:31.532Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:15:31.533Z] INFO: Admin is authenticated
+[2025-04-17T12:15:31.537Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:16:05.741Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:16:05.742Z] INFO: Admin is authenticated
+[2025-04-17T12:16:05.744Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:16:05.745Z] INFO: Admin is authenticated
+[2025-04-17T12:16:05.749Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:16:07.989Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:16:07.993Z] INFO: Admin is authenticated
+[2025-04-17T12:16:07.996Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:16:07.996Z] INFO: Admin is authenticated
+[2025-04-17T12:16:07.997Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:16:09.216Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:16:09.216Z] INFO: Admin is authenticated
+[2025-04-17T12:17:40.996Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:17:40.997Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:17:40.999Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:17:41.000Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:17:41.016Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:17:41.016Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:17:41.027Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:41.840Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:41.856Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:44.426Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:17:44.800Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:17:44.800Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:17:44.803Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:17:44.803Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:17:44.804Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:17:44.805Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:17:44.828Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:44.844Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:44.859Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:17:45.200Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:17:46.184Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T12:17:46.270Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:17:46.272Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:17:46.272Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:17:46.282Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:21:04.046Z] INFO: Middleware triggered for GET /api/trips/available?route=Select+Route&tripType=Select%20Trip%20Type&date=2025-04-20
+[2025-04-17T12:21:04.047Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:21:04.095Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:21:06.663Z] INFO: Middleware triggered for GET /api/trips/available?route=Select+Route&tripType=Select%20Trip%20Type&date=2025-04-20
+[2025-04-17T12:21:06.664Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:21:06.705Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:21:07.654Z] INFO: Middleware triggered for GET /api/trips/available?route=Select+Route&tripType=Select%20Trip%20Type&date=2025-04-20
+[2025-04-17T12:21:07.655Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:21:07.696Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:22:13.683Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:22:13.684Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:22:13.730Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:22:14.345Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:22:15.388Z] ERROR: Failed to fetch profile photo:
+[2025-04-17T12:22:15.910Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T12:22:16.140Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:22:16.141Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:22:16.210Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:22:16.212Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:22:17.933Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:22:17.934Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:22:17.936Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:22:17.936Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:22:17.938Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:22:17.938Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:22:17.983Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:22:17.992Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:22:17.999Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:22:21.820Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:22:22.983Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T12:22:23.170Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:22:23.171Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:22:23.243Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:22:23.294Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:22:23.866Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr+City+1
+[2025-04-17T12:22:32.420Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=5th+Settlement
+[2025-04-17T12:22:32.525Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+1&tripType=From%20Campus&date=2025-04-20
+[2025-04-17T12:22:37.180Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+1&tripType=To%20Campus&date=2025-04-20
+[2025-04-17T12:22:41.014Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Northern+90
+[2025-04-17T12:22:43.113Z] INFO: Middleware triggered for GET /api/trips/available?route=Northern+90&tripType=Select%20Trip%20Type&date=2025-04-20
+[2025-04-17T12:22:43.834Z] INFO: Middleware triggered for GET /api/trips/available?route=5th+Settlement&tripType=To%20Campus&date=2025-04-22
+[2025-04-17T12:22:44.907Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Nasr+City+2
+[2025-04-17T12:23:03.214Z] INFO: Middleware triggered for GET /api/trips/available?route=Nasr+City+2&tripType=Select%20Trip%20Type&date=2025-04-27
+[2025-04-17T12:23:08.463Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Northern+90
+[2025-04-17T12:23:09.230Z] INFO: Middleware triggered for GET /api/trips/available?route=Northern+90&tripType=Select%20Trip%20Type&date=2025-04-27
+[2025-04-17T12:23:11.821Z] INFO: Middleware triggered for GET /api/trips/available?route=Northern+90&tripType=To%20Campus&date=2025-04-27
+[2025-04-17T12:23:17.403Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-17T12:23:20.433Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-27
+[2025-04-17T12:23:27.160Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-28
+[2025-04-17T12:23:30.854Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-26
+[2025-04-17T12:23:32.388Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:23:32.390Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:23:32.391Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:23:32.405Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:23:40.233Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:23:40.233Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:23:40.403Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:23:41.308Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:23:42.244Z] ERROR: Failed to fetch profile photo:
+[2025-04-17T12:23:42.752Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T12:23:43.238Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:23:43.238Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:23:43.380Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:23:43.418Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:23:46.665Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-17T12:24:03.377Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=To%20Campus&date=2025-04-20
+[2025-04-17T12:24:08.044Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=To%20Campus&date=2025-04-23
+[2025-04-17T12:24:21.698Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-23
+[2025-04-17T12:24:21.776Z] INFO: Database connection is healthy
+[2025-04-17T12:24:21.897Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-23
+[2025-04-17T12:24:21.911Z] INFO: Middleware triggered for GET /api/trips/available?route=10th+of+Ramadan&tripType=To%20Campus&date=2025-04-23
+[2025-04-17T12:27:06.189Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-22
+[2025-04-17T12:27:07.590Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:27:07.590Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:27:07.855Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:27:07.857Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:27:10.471Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-17T12:27:17.310Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=To%20Campus&date=2025-04-22
+[2025-04-17T12:34:21.786Z] INFO: Database connection is healthy
+[2025-04-17T12:38:51.950Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:38:51.950Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:38:51.954Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:38:51.964Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:38:55.122Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Faisal+%26+Mohandessin
+[2025-04-17T12:38:59.333Z] INFO: Middleware triggered for GET /api/trips/available?route=Faisal+%26+Mohandessin&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T12:39:05.994Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+1
+[2025-04-17T12:39:06.650Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+1&tripType=Select%20Trip%20Type&date=2025-04-17
+[2025-04-17T12:39:08.239Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Heliopolis+2
+[2025-04-17T12:39:10.418Z] INFO: Middleware triggered for GET /api/trips/available?route=Heliopolis+2&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T12:40:35.059Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:40:35.060Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:40:35.064Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:40:35.083Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:42:00.847Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:00.852Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T12:42:00.852Z] INFO: Admin is authenticated
+[2025-04-17T12:42:01.326Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:01.328Z] INFO: Admin is authenticated
+[2025-04-17T12:42:01.330Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:01.330Z] INFO: Admin is authenticated
+[2025-04-17T12:42:01.333Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:02.665Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:02.665Z] INFO: Admin is authenticated
+[2025-04-17T12:42:02.667Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:02.668Z] INFO: Admin is authenticated
+[2025-04-17T12:42:02.669Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:03.337Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:03.338Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.342Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:03.342Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.343Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:03.614Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:03.614Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.617Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:03.617Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.618Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:03.819Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:03.820Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.824Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:03.839Z] INFO: Admin is authenticated
+[2025-04-17T12:42:03.840Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.005Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.008Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.011Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.012Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.012Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.171Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.173Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.175Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.175Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.176Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.354Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.355Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.358Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.359Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.359Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.514Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.515Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.518Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.518Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.519Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.678Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.678Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.681Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.681Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.682Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:04.826Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:04.826Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.828Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:04.830Z] INFO: Admin is authenticated
+[2025-04-17T12:42:04.831Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:42:05.006Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:42:05.006Z] INFO: Admin is authenticated
+[2025-04-17T12:42:05.008Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:42:05.009Z] INFO: Admin is authenticated
+[2025-04-17T12:42:05.009Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:43:06.021Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:43:06.022Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T12:43:06.024Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:43:06.024Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:43:06.025Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:43:06.026Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T12:43:06.045Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:43:06.055Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:43:06.069Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T12:43:25.013Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T12:43:26.305Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T12:43:26.449Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T12:43:26.450Z] INFO: User is authenticated for /api/check-auth
+[2025-04-17T12:43:26.482Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T12:43:26.499Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T12:43:28.762Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=10th+of+Ramadan
+[2025-04-17T12:44:21.785Z] INFO: Database connection is healthy
+[2025-04-17T12:54:21.799Z] INFO: Database connection is healthy
+[2025-04-17T12:58:56.722Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:58:56.724Z] INFO: Admin is authenticated
+[2025-04-17T12:58:56.727Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:58:56.727Z] INFO: Admin is authenticated
+[2025-04-17T12:58:56.728Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:58:57.919Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:58:57.920Z] INFO: Admin is authenticated
+[2025-04-17T12:58:57.923Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:58:57.923Z] INFO: Admin is authenticated
+[2025-04-17T12:58:57.924Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T12:58:58.708Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T12:58:58.709Z] INFO: Admin is authenticated
+[2025-04-17T12:58:58.711Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T12:58:58.712Z] INFO: Admin is authenticated
+[2025-04-17T12:58:58.713Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T13:02:13.322Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
+[2025-04-17T13:02:13.323Z] INFO: Admin is authenticated
+[2025-04-17T13:02:13.325Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
+[2025-04-17T13:02:13.325Z] INFO: Admin is authenticated
+[2025-04-17T13:02:13.331Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T13:04:21.801Z] INFO: Database connection is healthy
+[2025-04-17T13:08:55.106Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T13:08:58.742Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T13:08:58.757Z] INFO: Server running on port 5000
+[2025-04-17T13:09:03.596Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:03.598Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:09:03.610Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:03.612Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:03.616Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:03.619Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:03.624Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:04.318Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:04.323Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:04.897Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:09:05.921Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:09:05.996Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:05.997Z] INFO: User undefined is authenticated for /api/check-auth
+[2025-04-17T13:09:06.003Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:06.006Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:50.398Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T13:09:54.092Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T13:09:54.107Z] INFO: Server running on port 5000
+[2025-04-17T13:09:56.282Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:56.284Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:09:56.295Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:56.297Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:56.302Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:56.303Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:56.308Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:56.379Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:56.381Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:57.515Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:09:57.552Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:57.557Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:09:57.561Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:57.562Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:57.563Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:57.565Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:09:57.569Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:57.579Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:57.592Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:57.876Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:09:58.877Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:09:58.953Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:58.965Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:58.972Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:58.985Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:09:59.271Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:09:59.873Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:09:59.916Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:09:59.926Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:09:59.933Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:09:59.941Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:00.219Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:00.847Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:00.904Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:00.910Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:00.912Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:00.920Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:01.199Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:01.782Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:01.831Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:01.841Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:01.845Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:01.853Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:02.156Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:02.757Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:02.809Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:02.823Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:02.824Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:02.834Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:03.103Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:03.683Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:03.728Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:03.738Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:03.742Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:03.750Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:04.094Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:04.821Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:04.867Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:04.882Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:04.885Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:04.893Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:08.321Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:08.327Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:08.329Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:08.336Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:08.609Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:09.193Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:09.234Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:09.240Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:09.241Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:09.252Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:09.530Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:10.145Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:10.191Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:10.204Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:10.207Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:10.215Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:10.496Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:11.083Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:11.128Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:11.135Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:11.142Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:11.149Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:11.426Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:12.004Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:12.050Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:12.058Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:12.065Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:12.070Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:12.348Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:12.934Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:28.591Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T13:10:32.213Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T13:10:32.226Z] INFO: Server running on port 5000
+[2025-04-17T13:10:35.720Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:35.743Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:10:35.771Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:35.787Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:10:35.793Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:35.795Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:10:35.800Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:36.576Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:36.582Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:36.858Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:36.896Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:36.897Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:10:36.901Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:36.908Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:10:36.910Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:36.912Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:10:36.947Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:36.957Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:36.963Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:37.196Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:38.186Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:38.262Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:38.277Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:38.280Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:38.307Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:38.658Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:39.240Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:39.287Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:39.296Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:39.300Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:39.308Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:39.526Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:40.103Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:40.149Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:40.162Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:40.164Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:40.172Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:10:40.408Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:10:40.996Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:10:41.045Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:10:41.064Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:10:41.066Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:10:41.083Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:11:02.175Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T13:11:05.791Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T13:11:05.804Z] INFO: Server running on port 5000
+[2025-04-17T13:11:09.765Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:11:09.772Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:11:09.789Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:11:09.792Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:11:09.796Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:11:09.797Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:11:09.801Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:11:10.542Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:11:10.547Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.033Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:12:02.034Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:12:02.039Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:12:02.039Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:12:02.043Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:12:02.044Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:12:02.099Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.105Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.110Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.771Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:12:02.772Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:12:02.774Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:12:02.775Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:12:02.776Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:12:02.777Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:12:02.845Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.859Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:12:02.870Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:35.892Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:13:35.893Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:13:35.895Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:13:35.895Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:13:35.898Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:13:35.900Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:13:35.904Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:35.943Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:35.953Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:41.768Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:13:41.768Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:13:41.779Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:13:41.779Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:13:41.781Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:13:41.781Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:13:41.783Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:41.792Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:13:41.801Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:14:02.915Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:14:04.114Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:14:04.468Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:14:04.468Z] INFO: User undefined is authenticated for /api/check-auth
+[2025-04-17T13:14:04.478Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:14:04.482Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:14:18.548Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=Obour+%26+Madinaty
+[2025-04-17T13:14:28.098Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=To%20Campus&date=2025-04-18
+[2025-04-17T13:14:34.342Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=To%20Campus&date=2025-04-20
+[2025-04-17T13:14:38.742Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=To%20Campus&date=2025-04-21
+[2025-04-17T13:14:44.849Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=From%20Campus&date=2025-04-21
+[2025-04-17T13:14:51.925Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=From%20Campus&date=2025-04-17
+[2025-04-17T13:15:14.075Z] INFO: Middleware triggered for GET /api/trips/available?route=Obour+%26+Madinaty&tripType=From%20Campus&date=2025-04-20
+[2025-04-17T13:19:09.130Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:19:09.131Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:19:09.135Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:19:09.136Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:19:09.138Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:19:09.138Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:19:09.175Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:19:09.183Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:19:09.188Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:19:11.339Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:19:12.323Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:19:12.803Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:19:12.803Z] INFO: User undefined is authenticated for /api/check-auth
+[2025-04-17T13:19:12.807Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:19:12.809Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:21:04.716Z] INFO: Database connection is healthy
+[2025-04-17T13:31:04.730Z] INFO: Database connection is healthy
+[2025-04-17T13:41:04.739Z] INFO: Database connection is healthy
+[2025-04-17T13:51:04.754Z] INFO: Database connection is healthy
+[2025-04-17T13:53:48.109Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:53:48.110Z] INFO: User undefined is authenticated for /api/check-auth
+[2025-04-17T13:53:48.113Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:53:48.127Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:53:58.594Z] INFO: Middleware triggered for GET /api/admin/buses
+[2025-04-17T13:53:58.595Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-17T13:53:58.599Z] INFO: Middleware triggered for GET /api/admin/routes
+[2025-04-17T13:53:58.599Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
+[2025-04-17T13:53:58.612Z] INFO: Middleware triggered for GET /api/admin/check-auth
+[2025-04-17T13:53:58.647Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T13:53:58.668Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T13:53:58.684Z] INFO: Middleware triggered for GET /api/admin/login
+[2025-04-17T13:54:00.521Z] INFO: Middleware triggered for POST /api/admin/login
+[2025-04-17T13:59:03.654Z] WARN: SIGINT received. Shutting down gracefully...
+[2025-04-17T13:59:07.240Z] INFO: Database backup scheduler initialized, running daily at 11:55 PM.
+[2025-04-17T13:59:07.253Z] INFO: Server running on port 5000
+[2025-04-17T13:59:12.564Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:59:12.566Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:59:12.593Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:59:12.595Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:59:12.601Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:59:12.601Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:59:12.628Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:13.511Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:13.516Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:13.572Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:59:13.575Z] INFO: User is not authenticated for /api/check-auth
+[2025-04-17T13:59:13.580Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:59:13.580Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:59:13.582Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:59:13.582Z] INFO: User is not authenticated, redirecting to /auth/microsoft
+[2025-04-17T13:59:13.598Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:13.603Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:13.609Z] INFO: Middleware triggered for GET /auth/microsoft
+[2025-04-17T13:59:14.070Z] INFO: Middleware triggered for POST /auth/microsoft/callback
+[2025-04-17T13:59:15.271Z] INFO: Authentication successful, redirecting to homepage
+[2025-04-17T13:59:15.349Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:59:15.358Z] INFO: User Abdalla.Fayez@uofcanada.edu.eg is authenticated for /api/check-auth
+[2025-04-17T13:59:15.362Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:59:15.365Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:59:29.782Z] INFO: Middleware triggered for GET /api/routes/trip-types?routeName=5th+Settlement
+[2025-04-17T13:59:37.390Z] INFO: Middleware triggered for GET /api/trips/available?route=5th+Settlement&tripType=From%20Campus&date=2025-04-22
+[2025-04-17T13:59:40.524Z] INFO: Middleware triggered for GET /api/trips/available?route=5th+Settlement&tripType=To%20Campus&date=2025-04-22
+[2025-04-17T13:59:55.607Z] INFO: Middleware triggered for GET /api/system/maxTicketAllowance
+[2025-04-17T13:59:55.619Z] INFO: Middleware triggered for GET /api/user/ticketsbooked
+[2025-04-17T13:59:55.627Z] INFO: Middleware triggered for POST /api/session/booking/store
+[2025-04-17T13:59:56.256Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:59:56.258Z] INFO: User Abdalla.Fayez@uofcanada.edu.eg is authenticated for /api/check-auth
+[2025-04-17T13:59:56.264Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
+[2025-04-17T13:59:56.266Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:59:56.274Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+[2025-04-17T13:59:59.022Z] INFO: Middleware triggered for GET /api/check-auth
+[2025-04-17T13:59:59.023Z] INFO: User Abdalla.Fayez@uofcanada.edu.eg is authenticated for /api/check-auth
+[2025-04-17T13:59:59.027Z] INFO: Middleware triggered for GET /api/routes/active
+[2025-04-17T13:59:59.031Z] INFO: Middleware triggered for GET /api/session/user/retrieve

@@ -166,13 +166,19 @@ router.get('/api/payments/callback', async (req, res) => {
             WHERE b.order_id = ?`,
             [orderId]
         );
-            
+        
         if (!bookingDetails.length) {
             return res.status(404).json({ message: 'Booking not found' });
         }
 
         const ticketDetails = bookingDetails[0];
         ticketDetails.photo = req.session.user.photo;
+
+        // Update the user's tickets booked count
+        await db.query(
+            'UPDATE users SET tickets_booked = tickets_booked + ? WHERE student_email = ?',
+            [ticketDetails.seatsBooked, ticketDetails.student_email]
+        );
 
         // Generate ticket
         const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
@@ -202,7 +208,7 @@ Universities of Canada in Egypt`,
 
         // Prepare email options for the fleet manager.
         // You can set a fixed email or fetch it from your configuration.
-        const fleetManagerEmail = 'development.team@uofcanada.edu.eg';
+        const fleetManagerEmail = 'Mustafa.Mohamed@uofcanada.edu.eg';
         const fleetEmailBody = `
 Ticket Details:
 ---------------

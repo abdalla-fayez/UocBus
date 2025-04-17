@@ -201,4 +201,38 @@ router.get('/bookings/details', async (req, res) => {
     }
 });
 
+router.get('/user/ticketsbooked', async (req, res) => {
+    if (!req.session.user || !req.session.user.email) {
+      return res.status(401).json({ error: "Not authenticated" });
+    }
+    try {
+      const [rows] = await db.query(
+        `SELECT tickets_booked FROM users WHERE student_email = ?`, 
+        [req.session.user.email]
+      );
+      if (rows.length === 0) {
+        return res.status(404).json({ error: "User not found" });
+      }
+      res.json({ ticketsBooked: rows[0].tickets_booked });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/system/maxTicketAllowance', async (req, res) => {
+    try {
+      const [rows] = await db.query(
+        "SELECT config_value FROM system_config WHERE config_key = 'max_ticket_allowance'"
+      );
+      if (rows.length === 0) {
+        return res.status(404).json({ error: "Global ticket allowance not set." });
+      }
+      // Convert the config_value to a number
+      const maxTicketAllowance = Number(rows[0].config_value);
+      res.json({ maxTicketAllowance });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;

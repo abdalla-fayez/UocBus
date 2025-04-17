@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tripsTab.classList.remove('active');
     bookingsSection.style.display = 'block';
     tripsSection.style.display = 'none';
+    fetchBookings();
   });
 
   tripsTab.addEventListener('click', (e) => {
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bookingsTab.classList.remove('active');
     bookingsSection.style.display = 'none';
     tripsSection.style.display = 'block';
-    // (Optional) Can refetch trips here if needed.
+    fetchTrips();
+    // (Optional) Can refetch trips here if needed. (done above)
   });
   
   // --------------------------
