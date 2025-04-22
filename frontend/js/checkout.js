@@ -6,14 +6,21 @@ const seatCount = document.getElementById('seatCount');
 const pricePerSeat = document.getElementById('pricePerSeat');
 const totalAmount = document.getElementById('totalAmount');
 const proceedButton = document.getElementById('proceedToPayment');
-// const userName = document.getElementById('userName');
-// const userEmail = document.getElementById('userEmail');
-// const userId = document.getElementById('userId');
-// const userMobile = document.getElementById('userMobile'); 
+const tosCheckbox = document.getElementById('tosCheckbox');
+const tosError = document.getElementById('tosError');
+
 
 // Event listener for page load
 document.addEventListener('DOMContentLoaded', populateBookingDetails);
+
 proceedButton.addEventListener('click', handleProceedToPayment);
+
+// Hide error when user toggles the checkbox on
+tosCheckbox.addEventListener('change', () => {
+    if (tosCheckbox.checked) {
+      tosError.classList.add('d-none');
+    }
+});
 
 // Function to populate booking details
 async function populateBookingDetails() {
@@ -49,6 +56,15 @@ async function populateBookingDetails() {
 // Function to handle "Proceed to Checkout"
 async function handleProceedToPayment() {
     try {
+        // Validate TOS agreement
+        if (!tosCheckbox.checked) {
+            tosError.classList.remove('d-none');
+            return;
+        }
+
+        // Hide the error if it was visible
+        tosError.classList.add('d-none');
+
         // Send request to create booking
         const storeResponse = await fetch('/api/bookings/create', {
             method: 'POST',
@@ -86,67 +102,3 @@ async function handleProceedToPayment() {
         alert('An error occurred. Please try again.');
     }
 };
-
-
-
-// // Call handlePaymentSuccess after successful payment confirmation
-// async function handlePaymentSuccess(orderId) {
-//     try {
-//         // Show the ticket download section
-//         const ticketSection = document.getElementById('ticketSection');
-//         const downloadLink = document.getElementById('downloadTicketLink');
-
-//         // Update the download link
-//         downloadLink.href = `/api/tickets/${orderId}`;
-//         ticketSection.classList.remove('d-none');
-//     } catch (error) {
-//         console.error('Error handling payment success:', error);
-//     }
-// }
-
-// // Function to validate user input
-// function validateUserDetails() {
-//     let isValid = true;
-
-//     // Clear previous error messages
-//     document.querySelectorAll('.text-danger').forEach(errorElement => {
-//         errorElement.textContent = '';
-//         errorElement.classList.add('d-none');
-//     });
-
-//     // Name Validation: At least 3 characters
-//     if (userName.value.trim().length < 3) {
-//         const userNameError = document.getElementById('userNameError');
-//         userNameError.textContent = 'Name must be at least 3 characters long.';
-//         userNameError.classList.remove('d-none');
-//         isValid = false;
-//     }
-
-//     // Email Validation: Basic regex
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     if (!emailRegex.test(userEmail.value.trim())) {
-//         const userEmailError = document.getElementById('userEmailError');
-//         userEmailError.textContent = 'Please enter a valid email address.';
-//         userEmailError.classList.remove('d-none');
-//         isValid = false;
-//     }
-
-//     // Student ID Validation: Must be exactly 9 digits
-//     const studentIdRegex = /^\d{9}$/;
-//     if (!studentIdRegex.test(userId.value.trim())) {
-//         const userIdError = document.getElementById('userIdError');
-//         userIdError.textContent = 'Student ID must be exactly 9 digits.';
-//         userIdError.classList.remove('d-none');
-//         isValid = false;
-//     }
-
-//     // Mobile Number Validation: Ensure it’s not empty
-//     if (!userMobile.value.trim()) {
-//         const userMobileError = document.getElementById('userMobileError');
-//         userMobileError.textContent = 'Please enter your mobile number.';
-//         userMobileError.classList.remove('d-none');
-//         isValid = false;
-//     }
-
-//     return isValid;
-// }

@@ -218,20 +218,141 @@
             </p>
           </div>
         </div>
-          <!-- Checkout Button -->
-          <div class="text-center p-4">
-            <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">
-              Checkout
-            </button>
+        <div class="card mb-4 shadow">
+          <div class="card-body">
+            <!-- Terms of Service Agreement -->
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="tosCheckbox">
+              <label class="form-check-label" for="tosCheckbox">
+                I agree to the 
+                <a href="#" data-bs-toggle="modal" data-bs-target="#tosModal" class="text-decoration-underline">
+                Terms of Service
+                </a>
+              </label>
+              <!-- Inline error message, hidden by default -->
+              <div id="tosError" class="text-danger small d-none">
+                You must agree to the Terms of Service before proceeding.
+              </div>
+            </div>
+            <!-- Checkout Button -->
+            <div class="text-center p-4">
+              <button type="button" id="proceedToPayment" class="btn btn-success btn-lg">
+                Checkout
+              </button>
+            </div>
           </div>
+        </div>
       </div>
     </div>
     <div id="checkoutContainer"></div>
-    <!-- <div id="ticketSection" class="mt-4 d-none">
-      <h3>Payment Successful!</h3>
-      <p>Your ticket is ready for download.</p>
-      <a id="downloadTicketLink" class="btn btn-primary" href="#" target="_blank">Download Your Ticket</a>
-    </div> -->
+    <!-- Terms of Service Modal -->
+    <div class="modal fade" id="tosModal" tabindex="-1" aria-labelledby="tosModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tosModalLabel">Terms and Conditions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>These Terms and Conditions govern the use of the <strong>Universities of Canada in Egypt</strong> Bus Service (hereinafter referred to as "the Bus Service") provided by <strong>Universities of Canada in Egypt</strong> (hereinafter referred to as "the University"). By using the Bus Service, students, faculty, and staff (hereinafter referred to as "Passengers") agree to abide by these terms and conditions.</p>
+
+            <h6>1. Eligibility for Use:</h6>
+            <ul>
+              <li>The Bus Service is primarily intended for currently enrolled students, faculty, and staff of Universities of Canada in Egypt.</li>
+              <li>Proof of identification (e.g., University ID card) may be required upon boarding the bus or when requested by University personnel.</li>
+              <li>The University reserves the right to refuse access to the Bus Service to individuals who cannot provide valid identification or who are not authorized to use the service.</li>
+            </ul>
+
+            <h6>2. Registration and Ticketing/Passes:</h6>
+            <ul>
+              <li>Passengers are required to register for the Bus Service through the University's Bus Ticketing Website.</li>
+              <li>Physical passes or electronic tickets may be required for each journey.</li>
+              <li>Information regarding pass/ticket purchase, validity, and fees will be available on the Bus Ticketing Website.</li>
+              <li>Passengers are responsible for ensuring they have a valid ticket or pass before boarding the bus.</li>
+              <li>Transferring or sharing passes/tickets with unauthorized individuals is strictly prohibited and may result in the confiscation of the pass/ticket and/or disciplinary action.</li>
+            </ul>
+
+            <h6>3. Bus Schedules and Routes:</h6>
+            <ul>
+              <li>Bus schedules and routes are subject to change based on University needs, traffic conditions, and other unforeseen circumstances.</li>
+              <li>The latest bus schedules and route maps will be available on the Bus Ticketing Website.</li>
+              <li>Passengers are responsible for checking the latest schedules and ensuring they are waiting at designated bus stops at the scheduled time.</li>
+              <li>The University does not guarantee arrival times and shall not be held responsible for delays due to factors beyond its reasonable control.</li>
+              <li>The University reserves the right to modify, suspend, or cancel routes or schedules as deemed necessary. Notice of significant changes will be provided whenever possible through official University communication channels.</li>
+            </ul>
+
+            <h6>4. Conduct on the Bus:</h6>
+            <ul>
+              <li>Passengers are expected to conduct themselves in a respectful and considerate manner towards other passengers and University personnel.</li>
+              <li>The following are strictly prohibited on the bus:
+                <ul>
+                  <li>Smoking, consumption of alcohol, and use of illegal substances.</li>
+                  <li>Eating and drinking (unless explicitly permitted).</li>
+                  <li>Loud conversations, music, or any behavior that may disturb other passengers.</li>
+                  <li>Vandalism or damage to the bus or its equipment.</li>
+                  <li>Littering. Passengers are responsible for disposing of their own trash properly.</li>
+                  <li>Bringing hazardous materials or flammable substances onto the bus.</li>
+                  <li>Obstructing the aisles or emergency exits.</li>
+                  <li>Engaging in any behavior that may jeopardize the safety of themselves or others.</li>
+                </ul>
+              </li>
+              <li>Passengers must follow the instructions of the bus driver and any authorized University personnel.</li>
+              <li>The University reserves the right to deny boarding or request a passenger to disembark if their conduct violates these terms and conditions.</li>
+            </ul>
+
+            <h6>5. Boarding and Alighting:</h6>
+            <ul>
+              <li>Passengers should wait at designated bus stops and allow passengers to disembark before attempting to board.</li>
+              <li>Boarding and alighting should be done in an orderly manner.</li>
+              <li>Passengers should have their valid ticket/pass ready for inspection upon boarding.</li>
+              <li>Passengers are responsible for ensuring they board the correct bus and alight at their desired stop. The University is not responsible for passengers missing their stops.</li>
+              <li>Do not attempt to board or alight while the bus is in motion.</li>
+            </ul>
+
+            <h6>6. Lost and Found:</h6>
+            <ul>
+              <li>The University is not responsible for any personal belongings left on the bus.</li>
+              <li>Lost items found on the bus will be handed over to the Fleet Department.</li>
+              <li>Passengers who have lost an item should contact the Fleet Department with a detailed description of the lost item.</li>
+              <li>Unclaimed lost items may be disposed of after a reasonable period.</li>
+            </ul>
+
+            <h6>7. Safety and Security:</h6>
+            <ul>
+              <li>Passengers are responsible for their own safety while using the Bus Service.</li>
+              <li>In case of an emergency, passengers should follow the instructions of the bus driver or University personnel.</li>
+              <li>Passengers are encouraged to report any suspicious activity or safety concerns to the bus driver or University security immediately.</li>
+              <li>The University may have surveillance cameras installed on the buses for security purposes.</li>
+            </ul>
+
+            <h6>8. Amendments to Terms and Conditions:</h6>
+            <ul>
+              <li>The University reserves the right to amend these Terms and Conditions at any time without prior notice.</li>
+              <li>The latest version of the Terms and Conditions will be available on the Bus Ticketing Website.</li>
+              <li>Continued use of the Bus Service after any amendments constitutes acceptance of the revised Terms and Conditions.</li>
+            </ul>
+
+            <h6>9. Contact Information:</h6>
+            <ul>
+              <li>For any inquiries, complaints, or feedback regarding the Bus Service, please contact:
+                <ul>
+                  <li>Mr. Mustafa Mohamed</li>
+                  <li>+20 100 847 0311</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p>By using the Universities of Canada in Egypt Bus Service, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->
