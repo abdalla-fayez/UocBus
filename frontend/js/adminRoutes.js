@@ -32,10 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchRoutes() {
       try {
         const response = await fetch('/api/admin/routes');
+        if (!response.ok) throw new Error('Failed to fetch routes');
+        
         routesData = await response.json();
         renderRoutes(routesData);
       } catch (error) {
         console.error('Error fetching routes:', error);
+        routesTableBody.innerHTML = '<tr><td colspan="8" class="text-center text-danger">Error loading routes. Please try again.</td></tr>';
       }
     }
   
@@ -185,4 +188,3 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchBusList();
     fetchRoutes();
   });
-  

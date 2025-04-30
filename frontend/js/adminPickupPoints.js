@@ -1,3 +1,4 @@
+// Add Sortable.js library in HTML first
 document.addEventListener('DOMContentLoaded', () => {
   const routesContainer = document.getElementById('routesContainer');
 
@@ -49,9 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const expandableDiv = document.createElement('div');
       expandableDiv.classList.add('pickup-points-container');
 
+      // Add table-responsive wrapper
+      const tableResponsive = document.createElement('div');
+      tableResponsive.classList.add('table-responsive');
+
       // Create a table for listing pickup points for this route
       const table = document.createElement('table');
-      table.classList.add('table', 'table-sm', 'table-bordered');
+      table.classList.add('table', 'table-bordered');
       const thead = document.createElement('thead');
       thead.innerHTML = `
         <tr>
@@ -71,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.appendChild(tr);
       });
       table.appendChild(tbody);
-      expandableDiv.appendChild(table);
+      tableResponsive.appendChild(table);
+      expandableDiv.appendChild(tableResponsive);
 
         // Create a form to add a new pickup point for this route (widened)
         const addForm = document.createElement('form');

@@ -1095,3 +1095,13 @@
   "vacant_seats": "0",
   "driver_mobile": "01022662306"
 }
+[2025-04-30T12:11:37.402Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}

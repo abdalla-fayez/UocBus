@@ -6,6 +6,7 @@
   <title>Manage Buses</title>
   <!-- Link to your custom admin CSS -->
   <link rel="stylesheet" href="../../css/admin.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
   <!-- Include Bootstrap CSS from CDN for button styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -33,20 +34,22 @@
     <!-- Section: List Buses (View List) -->
     <section id="listBusSection" class="mb-5">
       <h2>Buses</h2>
-      <table class="table table-bordered" id="busesTable">
-        <thead class="thead-dark">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Vacant Seats</th>
-            <th>Driver Mobile</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Bus rows will be dynamically injected here -->
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="busesTable">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Vacant Seats</th>
+              <th>Driver Mobile</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Bus rows will be dynamically injected here -->
+          </tbody>
+        </table>
+      </div>
     </section>
   
     <!-- Section: Add New Bus -->

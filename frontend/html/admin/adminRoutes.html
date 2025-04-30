@@ -6,6 +6,7 @@
   <title>Manage Routes</title>
   <!-- Link to your custom admin CSS -->
   <link rel="stylesheet" href="../../css/admin.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
   <!-- Include Bootstrap CSS from CDN for button styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -33,23 +34,25 @@
     <!-- Section: View List -->
     <section id="listRouteSection" class="mb-5">
       <h2>Routes</h2>
-      <table class="table table-bordered" id="routesTable">
-        <thead class="thead-dark">
-          <tr>
-            <th>ID</th>
-            <th>Route Name</th>
-            <th>Trip Type</th>
-            <th>Bus Name</th>
-            <th>Price</th>
-            <th>Time</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Routes rows will be dynamically injected through JS here -->
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="routesTable">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Route Name</th>
+              <th>Trip Type</th>
+              <th>Bus Name</th>
+              <th>Price</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Routes rows will be dynamically injected through JS here -->
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- Section: Add New Route -->
