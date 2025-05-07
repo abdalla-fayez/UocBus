@@ -18765,6 +18765,7 @@
 [2025-04-30T14:17:36.133Z] INFO: Middleware triggered for GET /api/session/booking/retrieve
 [2025-04-30T14:17:36.136Z] INFO: Middleware triggered for GET /api/session/user/retrieve
 [2025-04-30T14:17:36.142Z] INFO: Middleware triggered for GET /api/session/user/retrieve
+<<<<<<< HEAD
 [2025-04-30T14:19:48.798Z] INFO: Middleware triggered for GET /api/admin/dashboard/bookings
 [2025-04-30T14:19:48.799Z] INFO: Admin is not authenticated, redirecting to /api/admin/login
 [2025-04-30T14:19:48.804Z] INFO: Middleware triggered for GET /api/admin/dashboard/trips
@@ -21189,3 +21190,5 @@
 [2025-05-07T07:24:54.019Z] INFO: Database connection is healthy
 [2025-05-07T07:34:54.034Z] INFO: Database connection is healthy
 [2025-05-07T07:44:54.036Z] INFO: Database connection is healthy
+=======
+>>>>>>> d10d51c246f3e13832dec74fa13dde1df00407f8

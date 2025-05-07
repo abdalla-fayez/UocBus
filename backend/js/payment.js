@@ -175,7 +175,7 @@ router.get('/api/payments/callback', async (req, res) => {
         // Update the user's tickets booked count
         await db.query(
             'UPDATE users SET tickets_booked = tickets_booked + ? WHERE student_email = ?',
-            [ticketDetails.seatsBooked, ticketDetails.student_email]
+            [ticketDetails.seats_booked, ticketDetails.student_email]
         );
 
         // Generate ticket

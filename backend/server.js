@@ -73,6 +73,13 @@ app.post('/auth/microsoft/callback',
                     [req.user.displayName, req.user._json.email, req.user.jobTitle]
                 );
             }
+            // User exists, update their information if necessary
+            else {
+                await db.query(
+                    `UPDATE users SET student_name = ?, student_id = ? WHERE student_email = ?`,
+                    [req.user.displayName, req.user.jobTitle, req.user._json.email]
+                );
+            }
         } catch (error) {
             logger.error('Error while checking or inserting user:', error);
             return res.status(500).json({ message: 'Internal server error' });

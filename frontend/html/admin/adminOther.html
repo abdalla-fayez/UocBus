@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="../../css/admin.css" />
   <!-- Include Bootstrap CSS for styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  <style>
+      @media screen and (max-width: 768px) {
+          .card {
+              margin: 10px 0;
+          }
+          .form-control {
+              width: 100% !important;
+          }
+      }
+  </style>
 </head>
 <body>
   <header class="mb-4">
@@ -47,7 +58,7 @@
           <h5 class="card-title">Bookings Report (Daily)</h5>
           <p class="card-text">Select a date and download the report in CSV format.</p>
           <div class="form-group">
-            <label for="reportDate">Trip Date:</label>
+            <label for="reportDate">Bookings Date:</label>
             <input type="date" id="reportDate" class="form-control col-2" required>
           </div>
           <button id="downloadReportBtn" class="btn btn-primary mt-2">Download Report</button>

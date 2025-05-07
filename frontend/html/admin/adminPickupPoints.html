@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../css/admin.css">
   <!-- Include Bootstrap CSS from CDN for button styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/responsive.css" />
   <style>
     /* Optional styling for route headers and expandable sections */
     .route-header {
@@ -22,6 +23,13 @@
       border: 1px solid #dee2e6;
       margin-bottom: 15px;
       display: none; /* Hidden by default; toggled on header click */
+    }
+    /* Remove the min-width constraint */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -46,8 +54,9 @@
     </nav>
   </header>
   <main class="container">
-    <!-- This container will be populated with route blocks -->
-    <div id="routesContainer"></div>
+    <div id="routesContainer">
+      <!-- Tables will be injected here -->
+    </div>
   </main>
   <script src="../../js/adminauth-check.js" defer></script>
   <script src="../../js/adminPickupPoints.js"></script>

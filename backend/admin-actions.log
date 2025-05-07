@@ -1095,6 +1095,7 @@
   "vacant_seats": "0",
   "driver_mobile": "01022662306"
 }
+<<<<<<< HEAD
 [2025-05-05T09:01:09.922Z] INFO: UPDATE ROUTE by user (app_team):
 {
   "id": "33",
@@ -1106,6 +1107,9 @@
   "status": "Active"
 }
 [2025-05-05T09:20:56.479Z] INFO: UPDATE ROUTE by user (app_team):
+=======
+[2025-04-30T12:11:37.402Z] INFO: UPDATE ROUTE by user (app_team):
+>>>>>>> d10d51c246f3e13832dec74fa13dde1df00407f8
 {
   "id": "33",
   "price": "1.00",
@@ -1115,6 +1119,7 @@
   "time": "06:30:00",
   "status": "Active"
 }
+<<<<<<< HEAD
 [2025-05-05T11:23:47.596Z] INFO: DELETE PICKUP POINT by user (app_team):
 {
   "id": 183,
@@ -1216,3 +1221,5 @@
   "time": "06:30:00",
   "status": "Active"
 }
+=======
+>>>>>>> d10d51c246f3e13832dec74fa13dde1df00407f8

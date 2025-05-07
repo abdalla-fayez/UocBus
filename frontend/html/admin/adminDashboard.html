@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="../../css/responsive.css" />
   <style>
     /* Optional: highlight active tab */
     .nav-tabs .nav-link.active {
@@ -64,45 +65,48 @@
     <!-- Bookings Section -->
     <section id="bookingsSection">
       <h2>Bookings</h2>
-      <table class="table table-bordered" id="bookingsTable">
-        <thead class="thead-dark">
-          <tr>
-            <th class="sortable">ID</th>
-            <th>Order ID</th>
-            <th>Student Name</th>
-            <th>Student ID</th>
-            <th>Email</th>
-            <th>Trip</th>
-            <th class="sortable">Trip Date</th>
-            <th>Seats Booked</th>
-            <th>Payment Status</th>
-            <th class="sortable">Created At</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Booking rows injected via JS -->
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="bookingsTable">
+          <thead class="thead-dark">
+            <tr>
+              <th class="sortable">ID</th>
+              <th>Order ID</th>
+              <th>Student Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Trip</th>
+              <th class="sortable">Trip Date</th>
+              <th>Seats Booked</th>
+              <th>Payment Status</th>
+              <th class="sortable">Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Booking rows injected via JS -->
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <!-- Trips Section (hidden by default) -->
     <section id="tripsSection" style="display: none;">
       <h2>Upcoming Trips</h2>
-      <table class="table table-bordered" id="tripsTable">
-        <thead class="thead-dark">
-          <tr>
-            <th class="sortable">ID</th>
-            <th class="sortable">Route Name</th>
-            <th class="sortable">Trip Type</th>
-            <th class="sortable">Date</th>
-            <th class="sortable">Time</th>
-            <th>Available Seats</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Trip rows injected via JS -->
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-bordered" id="tripsTable">
+          <thead class="thead-dark">
+            <tr>
+              <th class="sortable">ID</th>
+              <th class="sortable">Route Name</th>
+              <th class="sortable">Trip Type</th>
+              <th class="sortable">Date</th>
+              <th class="sortable">Time</th>
+              <th>Available Seats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Trip rows injected via JS -->
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
   <script src="../../js/adminauth-check.js" defer></script>
