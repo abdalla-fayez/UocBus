@@ -332,20 +332,54 @@ router.get('/bookingsreport', async (req, res) => {
 // Export pickup points as CSV template
 router.get('/pickup_points/export', async (req, res) => {
   try {
+    // Get pickup points with reordered columns
     const [results] = await db.query(`
-      SELECT r.route_name, r.trip_type, pp.name, pp.time, r.id as route_id
+      SELECT pp.name, r.trip_type, pp.time, r.route_name
       FROM pickup_points pp
       JOIN routes r ON pp.route_id = r.id
-      ORDER BY r.route_name, pp.time`);
+      ORDER BY r.route_name, r.trip_type, pp.time`);
     
-    const json2csvParser = new Parser({
-      fields: ['route_name', 'trip_type', 'name', 'time']
+    // Get unique route names first
+    const routeNames = [...new Set(results.map(r => r.route_name))].sort();
+    
+    // Group the results
+    const grouped = results.reduce((acc, curr) => {
+      const key = `${curr.route_name}-${curr.trip_type}`;
+      if (!acc[key]) acc[key] = [];
+      acc[key].push(curr);
+      return acc;
+    }, {});
+
+    // Create CSV with new column order
+    let csvContent = '"name","trip_type","time","route_name"\n\n';
+    
+    routeNames.forEach(routeName => {
+      // First add "To Campus" points
+      const toKey = `${routeName}-To Campus`;
+      if (grouped[toKey]) {
+        csvContent += `"# ${routeName} - To Campus"\n`;
+        grouped[toKey].forEach(point => {
+          csvContent += `${point.name},${point.trip_type},${point.time},${point.route_name}\n`;
+        });
+        csvContent += '\n';
+      }
+
+      // Then add "From Campus" points
+      const fromKey = `${routeName}-From Campus`;
+      if (grouped[fromKey]) {
+        csvContent += `"# ${routeName} - From Campus"\n`;
+        grouped[fromKey].forEach(point => {
+          csvContent += `${point.name},${point.trip_type},${point.time},${point.route_name}\n`;
+        });
+        csvContent += '\n';
+      }
+
+      csvContent += '\n';
     });
-    const csv = json2csvParser.parse(results);
-    
+
     res.header('Content-Type', 'text/csv');
     res.attachment('pickup-points-template.csv');
-    return res.send(csv);
+    return res.send(csvContent);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -368,7 +402,12 @@ router.post('/pickup_points/import', async (req, res) => {
     }
 
     const fileContent = csvFile.data.toString('utf8');
-    const rows = fileContent.split('\n').map(row => row.split(','));
+    // Split by newlines and filter out empty lines and comments
+    const rows = fileContent.split('\n')
+      .map(row => row.trim())
+      .filter(row => row && !row.startsWith('#'))  // Remove empty lines and comments
+      .map(row => row.split(','));
+
     const headers = rows[0];
     const data = rows.slice(1);
 
@@ -391,10 +430,10 @@ router.post('/pickup_points/import', async (req, res) => {
     for (const row of data) {
       if (row.length < headers.length) continue;
 
-      const routeName = row[0].trim();
+      const pointName = row[0].trim();
       const tripType = row[1].trim();
-      const pointName = row[2].trim();
-      const time = row[3].trim();
+      const time = row[2].trim();
+      const routeName = row[3].trim();
 
       const routeId = routeMap.get(`${routeName}-${tripType}`);
       if (!routeId) {
