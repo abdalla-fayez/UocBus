@@ -147,6 +147,10 @@ router.post('/pickup_points', async (req, res) => {
 router.put('/pickup_points/:id', async (req, res) => {
   try {
     const { route_id, name, time, route_name, trip_type } = req.body;
+    const [existingPoint] = await db.query('SELECT * FROM pickup_points WHERE id = ?', [req.params.id]);
+    if (!existingPoint || existingPoint.length === 0) {
+      return res.status(404).json({ error: 'Pickup point not found' });
+    }
     const sql = 'UPDATE pickup_points SET route_id=?, name=?, time=?, route_name=?, trip_type=? WHERE id=?';
     await db.query(sql, [route_id, name, time, route_name, trip_type, req.params.id]);
     const updatedPickupPoint = { id: req.params.id, route_id, name, time, route_name, trip_type };

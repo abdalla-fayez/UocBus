@@ -3,3 +3,6 @@ node_modules/*
 backend/.env
 backend/js/manualDbBackup.js
 database/backups/*
+backend/server.log
+backend/admin-actions.log
+frontend/assets/tickets/*

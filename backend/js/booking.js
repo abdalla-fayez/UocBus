@@ -141,6 +141,9 @@ router.get('/trips/available', async (req, res) => {
 });
 
 router.post('/bookings/create', async (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ error: "User not authenticated" });
+    }
     // Get user data from session
     const { displayName, email, jobTitle } = req.session.user;
 
@@ -155,7 +158,7 @@ router.post('/bookings/create', async (req, res) => {
         // Save the booking ID in the session for further processing (e.g., linking order_id later)
         req.session.bookingId = result.insertId;
 
-        logger.info('Booking entry created with ID:', result.insertId);
+        logger.info(`Booking entry created with ID: ${result.insertId}`);
 
         res.json({ message: 'Booking details stored successfully.', bookingId: result.insertId });
     } catch (error) {

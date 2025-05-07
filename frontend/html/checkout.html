@@ -244,6 +244,7 @@
         </div>
       </div>
     </div>
+    <!-- Payment Gateway Container -->
     <div id="checkoutContainer"></div>
     <!-- Terms of Service Modal -->
     <div class="modal fade" id="tosModal" tabindex="-1" aria-labelledby="tosModalLabel" aria-hidden="true">
@@ -352,7 +353,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Footer -->
@@ -375,8 +375,11 @@
   <script src="../js/checkout.js" defer></script>
   <script src="../js/userpreview.js" defer></script>
   <!-- Payment Gateway (NBE) JS -->
-  <script src="https://nbe.gateway.mastercard.com/checkout/version/61/checkout.js" data-error="errorCallback"
-    data-cancel="cancelCallback" defer></script> 
+  <script src="https://banquemisr.gateway.mastercard.com/checkout/version/61/checkout.js" 
+  data-error="errorCallback"
+  data-cancel="cancelCallback"
+  defer>
+  </script> 
   <script type="text/javascript">
     function errorCallback() {
       console.error("Payment error occurred.");

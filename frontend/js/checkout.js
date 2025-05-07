@@ -9,10 +9,9 @@ const proceedButton = document.getElementById('proceedToPayment');
 const tosCheckbox = document.getElementById('tosCheckbox');
 const tosError = document.getElementById('tosError');
 
-
 // Event listener for page load
 document.addEventListener('DOMContentLoaded', populateBookingDetails);
-
+proceedButton.removeEventListener('click', handleProceedToPayment);
 proceedButton.addEventListener('click', handleProceedToPayment);
 
 // Hide error when user toggles the checkbox on
@@ -88,7 +87,7 @@ async function handleProceedToPayment() {
         if (!paymentResponse.ok) throw new Error('Failed to initiate payment.');
 
         orderId = generatedOrderId;
-  
+
         console.log('Payment initiation successful:', { sessionId, orderId });
 
         // Configure hosted checkout

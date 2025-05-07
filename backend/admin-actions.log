@@ -1095,3 +1095,124 @@
   "vacant_seats": "0",
   "driver_mobile": "01022662306"
 }
+[2025-05-05T09:01:09.922Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "10.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-05-05T09:20:56.479Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-05-05T11:23:47.596Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 183,
+  "route_id": 1,
+  "name": "Maliha May",
+  "time": "06:45:00",
+  "route_name": "Helwan",
+  "trip_type": "To Campus"
+}
+[2025-05-05T11:35:02.612Z] INFO: UPDATE PICKUP POINT by user (app_team):
+{
+  "id": "19",
+  "route_id": 1,
+  "name": "Maliha May",
+  "time": "07:00:00",
+  "route_name": "Helwan",
+  "trip_type": "To Campus"
+}
+[2025-05-05T11:35:20.638Z] INFO: CREATE PICKUP POINT by user (app_team):
+{
+  "id": 184,
+  "route_id": 1,
+  "name": "Test point",
+  "time": "06:35"
+}
+[2025-05-05T11:35:27.187Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 184,
+  "route_id": 1,
+  "name": "Test point",
+  "time": "06:35:00",
+  "route_name": null,
+  "trip_type": null
+}
+[2025-05-05T11:35:36.312Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadann",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-05-05T11:35:43.366Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "33",
+  "price": "1.00",
+  "trip_type": "To Campus",
+  "bus_id": "17",
+  "route_name": "10th of Ramadan",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-05-05T11:51:15.500Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 36,
+  "route_id": 3,
+  "name": "UofCanada",
+  "time": "08:30:00",
+  "route_name": "Maadi",
+  "trip_type": "To Campus"
+}
+[2025-05-05T11:56:08.746Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 46,
+  "route_id": 5,
+  "name": "UofCanada",
+  "time": "08:30:00",
+  "route_name": "Nasr City 1",
+  "trip_type": "To Campus"
+}
+[2025-05-05T12:13:45.125Z] INFO: DELETE PICKUP POINT by user (app_team):
+{
+  "id": 153,
+  "route_id": 25,
+  "name": "Gate 4 (Hadayek)",
+  "time": "07:20:00",
+  "route_name": "Sheikh Zayed & 6 October",
+  "trip_type": "To Campus"
+}
+[2025-05-05T12:22:28.292Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "21",
+  "price": "10",
+  "trip_type": "To Campus",
+  "bus_id": "11",
+  "route_name": "5th Settlement",
+  "time": "06:30:00",
+  "status": "Active"
+}
+[2025-05-05T12:31:28.167Z] INFO: UPDATE ROUTE by user (app_team):
+{
+  "id": "21",
+  "price": "20",
+  "trip_type": "To Campus",
+  "bus_id": "11",
+  "route_name": "5th Settlement",
+  "time": "06:30:00",
+  "status": "Active"
+}

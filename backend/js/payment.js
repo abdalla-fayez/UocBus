@@ -56,14 +56,12 @@ router.post('/api/payments/initiate', async (req, res) => {
             [orderId, bookingId]
         );
         logger.info(`Order ID ${orderId} linked to booking ID ${bookingId}`);
-        
+
         // Temporarily reserve seats in the database
         await db.query(
             `UPDATE trips SET available_seats = available_seats - ? WHERE id = ?`,
             [seatsBooked, tripId]
         );
-
-      
 
         // NBE API credentials
         const merchantId = process.env.MERCHANT_ID;
@@ -72,15 +70,15 @@ router.post('/api/payments/initiate', async (req, res) => {
         const absoluteCallbackUrl = `https://busticketing.uofcanada.edu.eg/api/payments/callback?orderId=${orderId}`;
 
         // Create checkout session
-        const nbeResponse = await axios.post(
-            `https://nbe.gateway.mastercard.com/api/rest/version/61/merchant/${merchantId}/session`,
+        const bmResponse = await axios.post(
+            `https://banquemisr.gateway.mastercard.com/api/rest/version/61/merchant/${merchantId}/session`,
             {
                 apiOperation: 'CREATE_CHECKOUT_SESSION',
                 order: {
                     amount: amountPayable.toFixed(2),
                     currency: 'EGP',
                     id: orderId,
-                    description: 'Bus ticket booking.',
+                    description: 'Bus ticket booking',
                 },
                 interaction: {
                     operation: 'PURCHASE',
@@ -105,7 +103,7 @@ router.post('/api/payments/initiate', async (req, res) => {
             }
         );
 
-        const { id: sessionId } = nbeResponse.data.session;
+        const { id: sessionId } = bmResponse.data.session;
 
         logger.info('Payment initiation response:', { sessionId, orderId });
 
@@ -208,7 +206,7 @@ Universities of Canada in Egypt`,
 
         // Prepare email options for the fleet manager.
         // You can set a fixed email or fetch it from your configuration.
-        const fleetManagerEmail = 'Mustafa.Mohamed@uofcanada.edu.eg';
+        const fleetManagerEmail = 'abdalla.fayez@uofcanada.edu.eg';
         const fleetEmailBody = `
 Ticket Details:
 ---------------

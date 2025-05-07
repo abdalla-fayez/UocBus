@@ -1,0 +1,61 @@
+/* Mobile-first responsive styles */
+@media screen and (max-width: 768px) {
+    /* Container spacing */
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    /* Header responsiveness */
+    header {
+        padding: 10px;
+    }
+    
+    header .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+    
+    header img {
+        height: 50px !important;
+        margin: 10px 0;
+    }
+    
+    /* Navigation responsiveness */
+    header nav {
+        flex-direction: column;
+    }
+    
+    header nav .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    header nav .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Table responsiveness */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 15px;
+    }
+    
+    /* Form controls in tables */
+    .form-control-sm {
+        width: 100%;
+    }
+    
+    /* Button spacing in tables */
+    .btn-sm {
+        margin: 2px;
+    }
+}

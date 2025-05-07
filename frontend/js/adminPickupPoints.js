@@ -184,7 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const response = await fetch(`/api/admin/pickup_points/${pp.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: newName, time: newTime })
+          body: JSON.stringify({
+            name: newName,
+            time: newTime,
+            route_id: pp.route_id,
+            route_name: pp.route_name,
+            trip_type: pp.trip_type
+          })
         });
         const result = await response.json();
         alert(result.message);
