@@ -79,56 +79,112 @@ document.addEventListener('DOMContentLoaded', () => {
       tableResponsive.appendChild(table);
       expandableDiv.appendChild(tableResponsive);
 
-        // Create a form to add a new pickup point for this route (widened)
-        const addForm = document.createElement('form');
-        addForm.classList.add('mb-3');
-        // Set the form's width to 80% and center it
-        addForm.style.width = '80%';
-        addForm.style.margin = '0 auto';
-        addForm.innerHTML = `
-        <div class="form-row align-items-center">
-            <div class="col-6">
-            <input type="text" class="form-control mb-2 w-100" placeholder="Pickup Point Name" name="name" required>
-            </div>
-            <div class="col-3">
-            <input type="time" class="form-control mb-2 w-100" placeholder="Time" name="time" required>
-            </div>
-            <div class="col-3">
-            <button type="submit" class="btn btn-success mb-2">Add Point</button>
-            </div>
-        </div>
-        `;
+      // Create a form to add a new pickup point for this route (widened)
+      const addForm = document.createElement('form');
+      addForm.classList.add('mb-3');
+      // Set the form's width to 80% and center it
+      addForm.style.width = '80%';
+      addForm.style.margin = '0 auto';
+      addForm.innerHTML = `
+      <div class="form-row align-items-center">
+          <div class="col-6">
+          <input type="text" class="form-control mb-2 w-100" placeholder="Pickup Point Name" name="name" required>
+          </div>
+          <div class="col-3">
+          <input type="time" class="form-control mb-2 w-100" placeholder="Time" name="time" required>
+          </div>
+          <div class="col-3">
+          <button type="submit" class="btn btn-success mb-2">Add Point</button>
+          </div>
+      </div>
+      `;
 
-        // On form submission, create a new pickup point linked to the current route
-    addForm.addEventListener('submit', async (e) => {
+      // On form submission, create a new pickup point linked to the current route
+      addForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(addForm);
         const name = formData.get('name');
         const time = formData.get('time');
         try {
-            const response = await fetch('/api/admin/pickup_points', {
+          const response = await fetch('/api/admin/pickup_points', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ route_id: route.id, name, time })
-            });
-            const result = await response.json();
-            alert('Pickup point added successfully!');
-            await fetchData(); // Refresh the data
+          });
+          const result = await response.json();
+          alert('Pickup point added successfully!');
+          await fetchData(); // Refresh the data
         } catch (error) {
-            console.error('Error adding pickup point:', error);
+          console.error('Error adding pickup point:', error);
         }
-    });
-      expandableDiv.appendChild(addForm);
-
-      // Append the expandable container to the route container
-      routeDiv.appendChild(expandableDiv);
-
-      // Toggle the expandable container on header click
-      header.addEventListener('click', () => {
-        expandableDiv.style.display = expandableDiv.style.display === 'block' ? 'none' : 'block';
       });
-
+      expandableDiv.appendChild(addForm);
+      routeDiv.appendChild(expandableDiv);
       routesContainer.appendChild(routeDiv);
+    });
+
+    // Add CSV import/export section at the bottom of all routes
+    const csvSection = document.createElement('div');
+    csvSection.classList.add('mt-5', 'p-4', 'bg-light', 'rounded', 'border');
+    csvSection.innerHTML = `
+      <div class="alert alert-info mb-3" role="alert">
+        <h6 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Bulk Import/Export Pickup Points - رفع/تحميل نقاط التوقف</h6>
+        <div class="mb-2">
+          <p class="mb-1" dir="ltr"><small>CSV format: route_name, trip_type, name (pickup point), time</small></p>
+          <p class="mb-1" dir="rtl" style="font-family: Arial;"><small>صيغة الملف: route_name, trip_type, name, time</small></p>
+        </div>
+        <div>
+          <p class="mb-0"><small><strong>Example/مثال:</strong> "Main Campus Route, To Campus, Gate 1, 08:00"</small></p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="/api/admin/pickup_points/export" class="btn btn-success">
+          <i class="bi bi-download me-1"></i>Export CSV - تحميل
+        </a>
+        <div class="input-group" style="max-width: 400px;">
+          <input type="file" id="csvFile" accept=".csv" class="form-control">
+          <button id="uploadCsv" class="btn btn-primary">
+            <i class="bi bi-upload me-1"></i>Import - رفع
+          </button>
+        </div>
+      </div>
+    `;
+    routesContainer.appendChild(csvSection);
+
+    // Add event listener after the section is added to DOM
+    document.getElementById('uploadCsv').addEventListener('click', async () => {
+      const fileInput = document.getElementById('csvFile');
+      if (!fileInput.files[0]) {
+        alert('Please select a CSV file first');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('csv', fileInput.files[0]);
+
+      try {
+        const response = await fetch('/api/admin/pickup_points/import', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        
+        if (response.ok) {
+          alert(
+            `Import Summary:\n` +
+            `Added: ${result.summary.added}\n` +
+            `Updated: ${result.summary.updated}\n` +
+            `Unchanged: ${result.summary.unchanged}\n` +
+            `Deleted: ${result.summary.deleted}`
+          );
+          await fetchData();
+        } else {
+          alert('Error: ' + result.error);
+        }
+      } catch (error) {
+        console.error('Error uploading CSV:', error);
+        alert('Error uploading CSV file');
+      }
     });
   }
 

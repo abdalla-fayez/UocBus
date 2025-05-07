@@ -325,5 +325,160 @@ router.get('/bookingsreport', async (req, res) => {
   }
 });
 
+/* =======================
+    PICKUP POINTS CRUD
+    ======================= */
+
+// Export pickup points as CSV template
+router.get('/pickup_points/export', async (req, res) => {
+  try {
+    const [results] = await db.query(`
+      SELECT r.route_name, r.trip_type, pp.name, pp.time, r.id as route_id
+      FROM pickup_points pp
+      JOIN routes r ON pp.route_id = r.id
+      ORDER BY r.route_name, pp.time`);
+    
+    const json2csvParser = new Parser({
+      fields: ['route_name', 'trip_type', 'name', 'time']
+    });
+    const csv = json2csvParser.parse(results);
+    
+    res.header('Content-Type', 'text/csv');
+    res.attachment('pickup-points-template.csv');
+    return res.send(csv);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Import pickup points from CSV
+router.post('/pickup_points/import', async (req, res) => {
+  try {
+    if (!req.files) {
+      return res.status(400).json({ error: 'No file was uploaded' });
+    }
+    
+    const csvFile = req.files.csv;
+    if (!csvFile) {
+      return res.status(400).json({ error: 'CSV file is required. Please select a file named "csv"' });
+    }
+
+    if (!csvFile.name.endsWith('.csv')) {
+      return res.status(400).json({ error: 'Uploaded file must be a CSV file' });
+    }
+
+    const fileContent = csvFile.data.toString('utf8');
+    const rows = fileContent.split('\n').map(row => row.split(','));
+    const headers = rows[0];
+    const data = rows.slice(1);
+
+    // Start transaction
+    await db.query('START TRANSACTION');
+
+    // Track changes for logging
+    const changes = { 
+      added: [], 
+      updated: [], 
+      deleted: [],
+      unchanged: 0  // Track points that didn't need updating
+    };
+    const processedPoints = new Set();
+
+    // First, get all routes for quick lookup
+    const [routes] = await db.query('SELECT id, route_name, trip_type FROM routes');
+    const routeMap = new Map(routes.map(r => [`${r.route_name}-${r.trip_type}`, r.id]));
+
+    for (const row of data) {
+      if (row.length < headers.length) continue;
+
+      const routeName = row[0].trim();
+      const tripType = row[1].trim();
+      const pointName = row[2].trim();
+      const time = row[3].trim();
+
+      const routeId = routeMap.get(`${routeName}-${tripType}`);
+      if (!routeId) {
+        console.warn(`Route not found: ${routeName} (${tripType})`);
+        continue;
+      }
+
+      const pointKey = `${routeId}-${pointName}`;
+      processedPoints.add(pointKey);
+
+      // Check if point exists
+      const [existing] = await db.query(
+        'SELECT * FROM pickup_points WHERE route_id = ? AND name = ?', 
+        [routeId, pointName]
+      );
+
+      if (existing.length > 0) {
+        // Normalize times to HH:mm:ss format for comparison
+        const normalizeTime = (time) => {
+          // Handle both HH:mm and H:mm formats
+          const [hours, minutes] = time.split(':').map(n => parseInt(n));
+          return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:00`;
+        };
+
+        const existingTime = normalizeTime(existing[0].time);
+        const newTime = normalizeTime(time);
+
+        if (existingTime !== newTime) {
+          await db.query(
+            'UPDATE pickup_points SET time = ? WHERE route_id = ? AND name = ?',
+            [newTime, routeId, pointName]
+          );
+          changes.updated.push({ 
+            route_name: routeName, 
+            trip_type: tripType, 
+            name: pointName, 
+            old_time: existingTime,
+            new_time: newTime 
+          });
+        } else {
+          changes.unchanged++;
+        }
+      } else {
+        // Add new point
+        const normalizedTime = time.split(':')
+          .map(n => parseInt(n).toString().padStart(2, '0'))
+          .join(':') + ':00';
+
+        await db.query(
+          'INSERT INTO pickup_points (route_id, name, time, route_name, trip_type) VALUES (?, ?, ?, ?, ?)',
+          [routeId, pointName, time, routeName, tripType]
+        );
+        changes.added.push({ route_name: routeName, trip_type: tripType, name: pointName, time });
+      }
+    }
+
+    // Delete points that weren't in the CSV
+    const [allPoints] = await db.query('SELECT * FROM pickup_points');
+    for (const point of allPoints) {
+      const pointKey = `${point.route_id}-${point.name}`;
+      if (!processedPoints.has(pointKey)) {
+        await db.query('DELETE FROM pickup_points WHERE route_id = ? AND name = ?', 
+          [point.route_id, point.name]);
+        changes.deleted.push(point);
+      }
+    }
+
+    await db.query('COMMIT');
+    logAdminAction(req.session.adminUser, 'BULK UPDATE PICKUP POINTS', changes);
+    
+    res.json({
+      message: 'Import completed successfully',
+      summary: {
+        added: changes.added.length,
+        updated: changes.updated.length,
+        unchanged: changes.unchanged,
+        deleted: changes.deleted.length
+      }
+    });
+  } catch (err) {
+    await db.query('ROLLBACK');
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Export the router
 module.exports = router;

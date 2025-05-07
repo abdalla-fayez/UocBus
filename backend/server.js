@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const dotenv = require('dotenv');
+const fileUpload = require('express-fileupload'); // Add this line
 dotenv.config(); // Load environment variables
 const path = require('path');
 global.__basedir = path.resolve(__dirname, '../'); // This sets the base directory as the root of your project
@@ -22,7 +23,15 @@ const dbBackupScheduler = require('./js/dbBackupScheduler');
 process.env.TZ = 'Africa/Egypt'; // THIS SETS THE TIMEZONE OF NODE.JS TO EGYPT AS IT DEFAULTS TO UTC
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // Optional: For form-encoded data
+app.use(express.urlencoded({ extended: true }));
+app.use(fileUpload({    // Add this middleware configuration
+  createParentPath: true,
+  limits: { 
+    fileSize: 1 * 1024 * 1024 // 1MB max file size
+  },
+  abortOnLimit: true,
+  useTempFiles: false
+}));
 app.set('query parser', (str) => qs.parse(str));
 
 app.use(session({
