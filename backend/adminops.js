@@ -349,7 +349,7 @@ router.get('/pickup_points/export', async (req, res) => {
       acc[key].push(curr);
       return acc;
     }, {});
-
+    
     // Create CSV with new column order
     let csvContent = '"name","trip_type","time","route_name"\n\n';
     
