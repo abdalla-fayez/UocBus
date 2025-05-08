@@ -58,7 +58,6 @@ router.get('/trips/available', async (req, res) => {
     // logger.info('Received query parameters:', { route, tripType, date });
 
     if (!route || !tripType || !date) {
-        // console.warn('Missing required query parameters.');
         return res.status(400).json({ message: 'All fields are required.' });
     }
 
@@ -66,7 +65,7 @@ router.get('/trips/available', async (req, res) => {
         // SQL query to fetch trips and their associated pickup points
         const query = `
             SELECT 
-                trips.id AS id, -- Use 'id' instead of 'trip_id' for consistency
+                trips.id AS id,
                 trips.trip_date,
                 trips.trip_time,
                 trips.available_seats,
@@ -79,21 +78,16 @@ router.get('/trips/available', async (req, res) => {
             JOIN routes ON trips.route_id = routes.id
             LEFT JOIN pickup_points ON routes.id = pickup_points.route_id
             WHERE (
-                (trip_date = CURDATE() AND trip_time >= CURTIME())
+                (trip_date = CURDATE() AND routes.time >= CURTIME())
                 OR (trip_date > CURDATE())
             )
             AND routes.route_name = ?
             AND routes.trip_type = ?
             AND trips.trip_date = ?
             AND trips.available_seats > 0
+            AND routes.status = 'Active'
             ORDER BY trip_date, trip_time, pickup_time;
         `;
-
-        // logger.info('Executing SQL query for fetching trip details with filters:', {
-        //     route,
-        //     tripType,
-        //     date
-        // });
 
         const [results] = await db.query(query, [route, tripType, date]);
 
