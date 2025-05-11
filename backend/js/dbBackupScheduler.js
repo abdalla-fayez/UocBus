@@ -54,7 +54,7 @@ function backupDatabase() {
           }
           const now = Date.now();
           const fileAge = now - new Date(stats.mtime).getTime();
-          const sevenDays = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+          const sevenDays = 6 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
           if (fileAge > sevenDays) {
             fs.unlink(filePath, err => {
               if (err) {
