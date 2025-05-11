@@ -45,47 +45,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const tbody = document.querySelector('#bookingsTable tbody');
     tbody.innerHTML = '';
 
-    // Formatter for created_at in dd/mm/yyyy HH:MM:SS format (adjusted by subtracting 2 hours)
-    const createdAtFormatter = new Intl.DateTimeFormat('en-GB', {
-      day: '2-digit', month: '2-digit', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', second: '2-digit',
-      timeZone: 'Africa/Cairo'
-    });
-
-    // Formatter for trip_date (using short date style)
-    const tripDateFormatter = new Intl.DateTimeFormat('en-GB', {
-      dateStyle: 'short',
-      timeZone: 'Africa/Cairo'
-    });
+    // Custom formatter function for Cairo time
+    function formatDateToCairo(date) {
+        const utcDate = new Date(date);
+        // Adjust to Cairo time (UTC+2)
+        const cairoOffset = -3;
+        utcDate.setHours(utcDate.getHours() + cairoOffset);
+        
+        const day = utcDate.getDate().toString().padStart(2, '0');
+        const month = (utcDate.getMonth() + 1).toString().padStart(2, '0');
+        const year = utcDate.getFullYear();
+        const hours = utcDate.getHours().toString().padStart(2, '0');
+        const minutes = utcDate.getMinutes().toString().padStart(2, '0');
+        const seconds = utcDate.getSeconds().toString().padStart(2, '0');
+        
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    }
 
     bookings.forEach(booking => {
-      // Adjust created_at: subtract 2 hours
-      const createdAt = new Date(new Date(booking.created_at).getTime() - 7200000);
-      const formattedCreatedAt = createdAtFormatter.format(createdAt);
+        const formattedCreatedAt = formatDateToCairo(booking.created_at);
 
-      // Format trip_date: if it's "N/A", leave as is; otherwise format as date
-      let formattedTripDate = booking.trip_date;
-      if (booking.trip_date !== 'N/A') {
-        formattedTripDate = tripDateFormatter.format(new Date(booking.trip_date));
-      }
+        // Format trip_date: if it's "N/A", leave as is; otherwise format as date
+        let formattedTripDate = booking.trip_date;
+        if (booking.trip_date !== 'N/A') {
+            const tripDate = new Date(booking.trip_date);
+            formattedTripDate = `${tripDate.getDate().toString().padStart(2, '0')}/${(tripDate.getMonth() + 1).toString().padStart(2, '0')}/${tripDate.getFullYear()}`;
+        }
 
-      // Compute the "Trip" as route_name and trip_type combination
-      const tripCombined = `${booking.route_name} (${booking.trip_type})`;
+        // Compute the "Trip" as route_name and trip_type combination
+        const tripCombined = `${booking.route_name} (${booking.trip_type})`;
 
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${booking.id}</td>
-        <td>${booking.order_id || 'N/A'}</td>
-        <td>${booking.student_name}</td>
-        <td>${booking.student_id || 'N/A'}</td>
-        <td>${booking.student_email}</td>
-        <td>${tripCombined || 'N/A'}</td>
-        <td>${formattedTripDate}</td>
-        <td>${booking.seats_booked || 'N/A'}</td>
-        <td>${booking.payment_status || 'N/A'}</td>
-        <td>${formattedCreatedAt}</td>
-      `;
-      tbody.appendChild(tr);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${booking.id}</td>
+          <td>${booking.order_id || 'N/A'}</td>
+          <td>${booking.student_name}</td>
+          <td>${booking.student_id || 'N/A'}</td>
+          <td>${booking.student_email}</td>
+          <td>${tripCombined || 'N/A'}</td>
+          <td>${formattedTripDate}</td>
+          <td>${booking.seats_booked || 'N/A'}</td>
+          <td>${booking.payment_status || 'N/A'}</td>
+          <td>${formattedCreatedAt}</td>
+        `;
+        tbody.appendChild(tr);
     });
 
     // If DataTable is already initialized on #bookingsTable, destroy it first.
@@ -97,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#bookingsTable').DataTable({
       pageLength: 10,
       lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-      order: [] // Let DataTables handle default ordering.
+      order: [[0, 'desc']] // Order by first column (ID) descending
     });
   }
 

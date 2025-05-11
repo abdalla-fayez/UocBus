@@ -71,7 +71,7 @@ router.post('/api/payments/initiate', async (req, res) => {
 
         // Create checkout session
         const bmResponse = await axios.post(
-            `https://banquemisr.gateway.mastercard.com/api/rest/version/61/merchant/${merchantId}/session`,
+            `https://nbe.gateway.mastercard.com/api/rest/version/61/merchant/${merchantId}/session`,
             {
                 apiOperation: 'CREATE_CHECKOUT_SESSION',
                 order: {
@@ -193,7 +193,9 @@ router.get('/api/payments/callback', async (req, res) => {
             subject: 'Bus Ticket Booking Confirmation',
             text: `Dear ${ticketDetails.student_name},
 
-Thank you for your booking. Please find attached your bus ticket for your upcoming trip on ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(ticketDetails.trip_date))}.
+Thank you for your booking.
+
+Please find attached your bus ticket for your upcoming trip on ${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(ticketDetails.trip_date))}.
 
 For support, please contact us at 01008470311.
 
@@ -206,7 +208,7 @@ Universities of Canada in Egypt`,
 
         // Prepare email options for the fleet manager.
         // You can set a fixed email or fetch it from your configuration.
-        const fleetManagerEmail = 'abdalla.fayez@uofcanada.edu.eg';
+        const fleetManagerEmail = 'mustafa.mohamed@uofcanada.edu.eg';
         const fleetEmailBody = `
 Ticket Details:
 ---------------
