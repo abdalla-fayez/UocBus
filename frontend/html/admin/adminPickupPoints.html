@@ -19,6 +19,16 @@
       border: 1px solid #dee2e6;
       margin-bottom: 5px;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .route-header::after {
+      content: '▼';
+      transition: transform 0.3s ease;
+    }
+    .route-header.expanded::after {
+      transform: rotate(180deg);
     }
     .pickup-points-container {
       padding: 10px;

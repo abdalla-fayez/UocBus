@@ -44,6 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const header = document.createElement('div');
       header.classList.add('route-header');
       header.innerHTML = `Route ID: ${route.id} – ${route.route_name} (${route.trip_type})`;
+      
+      // Add click handler to toggle the expandable div
+      header.addEventListener('click', () => {
+        const container = header.nextElementSibling;
+        container.style.display = container.style.display === 'block' ? 'none' : 'block';
+        header.classList.toggle('expanded');
+      });
+      
       routeDiv.appendChild(header);
 
       // Create the expandable container for pickup points
