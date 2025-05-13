@@ -79,14 +79,14 @@ app.post('/auth/microsoft/callback',
                 // User does not exist, insert new user
                 await db.query(
                     `INSERT INTO users (student_name, student_email, student_id) VALUES (?, ?, ?)`,
-                    [req.user.displayName, req.user._json.email, req.user.jobTitle]
+                    [req.user.displayName, req.user._json.email, req.user.jobTitle || 'N/A']
                 );
             }
             // User exists, update their information if necessary
             else {
                 await db.query(
                     `UPDATE users SET student_name = ?, student_id = ? WHERE student_email = ?`,
-                    [req.user.displayName, req.user.jobTitle, req.user._json.email]
+                    [req.user.displayName, req.user.jobTitle || 'N/A', req.user._json.email]
                 );
             }
         } catch (error) {

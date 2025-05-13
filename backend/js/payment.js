@@ -181,7 +181,7 @@ router.get('/api/payments/callback', async (req, res) => {
         // Generate ticket
         const ticketPath = path.join(__dirname, '../../frontend/assets/tickets', `${orderId}.pdf`);
         await generateTicket(ticketDetails, ticketPath);
-        
+
         logger.info(`Ticket generated: ${ticketPath}`);
 
         // Read the generated PDF into a buffer
@@ -191,7 +191,7 @@ router.get('/api/payments/callback', async (req, res) => {
         const studentEmailOptions = {
             to: ticketDetails.student_email,
             subject: 'Bus Ticket Booking Confirmation',
-            text: `Dear ${ticketDetails.student_name},
+            text: `Dear ${ticketDetails.student_name.replace('Stu', '')},
 
 Thank you for your booking.
 

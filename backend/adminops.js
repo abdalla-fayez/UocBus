@@ -295,17 +295,20 @@ router.get('/bookingsreport', async (req, res) => {
         b.student_id AS Student_ID,
         b.student_email AS Student_Email,
         b.order_id AS Ticket_ID,
-        b.created_at AS Booking_Date,
         p.status AS Payment_Status,
         p.seats_booked AS Seats_Booked,
         p.amount AS Total_Amount,
-        COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date,
+        COALESCE(DATE_FORMAT(b.created_at, '%Y-%m-%d'), 'N/A') AS Booking_Date,
         COALESCE(t.route_name, 'N/A') AS Route_Name,
-        COALESCE(t.trip_type, 'N/A') AS Trip_Type
+        COALESCE(t.trip_type, 'N/A') AS Trip_Type,
+        COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date,
       FROM bookings b
       LEFT JOIN payments p ON b.order_id = p.order_id
       LEFT JOIN trips t ON p.trip_id = t.id
-      WHERE DATE(t.trip_date) = ?
+      WHERE 
+      p.status = 'SUCCESS' 
+      AND
+      DATE(b.created_at) = ?
     `, [reportDate]);
     
     // Check if there are no results

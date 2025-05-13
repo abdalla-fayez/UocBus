@@ -106,6 +106,12 @@
     .user-preview #displayName {
       font-size: 1rem;
     }
+
+    .user-preview #ticketAllowance {
+      font-size: 1rem;
+      color: #a30000;
+    }
+
     /* Results Section Styling */
     .results-container {
       margin-top: 20px;
@@ -206,6 +212,10 @@
         font-size: 0.6rem;
       }
 
+      .user-preview #ticketAllowance {
+        font-size: 0.6rem;
+      }
+      
       .user-preview .dropdown-menu {
         right: 5px;
       }
@@ -225,9 +235,12 @@
     <div class="dropdown user-preview">
       <img id="profilePhoto" src="" class="rounded-circle dropdown-toggle" width="60" height="60" data-bs-toggle="dropdown" aria-expanded="false">
       <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+        <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
       </ul>
       <div id="displayName" class="mt-2"></div>
+      <div id="ticketAllowance" class="small">
+        Ticket Allowance: <span id="remainingTickets">-</span>/<span id="maxTickets">-</span>
+      </div>
     </div>
     <div class="custom-text">Bus Booking</div>
   </header>
@@ -354,8 +367,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <!-- Version notice -->
+          <div class="alert alert-info mb-3" role="alert">
+            <small>Note: Features shown in this video may differ from the current version of the system.</small>
+          </div>
           <!-- Custom 9:16 ratio -->
-          <div class="ratio-9x16">
+          <div class="ratio-9x16">     
             <iframe 
               id="helpVideo"
               src="https://youtube.com/embed/sI-gTz7en4Y?feature=share&modestbranding=1&rel=0&showinfo=0&controls=1"

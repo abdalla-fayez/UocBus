@@ -107,6 +107,11 @@
       font-size: 1rem;
     }
 
+    .user-preview #ticketAllowance {
+      font-size: 1rem;
+      color: #a30000;
+    }
+
     /* Footer Styling */
     .footer {
       background-color: #a30000;
@@ -158,6 +163,10 @@
         font-size: 0.6rem;
       }
 
+      .user-preview #ticketAllowance {
+        font-size: 0.6rem;
+      }
+
       .user-preview .dropdown-menu {
         right: 5px;
       }
@@ -179,6 +188,9 @@
           <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
       </ul>
       <div id="displayName" class="mt-2"></div>
+      <div id="ticketAllowance" class="small">
+        Ticket Allowance: <span id="remainingTickets">-</span>/<span id="maxTickets">-</span>
+      </div>
     </div>
     <div class="custom-text">Checkout</div>
   </header>
@@ -226,7 +238,7 @@
               <label class="form-check-label" for="tosCheckbox">
                 I agree to the 
                 <a href="#" data-bs-toggle="modal" data-bs-target="#tosModal" class="text-decoration-underline">
-                Terms of Service
+                Terms of Service.
                 </a>
               </label>
               <!-- Inline error message, hidden by default -->
