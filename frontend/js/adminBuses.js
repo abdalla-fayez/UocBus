@@ -1,17 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
+import permissionsManager from './permissions.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Initialize permissions
+  await permissionsManager.init();
+
+  // Redirect if no permission to manage buses
+  if (!permissionsManager.hasPermission('manage_buses')) {
+    window.location.href = 'adminDashboard.html';
+    return;
+  }
+
   const busesTableBody = document.querySelector('#busesTable tbody');
   const addBusForm = document.getElementById('addBusForm');
   
   let busesData = []; // Array to store fetched buses
-
   // Fetch all buses from the API endpoint
   async function fetchBuses() {
     try {
-      const response = await fetch('/api/admin/buses');
-      busesData = await response.json();
-      renderBuses(busesData);
+      const response = await permissionsManager.fetchWithPermission('/api/admin/buses');
+      if (response.ok) {
+        busesData = await response.json();
+        renderBuses(busesData);
+      } else {
+        const error = await response.json();
+        alert(error.message || 'Failed to fetch buses');
+      }
     } catch (error) {
       console.error('Error fetching buses:', error);
+      if (error.message === 'Permission denied') {
+        window.location.href = 'adminDashboard.html';
+      }
     }
   }
 

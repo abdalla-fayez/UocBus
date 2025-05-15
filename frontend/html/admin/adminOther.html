@@ -28,31 +28,33 @@
       <a>
         <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
       </a>
-    </div>
-    <nav class="d-flex justify-content-between align-items-center">
+    </div>    <nav class="d-flex justify-content-between align-items-center">
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminRoutes.html">Manage Routes</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
-        <li class="nav-item"><a class="nav-link active" href="adminOther.html">Other</a></li>
+        <li class="nav-item" data-requires-permission="manage_buses"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item" data-requires-permission="manage_routes"><a class="nav-link" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item" data-requires-permission="manage_pickup_points"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item" data-requires-permission="manage_automation"><a class="nav-link active" href="adminOther.html">Other</a></li>
       </ul>
-      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+      <div>
+        <span class="mr-3">Role: <span class="role-indicator badge badge-info">Loading...</span></span>
+        <button id="logoutBtn" class="btn btn-dark">Logout</button>
+      </div>
     </nav>
   </header>
+  
   <main class="container">
-
-  <section id="toggleTripAutomationSection" class="mb-5">
+  <section id="toggleTripAutomationSection" class="mb-5" data-requires-permission="manage_automation">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Daily Trip Generation</h5>
         <p class="card-text" id="tripAutomationStatus">Loading current status...</p>
-        <button id="toggleTripAutomationBtn" class="btn btn-primary">Toggle Trip Automation</button>
+        <button id="toggleTripAutomationBtn" class="btn btn-primary" data-requires-permission-action="manage_automation">Toggle Trip Automation</button>
       </div>
     </div>
   </section>
 
-    <section id="downloadReportSection" class="mb-5">
+    <section id="downloadReportSection" class="mb-5" data-requires-permission="generate_reports">
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Bookings Report (Daily)</h5>
@@ -61,16 +63,15 @@
             <label for="reportDate">Bookings Date:</label>
             <input type="date" id="reportDate" class="form-control col-2" required>
           </div>
-          <button id="downloadReportBtn" class="btn btn-primary mt-2">Download Report</button>
+          <button id="downloadReportBtn" class="btn btn-primary mt-2" data-requires-permission-action="generate_reports">Download Report</button>
         </div>
       </div>
     </section>
 
     <!-- You can add more miscellaneous settings below -->
-  </main>
-  <!-- Common admin authentication check script -->
-  <script src="../../js/adminauth-check.js" defer></script>
+  </main>  <!-- Common admin authentication check script -->
+  <script src="../../js/adminauth-check-new.js" type="module"></script>
   <!-- Admin Other page JavaScript -->
-  <script src="../../js/adminOther.js"></script>
+  <script src="../../js/adminOther.js" type="module"></script>
 </body>
 </html>

@@ -1,4 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
+import permissionsManager from './permissions.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Initialize permissions
+  await permissionsManager.init();
+
+  // Redirect if no permissions for this page
+  if (!permissionsManager.hasPermission('manage_automation') && 
+      !permissionsManager.hasPermission('generate_reports')) {
+    window.location.href = 'adminDashboard.html';
+    return;
+  }
+
   const statusEl = document.getElementById('tripAutomationStatus');
   const toggleBtn = document.getElementById('toggleTripAutomationBtn');
   const downloadReportBtn = document.getElementById('downloadReportBtn');
@@ -17,13 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleBtn.classList.add('btn-success');
     }
   }
-
   // Fetch the current status from the backend
   async function fetchTripAutomationStatus() {
     try {
-      const response = await fetch('/api/admin/other/trip-automation-status', { credentials: 'include' });
+      const response = await permissionsManager.fetchWithPermission('/api/admin/other/trip-automation-status');
       const data = await response.json();
-      updateUI(data.enabled);
+      if (response.ok) {
+        updateUI(data.enabled);
+      } else {
+        console.error('Error:', data.error);
+        if (response.status === 403) {
+          statusEl.textContent = 'You do not have permission to view automation status.';
+        }
+      }
     } catch (error) {
       console.error('Error fetching trip automation status:', error);
       statusEl.textContent = 'Error fetching status.';
@@ -33,9 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle the event status on the backend
   async function toggleTripAutomation() {
     try {
-      const response = await fetch('/api/admin/other/toggle-trip-automation', {
-        method: 'POST',
-        credentials: 'include'
+      const response = await permissionsManager.fetchWithPermission('/api/admin/other/toggle-trip-automation', {
+        method: 'POST'
       });
       const data = await response.json();
       updateUI(data.enabled);
@@ -55,17 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     toggleTripAutomation();
   });
-
   // Handle report download
   downloadReportBtn.addEventListener('click', async () => {
-    const reportDate = document.getElementById('reportDate').value;
-    if (!reportDate) {
-      alert('Please select a trip date before downloading the report.');
+    if (!permissionsManager.hasPermission('generate_reports')) {
+      alert('You do not have permission to generate reports.');
       return;
     }
-    const downloadUrl = `/api/admin/bookingsreport?date=${reportDate}`;
+
+    const reportDate = document.getElementById('reportDate').value;
+    if (!reportDate) {
+      alert('Please select a date before downloading the report.');
+      return;
+    }
+
     try {
-      const response = await fetch(downloadUrl);
+      const response = await permissionsManager.fetchWithPermission(`/api/admin/dailypaymentsreport?date=${reportDate}`);
       const contentType = response.headers.get("content-type");
       
       // If the response is JSON, parse it and display the message
@@ -77,12 +98,24 @@ document.addEventListener('DOMContentLoaded', () => {
           alert(data.error);
         }
       } else {
-        // Otherwise, if it's CSV, trigger the download
-        window.location.href = downloadUrl;
+        // Otherwise, if it's CSV, create a blob and trigger download
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `payments-report-${reportDate}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
       }
     } catch (err) {
       console.error(err);
-      alert("An error occurred: " + err.message);
+      if (err.message === 'Permission denied') {
+        alert('You do not have permission to generate reports.');
+      } else {
+        alert("An error occurred: " + err.message);
+      }
     }
   });
   

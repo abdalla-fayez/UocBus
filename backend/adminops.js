@@ -3,13 +3,14 @@ const router = express.Router();
 const db = require('./models/dbconnection'); // DB connection module
 const { logAdminAction } = require('./adminLogger');
 const { Parser } = require('json2csv');
+const checkPermission = require('./middleware/checkPermission');
 
 /* ============
    BUSES CRUD
    ============ */
 
 // Get all buses (read-only, no logging)
-router.get('/buses', async (req, res) => {
+router.get('/buses', checkPermission(['manage_buses', 'manage_routes']), async (req, res) => {
   try {
     const [results] = await db.query('SELECT * FROM buses ORDER BY name');
     res.json(results);
@@ -19,7 +20,7 @@ router.get('/buses', async (req, res) => {
 });
 
 // Create a new bus
-router.post('/buses', async (req, res) => {
+router.post('/buses', checkPermission('manage_buses'), async (req, res) => {
   try {
     const { name, vacant_seats, driver_mobile } = req.body;
     const sql = 'INSERT INTO buses (name, vacant_seats, driver_mobile) VALUES (?, ?, ?)';
@@ -33,7 +34,7 @@ router.post('/buses', async (req, res) => {
 });
 
 // Update a bus
-router.put('/buses/:id', async (req, res) => {
+router.put('/buses/:id', checkPermission('manage_buses'), async (req, res) => {
   try {
     const { name, vacant_seats, driver_mobile } = req.body;
     const sql = 'UPDATE buses SET name=?, vacant_seats=?, driver_mobile=? WHERE id=?';
@@ -47,7 +48,7 @@ router.put('/buses/:id', async (req, res) => {
 });
 
 // Delete a bus
-router.delete('/buses/:id', async (req, res) => {
+router.delete('/buses/:id', checkPermission('manage_buses'), async (req, res) => {
   try {
     // Optionally fetch the bus before deleting for logging purposes
     const [busRows] = await db.query('SELECT * FROM buses WHERE id=?', [req.params.id]);
@@ -65,9 +66,14 @@ router.delete('/buses/:id', async (req, res) => {
     ============ */
 
 // Get all routes (read-only, no logging)
-router.get('/routes', async (req, res) => {
+router.get('/routes', checkPermission('manage_routes'), async (req, res) => {
   try {
-    const [results] = await db.query('SELECT * FROM routes ORDER BY route_name');
+    const [results] = await db.query(`
+      SELECT r.*, b.name as bus_name 
+      FROM routes r
+      LEFT JOIN buses b ON r.bus_id = b.id 
+      ORDER BY r.route_name
+    `);
     res.json(results);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -75,7 +81,7 @@ router.get('/routes', async (req, res) => {
 });
 
 // Create a new route  
-router.post('/routes', async (req, res) => {
+router.post('/routes', checkPermission('manage_routes'), async (req, res) => {
   try {
     const { price, trip_type, bus_id, route_name, time, status } = req.body;
     const sql = 'INSERT INTO routes (price, trip_type, bus_id, route_name, time, status) VALUES (?, ?, ?, ?, ?, ?)';
@@ -89,7 +95,7 @@ router.post('/routes', async (req, res) => {
 });
 
 // Update a route
-router.put('/routes/:id', async (req, res) => {
+router.put('/routes/:id', checkPermission('manage_routes'), async (req, res) => {
   try {
     const { price, trip_type, bus_id, route_name, time, status } = req.body;
     const sql = 'UPDATE routes SET price=?, trip_type=?, bus_id=?, route_name=?, time=?, status=? WHERE id=?';
@@ -103,7 +109,7 @@ router.put('/routes/:id', async (req, res) => {
 });
 
 // Delete a route
-router.delete('/routes/:id', async (req, res) => {
+router.delete('/routes/:id', checkPermission('manage_routes'), async (req, res) => {
   try {
     const [routeRows] = await db.query('SELECT * FROM routes WHERE id=?', [req.params.id]);
     await db.query('DELETE FROM routes WHERE id=?', [req.params.id]);
@@ -120,7 +126,7 @@ router.delete('/routes/:id', async (req, res) => {
     ======================= */
 
 // Get all pickup points (read-only)
-router.get('/pickup_points', async (req, res) => {
+router.get('/pickup_points', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     const [results] = await db.query('SELECT * FROM pickup_points ORDER BY time');
     res.json(results);
@@ -130,7 +136,7 @@ router.get('/pickup_points', async (req, res) => {
 });
 
 // Create a new pickup point
-router.post('/pickup_points', async (req, res) => {
+router.post('/pickup_points', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     const { route_id, name, time, route_name, trip_type } = req.body;
     const sql = 'INSERT INTO pickup_points (route_id, name, time, route_name, trip_type) VALUES (?, ?, ?, ?, ?)';
@@ -144,7 +150,7 @@ router.post('/pickup_points', async (req, res) => {
 });
 
 // Update a pickup point
-router.put('/pickup_points/:id', async (req, res) => {
+router.put('/pickup_points/:id', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     const { route_id, name, time, route_name, trip_type } = req.body;
     const [existingPoint] = await db.query('SELECT * FROM pickup_points WHERE id = ?', [req.params.id]);
@@ -162,7 +168,7 @@ router.put('/pickup_points/:id', async (req, res) => {
 });
 
 // Delete a pickup point
-router.delete('/pickup_points/:id', async (req, res) => {
+router.delete('/pickup_points/:id', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     const [pickupRows] = await db.query('SELECT * FROM pickup_points WHERE id=?', [req.params.id]);
     await db.query('DELETE FROM pickup_points WHERE id=?', [req.params.id]);
@@ -179,7 +185,7 @@ router.delete('/pickup_points/:id', async (req, res) => {
     ======================= */
 
 // Get all bookings with extra info from payments and trips
-router.get('/dashboard/bookings', async (req, res) => {
+router.get('/dashboard/bookings', checkPermission('view_bookings'), async (req, res) => {
   try {
     const [results] = await db.query(`
       SELECT 
@@ -205,7 +211,7 @@ router.get('/dashboard/bookings', async (req, res) => {
 });
 
 // Dashboard: Get upcoming trips (only trips that have not yet passed)
-router.get('/dashboard/trips', async (req, res) => {
+router.get('/dashboard/trips', checkPermission('view_bookings'), async (req, res) => {
   try {
     const [results] = await db.query(`
       SELECT * FROM trips
@@ -219,7 +225,7 @@ router.get('/dashboard/trips', async (req, res) => {
 });
 
 // Get the current status of the Trip_Automation event
-router.get('/other/trip-automation-status', async (req, res) => {
+router.get('/other/trip-automation-status', checkPermission('manage_automation'), async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT STATUS 
@@ -241,7 +247,7 @@ router.get('/other/trip-automation-status', async (req, res) => {
 });
 
 // Toggle the Trip_Automation event (enable if disabled, disable if enabled)
-router.post('/other/toggle-trip-automation', async (req, res) => {
+router.post('/other/toggle-trip-automation', checkPermission('manage_automation'), async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT STATUS 
@@ -282,46 +288,96 @@ router.post('/other/toggle-trip-automation', async (req, res) => {
     REPORTS GENERATION
     ======================= */
 
-router.get('/bookingsreport', async (req, res) => {
+// Generate payments report
+router.get('/dailypaymentsreport', checkPermission('generate_reports_finance'), async (req, res) => {
   try {
-    const reportDate = req.query.date; // Expecting date in 'YYYY-MM-DD' format
-    if (!reportDate) {
-      return res.status(400).json({ error: 'Date parameter is required (format: YYYY-MM-DD)' });
+    const fromDate = req.query.fromDate;
+    const toDate = req.query.toDate;
+    
+    if (!fromDate || !toDate) {
+      return res.status(400).json({ error: 'Both fromDate and toDate parameters are required (format: YYYY-MM-DD)' });
     }
     
     const [results] = await db.query(`
       SELECT 
-        b.student_name AS Student_Name,
-        b.student_id AS Student_ID,
         b.student_email AS Student_Email,
-        b.order_id AS Ticket_ID,
-        p.status AS Payment_Status,
-        p.seats_booked AS Seats_Booked,
-        p.amount AS Total_Amount,
+        b.student_id AS Student_ID,
+        b.student_name AS Student_Name,
         COALESCE(DATE_FORMAT(b.created_at, '%Y-%m-%d'), 'N/A') AS Payment_Date,
+        p.amount AS Total_Amount,
+        p.status AS Payment_Status,
+        b.order_id AS Ticket_ID,
+        p.seats_booked AS Seats_Booked,
         COALESCE(t.route_name, 'N/A') AS Route_Name,
         COALESCE(t.trip_type, 'N/A') AS Trip_Type,
         COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date
       FROM bookings b
       LEFT JOIN payments p ON b.order_id = p.order_id
-      LEFT JOIN trips t ON p.trip_id = t.id
-      WHERE 
+      LEFT JOIN trips t ON p.trip_id = t.id      WHERE 
       p.status = 'SUCCESS' 
       AND
-      DATE(b.created_at) = ?
-    `, [reportDate]);
+      DATE(b.created_at) BETWEEN ? AND ?
+      ORDER BY b.created_at ASC
+    `, [fromDate, toDate]);
     
     // Check if there are no results
     if (results.length === 0) {
       return res.status(200).json({ message: "There are no bookings for this date." });
     }
-    
-    // Generate CSV if data is available
+      // Generate CSV if data is available
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(results);
     
     res.header('Content-Type', 'text/csv');
-    res.attachment(`bookings-report-${reportDate}.csv`);
+    res.attachment(`payments-report-${fromDate}-to-${toDate}.csv`);
+    return res.send(csv);
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// Generate bookings report
+router.get('/dailybookingsreport', checkPermission('generate_reports_fleet'), async (req, res) => {
+  try {
+    const fromDate = req.query.fromDate;
+    const toDate = req.query.toDate;
+    
+    if (!fromDate || !toDate) {
+      return res.status(400).json({ error: 'Both fromDate and toDate parameters are required (format: YYYY-MM-DD)' });
+    }
+    
+    const [results] = await db.query(`
+      SELECT 
+        b.student_email AS Student_Email,
+        b.student_id AS Student_ID,
+        b.student_name AS Student_Name,
+        COALESCE(DATE_FORMAT(b.created_at, '%Y-%m-%d'), 'N/A') AS Payment_Date,
+        p.amount AS Total_Amount,
+        p.status AS Payment_Status,
+        b.order_id AS Ticket_ID,
+        p.seats_booked AS Seats_Booked,
+        COALESCE(t.route_name, 'N/A') AS Route_Name,
+        COALESCE(t.trip_type, 'N/A') AS Trip_Type,
+        COALESCE(DATE_FORMAT(t.trip_date, '%Y-%m-%d'), 'N/A') AS Trip_Date
+      FROM bookings b
+      LEFT JOIN payments p ON b.order_id = p.order_id
+      LEFT JOIN trips t ON p.trip_id = t.id      WHERE 
+      p.status = 'SUCCESS' 
+      AND
+      DATE(t.trip_date) BETWEEN ? AND ?
+      ORDER BY t.trip_date ASC, t.route_name ASC
+    `, [fromDate, toDate]);
+    
+    // Check if there are no results
+    if (results.length === 0) {
+      return res.status(200).json({ message: "There are no bookings for this date." });
+    }
+      // Generate CSV if data is available
+    const json2csvParser = new Parser();
+    const csv = json2csvParser.parse(results);
+    
+    res.header('Content-Type', 'text/csv');
+    res.attachment(`bookings-report-${fromDate}-to-${toDate}.csv`);
     return res.send(csv);
   } catch (err) {
     return res.status(500).json({ error: err.message });
@@ -333,7 +389,7 @@ router.get('/bookingsreport', async (req, res) => {
     ======================= */
 
 // Export pickup points as CSV template
-router.get('/pickup_points/export', async (req, res) => {
+router.get('/pickup_points/export', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     // Get pickup points with reordered columns
     const [results] = await db.query(`
@@ -389,7 +445,7 @@ router.get('/pickup_points/export', async (req, res) => {
 });
 
 // Import pickup points from CSV
-router.post('/pickup_points/import', async (req, res) => {
+router.post('/pickup_points/import', checkPermission('manage_pickup_points'), async (req, res) => {
   try {
     if (!req.files) {
       return res.status(400).json({ error: 'No file was uploaded' });
@@ -520,6 +576,34 @@ router.post('/pickup_points/import', async (req, res) => {
     await db.query('ROLLBACK');
     res.status(500).json({ error: err.message });
   }
+});
+
+// Get user permissions endpoint
+router.get('/permissions', async (req, res) => {
+    try {
+        if (!req.session.adminUser) {
+            return res.status(401).json({ error: 'Not authenticated' });
+        }
+
+        const [permissions] = await db.query(`
+            SELECT 
+                r.role_name,
+                GROUP_CONCAT(p.permission_name) as permissions
+            FROM admin_users u
+            JOIN admin_roles r ON u.role_id = r.id
+            JOIN role_permissions rp ON r.id = rp.role_id
+            JOIN admin_permissions p ON rp.permission_id = p.id
+            WHERE u.id = ?
+            GROUP BY r.role_name
+        `, [req.session.adminUser.id]);
+
+        res.json({
+            role: permissions[0]?.role_name,
+            permissions: permissions[0]?.permissions.split(',') || []
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // Export the router

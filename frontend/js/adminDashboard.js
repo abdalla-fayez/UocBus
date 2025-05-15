@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+import permissionsManager from './permissions.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Initialize permissions
+  await permissionsManager.init();
+  
   // --------------------------
   // Tab Switching Functionality
   // --------------------------
@@ -25,10 +30,188 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchTrips();
     // (Optional) Can refetch trips here if needed. (done above)
   });
-  
+  // --------------------------
+  // Report Generation UI based on Permissions
+  // --------------------------
+
+  // Create report section if user has either permission
+  if (permissionsManager.hasPermission('generate_reports_fleet') || 
+      permissionsManager.hasPermission('generate_reports_finance')) {
+      
+      const reportSection = document.createElement('div');
+      reportSection.className = 'mb-3';
+      
+      let reportHTML = `<div class="row">`;
+      
+      // Add Bookings Report UI if user has permission
+      if (permissionsManager.hasPermission('generate_reports_fleet')) {
+          reportHTML += `
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <div class="card-header">
+                          <h5 class="card-title mb-0">Bookings Report</h5>
+                      </div>
+                      <div class="card-body">
+                          <div class="form-group mb-2">
+                              <label>Date Range:</label>
+                              <div class="d-flex gap-2">
+                                  <input type="date" id="bookingsReportFromDate" class="form-control" placeholder="From Date">
+                                  <input type="date" id="bookingsReportToDate" class="form-control" placeholder="To Date">
+                              </div>
+                          </div>
+                          <button id="generateBookingsReport" class="btn btn-primary">Generate Bookings Report</button>
+                      </div>
+                  </div>
+              </div>`;
+      }
+      
+      // Add Payments Report UI if user has permission
+      if (permissionsManager.hasPermission('generate_reports_finance')) {
+          reportHTML += `
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <div class="card-header">
+                          <h5 class="card-title mb-0">Payments Report</h5>
+                      </div>
+                      <div class="card-body">
+                          <div class="form-group mb-2">
+                              <label>Date Range:</label>
+                              <div class="d-flex gap-2">
+                                  <input type="date" id="paymentsReportFromDate" class="form-control" placeholder="From Date">
+                                  <input type="date" id="paymentsReportToDate" class="form-control" placeholder="To Date">
+                              </div>
+                          </div>
+                          <button id="generatePaymentsReport" class="btn btn-primary">Generate Payments Report</button>
+                      </div>
+                  </div>
+              </div>`;
+      }
+      
+      reportHTML += `</div>`;
+      reportSection.innerHTML = reportHTML;
+      bookingsSection.insertBefore(reportSection, bookingsSection.firstChild);
+
+      // Add event listeners if the elements exist
+      const bookingsReportBtn = document.getElementById('generateBookingsReport');
+      const paymentsReportBtn = document.getElementById('generatePaymentsReport');
+
+      // Bookings Report Event Handler
+      if (bookingsReportBtn) {
+          bookingsReportBtn.addEventListener('click', async () => {
+              const fromDate = document.getElementById('bookingsReportFromDate').value;
+              const toDate = document.getElementById('bookingsReportToDate').value;
+              
+              if (!fromDate || !toDate) {
+                  alert('Please select both From and To dates');
+                  return;
+              }
+              
+              if (new Date(fromDate) > new Date(toDate)) {
+                  alert('From date cannot be later than To date');
+                  return;
+              }
+
+              try {
+                  const response = await permissionsManager.fetchWithPermission(
+                      `/api/admin/dailybookingsreport?fromDate=${fromDate}&toDate=${toDate}`
+                  );
+                  const contentType = response.headers.get('content-type');
+                  
+                  if (response.ok) {
+                      if (contentType && contentType.indexOf("application/json") !== -1) {
+                          const data = await response.json();
+                          if(data.message) {
+                              alert(data.message);
+                          } else if(data.error) {
+                              alert(data.error);
+                          }
+                      } else {
+                          const blob = await response.blob();
+                          const url = window.URL.createObjectURL(blob);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = `bookings-report-${fromDate}-to-${toDate}.csv`;
+                          document.body.appendChild(a);
+                          a.click();
+                          window.URL.revokeObjectURL(url);
+                          document.body.removeChild(a);
+                      }
+                  } else {
+                      if (contentType && contentType.indexOf("application/json") !== -1) {
+                          const error = await response.json();
+                          alert(error.message || 'Failed to generate bookings report');
+                      } else {
+                          alert('Failed to generate bookings report');
+                      }
+                  }
+              } catch (error) {
+                  console.error('Error generating bookings report:', error);
+                  alert('Error generating bookings report');
+              }
+          });
+      }
+
+      // Payments Report Event Handler
+      if (paymentsReportBtn) {
+          paymentsReportBtn.addEventListener('click', async () => {
+              const fromDate = document.getElementById('paymentsReportFromDate').value;
+              const toDate = document.getElementById('paymentsReportToDate').value;
+              
+              if (!fromDate || !toDate) {
+                  alert('Please select both From and To dates');
+                  return;
+              }
+              
+              if (new Date(fromDate) > new Date(toDate)) {
+                  alert('From date cannot be later than To date');
+                  return;
+              }
+
+              try {
+                  const response = await permissionsManager.fetchWithPermission(
+                      `/api/admin/dailypaymentsreport?fromDate=${fromDate}&toDate=${toDate}`
+                  );
+                  const contentType = response.headers.get('content-type');
+                  
+                  if (response.ok) {
+                      if (contentType && contentType.indexOf("application/json") !== -1) {
+                          const data = await response.json();
+                          if(data.message) {
+                              alert(data.message);
+                          } else if(data.error) {
+                              alert(data.error);
+                          }
+                      } else {
+                          const blob = await response.blob();
+                          const url = window.URL.createObjectURL(blob);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = `payments-report-${fromDate}-to-${toDate}.csv`;
+                          document.body.appendChild(a);
+                          a.click();
+                          window.URL.revokeObjectURL(url);
+                          document.body.removeChild(a);
+                      }
+                  } else {
+                      if (contentType && contentType.indexOf("application/json") !== -1) {
+                          const error = await response.json();
+                          alert(error.message || 'Failed to generate payments report');
+                      } else {
+                          alert('Failed to generate payments report');
+                      }
+                  }
+              } catch (error) {
+                  console.error('Error generating payments report:', error);
+                  alert('Error generating payments report');
+              }
+          });
+      }
+  }
+
   // --------------------------
   // Fetch and Render Bookings using DataTables
   // --------------------------
+  
   let bookingsData = [];
 
   async function fetchBookings() {

@@ -1,17 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if admin is authenticated
-    fetch('/api/admin/check-auth', { credentials: 'include' })
-        .then(response => response.json())
-        .then(data => {
-            if (!data.authenticated) {
-                window.location.href = '/api/admin/login';
-            }
-        })
-        .catch(() => {
+export async function checkAdminAuth() {
+    try {
+        const response = await fetch('/api/admin/check-auth', { credentials: 'include' });
+        const data = await response.json();
+        if (!data.authenticated) {
             window.location.href = '/api/admin/login';
-        });
+            return false;
+        }
+        return true;
+    } catch (error) {
+        window.location.href = '/api/admin/login';
+        return false;
+    }
+}
 
-    // Add event listener to the logout button
+export function setupLogout() {
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
         logoutBtn.addEventListener('click', async (e) => {
@@ -31,4 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+}
+
+// Initialize both auth check and logout handler when imported
+document.addEventListener('DOMContentLoaded', () => {
+    checkAdminAuth();
+    setupLogout();
 });

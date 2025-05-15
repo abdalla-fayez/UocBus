@@ -18,16 +18,18 @@
       <a>
         <img src="../../assets/UOC-Website-Header-Logo3.png" alt="University Logo" style="height: 70px;">
       </a>
-    </div>
-    <nav class="d-flex justify-content-between align-items-center">
+    </div>    <nav class="d-flex justify-content-between align-items-center">
       <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
-        <li class="nav-item"><a class="nav-link active" href="adminRoutes.html">Manage Routes</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
-        <li class="nav-item"><a class="nav-link" href="adminOther.html">Other</a></li>
+        <li class="nav-item" data-requires-permission="manage_buses"><a class="nav-link" href="adminBuses.html">Manage Buses</a></li>
+        <li class="nav-item" data-requires-permission="manage_routes"><a class="nav-link active" href="adminRoutes.html">Manage Routes</a></li>
+        <li class="nav-item" data-requires-permission="manage_pickup_points"><a class="nav-link" href="adminPickupPoints.html">Manage Pickup Points</a></li>
+        <li class="nav-item" data-requires-permission="manage_automation"><a class="nav-link" href="adminOther.html">Other</a></li>
       </ul>
-      <button id="logoutBtn" class="btn btn-dark">Logout</button>
+      <div>
+        <span class="mr-3">Role: <span class="role-indicator badge badge-info">Loading...</span></span>
+        <button id="logoutBtn" class="btn btn-dark">Logout</button>
+      </div>
     </nav>
   </header>
   <main>
@@ -92,9 +94,8 @@
         </div>
         <button type="submit" class="btn btn-success">Add Route</button>
       </form>
-    </section>
-  </main>
-  <script src="../../js/adminauth-check.js" defer></script>
-  <script src="../../js/adminRoutes.js"></script>
+    </section>  </main>
+    <script src="../../js/adminauth-check-new.js" type="module"></script>
+    <script src="../../js/adminRoutes.js" type="module"></script>
 </body>
 </html>

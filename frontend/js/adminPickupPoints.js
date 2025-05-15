@@ -1,19 +1,30 @@
-// Add Sortable.js library in HTML first
-document.addEventListener('DOMContentLoaded', () => {
+import permissionsManager from './permissions.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Initialize permissions
+  await permissionsManager.init();
+
+  // Redirect if no permission to manage pickup points
+  if (!permissionsManager.hasPermission('manage_pickup_points')) {
+    window.location.href = 'adminDashboard.html';
+    return;
+  }
+
   const routesContainer = document.getElementById('routesContainer');
 
   let routesData = [];
   let pickupPointsData = [];
-
   // Fetch routes and pickup points, then render the UI
   async function fetchData() {
     try {
       // Fetch routes
-      const routesResponse = await fetch('/api/admin/routes');
+      const routesResponse = await permissionsManager.fetchWithPermission('/api/admin/routes');
+      if (!routesResponse.ok) throw new Error('Failed to fetch routes');
       routesData = await routesResponse.json();
 
       // Fetch all pickup points
-      const pickupResponse = await fetch('/api/admin/pickup_points');
+      const pickupResponse = await permissionsManager.fetchWithPermission('/api/admin/pickup_points');
+      if (!pickupResponse.ok) throw new Error('Failed to fetch pickup points');
       pickupPointsData = await pickupResponse.json();
 
       renderRoutes();
@@ -112,9 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const formData = new FormData(addForm);
         const name = formData.get('name');
-        const time = formData.get('time');
-        try {
-          const response = await fetch('/api/admin/pickup_points', {
+        const time = formData.get('time');        try {
+          const response = await permissionsManager.fetchWithPermission('/api/admin/pickup_points', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ route_id: route.id, name, time })
@@ -168,10 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const formData = new FormData();
-      formData.append('csv', fileInput.files[0]);
-
-      try {
-        const response = await fetch('/api/admin/pickup_points/import', {
+      formData.append('csv', fileInput.files[0]);      try {
+        const response = await permissionsManager.fetchWithPermission('/api/admin/pickup_points/import', {
           method: 'POST',
           body: formData
         });
@@ -218,10 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach event listener for the Delete button
     const deleteBtn = tr.querySelector('.deletePickupBtn');
-    deleteBtn.addEventListener('click', async () => {
-      if (confirm('Are you sure you want to delete this pickup point?')) {
+    deleteBtn.addEventListener('click', async () => {      if (confirm('Are you sure you want to delete this pickup point?')) {
         try {
-          const response = await fetch(`/api/admin/pickup_points/${pp.id}`, { method: 'DELETE' });
+          const response = await permissionsManager.fetchWithPermission(`/api/admin/pickup_points/${pp.id}`, { method: 'DELETE' });
           const result = await response.json();
           alert(result.message);
           await fetchData();
@@ -249,9 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save button: update the pickup point
     tr.querySelector('.savePickupBtn').addEventListener('click', async () => {
       const newName = tr.querySelector('input[type="text"]').value;
-      const newTime = tr.querySelector('input[type="time"]').value;
-      try {
-        const response = await fetch(`/api/admin/pickup_points/${pp.id}`, {
+      const newTime = tr.querySelector('input[type="time"]').value;      try {
+        const response = await permissionsManager.fetchWithPermission(`/api/admin/pickup_points/${pp.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

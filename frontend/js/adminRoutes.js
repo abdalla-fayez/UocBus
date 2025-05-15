@@ -1,18 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
+import permissionsManager from './permissions.js';
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Initialize permissions
+    await permissionsManager.init();
+
+    // Redirect if no permission to manage routes
+    if (!permissionsManager.hasPermission('manage_routes')) {
+        window.location.href = 'adminDashboard.html';
+        return;
+    }
+
     const routesTableBody = document.querySelector('#routesTable tbody');
     const addRouteForm = document.getElementById('addRouteForm');
     
     let routesData = []; // Stores the fetched routes
     let busList = [];    // Stores the fetched buses
-  
     // Fetch bus list for populating drop-downs in the inline edit forms
     async function fetchBusList() {
       try {
-        const response = await fetch('/api/admin/buses');
-        busList = await response.json();
-        populateBusSelects(); // (If needed for the add form)
+        const response = await permissionsManager.fetchWithPermission('/api/admin/buses');
+        if (response.ok) {
+          busList = await response.json();
+          populateBusSelects();
+        } else {
+          const error = await response.json();
+          alert(error.message || 'Failed to fetch bus list');
+        }
       } catch (error) {
         console.error('Error fetching bus list:', error);
+        if (error.message === 'Permission denied') {
+          window.location.href = 'adminDashboard.html';
+        }
       }
     }
   
@@ -53,15 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Create a normal table row for a route
     function createRouteRow(route) {
-      const tr = document.createElement('tr');
-      // Look up bus name by bus_id
-      const bus = busList.find(b => b.id == route.bus_id);
-      const busName = bus ? bus.name : 'N/A';
-      tr.innerHTML = `
+      const tr = document.createElement('tr');      tr.innerHTML = `
         <td>${route.id}</td>
         <td>${route.route_name}</td>
         <td>${route.trip_type}</td>
-        <td>${busName}</td>
+        <td>${route.bus_name || 'N/A'}</td>
         <td>${route.price}</td>
         <td>${route.time}</td>
         <td>${route.status}</td>
