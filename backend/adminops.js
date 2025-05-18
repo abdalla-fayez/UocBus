@@ -10,7 +10,7 @@ const checkPermission = require('./middleware/checkPermission');
    ============ */
 
 // Get all buses (read-only, no logging)
-router.get('/buses', checkPermission(['manage_buses', 'manage_routes']), async (req, res) => {
+router.get('/buses', checkPermission(['manage_buses', 'view_buses', 'manage_routes']), async (req, res) => {
   try {
     const [results] = await db.query('SELECT * FROM buses ORDER BY name');
     res.json(results);
@@ -66,7 +66,7 @@ router.delete('/buses/:id', checkPermission('manage_buses'), async (req, res) =>
     ============ */
 
 // Get all routes (read-only, no logging)
-router.get('/routes', checkPermission('manage_routes'), async (req, res) => {
+router.get('/routes', checkPermission(['manage_routes', 'view_routes', 'manage_pickup_points']), async (req, res) => {
   try {
     const [results] = await db.query(`
       SELECT r.*, b.name as bus_name 
@@ -126,7 +126,7 @@ router.delete('/routes/:id', checkPermission('manage_routes'), async (req, res) 
     ======================= */
 
 // Get all pickup points (read-only)
-router.get('/pickup_points', checkPermission('manage_pickup_points'), async (req, res) => {
+router.get('/pickup_points', checkPermission(['manage_pickup_points', 'view_pickup_points', ]), async (req, res) => {
   try {
     const [results] = await db.query('SELECT * FROM pickup_points ORDER BY time');
     res.json(results);
@@ -322,7 +322,7 @@ router.get('/dailypaymentsreport', checkPermission('generate_reports_finance'), 
     
     // Check if there are no results
     if (results.length === 0) {
-      return res.status(200).json({ message: "There are no bookings for this date." });
+      return res.status(200).json({ message: "There are no payments for this date." });
     }
       // Generate CSV if data is available
     const json2csvParser = new Parser();
