@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // --------------------------
   let tripsData = [];
   let currentSortColumn = 'trip_date';
-  let currentSortOrder = 'desc'; // "asc" or "desc"
+  let currentSortOrder = 'desc'; // "asc" or "desc"?
 
   async function fetchTrips() {
     try {
@@ -322,20 +322,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function sortAndRenderTrips(column, order) {
+    console.log('Sorting by:', column, 'Order:', order);
     const sortedTrips = tripsData.sort((a, b) => {
       let valA = a[column];
       let valB = b[column];
 
       // Convert dates for proper comparison
       if (column === 'trip_date') {
-        valA = new Date(valA);
-        valB = new Date(valB);
-      }
-      // Compare as lowercase strings if applicable
+        // The dates are already in ISO format, so parse them directly
+        console.log('Original date values:', valA, valB);
+        // Handle 'N/A' values
+        valA = valA === 'N/A' ? new Date(0) : new Date(valA);
+        valB = valB === 'N/A' ? new Date(0) : new Date(valB);
+        console.log('Parsed date values:', valA, valB);
+        
+        // Convert to timestamps for reliable numeric comparison
+        const timeA = valA.getTime();
+        const timeB = valB.getTime();
+        
+        if (timeA < timeB) {
+          return order === 'asc' ? -1 : 1;
+        }
+        if (timeA > timeB) {
+          return order === 'asc' ? 1 : -1;
+        }
+        return 0;
+      } 
+      
+      // Handle non-date columns
       if (typeof valA === 'string') {
         valA = valA.toLowerCase();
         valB = valB.toLowerCase();
       }
+
       if (valA < valB) {
         return order === 'asc' ? -1 : 1;
       }
@@ -344,6 +363,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
       return 0;
     });
+    console.log('Sorted trips:', sortedTrips.map(t => t.trip_date));
     renderTrips(sortedTrips);
   }
 
