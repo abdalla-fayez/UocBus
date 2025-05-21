@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const statusEl = document.getElementById('tripAutomationStatus');
   const toggleBtn = document.getElementById('toggleTripAutomationBtn');
-  const downloadReportBtn = document.getElementById('downloadReportBtn');
+  // const downloadReportBtn = document.getElementById('downloadReportBtn');
 
   // Update the UI based on current status
   function updateUI(isEnabled) {
@@ -72,52 +72,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     toggleTripAutomation();
   });
-  // Handle report download
-  downloadReportBtn.addEventListener('click', async () => {
-    if (!permissionsManager.hasPermission('generate_reports')) {
-      alert('You do not have permission to generate reports.');
-      return;
-    }
+  // // Handle report download
+  // downloadReportBtn.addEventListener('click', async () => {
+  //   if (!permissionsManager.hasPermission('generate_reports')) {
+  //     alert('You do not have permission to generate reports.');
+  //     return;
+  //   }
 
-    const reportDate = document.getElementById('reportDate').value;
-    if (!reportDate) {
-      alert('Please select a date before downloading the report.');
-      return;
-    }
+  //   const reportDate = document.getElementById('reportDate').value;
+  //   if (!reportDate) {
+  //     alert('Please select a date before downloading the report.');
+  //     return;
+  //   }
 
-    try {
-      const response = await permissionsManager.fetchWithPermission(`/api/admin/dailypaymentsreport?date=${reportDate}`);
-      const contentType = response.headers.get("content-type");
+  //   try {
+  //     const response = await permissionsManager.fetchWithPermission(`/api/admin/dailypaymentsreport?date=${reportDate}`);
+  //     const contentType = response.headers.get("content-type");
       
-      // If the response is JSON, parse it and display the message
-      if (contentType && contentType.indexOf("application/json") !== -1) {
-        const data = await response.json();
-        if(data.message) {
-          alert(data.message);
-        } else if(data.error) {
-          alert(data.error);
-        }
-      } else {
-        // Otherwise, if it's CSV, create a blob and trigger download
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `payments-report-${reportDate}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      }
-    } catch (err) {
-      console.error(err);
-      if (err.message === 'Permission denied') {
-        alert('You do not have permission to generate reports.');
-      } else {
-        alert("An error occurred: " + err.message);
-      }
-    }
-  });
+  //     // If the response is JSON, parse it and display the message
+  //     if (contentType && contentType.indexOf("application/json") !== -1) {
+  //       const data = await response.json();
+  //       if(data.message) {
+  //         alert(data.message);
+  //       } else if(data.error) {
+  //         alert(data.error);
+  //       }
+  //     } else {
+  //       // Otherwise, if it's CSV, create a blob and trigger download
+  //       const blob = await response.blob();
+  //       const url = window.URL.createObjectURL(blob);
+  //       const a = document.createElement('a');
+  //       a.href = url;
+  //       a.download = `payments-report-${reportDate}.csv`;
+  //       document.body.appendChild(a);
+  //       a.click();
+  //       window.URL.revokeObjectURL(url);
+  //       document.body.removeChild(a);
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //     if (err.message === 'Permission denied') {
+  //       alert('You do not have permission to generate reports.');
+  //     } else {
+  //       alert("An error occurred: " + err.message);
+  //     }
+  //   }
+  // });
   
   // Initial fetch of the event status when the page loads
   fetchTripAutomationStatus();

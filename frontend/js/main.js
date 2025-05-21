@@ -74,7 +74,7 @@ routeSelect.addEventListener('change', (event) => {
     }
 });
 
-// Function to search for trips based on user input
+// Function to search for trips based on user input and view them
 async function searchTrips() {
     try {
         // Hide the error alert before performing a new search
@@ -115,7 +115,7 @@ async function searchTrips() {
             clone.querySelector('.trip-date').textContent = new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(trip.trip_date));
             clone.querySelector('.available-seats').textContent = trip.available_seats;
             clone.querySelector('.trip-price').textContent = trip.price;
-            
+
             // Populate seat dropdown
             const seatDropdown = clone.querySelector('.seat-dropdown');
             for (let i = 1; i <= trip.available_seats; i++) {
@@ -241,7 +241,6 @@ async function searchTrips() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded event triggered'); // Log to confirm event execution
 
@@ -272,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
 
 // Function to fetch the global ticket allowance from the backend
 async function fetchTicketAllowance() {

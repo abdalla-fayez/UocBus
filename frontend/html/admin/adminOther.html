@@ -45,17 +45,17 @@
   </header>
   
   <main class="container">
-  <section id="toggleTripAutomationSection" class="mb-5" data-requires-permission="manage_automation">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Daily Trip Generation</h5>
-        <p class="card-text" id="tripAutomationStatus">Loading current status...</p>
-        <button id="toggleTripAutomationBtn" class="btn btn-primary" data-requires-permission-action="manage_automation">Toggle Trip Automation</button>
+    <section id="toggleTripAutomationSection" class="mb-5" data-requires-permission="manage_automation">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Daily Trip Generation</h5>
+          <p class="card-text" id="tripAutomationStatus">Loading current status...</p>
+          <button id="toggleTripAutomationBtn" class="btn btn-primary" data-requires-permission-action="manage_automation">Toggle Trip Automation</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <section id="downloadReportSection" class="mb-5" data-requires-permission="generate_reports">
+    <!-- <section id="downloadReportSection" class="mb-5" data-requires-permission="generate_reports">
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Bookings Report (Daily)</h5>
@@ -67,12 +67,11 @@
           <button id="downloadReportBtn" class="btn btn-primary mt-2" data-requires-permission-action="generate_reports">Download Report</button>
         </div>
       </div>
-    </section>
-
-    <!-- You can add more miscellaneous settings below -->
-  </main>  <!-- Common admin authentication check script -->
-  <script src="../../js/adminauth-check-new.js" type="module"></script>
+    </section> -->
+  </main>  
+  <!-- Common admin authentication check script -->
+  <script src="../../js/admin/adminauth-check-new.js" type="module"></script>
   <!-- Admin Other page JavaScript -->
-  <script src="../../js/adminOther.js" type="module"></script>
+  <script src="../../js/admin/adminOther.js" type="module"></script>
 </body>
 </html>
