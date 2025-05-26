@@ -8,7 +8,9 @@ const tripsResults = document.getElementById('tripsResults'); // Trips container
 const tripTemplate = document.getElementById('tripTemplate'); // HTML template
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', populateRouteDropdown);
+document.addEventListener('DOMContentLoaded', () => {
+    populateRouteDropdown();
+});
 searchButton.addEventListener('click', searchTrips);
 
 // Function to populate route names dropdown
