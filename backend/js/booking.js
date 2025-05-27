@@ -51,87 +51,125 @@ router.get('/routes/trip-types', async (req, res) => {
     }
 });
 
-// Fetch available trips with pickup points
+// Fetch available trips with unified list of stops
 router.get('/trips/available', async (req, res) => {
-    const { route, tripType, date } = req.query;
+  const { route, tripType, date } = req.query;
+  if (!route || !tripType || !date) {
+    return res.status(400).json({ message: 'All fields are required.' });
+  }
 
-    // logger.info('Received query parameters:', { route, tripType, date });
+  try {
+    // 1) Fetch all trips for this route+type+date
+    const [tripRows] = await db.query(`
+      SELECT
+        t.id           AS tripId,
+        t.trip_date,
+        t.trip_time,
+        t.available_seats,
+        r.id           AS routeId,
+        r.route_name,
+        r.price,
+        r.trip_type
+      FROM trips AS t
+      JOIN routes AS r
+        ON t.route_id = r.id
+      WHERE
+        ((t.trip_date = CURDATE() AND t.trip_time >= CURTIME())
+         OR (t.trip_date > CURDATE()))
+        AND r.route_name      = ?
+        AND r.trip_type       = ?
+        AND t.trip_date       = ?
+        AND t.available_seats > 0
+        AND r.status          = 'Active'
+      ORDER BY t.trip_date, t.trip_time
+    `, [ route, tripType, date ]);
 
-    if (!route || !tripType || !date) {
-        return res.status(400).json({ message: 'All fields are required.' });
+    if (tripRows.length === 0) {
+      return res.json([]);
     }
 
-    try {
-        // SQL query to fetch trips and their associated pickup points
-        const query = `
-            SELECT 
-                trips.id AS id,
-                trips.trip_date,
-                trips.trip_time,
-                trips.available_seats,
-                routes.route_name,
-                routes.price,
-                routes.trip_type,
-                pickup_points.name AS pickup_name,
-                pickup_points.time AS pickup_time
-            FROM trips
-            JOIN routes ON trips.route_id = routes.id
-            LEFT JOIN pickup_points ON routes.id = pickup_points.route_id
-            WHERE (
-                (trip_date = CURDATE() AND routes.time >= CURTIME())
-                OR (trip_date > CURDATE())
-            )
-            AND routes.route_name = ?
-            AND routes.trip_type = ?
-            AND trips.trip_date = ?
-            AND trips.available_seats > 0
-            AND routes.status = 'Active'
-            ORDER BY trip_date, trip_time, pickup_time;
-        `;
+    // 2) If From Campus, fetch its assigned stop + the To Campus stops
+    let assignedStop = null;
+    let toCampusStops = [];
 
-        const [results] = await db.query(query, [route, tripType, date]);
+    if (tripType === 'From Campus') {
+      // a) assigned stop for this specific From-Campus route
+      const [[{ name: asn, time: ast }]] = await db.query(`
+        SELECT pp.name, pp.time
+          FROM pickup_points pp
+          WHERE pp.route_id = ?
+            AND pp.name = 'U of Canada'
+        LIMIT 1
+      `, [ tripRows[0].routeId ]);
+      assignedStop = { name: asn, time: ast };
 
-        // logger.info('Query results:', results);
+      // b) all stops for the To Campus variant of this same route_name, excluding U of Canada
+      const [tcRows] = await db.query(`
+        SELECT pp.name, pp.time
+          FROM routes r2
+          JOIN pickup_points pp
+            ON pp.route_id = r2.id
+         WHERE r2.route_name = ?
+           AND r2.trip_type  = 'To Campus'
+           AND pp.name <> 'U of Canada'
+      `, [ route ]);
 
-        // Group trips by id, adding pickup points to each trip
-        const trips = {};
-        results.forEach(row => {
-            if (!trips[row.id]) {
-                // logger.info(`Creating new trip entry for id: ${row.id}`);
-                trips[row.id] = {
-                    id: row.id,
-                    trip_date: row.trip_date,
-                    trip_time: row.trip_time,
-                    available_seats: row.available_seats,
-                    route_name: row.route_name,
-                    price: row.price,
-                    trip_type: row.trip_type,
-                    pickup_points: []
-                };
-            }
-
-            if (row.pickup_name && row.pickup_time) {
-                // logger.info(`Adding pickup point for id ${row.id}:`, {
-                //     name: row.pickup_name,
-                //     time: row.pickup_time
-                // });
-
-                // Include pickup points only for to campus routes or single point for from campus routes
-                if (row.trip_type === 'To Campus' || row.trip_type === 'From Campus') {
-                    trips[row.id].pickup_points.push({
-                        name: row.pickup_name,
-                        time: row.pickup_time
-                    });
-                }
-            }
-        });
-
-        // logger.info('Final trips object:', trips);
-        res.json(Object.values(trips));
-    } catch (error) {
-        logger.error('Error fetching trips:', error);
-        res.status(500).json({ message: 'Server error' });
+      toCampusStops = tcRows
+        .map(r => ({ name: r.name, time: r.time }))
+        .sort((a, b) => b.time.localeCompare(a.time));  // descending
     }
+
+    // 3) Now build each trip’s pickup_points
+    const trips = tripRows.map(r => {
+      const p = {
+        id:              r.tripId,
+        trip_date:       r.trip_date,
+        trip_time:       r.trip_time,
+        available_seats: r.available_seats,
+        route_name:      r.route_name,
+        price:           r.price,
+        trip_type:       r.trip_type,
+        pickup_points:   []
+      };
+
+      if (r.trip_type === 'From Campus') {
+        // assigned first, then the sorted To-Campus stops
+        if (assignedStop)     p.pickup_points.push(assignedStop);
+        p.pickup_points.push(...toCampusStops);
+      } else {
+        // To Campus: fetch and sort that route’s stops ascending
+        // (we could optimize by caching if many trips per day)
+        p.pickup_points = [];  
+      }
+
+      return p;
+    });
+
+    // 4) For To Campus, fill in stops (one query per unique routeId)
+    if (tripType === 'To Campus') {
+      // grab all stops for this routeId, sorted ASC
+      const routeId = tripRows[0].routeId;
+      const [allStops] = await db.query(`
+        SELECT name, time
+          FROM pickup_points
+         WHERE route_id = ?
+         ORDER BY time ASC
+      `, [ routeId ]);
+
+      trips.forEach(t => {
+        t.pickup_points = allStops.map(r => ({
+          name: r.name,
+          time: r.time
+        }));
+      });
+    }
+
+    res.json(trips);
+
+  } catch (err) {
+    logger.error('Error fetching trips:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
 });
 
 router.post('/bookings/create', async (req, res) => {
