@@ -147,8 +147,13 @@ async function searchTrips() {
                     icon.style.color = 'red';
                     icon.style.marginRight = '5px';
 
+                    let displayTime = point.time;
+                    if (trip.trip_type === 'From Campus' && index > 0) {
+                        displayTime = 'Variable';
+                    }
+                    
                     // Create the text node for the pickup point
-                    const pointText = document.createTextNode(`${point.name} (${point.time})`);
+                    const pointText = document.createTextNode(`${point.name} (${displayTime})`);
 
                     // Append icon and text to the list item
                     listItem.appendChild(icon);
