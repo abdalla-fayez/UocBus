@@ -275,10 +275,94 @@ router.post('/other/toggle-trip-automation', checkPermission('manage_automation'
     logAdminAction(
       req.session.adminUser,
       'TOGGLE TRIP AUTOMATION',
-      { previousStatus: currentStatus, newStatus: newStatus ? 'ENABLED' : 'DISABLED' }
+      { previousStatus: currentStatus, newStatus: newStatus ? 'ENABLED' : 'DISABLED' },
+      { timestamp: new Date().toISOString() }
     );
     
     res.json({ enabled: newStatus });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Manually trigger trip generation
+router.post('/other/manual-trip-generation', checkPermission('manage_automation'), async (req, res) => {
+  try {
+    // Call the Trip_Creation stored procedure
+    await db.query('CALL Trip_Creation()');
+    
+    // Log the manual trip generation action
+    logAdminAction(
+      req.session.adminUser,
+      'MANUAL TRIP GENERATION',
+      { timestamp: new Date().toISOString() }
+    );
+    
+    res.json({ success: true, message: 'Trip generation completed successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get ticket allowance config
+router.get('/config/ticket-allowance', checkPermission('manage_system_config'), async (req, res) => {
+  try {
+    const [rows] = await db.query(
+      'SELECT config_value FROM system_config WHERE config_key = ?', 
+      ['max_ticket_allowance']
+    );
+    
+    if (rows.length > 0) {
+      res.json({ value: parseInt(rows[0].config_value) });
+    } else {
+      res.status(404).json({ error: "Configuration not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update ticket allowance config
+router.put('/config/ticket-allowance', checkPermission('manage_system_config'), async (req, res) => {
+  try {
+    const { value } = req.body;
+    
+    if (!Number.isInteger(value) || value < 1) {
+      return res.status(400).json({ error: "Value must be a positive integer" });
+    }
+
+    await db.query(
+      'UPDATE system_config SET config_value = ? WHERE config_key = ?',
+      [value.toString(), 'max_ticket_allowance']
+    );
+
+    logAdminAction(
+      req.session.adminUser,
+      'UPDATE TICKET ALLOWANCE',
+      { old_value: (await db.query('SELECT config_value FROM system_config WHERE config_key = ?', ['max_ticket_allowance']))[0][0]?.config_value, new_value: value.toString() },
+      { timestamp: new Date().toISOString() }
+    );
+
+    res.json({ message: 'Ticket allowance updated successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Reset bookings counter for all users
+router.post('/config/reset-bookings-counter', checkPermission('manage_system_config'), async (req, res) => {
+  try {
+    // Call the Reset_Bookings_Counter stored procedure
+    await db.query('CALL Reset_Bookings_Counter()');
+    
+    // Log the reset action
+    logAdminAction(
+      req.session.adminUser,
+      'RESET BOOKINGS COUNTER',
+      { timestamp: new Date().toISOString() }
+    );
+    
+    res.json({ message: 'Bookings counter reset successfully' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -396,6 +480,7 @@ router.get('/pickup_points/export', checkPermission('manage_pickup_points'), asy
       SELECT pp.name, r.trip_type, pp.time, r.route_name
       FROM pickup_points pp
       JOIN routes r ON pp.route_id = r.id
+      WHERE r.status = 'Active'
       ORDER BY r.route_name, r.trip_type, pp.time`);
     
     // Get unique route names first

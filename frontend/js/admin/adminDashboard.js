@@ -278,11 +278,31 @@ document.addEventListener('DOMContentLoaded', async () => {
       $('#bookingsTable').DataTable().destroy();
     }
 
-    // Initialize DataTables on the bookings table.
+    // Add custom date sorting for DD/MM/YYYY format
+    jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+        "date-uk-pre": function(a) {
+            if (a === "N/A") return 0;
+            const ukDate = a.split(" ")[0].split("/");
+            return (ukDate[2] + ukDate[1] + ukDate[0]) * 1;
+        },
+        "date-uk-asc": function(a, b) {
+            return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        },
+        "date-uk-desc": function(a, b) {
+            return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+        }
+    });
+
+    // Initialize DataTables on the bookings table with custom column types
     $('#bookingsTable').DataTable({
-      pageLength: 10,
-      lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-      order: [[0, 'desc']] // Order by first column (ID) descending
+        pageLength: 10,
+        lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+        columnDefs: [
+            { type: "date-uk", targets: [6, 9] }, // Apply to trip_date (index 6) and created_at (index 9) columns
+            { orderable: true, targets: [0, 6, 9] }, // Make ID, trip_date, and created_at sortable
+            { orderable: false, targets: '_all' } // Make other columns non-sortable
+        ],
+        order: [[0, 'desc']] // Default sort by ID descending
     });
   }
 
@@ -290,14 +310,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Fetch and Render Upcoming Trips
   // --------------------------
   let tripsData = [];
-  let currentSortColumn = 'trip_date';
-  let currentSortOrder = 'desc'; // "asc" or "desc"?
 
   async function fetchTrips() {
     try {
       const response = await fetch('/api/admin/dashboard/trips');
       tripsData = await response.json();
-      sortAndRenderTrips(currentSortColumn, currentSortOrder);
+      renderTrips(tripsData);
     } catch (error) {
       console.error('Error fetching trips:', error);
     }
@@ -308,98 +326,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     tbody.innerHTML = '';
     trips.forEach(trip => {
       const tr = document.createElement('tr');
+      // Format date in DD/MM/YYYY format for consistency
+      const tripDate = new Date(trip.trip_date);
+      const formattedDate = `${tripDate.getDate().toString().padStart(2, '0')}/${(tripDate.getMonth() + 1).toString().padStart(2, '0')}/${tripDate.getFullYear()}`;
+      
       tr.innerHTML = `
         <td>${trip.id}</td>
         <td>${trip.route_name}</td>
         <td>${trip.trip_type}</td>
-        <td>${new Intl.DateTimeFormat('en-GB', { dateStyle: 'short' }).format(new Date(trip.trip_date))}</td>
+        <td>${formattedDate}</td>
         <td>${trip.trip_time}</td>
         <td>${trip.available_seats}</td>
       `;
       tbody.appendChild(tr);
     });
-  }
 
-  function sortAndRenderTrips(column, order) {
-    console.log('Sorting by:', column, 'Order:', order);
-    const sortedTrips = tripsData.sort((a, b) => {
-      let valA = a[column];
-      let valB = b[column];
+    // If DataTable is already initialized on #tripsTable, destroy it first
+    if ($.fn.DataTable.isDataTable('#tripsTable')) {
+      $('#tripsTable').DataTable().destroy();
+    }
 
-      // Convert dates for proper comparison
-      if (column === 'trip_date') {
-        // The dates are already in ISO format, so parse them directly
-        console.log('Original date values:', valA, valB);
-        // Handle 'N/A' values
-        valA = valA === 'N/A' ? new Date(0) : new Date(valA);
-        valB = valB === 'N/A' ? new Date(0) : new Date(valB);
-        console.log('Parsed date values:', valA, valB);
-        
-        // Convert to timestamps for reliable numeric comparison
-        const timeA = valA.getTime();
-        const timeB = valB.getTime();
-        
-        if (timeA < timeB) {
-          return order === 'asc' ? -1 : 1;
+    // Initialize DataTables on the trips table
+    $('#tripsTable').DataTable({
+      pageLength: 10,
+      lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+      columnDefs: [
+        { 
+          targets: 3, // Date column
+          type: 'date-uk'
         }
-        if (timeA > timeB) {
-          return order === 'asc' ? 1 : -1;
-        }
-        return 0;
-      } 
-      
-      // Handle non-date columns
-      if (typeof valA === 'string') {
-        valA = valA.toLowerCase();
-        valB = valB.toLowerCase();
-      }
-
-      if (valA < valB) {
-        return order === 'asc' ? -1 : 1;
-      }
-      if (valA > valB) {
-        return order === 'asc' ? 1 : -1;
-      }
-      return 0;
+      ],
+      order: [[3, 'desc']] // Default sort by date descending
     });
-    console.log('Sorted trips:', sortedTrips.map(t => t.trip_date));
-    renderTrips(sortedTrips);
   }
-
-  // Attach click events for sortable columns in trips table
-  const sortableHeaders = document.querySelectorAll('#tripsTable th.sortable');
-  sortableHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      let sortColumn;
-      switch (header.textContent.trim()) {
-        case 'ID':
-          sortColumn = 'id';
-          break;
-        case 'Date':
-          sortColumn = 'trip_date';
-          break;
-        case 'Time':
-          sortColumn = 'trip_time';
-          break;
-        case 'Route Name':
-          sortColumn = 'route_name';
-          break;
-        case 'Trip Type':
-          sortColumn = 'trip_type';
-          break;
-        default:
-          sortColumn = 'trip_date';
-      }
-      // Toggle sort order if same column clicked again
-      if (currentSortColumn === sortColumn) {
-        currentSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
-      } else {
-        currentSortColumn = sortColumn;
-        currentSortOrder = 'asc';
-      }
-      sortAndRenderTrips(currentSortColumn, currentSortOrder);
-    });
-  });
 
   // --------------------------
   // Initial Data Fetch

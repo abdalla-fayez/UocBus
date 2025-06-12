@@ -46,7 +46,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       pickupPointsByRoute[pp.route_id].push(pp);
     });
 
-    routesData.forEach(route => {
+    // Filter to only show active routes
+    const activeRoutes = routesData.filter(route => route.status === 'Active');
+
+    activeRoutes.forEach(route => {
       // Create a container for this route
       const routeDiv = document.createElement('div');
       routeDiv.classList.add('mb-3');

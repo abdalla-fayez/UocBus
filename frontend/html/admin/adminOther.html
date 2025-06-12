@@ -55,6 +55,43 @@
       </div>
     </section>
 
+    <section id="manualTripGenerationSection" class="mb-5" data-requires-permission="manage_automation">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Manual Trip Generation</h5>
+          <p class="card-text">Clicking the button below will attempt to manually create trips as the automatic generation does.</p>
+          <button id="generateTripsBtn" class="btn btn-primary" data-requires-permission-action="manage_automation">Generate Trips Now</button>
+          <div id="tripGenerationStatus" class="mt-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ticketAllowanceSection" class="mb-5" data-requires-permission="manage_system_config">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Maximum Ticket Allowance</h5>
+          <p class="card-text">Set the maximum number of tickets that students can book per semester.</p>
+          <div class="form-group">
+            <div class="input-group">
+              <input type="number" id="ticketAllowanceInput" class="form-control" min="1" style="max-width: 200px;">
+              <div class="input-group-append">
+                <button id="updateTicketAllowanceBtn" class="btn btn-primary" data-requires-permission-action="manage_system_config">Update</button>
+              </div>
+            </div>
+            <small class="form-text text-muted mt-2">Current value: <span id="currentTicketAllowance">Loading...</span></small>
+          </div>
+          <div id="ticketAllowanceStatus" class="mt-2"></div>
+          
+          <hr class="my-4">
+          
+          <h6>Reset Student Bookings Counter</h6>
+          <p class="card-text">This resets the bookings counter for all students. Intended to be used at the start of a new semester.</p>
+          <button id="resetBookingCountersBtn" class="btn btn-warning" data-requires-permission-action="manage_system_config">Reset All Counters</button>
+          <div id="resetCounterStatus" class="mt-2"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- <section id="downloadReportSection" class="mb-5" data-requires-permission="generate_reports">
       <div class="card mt-4">
         <div class="card-body">
